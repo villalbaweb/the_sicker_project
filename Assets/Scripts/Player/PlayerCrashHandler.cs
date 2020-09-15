@@ -9,7 +9,7 @@ namespace TheSicker.Player
     {
         // config
         [Tooltip("Layer names that cause damage on crash")]
-        [SerializeField] LayerMask crashLayers;
+        [SerializeField] LayerMask crashLayers = new LayerMask();
 
         [SerializeField] int crashDamagePerSecond = 10;
         [SerializeField] float crashDamageSecondsRate = 2.0f;

@@ -10,7 +10,7 @@ namespace TheSicker.Player
         [SerializeField] GameObject projectile = null;
         [SerializeField] float projectileFiringPeriod = 0.1f;
         [SerializeField] float projectileDistance = 20f;
-        [SerializeField] LayerMask enemyLayers;
+        [SerializeField] LayerMask enemyLayers = new LayerMask();
 
         // State
         GameObject _projectileParent;
