@@ -384,6 +384,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 299252146, guid: fdfafc42d1921af45a9f469d6af93d3b, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2076681289}
+    - target: {fileID: 299252146, guid: fdfafc42d1921af45a9f469d6af93d3b, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveBtnDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 299252146, guid: fdfafc42d1921af45a9f469d6af93d3b, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TheSicker.Player.PlayerMover, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 299252146, guid: fdfafc42d1921af45a9f469d6af93d3b, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2076681289}
+    - target: {fileID: 299252146, guid: fdfafc42d1921af45a9f469d6af93d3b, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveBtnUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 299252146, guid: fdfafc42d1921af45a9f469d6af93d3b, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TheSicker.Player.PlayerMover, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 594281436935963653, guid: fdfafc42d1921af45a9f469d6af93d3b, type: 3}
       propertyPath: m_Name
       value: Game Controls
@@ -434,6 +458,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdfafc42d1921af45a9f469d6af93d3b, type: 3}
+--- !u!114 &2076681289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6576423509886590835, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
+  m_PrefabInstance: {fileID: 932829366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0dae2c814e389949a813309d58b5ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2131755987
 PrefabInstance:
   m_ObjectHideFlags: 0
