@@ -21,7 +21,7 @@ namespace TheSicker.Player
         // state
         Coroutine _crashDamageCoroutine = null;
 
-        void Start()
+        void Awake()
         {
             _capsuleCollider2D = GetComponent<CapsuleCollider2D>();
             _health = GetComponent<Health>();
