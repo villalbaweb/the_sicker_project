@@ -4,7 +4,7 @@ using TheSicker.Player;
 
 namespace TheSicker.Enemies
 {
-    public class FollowOnDistanceAttacker : MonoBehaviour
+    public class FollowOnDistanceAttacker : MonoBehaviour, IPooledObject
     {
         // config
         [SerializeField] float chaseDistance = 4.0f;
@@ -40,6 +40,12 @@ namespace TheSicker.Enemies
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, chaseDistance);
+        }
+
+        // execute specific action on spawn
+        public void OnObjectSpawn()
+        {
+            print($"{gameObject.name} has been pooled...");
         }
     }
 }

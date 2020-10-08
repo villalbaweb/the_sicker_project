@@ -56,6 +56,13 @@ namespace TheSicker.Core
             objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
 
+            // execute specific action on spawn
+            IPooledObject pooledObject = objectToSpawn.GetComponent<IPooledObject>();
+            if(pooledObject != null)
+            {
+                pooledObject.OnObjectSpawn();
+            }
+
             poolDictionary[tag].Enqueue(objectToSpawn);
 
             return objectToSpawn;
