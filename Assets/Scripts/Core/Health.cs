@@ -18,7 +18,7 @@ namespace TheSicker.Core
         {
             // signal the entity dead
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
