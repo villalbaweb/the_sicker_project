@@ -96,8 +96,8 @@ GameObject:
   - component: {fileID: 3501752544267082895}
   - component: {fileID: 5035905256989446730}
   - component: {fileID: 7964202901901516653}
-  - component: {fileID: 1062642721629483302}
   - component: {fileID: 1837201274491159755}
+  - component: {fileID: 6974090696833305347}
   m_Layer: 9
   m_Name: Green Enemy Cell
   m_TagString: Untagged
@@ -205,19 +205,6 @@ MonoBehaviour:
   followingSpeed: 3
   target: {fileID: 0}
   isFollowing: 0
---- !u!114 &1062642721629483302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3501752544267082893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05998b675c16460429367558f420773f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseDistance: 4
 --- !u!114 &1837201274491159755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +218,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &6974090696833305347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501752544267082893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ec164c272a144b8f80128a37dc888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 4
