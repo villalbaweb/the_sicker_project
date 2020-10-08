@@ -13,22 +13,14 @@ namespace TheSicker.Core
             public int size;
         }
 
-        #region Singleton To Review
-
-        public static ObjectPooler Instance;
-
-        private void Awake() 
-        {
-            Instance = this;    
-        }
-
-        #endregion
-
-        public List<Pool> pools;
-        public Dictionary<string, Queue<GameObject>> poolDictionary;
+        // config
+        [SerializeField] List<Pool> pools;
+        
+        // state
+        private Dictionary<string, Queue<GameObject>> poolDictionary;
 
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             poolDictionary = new Dictionary<string, Queue<GameObject>>();
 

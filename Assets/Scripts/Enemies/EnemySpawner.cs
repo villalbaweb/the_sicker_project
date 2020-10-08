@@ -14,9 +14,9 @@ namespace TheSicker.Enemies
         // state
         float spawnTimer = Mathf.Infinity;
 
-        private void Start() 
+        private void Awake() 
         {
-            _objectPooler = ObjectPooler.Instance;    
+            _objectPooler = FindObjectOfType<ObjectPooler>();    
         }
 
         // Update is called once per frame
