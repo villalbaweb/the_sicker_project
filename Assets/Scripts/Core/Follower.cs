@@ -20,11 +20,8 @@ namespace TheSicker.Core
         void Update()
         {
             float step = CalculateStep();
-
-            if (isFollowing)
-            {
-                CalculateTargetPosition(step);
-            }
+                
+            CalculateTargetPosition(step);
 
             MoveRight(step);
         }
@@ -36,22 +33,24 @@ namespace TheSicker.Core
             speed = isFollowing ? followingSpeed : normalSpeed;
         }
 
-        private void MoveRight(float step)
+        private float CalculateStep()
         {
-            transform.position += transform.right * step;
+            return speed * Time.deltaTime;
         }
 
         private void CalculateTargetPosition(float step)
         {
+            if(!isFollowing) return; 
+
             Vector3 vectorToTarget = target.position - transform.position;
             float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
             Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, q, step);
         }
 
-        private float CalculateStep()
+        private void MoveRight(float step)
         {
-            return speed * Time.deltaTime;
+            transform.position += transform.right * step;
         }
     }
 }
