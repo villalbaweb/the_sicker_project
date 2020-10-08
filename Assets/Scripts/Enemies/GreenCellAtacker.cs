@@ -41,7 +41,7 @@ namespace TheSicker.Enemies
 
         private void Atack(bool isAttacking)
         {
-            _follower.IsFollowing = isAttacking;
+            _follower.Following(isAttacking);
         }
         
         private bool IsInAttackRange()

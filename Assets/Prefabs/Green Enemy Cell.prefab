@@ -201,7 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3913a0502a12f4b9a018344eb33cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  normalSpeed: 1
+  followingSpeed: 3
   target: {fileID: 0}
   isFollowing: 0
 --- !u!114 &1062642721629483302

@@ -6,24 +6,15 @@ namespace TheSicker.Core
     {
         // config params
         [Tooltip("Follower' Speed")]
-        [SerializeField] float speed = 5f;
+        [SerializeField] float normalSpeed = 5f;
+        [SerializeField] float followingSpeed = 10f;
+        
         [Tooltip("Follower's Target")]
         [SerializeField] public Transform target;
         [SerializeField] bool isFollowing = false;
 
-        // properties
-        public bool IsFollowing 
-        { 
-            get
-            {
-                return isFollowing;
-            }
-
-            set
-            {
-                isFollowing = value;
-            } 
-        }
+        // state
+        float speed;
 
         // Update is called once per frame
         void Update()
@@ -36,6 +27,13 @@ namespace TheSicker.Core
             }
 
             MoveRight(step);
+        }
+
+        public void Following(bool isFollowingState)
+        {
+            isFollowing = isFollowingState;
+
+            speed = isFollowing ? followingSpeed : normalSpeed;
         }
 
         private void MoveRight(float step)
