@@ -31,9 +31,17 @@ namespace TheSicker.Enemies
 
             if (spawnTimer > timeBetweenSpawns)
             {
-                _objectPooler.SpawnFromPool("FollowOnDistanceAttacker", transform.position, Quaternion.identity);
+                _objectPooler.SpawnFromPool("FollowOnDistanceAttacker", GetRandomPos(), Quaternion.identity);
                 spawnTimer = 0;
             }
+        }
+
+        private Vector3 GetRandomPos()
+        {
+            float xValue = Random.Range(0f, 1f);
+            float yValue = Random.Range(0f, 1f);
+
+            return Camera.main.ViewportToWorldPoint(new Vector3(xValue, yValue, Camera.main.nearClipPlane));
         }
     }
 }
