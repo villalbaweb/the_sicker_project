@@ -18,11 +18,16 @@ namespace TheSicker.Core
         
         // state
         private Dictionary<string, Queue<GameObject>> poolDictionary;
+        GameObject _objectsPoolParent;
+
+        // consts
+        const string OBJECT_POOL_PARENT_NAME = "Objects Pool";
 
         // Start is called before the first frame update
         void Awake()
         {
             poolDictionary = new Dictionary<string, Queue<GameObject>>();
+            CreateObjectPoolParent();
 
             foreach(Pool pool in pools)
             {
@@ -32,6 +37,7 @@ namespace TheSicker.Core
                 {
                     GameObject obj = Instantiate(pool.prefab);
                     obj.SetActive(false);
+                    obj.transform.parent = _objectsPoolParent.transform;
                     objectPool.Enqueue(obj);
                 }
 
@@ -58,6 +64,16 @@ namespace TheSicker.Core
             poolDictionary[tag].Enqueue(objectToSpawn);
 
             return objectToSpawn;
+        }
+
+        private void CreateObjectPoolParent()
+        {
+            _objectsPoolParent = GameObject.Find(OBJECT_POOL_PARENT_NAME);
+
+            if (!_objectsPoolParent)
+            {
+                _objectsPoolParent = new GameObject(OBJECT_POOL_PARENT_NAME);
+            }
         }
     }
 }
