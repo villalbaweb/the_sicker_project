@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TheSicker.Core;
 using TheSicker.Projectile;
 using UnityEngine;
 
@@ -7,7 +8,6 @@ namespace TheSicker.Player
     public class PlayerShooter : MonoBehaviour
     {
         // config
-        [SerializeField] GameObject projectile = null;
         [SerializeField] float projectileFiringPeriod = 0.1f;
         [SerializeField] float projectileDistance = 20f;
         [SerializeField] LayerMask enemyLayers = new LayerMask();
@@ -16,22 +16,12 @@ namespace TheSicker.Player
         GameObject _projectileParent;
         Coroutine _firingCoroutine;
 
-        const string PROJECTILE_PARENT_NAME = "Player Projectiles";
+        // cache
+        ObjectPooler _objectPooler;
 
-        // Start is called before the first frame update
-        void Start()
+        private void Awake() 
         {
-            CreateProjectileParent();
-        }
-
-        private void CreateProjectileParent()
-        {
-            _projectileParent = GameObject.Find(PROJECTILE_PARENT_NAME);
-
-            if (!_projectileParent)
-            {
-                _projectileParent = new GameObject(PROJECTILE_PARENT_NAME);
-            }
+            _objectPooler = FindObjectOfType<ObjectPooler>();    
         }
 
         // Update is called once per frame
@@ -77,11 +67,9 @@ namespace TheSicker.Player
 
         private void Shoot()
         {
-            if (!projectile) return;
-
-            ProjectileMovement projectileInstance = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<ProjectileMovement>();
+            GameObject projectileGameObject = _objectPooler.SpawnFromPool("PlayerProjectile", transform.position, Quaternion.identity);
+            ProjectileMovement projectileInstance = projectileGameObject.GetComponent<ProjectileMovement>();
             projectileInstance.SetRotation(transform.rotation);
-            projectileInstance.transform.parent = _projectileParent.transform;
         }
     }
 }

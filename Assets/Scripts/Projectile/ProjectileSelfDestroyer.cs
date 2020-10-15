@@ -19,7 +19,7 @@ namespace TheSicker.Projectile
 
             if(destroyTime <= Mathf.Epsilon)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

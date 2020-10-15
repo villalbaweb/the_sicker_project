@@ -19,7 +19,7 @@ namespace TheSicker.Projectile
                 _targetHealth.TakeDamage(damage);
             }
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
