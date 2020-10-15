@@ -27,17 +27,20 @@ namespace TheSicker.Core
         void Awake()
         {
             poolDictionary = new Dictionary<string, Queue<GameObject>>();
-            CreateObjectPoolParent();
+            _objectsPoolParent = CreateCustomObjectPoolParent(OBJECT_POOL_PARENT_NAME);
 
             foreach(Pool pool in pools)
             {
+                GameObject objectPoolDivision = CreateCustomObjectPoolParent(pool.tag);
+                objectPoolDivision.transform.parent = _objectsPoolParent.transform;
+                
                 Queue<GameObject> objectPool = new Queue<GameObject>();
 
                 for(int i = 0; i < pool.size; i++)
                 {
                     GameObject obj = Instantiate(pool.prefab);
                     obj.SetActive(false);
-                    obj.transform.parent = _objectsPoolParent.transform;
+                    obj.transform.parent = objectPoolDivision.transform;
                     objectPool.Enqueue(obj);
                 }
 
@@ -66,14 +69,16 @@ namespace TheSicker.Core
             return objectToSpawn;
         }
 
-        private void CreateObjectPoolParent()
+        private GameObject CreateCustomObjectPoolParent(string parentName)
         {
-            _objectsPoolParent = GameObject.Find(OBJECT_POOL_PARENT_NAME);
+            GameObject parent = GameObject.Find(parentName);
 
-            if (!_objectsPoolParent)
+            if (!parent)
             {
-                _objectsPoolParent = new GameObject(OBJECT_POOL_PARENT_NAME);
+                parent = new GameObject(parentName);
             }
+
+            return parent;
         }
     }
 }
