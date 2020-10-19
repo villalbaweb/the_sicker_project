@@ -8,8 +8,15 @@ namespace TheSicker.Player
     public class PlayerShooter : MonoBehaviour
     {
         // config
+        [Header("Projectile Control")]
         [SerializeField] float projectileFiringPeriod = 0.1f;
         [SerializeField] float projectileDistance = 20f;
+
+        [Header("Projectile SFX")]
+        [SerializeField] AudioClip onFireSoundClip;
+        [SerializeField] [Range(0, 1)] float fireSoundVolume = 0.5f;
+
+        [Header("Target Control")]
         [SerializeField] LayerMask enemyLayers = new LayerMask();
 
         // State
@@ -59,6 +66,7 @@ namespace TheSicker.Player
         {
             while(true)
             {
+                PlayShootSFX();
                 Shoot();
 
                 yield return new WaitForSeconds(projectileFiringPeriod);
@@ -70,6 +78,11 @@ namespace TheSicker.Player
             GameObject projectileGameObject = _objectPooler.SpawnFromPool("PlayerProjectile", transform.position, Quaternion.identity);
             ProjectileMovement projectileInstance = projectileGameObject.GetComponent<ProjectileMovement>();
             projectileInstance.SetRotation(transform.rotation);
+        }
+
+        private void PlayShootSFX()
+        {
+            AudioSource.PlayClipAtPoint(onFireSoundClip, Camera.main.transform.position, fireSoundVolume);
         }
     }
 }

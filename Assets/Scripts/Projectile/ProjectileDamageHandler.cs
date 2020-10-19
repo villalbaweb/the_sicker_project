@@ -1,6 +1,5 @@
 ﻿using TheSicker.Core;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace TheSicker.Projectile
 {
@@ -8,12 +7,9 @@ namespace TheSicker.Projectile
     {
         // config
         [SerializeField] int damage = 0;
-        [SerializeField] UnityEvent onHit;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            onHit.Invoke();
-
             DealDamage(collision.gameObject.GetComponent<Health>());
             
             gameObject.SetActive(false);

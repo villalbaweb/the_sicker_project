@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1668610361
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ab16c1d97cc81914e938bfb24522d094, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -186,9 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7208467dca15b334cad1d08b23cbe524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 4944162248327674704, guid: 72435a359619aee4c8bf9c2eb8e4aa52, type: 3}
   projectileFiringPeriod: 0.1
   projectileDistance: 20
+  onFireSoundClip: {fileID: 8300000, guid: 514146b278b937d498330b73c1d1331d, type: 3}
+  fireSoundVolume: 0.5
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
