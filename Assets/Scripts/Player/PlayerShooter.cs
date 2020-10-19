@@ -18,6 +18,7 @@ namespace TheSicker.Player
 
         [Header("Target Control")]
         [SerializeField] LayerMask enemyLayers = new LayerMask();
+        [SerializeField] float circleRayCastRadious = 0.5f;
 
         // State
         GameObject _projectileParent;
@@ -52,8 +53,9 @@ namespace TheSicker.Player
 
         private bool IsTargetFound()
         {
-            RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, transform.right, projectileDistance, enemyLayers);
-            
+            //RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, transform.right, projectileDistance, enemyLayers);
+            RaycastHit2D raycastHit = Physics2D.CircleCast(transform.position, circleRayCastRadious, transform.right, projectileDistance, enemyLayers);
+
             return raycastHit.collider != null && IsInLayerMask(raycastHit.collider.gameObject.layer, enemyLayers);
         }
 

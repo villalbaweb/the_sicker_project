@@ -46,7 +46,7 @@ MonoBehaviour:
   pools:
   - tag: FollowOnDistanceAttacker
     prefab: {fileID: 3501752544267082893, guid: 0f94247bb51a4eb41af792e165b56986, type: 3}
-    size: 15
+    size: 25
   - tag: PlayerProjectile
     prefab: {fileID: 8541223225210814284, guid: 138c642f927877441b588f275dd09b2c, type: 3}
-    size: 25
+    size: 150

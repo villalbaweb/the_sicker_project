@@ -193,6 +193,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
+  circleRayCastRadious: 0.25
 --- !u!114 &6576423509886590835
 MonoBehaviour:
   m_ObjectHideFlags: 0
