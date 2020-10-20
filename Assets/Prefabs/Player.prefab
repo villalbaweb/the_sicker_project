@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileFiringPeriod: 0.1
   projectileDistance: 20
+  muzzlerVFX: {fileID: 8223403293242917233}
   onFireSoundClip: {fileID: 8300000, guid: 514146b278b937d498330b73c1d1331d, type: 3}
   fireSoundVolume: 0.5
   enemyLayers:
@@ -348,10 +349,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 198561448080344486, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 199762154643548764, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -361,5 +358,10 @@ PrefabInstance:
 --- !u!4 &8129382982331667857 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4316597834682694, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}
+  m_PrefabInstance: {fileID: 8132950260825654487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8223403293242917233 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198561448080344486, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}
   m_PrefabInstance: {fileID: 8132950260825654487}
   m_PrefabAsset: {fileID: 0}

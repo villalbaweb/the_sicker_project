@@ -11,6 +11,7 @@ namespace TheSicker.Player
         [Header("Projectile Control")]
         [SerializeField] float projectileFiringPeriod = 0.1f;
         [SerializeField] float projectileDistance = 20f;
+        [SerializeField] ParticleSystem muzzlerVFX = null;
 
         [Header("Projectile SFX")]
         [SerializeField] AudioClip onFireSoundClip;
@@ -42,10 +43,12 @@ namespace TheSicker.Player
         {
             if (IsTargetFound())
             {
+                muzzlerVFX.Play();
                 _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : StartCoroutine(Firing());
             }
             else if (_firingCoroutine != null)
             {
+                muzzlerVFX.Stop();
                 StopCoroutine(_firingCoroutine);
                 _firingCoroutine = null;
             }
