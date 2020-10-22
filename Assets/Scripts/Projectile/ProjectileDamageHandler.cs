@@ -8,11 +8,21 @@ namespace TheSicker.Projectile
         // config
         [SerializeField] int damage = 0;
 
+        // cache
+        VisualEffectHandler _visualEffectHandler;
+
+        private void Awake() 
+        {
+            _visualEffectHandler = GetComponent<VisualEffectHandler>();    
+        }
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             DealDamage(collision.gameObject.GetComponent<Health>());
             
             gameObject.SetActive(false);
+
+            _visualEffectHandler.StartVfx(collision.transform.position);
         }
 
         private void DealDamage(Health targetHealth)
