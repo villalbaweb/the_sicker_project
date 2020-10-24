@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Storm
       objectReference: {fileID: 0}
+    - target: {fileID: 4680477083523349040, guid: 62a8d7756fcacef4faf1148db1986a5c, type: 3}
+      propertyPath: shrinkSpeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62a8d7756fcacef4faf1148db1986a5c, type: 3}
 --- !u!1001 &932829366
