@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace TheSicker.Core
 {
@@ -6,6 +7,7 @@ namespace TheSicker.Core
     {
         // config
         [SerializeField] int health = 100;
+        [SerializeField] UnityEvent<Vector2> onDieEvent;
 
         public void TakeDamage(int damage)
         {
@@ -19,6 +21,8 @@ namespace TheSicker.Core
             // signal the entity dead
 
             gameObject.SetActive(false);
+
+            onDieEvent.Invoke(transform.position);
         }
     }
 }

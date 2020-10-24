@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 5564694813442821272}
   - component: {fileID: 6576423509886590836}
   - component: {fileID: 1031869226}
+  - component: {fileID: 6505622585736978610}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -255,6 +256,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
+  onDieEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6505622585736978610}
+        m_TargetAssemblyTypeName: TheSicker.Core.VisualEffectHandler, Assembly-CSharp
+        m_MethodName: StartVfx
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6576423509886590836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +302,19 @@ MonoBehaviour:
     m_Bits: 512
   crashDamagePerSecond: 10
   crashDamageSecondsRate: 2
+--- !u!114 &6505622585736978610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576423509886590863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9874747ec6c6944a32f9ec3b07a8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxPrefab: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
 --- !u!1001 &8132950260825654487
 PrefabInstance:
   m_ObjectHideFlags: 0

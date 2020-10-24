@@ -9,6 +9,8 @@ namespace TheSicker.Core
 
         public void StartVfx(Vector2 position)
         {
+            if(!vfxPrefab) return;
+
             Instantiate(vfxPrefab, position, Quaternion.identity);
         }
     }

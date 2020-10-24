@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 7964202901901516653}
   - component: {fileID: 1837201274491159755}
   - component: {fileID: 6974090696833305347}
+  - component: {fileID: 3990084144582010183}
   m_Layer: 9
   m_Name: Follow On DIstance Attacker
   m_TagString: Untagged
@@ -218,6 +219,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  onDieEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3990084144582010183}
+        m_TargetAssemblyTypeName: TheSicker.Core.VisualEffectHandler, Assembly-CSharp
+        m_MethodName: StartVfx
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6974090696833305347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +247,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 4
+--- !u!114 &3990084144582010183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501752544267082893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9874747ec6c6944a32f9ec3b07a8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxPrefab: {fileID: 1981774452263784, guid: 69bc9de1566254e4db3ef4d734a7fbcd, type: 3}
