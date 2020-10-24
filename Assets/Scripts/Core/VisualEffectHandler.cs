@@ -13,5 +13,10 @@ namespace TheSicker.Core
 
             Instantiate(vfxPrefab, position, Quaternion.identity);
         }
+
+        public void StartVfxParentposition()
+        {
+            StartVfx(transform.position);
+        }
     }
 }

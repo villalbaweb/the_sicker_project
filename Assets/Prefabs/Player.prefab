@@ -261,8 +261,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6505622585736978610}
         m_TargetAssemblyTypeName: TheSicker.Core.VisualEffectHandler, Assembly-CSharp
-        m_MethodName: StartVfx
-        m_Mode: 0
+        m_MethodName: StartVfxParentposition
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

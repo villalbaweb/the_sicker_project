@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace TheSicker.Core
@@ -7,22 +8,27 @@ namespace TheSicker.Core
     {
         // config
         [SerializeField] int health = 100;
-        [SerializeField] UnityEvent<Vector2> onDieEvent;
+        [SerializeField] UnityEvent onDieEvent;
+        [SerializeField] float timeToDisableAfterDie = 1.5f;
 
         public void TakeDamage(int damage)
         {
             health -= damage;
 
-            if(health <= Mathf.Epsilon) Die();
+            if(health <= Mathf.Epsilon) 
+            {
+               StartCoroutine(Die());
+            }
         }
 
-        private void Die()
+        private IEnumerator Die()
         {
-            // signal the entity dead
+            onDieEvent.Invoke();
+
+            yield return new WaitForSecondsRealtime(timeToDisableAfterDie);
 
             gameObject.SetActive(false);
 
-            onDieEvent.Invoke(transform.position);
         }
     }
 }
