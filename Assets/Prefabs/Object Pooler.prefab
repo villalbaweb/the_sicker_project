@@ -49,4 +49,4 @@ MonoBehaviour:
     size: 25
   - tag: PlayerProjectile
     prefab: {fileID: 8541223225210814284, guid: 138c642f927877441b588f275dd09b2c, type: 3}
-    size: 150
+    size: 8
