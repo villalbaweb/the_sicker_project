@@ -1,11 +1,15 @@
-﻿using UnityEngine;
+﻿using TheSicker.Core;
+using UnityEngine;
 
 namespace TheSicker.Projectile
 {
-    public class ProjectileSelfDestroyer : MonoBehaviour
+    public class ProjectileSelfDestroyer : MonoBehaviour, IPooledObject
     {
         // config
         [SerializeField] float destroyTime = 2;
+
+        // state
+        float instanceDestroyTime;
 
         // Update is called once per frame
         void Update()
@@ -15,12 +19,18 @@ namespace TheSicker.Projectile
 
         private void SelfDestroyAfter()
         {
-            destroyTime -= Time.deltaTime;
+            instanceDestroyTime -= Time.deltaTime;
 
-            if(destroyTime <= Mathf.Epsilon)
+            if(instanceDestroyTime <= Mathf.Epsilon)
             {
                 gameObject.SetActive(false);
             }
+        }
+
+        // execute specific action on spawn
+        public void OnObjectSpawn()
+        {
+            instanceDestroyTime = destroyTime;
         }
     }
 }
