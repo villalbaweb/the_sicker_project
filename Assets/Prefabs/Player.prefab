@@ -445,20 +445,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198552004590095300, guid: b74db332333018b499e28761076c3582, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198552004590095300, guid: b74db332333018b499e28761076c3582, type: 3}
       propertyPath: InitialModule.startSizeY.scalar
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198552004590095300, guid: b74db332333018b499e28761076c3582, type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198552004590095300, guid: b74db332333018b499e28761076c3582, type: 3}
-      propertyPath: InitialModule.startRotation.scalar
-      value: 1.5707963
       objectReference: {fileID: 0}
     - target: {fileID: 198688566291969140, guid: b74db332333018b499e28761076c3582, type: 3}
       propertyPath: InitialModule.startSize.scalar
