@@ -14,7 +14,7 @@ namespace TheSicker.Player
         [SerializeField] ParticleSystem muzzlerVFX = null;
 
         [Header("Projectile SFX")]
-        [SerializeField] AudioClip onFireSoundClip;
+        [SerializeField] AudioClip onFireSoundClip = null;
         [SerializeField] [Range(0, 1)] float fireSoundVolume = 0.5f;
 
         [Header("Target Control")]

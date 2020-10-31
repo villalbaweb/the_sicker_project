@@ -14,7 +14,7 @@ namespace TheSicker.Core
         }
 
         // config
-        [SerializeField] List<Pool> pools;
+        [SerializeField] List<Pool> pools = null;
         
         // state
         private Dictionary<string, Queue<GameObject>> poolDictionary;

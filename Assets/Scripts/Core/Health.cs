@@ -8,7 +8,7 @@ namespace TheSicker.Core
     {
         // config
         [SerializeField] int health = 100;
-        [SerializeField] UnityEvent onDieEvent;
+        [SerializeField] UnityEvent onDieEvent = null;
         [SerializeField] float timeToDisableAfterDie = 1.5f;
 
         // cache

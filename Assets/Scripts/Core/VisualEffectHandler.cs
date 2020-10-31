@@ -7,11 +7,16 @@ namespace TheSicker.Core
         // config
         [SerializeField] GameObject explosionVfxPrefab = null;
 
+        private void StartSpecificVfx(GameObject vfxPrefab, Vector2 position)
+        {
+            if (!vfxPrefab) return;
+
+            Instantiate(vfxPrefab, position, Quaternion.identity);
+        }
+
         public void ExplosionVfx(Vector2 position)
         {
-            if(!explosionVfxPrefab) return;
-
-            Instantiate(explosionVfxPrefab, position, Quaternion.identity);
+            StartSpecificVfx(explosionVfxPrefab, position);
         }
 
         public void ExplosionVFXParentPosition()
