@@ -6,6 +6,10 @@ namespace TheSicker.Player
     public class PlayerMover : MonoBehaviour
     {
         // config
+        [Header("VFX")]
+        [SerializeField] ParticleSystem engineParticleSystem = null;
+        [SerializeField] ParticleSystem speedEngineParticleSystem = null;
+
         [Header("Speed")]
         [SerializeField] float speed = 5;
         [SerializeField] int turboSpeedIncreaseTimes = 3;
@@ -38,6 +42,7 @@ namespace TheSicker.Player
         {
             ThrottleMove();
             RemainMove();
+            UpdateParticleSystems();
         }
 
         private void ThrottleMove()
@@ -65,6 +70,39 @@ namespace TheSicker.Player
                 MoveRemain(remainMovingSpeed);
                 remainMovingTimeLeft -= Time.deltaTime;
                 remainMovingSpeed -= (remainMovingSpeed * remainMovingSlowFactor * Time.deltaTime);
+            }
+        }
+
+        private void UpdateParticleSystems() 
+        {
+            if (IsMoveBtnPressed || (useAdditionalMoveKey && Input.GetKey(KeyCode.Z)))
+            {
+                if (!engineParticleSystem.isPlaying)
+                {
+                    engineParticleSystem.Play();
+                }
+
+                if (IsTurboSpeed && !speedEngineParticleSystem.isPlaying)
+                {
+                    speedEngineParticleSystem.Play();
+                }
+
+                if (!IsTurboSpeed && !speedEngineParticleSystem.isStopped)
+                {
+                    speedEngineParticleSystem.Stop();
+                }
+            }
+            else
+            {
+                if (!engineParticleSystem.isStopped)
+                {
+                    engineParticleSystem.Stop();
+                }
+
+                if (!speedEngineParticleSystem.isStopped)
+                {
+                    speedEngineParticleSystem.Stop();
+                }
             }
         }
         

@@ -210,6 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0dae2c814e389949a813309d58b5ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  engineParticleSystem: {fileID: 4509175915654213224}
+  speedEngineParticleSystem: {fileID: 4509027190622097880}
   speed: 5
   turboSpeedIncreaseTimes: 3
   turboSpeedTime: 3
@@ -317,7 +319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionVfxPrefab: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
-  trailVfxPrefab: {fileID: 0}
 --- !u!1001 &4346586790154689052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -478,6 +479,16 @@ PrefabInstance:
 --- !u!4 &4349721380411096368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4359721372903212, guid: b74db332333018b499e28761076c3582, type: 3}
+  m_PrefabInstance: {fileID: 4346586790154689052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4509175915654213224 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198688566291969140, guid: b74db332333018b499e28761076c3582, type: 3}
+  m_PrefabInstance: {fileID: 4346586790154689052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4509027190622097880 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198552004590095300, guid: b74db332333018b499e28761076c3582, type: 3}
   m_PrefabInstance: {fileID: 4346586790154689052}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8132950260825654487
