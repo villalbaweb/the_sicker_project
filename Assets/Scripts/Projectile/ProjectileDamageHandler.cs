@@ -22,7 +22,7 @@ namespace TheSicker.Projectile
             
             gameObject.SetActive(false);
 
-            _visualEffectHandler.StartVfx(transform.position);
+            _visualEffectHandler.ExplosionVfx(transform.position);
         }
 
         private void DealDamage(Health targetHealth)

@@ -5,18 +5,18 @@ namespace TheSicker.Core
     public class VisualEffectHandler : MonoBehaviour
     {
         // config
-        [SerializeField] GameObject vfxPrefab = null;
+        [SerializeField] GameObject explosionVfxPrefab = null;
 
-        public void StartVfx(Vector2 position)
+        public void ExplosionVfx(Vector2 position)
         {
-            if(!vfxPrefab) return;
+            if(!explosionVfxPrefab) return;
 
-            Instantiate(vfxPrefab, position, Quaternion.identity);
+            Instantiate(explosionVfxPrefab, position, Quaternion.identity);
         }
 
-        public void StartVfxParentposition()
+        public void ExplosionVFXParentPosition()
         {
-            StartVfx(transform.position);
+            ExplosionVfx(transform.position);
         }
     }
 }

@@ -262,7 +262,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6505622585736978610}
         m_TargetAssemblyTypeName: TheSicker.Core.VisualEffectHandler, Assembly-CSharp
-        m_MethodName: StartVfxParentposition
+        m_MethodName: ExplosionVFXParentPosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9874747ec6c6944a32f9ec3b07a8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxPrefab: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
+  explosionVfxPrefab: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
 --- !u!1001 &4346586790154689052
 PrefabInstance:
   m_ObjectHideFlags: 0
