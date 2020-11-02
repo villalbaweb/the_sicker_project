@@ -10,11 +10,13 @@ namespace TheSicker.Enemies
         [SerializeField] float chaseDistance = 4.0f;
 
         // Cache
+        Health _health;
         PlayerMarker _player;
         Follower _follower;
 
         private void Awake()
         {
+            _health = GetComponent<Health>();
             _player = FindObjectOfType<PlayerMarker>();
             _follower = GetComponent<Follower>();
             _follower.target = _player.transform;
@@ -45,7 +47,7 @@ namespace TheSicker.Enemies
         // execute specific action on spawn
         public void OnObjectSpawn()
         {
-            print($"{gameObject.name} has been pooled...");
+            _health.RestoreInitialHealth();
         }
     }
 }

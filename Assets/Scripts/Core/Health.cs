@@ -14,9 +14,13 @@ namespace TheSicker.Core
         // cache
         Rigidbody2D _rigidBody2D;
 
+        // state
+        int initialHealth;
+
         private void Awake() 
         {
-            _rigidBody2D = GetComponent<Rigidbody2D>();    
+            _rigidBody2D = GetComponent<Rigidbody2D>();
+            initialHealth = health;    
         }
 
         public void TakeDamage(int damage)
@@ -27,6 +31,11 @@ namespace TheSicker.Core
             {
                StartCoroutine(Die());
             }
+        }
+
+        public void RestoreInitialHealth()
+        {
+            health = initialHealth;
         }
 
         private IEnumerator Die()
