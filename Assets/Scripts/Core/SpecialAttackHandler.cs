@@ -1,17 +1,16 @@
-﻿using UnityEngine;
+﻿using TheSicker.Attacks;
+using UnityEngine;
 
 namespace TheSicker.Core
 {
     public class SpecialAttackHandler : MonoBehaviour
     {
-        // TODO: Add ISpecialAttack interface so it can be handled
-        // [SerializedField] ISpecialAttack specialAttack;
-        
         // config
         [SerializeField] float timeBetweenAttacks = 5f;
 
         // cache
         Animator _animator;
+        ISpecialAttack _specialAttack;
 
         // state
         float attackTimer = Mathf.Infinity;
@@ -19,6 +18,7 @@ namespace TheSicker.Core
         void Awake()
         {
             _animator = GetComponent<Animator>();
+            _specialAttack = GetComponent<ISpecialAttack>();
         }
 
         // Update is called once per frame
@@ -33,7 +33,7 @@ namespace TheSicker.Core
 
             if (attackTimer > timeBetweenAttacks)
             {
-                // specialAttack.Attack();
+                _specialAttack.Attack();
                 
                 AnimatorTriggerAttack();
 
