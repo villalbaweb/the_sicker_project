@@ -29,6 +29,7 @@ namespace TheSicker.Player
         [SerializeField] bool useAdditionalMoveKey = false;
 
         // state
+        bool isDead;
         bool IsMoveBtnPressed;
         bool IsMoveBtnReleased;
         bool IsTurboSpeed = false;
@@ -40,6 +41,8 @@ namespace TheSicker.Player
         // Update is called once per frame
         void Update()
         {
+            if(isDead) return;
+            
             ThrottleMove();
             RemainMove();
             UpdateParticleSystems();
@@ -127,6 +130,11 @@ namespace TheSicker.Player
 
             speed = originalSpeed;
             IsTurboSpeed = false;
+        }
+
+        public void OnDie()
+        {
+            isDead = true;
         }
 
         #region UI Button Related Methods
