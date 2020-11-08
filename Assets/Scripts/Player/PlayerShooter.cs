@@ -37,8 +37,6 @@ namespace TheSicker.Player
         // Update is called once per frame
         void Update()
         {
-            if (isDead) return;
-
             Fire();
         }
 
@@ -59,6 +57,8 @@ namespace TheSicker.Player
 
         private bool IsTargetFound()
         {
+            if (isDead) return false;
+
             //RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, transform.right, projectileDistance, enemyLayers);
             RaycastHit2D raycastHit = Physics2D.CircleCast(transform.position, circleRayCastRadious, transform.right, projectileDistance, enemyLayers);
 
