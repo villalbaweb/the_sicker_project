@@ -24,6 +24,7 @@ namespace TheSicker.Player
         // State
         GameObject _projectileParent;
         Coroutine _firingCoroutine;
+        bool isDead;
 
         // cache
         ObjectPooler _objectPooler;
@@ -36,6 +37,8 @@ namespace TheSicker.Player
         // Update is called once per frame
         void Update()
         {
+            if (isDead) return;
+
             Fire();
         }
 
@@ -88,6 +91,11 @@ namespace TheSicker.Player
         private void PlayShootSFX()
         {
             AudioSource.PlayClipAtPoint(onFireSoundClip, Camera.main.transform.position, fireSoundVolume);
+        }
+
+        public void OnDie()
+        {
+            isDead = true;
         }
     }
 }
