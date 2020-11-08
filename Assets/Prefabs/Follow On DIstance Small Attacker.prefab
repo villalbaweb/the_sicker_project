@@ -128,30 +128,6 @@ MonoBehaviour:
   onDieEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9024391059179822776}
-        m_TargetAssemblyTypeName: TheSicker.Core.AnimatorControllerHandler, Assembly-CSharp
-        m_MethodName: RunDieAnimation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6061016980342541746}
-        m_TargetAssemblyTypeName: TheSicker.Core.SoundEffectHandler, Assembly-CSharp
-        m_MethodName: StartSfx
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1351618561373446504}
         m_TargetAssemblyTypeName: TheSicker.Core.DieHandler, Assembly-CSharp
         m_MethodName: Die
@@ -164,7 +140,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  timeToDisableAfterDie: 0.625
 --- !u!114 &4369670543118192299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +192,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDisableAfterDie: 0.625
+  onStartDieCoroutineEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9024391059179822776}
+        m_TargetAssemblyTypeName: TheSicker.Core.AnimatorControllerHandler, Assembly-CSharp
+        m_MethodName: RunDieAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6061016980342541746}
+        m_TargetAssemblyTypeName: TheSicker.Core.SoundEffectHandler, Assembly-CSharp
+        m_MethodName: StartSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCompleteDieCoroutineEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7851036244985414995
 GameObject:
   m_ObjectHideFlags: 0
