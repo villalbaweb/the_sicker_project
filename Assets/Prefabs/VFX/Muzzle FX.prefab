@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4316597834682694}
   - component: {fileID: 198561448080344486}
   - component: {fileID: 199762154643548764}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Muzzle FX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4825,7 +4825,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4fa12924968c51a4fbf7f67f630db413, type: 2}
-  - {fileID: 2100000, guid: 4fa12924968c51a4fbf7f67f630db413, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4843,8 +4842,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 738997965
-  m_SortingLayer: 0
+  m_SortingLayerID: -1668610361
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 198924067557857112}
   - component: {fileID: 199136945796834762}
   - component: {fileID: 114993836375895772}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lazer Ray Hit Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4768,7 +4768,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 12d55130dedd36e469dd547e3a836b83, type: 2}
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4787,7 +4786,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1759472331
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
