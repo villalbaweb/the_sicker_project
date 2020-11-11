@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1668610361
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f6d9e7337b90b9e4ba6d44379335a759, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 6576423509886590833}
   - component: {fileID: 6576423509886590834}
   - component: {fileID: 6576423509886590835}
-  - component: {fileID: 6576423509886590837}
   - component: {fileID: 3104967129636527127}
   - component: {fileID: 5564694813442821272}
   - component: {fileID: 6576423509886590836}
@@ -225,19 +224,6 @@ MonoBehaviour:
   clickedTime: 0
   doubleClickDelay: 1.5
   useAdditionalMoveKey: 1
---- !u!114 &6576423509886590837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6576423509886590863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f6479e3b41e0c4c9e44b526a1213fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buffer: 1
 --- !u!114 &3104967129636527127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,9 +577,25 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 199209553638657536, guid: b74db332333018b499e28761076c3582, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1668610361
+      objectReference: {fileID: 0}
+    - target: {fileID: 199209553638657536, guid: b74db332333018b499e28761076c3582, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 199970333849512034, guid: b74db332333018b499e28761076c3582, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199970333849512034, guid: b74db332333018b499e28761076c3582, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1668610361
+      objectReference: {fileID: 0}
+    - target: {fileID: 199970333849512034, guid: b74db332333018b499e28761076c3582, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b74db332333018b499e28761076c3582, type: 3}
@@ -678,6 +680,14 @@ PrefabInstance:
     - target: {fileID: 199762154643548764, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199762154643548764, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1668610361
+      objectReference: {fileID: 0}
+    - target: {fileID: 199762154643548764, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}

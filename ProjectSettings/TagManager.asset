@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2632306365
+    locked: 0
   - name: Storm
     uniqueID: 732474789
     locked: 0
