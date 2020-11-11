@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!60 &429700097 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 429700097, guid: 293d058aaea246d4fb06fc2d45cd8a6b, type: 3}
+  m_PrefabInstance: {fileID: 327479933055411933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &932829366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -341,6 +346,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1699797536, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 429700097}
     - target: {fileID: 2163542815728084042, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -393,22 +402,6 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1551066975}
-    - target: {fileID: 2163542815788306123, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.99443626
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163542815788306123, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.159233
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163542816022937535, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.99443626
-      objectReference: {fileID: 0}
-    - target: {fileID: 2163542816022937535, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.159233
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
 --- !u!1001 &2687863318535800436
