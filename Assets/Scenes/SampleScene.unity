@@ -123,10 +123,10 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!60 &429700097 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2640086588069982682, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-  m_PrefabInstance: {fileID: 2317112454102229766}
+--- !u!1 &622104788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2163542816022937522, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
+  m_PrefabInstance: {fileID: 2163542815164454101}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &932829366
 PrefabInstance:
@@ -185,6 +185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
+--- !u!60 &1431424806 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8803724580745831751, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
+  m_PrefabInstance: {fileID: 2317112454102229766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1551066975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6576423509886590832, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
@@ -292,7 +297,7 @@ PrefabInstance:
     - target: {fileID: 1699797536, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
-      objectReference: {fileID: 429700097}
+      objectReference: {fileID: 1431424806}
     - target: {fileID: 2163542815728084042, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -354,6 +359,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1012906146, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 622104788}
+    - target: {fileID: 1833032643, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 622104788}
+    - target: {fileID: 1845233708, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 622104788}
     - target: {fileID: 2317112455548854924, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
