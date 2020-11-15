@@ -350,6 +350,14 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1551066975}
+    - target: {fileID: 2163542815788306123, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.99443626
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163542816022937535, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.99443626
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
 --- !u!1001 &2317112454102229766
@@ -359,18 +367,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1012906146, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 622104788}
-    - target: {fileID: 1833032643, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 622104788}
-    - target: {fileID: 1845233708, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 622104788}
     - target: {fileID: 2317112455548854924, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -419,6 +415,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Nebula Game Playable Area
       objectReference: {fileID: 0}
+    - target: {fileID: 2640086588703128953, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 622104788}
+    - target: {fileID: 2640086589481389559, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 622104788}
+    - target: {fileID: 2640086589492059672, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 622104788}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
 --- !u!1001 &2687863318535800436

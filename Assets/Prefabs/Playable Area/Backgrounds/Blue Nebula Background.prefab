@@ -70,6 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327479932660388572}
   - component: {fileID: 327479932660388575}
+  - component: {fileID: 1833032643}
   m_Layer: 11
   m_Name: Nebula Blue
   m_TagString: Untagged
@@ -142,6 +143,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1833032643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327479932660388573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b25f7ccaf90a1748963a9d2573ac4e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  parallaxEffect: 0.3
 --- !u!1 &327479933279196206
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327479934232606787}
   - component: {fileID: 327479934232606786}
+  - component: {fileID: 1845233708}
   m_Layer: 11
   m_Name: Stars Small_1
   m_TagString: Untagged
@@ -258,6 +274,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1845233708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327479934232606784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b25f7ccaf90a1748963a9d2573ac4e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  parallaxEffect: 0.7
 --- !u!1 &327479934238913134
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327479934238913129}
   - component: {fileID: 327479934238913128}
+  - component: {fileID: 1012906146}
   m_Layer: 11
   m_Name: Stars-Big_1
   m_TagString: Untagged
@@ -340,3 +371,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1012906146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327479934238913134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b25f7ccaf90a1748963a9d2573ac4e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  parallaxEffect: 0.5
