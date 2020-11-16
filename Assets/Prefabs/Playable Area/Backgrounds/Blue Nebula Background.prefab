@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  parallaxEffect: 0.3
+  parallaxEffect: 0.1
 --- !u!1 &327479933279196206
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  parallaxEffect: 0.7
+  parallaxEffect: 0.5
 --- !u!1 &327479934238913134
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  parallaxEffect: 0.5
+  parallaxEffect: 0.3
 --- !u!1 &7614299549339004056
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9018532807115348721}
   - component: {fileID: 8728104891826743031}
+  - component: {fileID: 6826543551343510825}
   m_Layer: 0
   m_Name: cyan-planet
   m_TagString: Untagged
@@ -411,7 +412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7614299549339004056}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.5, y: 32.1, z: 0}
+  m_LocalPosition: {x: 36.87, y: 37.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 327479933279196201}
@@ -468,3 +469,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6826543551343510825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7614299549339004056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d99e331769638245bf4113cebdd1151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
+  direction: {x: -1, y: -1, z: 0}

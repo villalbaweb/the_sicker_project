@@ -39,18 +39,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2317112455548854924}
     m_Modifications:
-    - target: {fileID: 1012906146, guid: 293d058aaea246d4fb06fc2d45cd8a6b, type: 3}
-      propertyPath: parallaxEffect
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1833032643, guid: 293d058aaea246d4fb06fc2d45cd8a6b, type: 3}
-      propertyPath: parallaxEffect
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845233708, guid: 293d058aaea246d4fb06fc2d45cd8a6b, type: 3}
-      propertyPath: parallaxEffect
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 327479933279196201, guid: 293d058aaea246d4fb06fc2d45cd8a6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

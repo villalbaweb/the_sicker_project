@@ -367,14 +367,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 551698825823712007, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 622104788}
-    - target: {fileID: 551698825823712007, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-      propertyPath: parallaxEffect
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 2317112455548854924, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
