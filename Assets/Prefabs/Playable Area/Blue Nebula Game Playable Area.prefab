@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Nebula Background
       objectReference: {fileID: 0}
+    - target: {fileID: 8836234694653027659, guid: 293d058aaea246d4fb06fc2d45cd8a6b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 293d058aaea246d4fb06fc2d45cd8a6b, type: 3}
 --- !u!4 &2317112454273782258 stripped
