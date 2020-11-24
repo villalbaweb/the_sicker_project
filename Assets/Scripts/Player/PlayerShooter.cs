@@ -11,8 +11,6 @@ namespace TheSicker.Player
         [Header("Weapon Selected")]
         [SerializeField] Weapon selectedWeapon;
 
-        [SerializeField] ParticleSystem muzzlerVFX = null;  // TODO: Take reference from Weapon instead
-
         [Header("Target Control")]
         [SerializeField] LayerMask enemyLayers = new LayerMask();
         [SerializeField] float circleRayCastRadious = 0.5f;
@@ -27,7 +25,8 @@ namespace TheSicker.Player
 
         private void Awake() 
         {
-            _objectPooler = FindObjectOfType<ObjectPooler>();    
+            _objectPooler = FindObjectOfType<ObjectPooler>();
+            selectedWeapon?.SetupWeapon(transform);    
         }
 
         // Update is called once per frame
@@ -40,12 +39,12 @@ namespace TheSicker.Player
         {
             if (IsTargetFound())
             {
-                muzzlerVFX.Play();
+                selectedWeapon?.MuzzlerVFX?.Play();
                 _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : StartCoroutine(Firing());
             }
             else if (_firingCoroutine != null)
             {
-                muzzlerVFX.Stop();
+                selectedWeapon?.MuzzlerVFX?.Stop();
                 StopCoroutine(_firingCoroutine);
                 _firingCoroutine = null;
             }
@@ -55,7 +54,6 @@ namespace TheSicker.Player
         {
             if (isDead) return false;
 
-            //RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, transform.right, projectileDistance, enemyLayers);
             RaycastHit2D raycastHit = Physics2D.CircleCast(transform.position, circleRayCastRadious, transform.right, selectedWeapon.ProjectileDistance, enemyLayers);
 
             return raycastHit.collider != null && IsInLayerMask(raycastHit.collider.gameObject.layer, enemyLayers);
