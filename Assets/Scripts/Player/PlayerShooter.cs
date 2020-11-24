@@ -8,14 +8,10 @@ namespace TheSicker.Player
     public class PlayerShooter : MonoBehaviour
     {
         // config
-        [Header("Projectile Control")]
-        [SerializeField] float projectileFiringPeriod = 0.1f;
-        [SerializeField] float projectileDistance = 20f;
-        [SerializeField] ParticleSystem muzzlerVFX = null;
+        [Header("Weapon Selected")]
+        [SerializeField] Weapon selectedWeapon;
 
-        [Header("Projectile SFX")]
-        [SerializeField] AudioClip onFireSoundClip = null;
-        [SerializeField] [Range(0, 1)] float fireSoundVolume = 0.5f;
+        [SerializeField] ParticleSystem muzzlerVFX = null;  // TODO: Take reference from Weapon instead
 
         [Header("Target Control")]
         [SerializeField] LayerMask enemyLayers = new LayerMask();
@@ -60,7 +56,7 @@ namespace TheSicker.Player
             if (isDead) return false;
 
             //RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, transform.right, projectileDistance, enemyLayers);
-            RaycastHit2D raycastHit = Physics2D.CircleCast(transform.position, circleRayCastRadious, transform.right, projectileDistance, enemyLayers);
+            RaycastHit2D raycastHit = Physics2D.CircleCast(transform.position, circleRayCastRadious, transform.right, selectedWeapon.ProjectileDistance, enemyLayers);
 
             return raycastHit.collider != null && IsInLayerMask(raycastHit.collider.gameObject.layer, enemyLayers);
         }
@@ -77,20 +73,20 @@ namespace TheSicker.Player
                 PlayShootSFX();
                 Shoot();
 
-                yield return new WaitForSeconds(projectileFiringPeriod);
+                yield return new WaitForSeconds(selectedWeapon.ProjectileFiringPeriod);
             }
         }
 
         private void Shoot()
         {
-            GameObject projectileGameObject = _objectPooler.SpawnFromPool("PlayerProjectile", transform.position, Quaternion.identity);
+            GameObject projectileGameObject = _objectPooler.SpawnFromPool(selectedWeapon.Projectile, transform.position, Quaternion.identity);
             ProjectileMovement projectileInstance = projectileGameObject.GetComponent<ProjectileMovement>();
             projectileInstance.SetRotation(transform.rotation);
         }
 
         private void PlayShootSFX()
         {
-            AudioSource.PlayClipAtPoint(onFireSoundClip, Camera.main.transform.position, fireSoundVolume);
+            AudioSource.PlayClipAtPoint(selectedWeapon.OnFireSoundClip, Camera.main.transform.position, selectedWeapon.FireSoundVolume);
         }
 
         public void OnDie()

@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7208467dca15b334cad1d08b23cbe524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedWeapon: {fileID: 11400000, guid: cbe6ae86e0116ac42b45a35bffe271c3, type: 2}
   projectileFiringPeriod: 0.1
   projectileDistance: 20
   muzzlerVFX: {fileID: 8223403293242917233}
