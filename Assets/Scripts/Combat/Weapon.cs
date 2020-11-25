@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TheSicker.Core;
+using UnityEngine;
 
 namespace TheSicker.Projectile
 {
@@ -7,7 +8,7 @@ namespace TheSicker.Projectile
     {
         // config
         [Header("Object Pool")]
-        [SerializeField] string projectile;
+        [SerializeField] ObjectPoolIds projectile;
 
         [Header("Control")]
         [SerializeField] float projectileFiringPeriod = 0.1f;
@@ -25,7 +26,7 @@ namespace TheSicker.Projectile
         ParticleSystem muzzleParticleSystem;
 
         // properties
-        public string Projectile => projectile;
+        public string Projectile => projectile.ToString();
         public float ProjectileFiringPeriod => projectileFiringPeriod;
         public float ProjectileDistance => projectileDistance;
         public ParticleSystem MuzzlerVFX => muzzleParticleSystem;

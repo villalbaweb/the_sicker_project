@@ -8,7 +8,7 @@ namespace TheSicker.Core
         [System.Serializable]
         public class Pool
         {
-            public string tag;
+            public ObjectPoolIds tag;
             public GameObject prefab;
             public int size;
         }
@@ -31,7 +31,7 @@ namespace TheSicker.Core
 
             foreach(Pool pool in pools)
             {
-                GameObject objectPoolDivision = CreateCustomObjectPoolParent(pool.tag);
+                GameObject objectPoolDivision = CreateCustomObjectPoolParent(pool.tag.ToString());
                 objectPoolDivision.transform.parent = _objectsPoolParent.transform;
                 
                 Queue<GameObject> objectPool = new Queue<GameObject>();
@@ -44,7 +44,7 @@ namespace TheSicker.Core
                     objectPool.Enqueue(obj);
                 }
 
-                poolDictionary.Add(pool.tag, objectPool);
+                poolDictionary.Add(pool.tag.ToString(), objectPool);
             }
         }
     

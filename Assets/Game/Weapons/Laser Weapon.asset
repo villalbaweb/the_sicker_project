@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cacb96ee6676e4197ada21cb2a1bc2, type: 3}
   m_Name: Laser Weapon
   m_EditorClassIdentifier: 
-  projectile: PlayerProjectile
+  projectile: 1
   projectileFiringPeriod: 0.1
   projectileDistance: 20
   muzzlerParticleSystemPrefab: {fileID: 198561448080344486, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}

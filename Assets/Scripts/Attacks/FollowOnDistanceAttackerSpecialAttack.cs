@@ -16,7 +16,7 @@ namespace TheSicker.Attacks
         // This is the Attack implementation
         public void Attack()
         {
-            _objectPooler.SpawnFromPool("FollowOnDistanceSmallAttacker", gameObject.transform.position, Quaternion.identity);
+            _objectPooler.SpawnFromPool(ObjectPoolIds.FollowOnDistanceSmallAttacker.ToString(), gameObject.transform.position, Quaternion.identity);
         }
     }
 }
