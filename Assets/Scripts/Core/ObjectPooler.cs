@@ -53,6 +53,13 @@ namespace TheSicker.Core
             if(!poolDictionary.ContainsKey(tag)) return null;
 
             GameObject objectToSpawn = poolDictionary[tag].Dequeue();
+
+            if(objectToSpawn.activeSelf)
+            {
+                poolDictionary[tag].Enqueue(objectToSpawn);
+                return null;
+            }
+
             objectToSpawn.SetActive(true);
             objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
