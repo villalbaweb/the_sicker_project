@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1557253329531483398}
   m_Layer: 12
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: Playable Area Delimiter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 1557253329771555043}
   m_Layer: 12
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: Playable Area Delimiter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 1557253330046508878}
   m_Layer: 12
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Playable Area Delimiter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 1557253330180942825}
   m_Layer: 12
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Playable Area Delimiter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 1557253331116986811}
   m_Layer: 12
   m_Name: Delimiters
-  m_TagString: Untagged
+  m_TagString: Playable Area Delimiter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
