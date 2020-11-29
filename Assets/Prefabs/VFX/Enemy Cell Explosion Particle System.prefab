@@ -4915,7 +4915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8515ff1b32ecb498437becf714b57d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destructionTime: 3
+  destructionTime: 4
 --- !u!1 &6107377662766219861
 GameObject:
   m_ObjectHideFlags: 0
@@ -5031,7 +5031,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
+      scalar: 4
       minScalar: 0.5
       maxCurve:
         serializedVersion: 2
@@ -5200,8 +5200,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
-      minScalar: 0.01
+      scalar: 0.25
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
