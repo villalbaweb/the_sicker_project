@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 1148747014261681664}
   - component: {fileID: 8607404590703842589}
   - component: {fileID: -8782166883816765356}
+  - component: {fileID: 4205084049151588961}
   m_Layer: 10
   m_Name: Projectile
   m_TagString: Untagged
@@ -186,3 +187,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionVfxPrefab: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
+--- !u!114 &4205084049151588961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541223225210814284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf25660e5d1f7847ae57850564fbcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

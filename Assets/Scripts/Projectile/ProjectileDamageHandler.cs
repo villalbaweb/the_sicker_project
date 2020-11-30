@@ -20,8 +20,6 @@ namespace TheSicker.Projectile
         {
             DealDamage(collision.gameObject.GetComponent<Health>());
             
-            gameObject.SetActive(false);
-
             _visualEffectHandler.ExplosionVfx(transform.position);
         }
 
