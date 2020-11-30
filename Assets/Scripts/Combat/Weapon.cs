@@ -9,6 +9,7 @@ namespace TheSicker.Projectile
     {
         // config
         [Header("Object Pool")]
+        [SerializeField] bool isProjectileBased = true;
         [SerializeField] ObjectPoolIds projectile;
 
         [Header("Control")]
@@ -54,6 +55,22 @@ namespace TheSicker.Projectile
 
         public IEnumerator Fire(Transform sourceTransform)
         {
+            if(isProjectileBased) 
+            {
+                return FireProjectile(sourceTransform);
+            }
+            else
+            {
+                return FireCustom(sourceTransform);
+            }
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private IEnumerator FireProjectile(Transform sourceTransform)
+        {
             while (true)
             {
                 PlayShootSFX();
@@ -63,9 +80,11 @@ namespace TheSicker.Projectile
             }
         }
 
-        #endregion
-
-        #region Private Methods
+        // TODO: proper implementation for new custom weapons!!!
+        private IEnumerator FireCustom(Transform sourceTransform)
+        {
+            yield return null;
+        }
 
         private void ShootProjectile(Transform sourceTransform)
         {
