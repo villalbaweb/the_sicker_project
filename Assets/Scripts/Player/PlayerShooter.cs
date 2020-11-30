@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using TheSicker.Core;
+﻿using TheSicker.Core;
 using TheSicker.Projectile;
 using UnityEngine;
 
@@ -26,7 +25,7 @@ namespace TheSicker.Player
         private void Awake() 
         {
             _objectPooler = FindObjectOfType<ObjectPooler>();
-            selectedWeapon?.SetupWeapon(transform);    
+            selectedWeapon?.SetupWeapon(transform, _objectPooler);    
         }
 
         // Update is called once per frame
@@ -40,7 +39,7 @@ namespace TheSicker.Player
             if (IsTargetFound())
             {
                 selectedWeapon?.MuzzlerVFX?.Play();
-                _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : StartCoroutine(Firing());
+                _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : StartCoroutine(selectedWeapon.Fire(transform));
             }
             else if (_firingCoroutine != null)
             {
@@ -62,29 +61,6 @@ namespace TheSicker.Player
         private bool IsInLayerMask(int layer, LayerMask layermask)
         {
             return layermask == (layermask | (1 << layer));
-        }
-
-        private IEnumerator Firing()
-        {
-            while(true)
-            {
-                PlayShootSFX();
-                Shoot();
-
-                yield return new WaitForSeconds(selectedWeapon.ProjectileFiringPeriod);
-            }
-        }
-
-        private void Shoot()
-        {
-            GameObject projectileGameObject = _objectPooler.SpawnFromPool(selectedWeapon.Projectile, transform.position, Quaternion.identity);
-            ProjectileMovement projectileInstance = projectileGameObject.GetComponent<ProjectileMovement>();
-            projectileInstance.SetRotation(transform.rotation);
-        }
-
-        private void PlayShootSFX()
-        {
-            AudioSource.PlayClipAtPoint(selectedWeapon.OnFireSoundClip, Camera.main.transform.position, selectedWeapon.FireSoundVolume);
         }
 
         public void OnDie()

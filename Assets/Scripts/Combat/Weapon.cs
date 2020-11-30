@@ -1,4 +1,5 @@
-﻿using TheSicker.Core;
+﻿using System.Collections;
+using TheSicker.Core;
 using UnityEngine;
 
 namespace TheSicker.Projectile
@@ -33,10 +34,16 @@ namespace TheSicker.Projectile
         public AudioClip OnFireSoundClip => onFireSoundClip;
         public float FireSoundVolume => fireSoundVolume;
 
+        // cache
+        ObjectPooler _objectPooler;
 
-        public void SetupWeapon(Transform gunPosition)
+        #region Public Methods
+
+        public void SetupWeapon(Transform gunPosition, ObjectPooler objectPooler)
         {
-            DestroyOldWepon(gunPosition);
+            _objectPooler = objectPooler;
+
+            DestroyOldWeapon(gunPosition);
 
             if(muzzlerParticleSystemPrefab)
             {
@@ -45,7 +52,34 @@ namespace TheSicker.Projectile
             }
         }
 
-        private void DestroyOldWepon(Transform gunPosition)
+        public IEnumerator Fire(Transform sourceTransform)
+        {
+            while (true)
+            {
+                PlayShootSFX();
+                ShootProjectile(sourceTransform);
+
+                yield return new WaitForSeconds(projectileFiringPeriod);
+            }
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void ShootProjectile(Transform sourceTransform)
+        {
+            GameObject projectileGameObject = _objectPooler.SpawnFromPool(Projectile, sourceTransform.position, Quaternion.identity);
+            ProjectileMovement projectileInstance = projectileGameObject.GetComponent<ProjectileMovement>();
+            projectileInstance.SetRotation(sourceTransform.rotation);
+        }
+
+        private void PlayShootSFX()
+        {
+            AudioSource.PlayClipAtPoint(onFireSoundClip, Camera.main.transform.position, fireSoundVolume);
+        }
+
+        private void DestroyOldWeapon(Transform gunPosition)
         {
             Transform oldWeapon = gunPosition.Find(WEAPON_NAME);
             if (oldWeapon)
@@ -53,5 +87,7 @@ namespace TheSicker.Projectile
                 Destroy(oldWeapon.gameObject);
             }
         }
+
+        #endregion
     }
 }
