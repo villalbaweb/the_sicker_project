@@ -36,14 +36,16 @@ namespace TheSicker.Player
 
         private void Fire()
         {
+            if(!selectedWeapon) return;
+
             if (IsTargetFound())
             {
-                selectedWeapon?.MuzzlerVFX?.Play();
+                selectedWeapon.MuzzlerVFX?.Play();
                 _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : StartCoroutine(selectedWeapon.Fire(transform));
             }
             else if (_firingCoroutine != null)
             {
-                selectedWeapon?.MuzzlerVFX?.Stop();
+                selectedWeapon.MuzzlerVFX?.Stop();
                 StopCoroutine(_firingCoroutine);
                 _firingCoroutine = null;
             }
