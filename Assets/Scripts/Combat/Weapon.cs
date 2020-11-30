@@ -34,6 +34,7 @@ namespace TheSicker.Projectile
         public ParticleSystem MuzzlerVFX => muzzleParticleSystem;
         public AudioClip OnFireSoundClip => onFireSoundClip;
         public float FireSoundVolume => fireSoundVolume;
+        public bool IsProjectileBased => isProjectileBased;
 
         // cache
         ObjectPooler _objectPooler;
@@ -55,22 +56,6 @@ namespace TheSicker.Projectile
 
         public IEnumerator Fire(Transform sourceTransform)
         {
-            if(isProjectileBased) 
-            {
-                return FireProjectile(sourceTransform);
-            }
-            else
-            {
-                return FireCustom(sourceTransform);
-            }
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        private IEnumerator FireProjectile(Transform sourceTransform)
-        {
             while (true)
             {
                 PlayShootSFX();
@@ -80,11 +65,9 @@ namespace TheSicker.Projectile
             }
         }
 
-        // TODO: proper implementation for new custom weapons!!!
-        private IEnumerator FireCustom(Transform sourceTransform)
-        {
-            yield return null;
-        }
+        #endregion
+
+        #region Private Methods
 
         private void ShootProjectile(Transform sourceTransform)
         {
