@@ -15,8 +15,6 @@ namespace TheSicker.Player
         [SerializeField] float circleRayCastRadious = 0.5f;
 
         // State
-        GameObject _projectileParent;
-        Coroutine _firingCoroutine;
         bool isDead;
         bool isCustomFiring;
 
@@ -26,7 +24,7 @@ namespace TheSicker.Player
         private void Awake() 
         {
             _objectPooler = FindObjectOfType<ObjectPooler>();
-            selectedWeapon?.SetupWeapon(transform, _objectPooler);    
+            selectedWeapon?.SetupWeapon(transform, _objectPooler, this);    
         }
 
         // Update is called once per frame
@@ -41,11 +39,11 @@ namespace TheSicker.Player
 
             if (IsTargetFound())
             {
-                StartFiring();
+                selectedWeapon.StartFiring();
             }
             else
             {
-                StopFiring();
+                selectedWeapon.StopFiring();
             }
         }
 
@@ -61,35 +59,6 @@ namespace TheSicker.Player
         private bool IsInLayerMask(int layer, LayerMask layermask)
         {
             return layermask == (layermask | (1 << layer));
-        }
-
-        private void StartFiring()
-        {
-            if(selectedWeapon.IsProjectileBased)
-            {
-                selectedWeapon.MuzzlerVFX?.Play();
-                _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : StartCoroutine(selectedWeapon.Fire(transform));
-            }
-            else if(!isCustomFiring)
-            {
-                isCustomFiring = true;
-                selectedWeapon.StartCustomFire();
-            }
-        }
-
-        private void StopFiring()
-        {
-            if (selectedWeapon.IsProjectileBased && _firingCoroutine != null)
-            {
-                selectedWeapon.MuzzlerVFX?.Stop();
-                StopCoroutine(_firingCoroutine);
-                _firingCoroutine = null;
-            }
-            else if (isCustomFiring)
-            {
-                isCustomFiring = false;
-                selectedWeapon.StopCustomFire();
-            }
         }
 
         // called from Unity Event

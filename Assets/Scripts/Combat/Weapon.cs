@@ -28,22 +28,22 @@ namespace TheSicker.Projectile
         ParticleSystem muzzleParticleSystem;
 
         // properties
-        public string Projectile => projectile.ToString();
-        public float ProjectileFiringPeriod => projectileFiringPeriod;
         public float ProjectileDistance => projectileDistance;
-        public ParticleSystem MuzzlerVFX => muzzleParticleSystem;
-        public AudioClip OnFireSoundClip => onFireSoundClip;
-        public float FireSoundVolume => fireSoundVolume;
-        public bool IsProjectileBased => isProjectileBased;
 
         // cache
         ObjectPooler _objectPooler;
+        MonoBehaviour _weaponHoldingCharacter;
+
+        // state
+        bool isCustomFiring;
+        Coroutine _firingCoroutine;
 
         #region Public Methods
 
-        public void SetupWeapon(Transform gunPosition, ObjectPooler objectPooler)
+        public void SetupWeapon(Transform gunPosition, ObjectPooler objectPooler, MonoBehaviour weaponHoldingCharacter)
         {
             _objectPooler = objectPooler;
+            _weaponHoldingCharacter = weaponHoldingCharacter;
 
             DestroyOldWeapon(gunPosition);
 
@@ -54,37 +54,65 @@ namespace TheSicker.Projectile
             }
         }
 
-        public IEnumerator Fire(Transform sourceTransform)
+        public void StartFiring()
         {
-            while (true)
+            if (isProjectileBased)
             {
-                PlayShootSFX();
-                ShootProjectile(sourceTransform);
-
-                yield return new WaitForSeconds(projectileFiringPeriod);
+                muzzleParticleSystem?.Play();
+                _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : _weaponHoldingCharacter.StartCoroutine(Fire());
+            }
+            else if (!isCustomFiring)
+            {
+                isCustomFiring = true;
+                StartCustomFire();
             }
         }
 
-        public void StartCustomFire()
+        public void StopFiring()
         {
-            Debug.Log("Start Custom Fire...");
-        }
-
-        public void StopCustomFire()
-        {
-            Debug.Log("Stop Custom Fire...");
-
+            if (isProjectileBased && _firingCoroutine != null)
+            {
+                muzzleParticleSystem?.Stop();
+                _weaponHoldingCharacter.StopCoroutine(_firingCoroutine);
+                _firingCoroutine = null;
+            }
+            else if (isCustomFiring)
+            {
+                isCustomFiring = false;
+                StopCustomFire();
+            }
         }
 
         #endregion
 
         #region Private Methods
 
-        private void ShootProjectile(Transform sourceTransform)
+        private IEnumerator Fire()
         {
-            GameObject projectileGameObject = _objectPooler.SpawnFromPool(Projectile, sourceTransform.position, Quaternion.identity);
-            ProjectileMovement projectileInstance = projectileGameObject.GetComponent<ProjectileMovement>();
-            projectileInstance.SetRotation(sourceTransform.rotation);
+            while (true)
+            {
+                PlayShootSFX();
+                ShootProjectile();
+
+                yield return new WaitForSeconds(projectileFiringPeriod);
+            }
+        }
+
+        private void StartCustomFire()
+        {
+            Debug.Log("Start Custom Fire...");
+        }
+
+        private void StopCustomFire()
+        {
+            Debug.Log("Stop Custom Fire...");
+        }
+
+        private void ShootProjectile()
+        {
+            GameObject projectileGameObject = _objectPooler.SpawnFromPool(projectile.ToString(), _weaponHoldingCharacter.transform.position, Quaternion.identity);
+            ProjectileMovement projectileInstance = projectileGameObject?.GetComponent<ProjectileMovement>();
+            projectileInstance?.SetRotation(_weaponHoldingCharacter.transform.rotation);
         }
 
         private void PlayShootSFX()
