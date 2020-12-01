@@ -65,6 +65,17 @@ namespace TheSicker.Projectile
             }
         }
 
+        public void StartCustomFire()
+        {
+            Debug.Log("Start Custom Fire...");
+        }
+
+        public void StopCustomFire()
+        {
+            Debug.Log("Stop Custom Fire...");
+
+        }
+
         #endregion
 
         #region Private Methods

@@ -18,6 +18,7 @@ namespace TheSicker.Player
         GameObject _projectileParent;
         Coroutine _firingCoroutine;
         bool isDead;
+        bool isCustomFiring;
 
         // cache
         ObjectPooler _objectPooler;
@@ -40,14 +41,11 @@ namespace TheSicker.Player
 
             if (IsTargetFound())
             {
-                selectedWeapon.MuzzlerVFX?.Play();
-                _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : StartCoroutine(selectedWeapon.Fire(transform));
+                StartFiring();
             }
-            else if (_firingCoroutine != null)
+            else
             {
-                selectedWeapon.MuzzlerVFX?.Stop();
-                StopCoroutine(_firingCoroutine);
-                _firingCoroutine = null;
+                StopFiring();
             }
         }
 
@@ -65,6 +63,36 @@ namespace TheSicker.Player
             return layermask == (layermask | (1 << layer));
         }
 
+        private void StartFiring()
+        {
+            if(selectedWeapon.IsProjectileBased)
+            {
+                selectedWeapon.MuzzlerVFX?.Play();
+                _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : StartCoroutine(selectedWeapon.Fire(transform));
+            }
+            else if(!isCustomFiring)
+            {
+                isCustomFiring = true;
+                selectedWeapon.StartCustomFire();
+            }
+        }
+
+        private void StopFiring()
+        {
+            if (selectedWeapon.IsProjectileBased && _firingCoroutine != null)
+            {
+                selectedWeapon.MuzzlerVFX?.Stop();
+                StopCoroutine(_firingCoroutine);
+                _firingCoroutine = null;
+            }
+            else if (isCustomFiring)
+            {
+                isCustomFiring = false;
+                selectedWeapon.StopCustomFire();
+            }
+        }
+
+        // called from Unity Event
         public void OnDie()
         {
             isDead = true;
