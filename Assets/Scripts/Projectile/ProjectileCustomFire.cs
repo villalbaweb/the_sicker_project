@@ -35,26 +35,5 @@ namespace TheSicker.Projectile
         }
 
         #endregion
-
-        #region Private Methods
-
-        private void ParticleSystemsPlay(bool play)
-        {
-            foreach (ParticleSystem particleSystem in particleSystems)
-            {
-                hasToPlay = play && !particleSystem.isPlaying ? true : false;
-
-                if (hasToPlay)
-                {
-                    particleSystem.Play();
-                }
-                else
-                {
-                    particleSystem.Stop();
-                }
-            }
-        }
-
-        #endregion
     }
 }
