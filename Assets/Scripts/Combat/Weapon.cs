@@ -110,6 +110,7 @@ namespace TheSicker.Projectile
 
         private void StartCustomFire()
         {
+            PlayShootSFX();
             projectileCustomFire?.FireStart();
         }
 

@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6576423509886590834, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
+      propertyPath: selectedWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 08818815b4ad92a41a854e0f0dd84722, type: 2}
     - target: {fileID: 6576423509886590863, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -360,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163542816022937535, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.287755
+      value: -9.107785
       objectReference: {fileID: 0}
     - target: {fileID: 2163542816022937535, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
       propertyPath: m_LocalPosition.y
