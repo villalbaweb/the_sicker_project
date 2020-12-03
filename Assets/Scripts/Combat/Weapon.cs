@@ -12,6 +12,9 @@ namespace TheSicker.Projectile
         [SerializeField] bool isProjectileBased = true;
         [SerializeField] ObjectPoolIds projectile;
 
+        [Header("Custom Fire")]
+        [SerializeField] ProjectileCustomFire projectileCustomFirePrefab = null;
+
         [Header("Control")]
         [SerializeField] float projectileFiringPeriod = 0.1f;
         [SerializeField] float projectileDistance = 20f;
@@ -26,6 +29,7 @@ namespace TheSicker.Projectile
         // state
         const string WEAPON_NAME = "Weapon";
         ParticleSystem muzzleParticleSystem;
+        ProjectileCustomFire projectileCustomFire;
 
         // properties
         public float ProjectileDistance => projectileDistance;
@@ -51,6 +55,12 @@ namespace TheSicker.Projectile
             {
                 muzzleParticleSystem = Instantiate(muzzlerParticleSystemPrefab, gunPosition);
                 muzzleParticleSystem.gameObject.name = WEAPON_NAME;
+            }
+
+            if(projectileCustomFirePrefab)
+            {
+                projectileCustomFire = Instantiate(projectileCustomFirePrefab, gunPosition);
+                projectileCustomFire.gameObject.name = WEAPON_NAME;
             }
         }
 
@@ -100,12 +110,12 @@ namespace TheSicker.Projectile
 
         private void StartCustomFire()
         {
-            Debug.Log("Start Custom Fire...");
+            projectileCustomFire?.FireStart();
         }
 
         private void StopCustomFire()
         {
-            Debug.Log("Stop Custom Fire...");
+            projectileCustomFire?.FireStop();
         }
 
         private void ShootProjectile()
