@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4792296990418494}
   - component: {fileID: 198464213672787702}
   - component: {fileID: 199039018961966016}
+  - component: {fileID: -3932856334301910503}
   m_Layer: 10
   m_Name: Electricity
   m_TagString: Untagged
@@ -4876,3 +4877,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &-3932856334301910503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344457166417818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8779022f550a7bd41a47d991ce0cd1ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystemDamage: 1000
