@@ -9,6 +9,7 @@ namespace TheSicker.Player
         // config
         [Header("Weapon Selected")]
         [SerializeField] Weapon selectedWeapon;
+        [SerializeField] Transform weaponPos;
 
         [Header("Target Control")]
         [SerializeField] LayerMask enemyLayers = new LayerMask();
@@ -24,7 +25,7 @@ namespace TheSicker.Player
         private void Awake() 
         {
             _objectPooler = FindObjectOfType<ObjectPooler>();
-            selectedWeapon?.SetupWeapon(transform, _objectPooler, this);    
+            selectedWeapon?.SetupWeapon(weaponPos ?? transform, _objectPooler, this);    
         }
 
         // Update is called once per frame

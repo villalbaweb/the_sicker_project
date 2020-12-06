@@ -28,6 +28,7 @@ namespace TheSicker.Projectile
 
         // state
         const string WEAPON_NAME = "Weapon";
+        const string MUZZLER_NAME = "Muzzler";
         ParticleSystem muzzleParticleSystem;
         ProjectileCustomFire projectileCustomFire;
 
@@ -54,7 +55,7 @@ namespace TheSicker.Projectile
             if(muzzlerParticleSystemPrefab)
             {
                 muzzleParticleSystem = Instantiate(muzzlerParticleSystemPrefab, gunPosition);
-                muzzleParticleSystem.gameObject.name = WEAPON_NAME;
+                muzzleParticleSystem.gameObject.name = MUZZLER_NAME;
             }
 
             if(projectileCustomFirePrefab)
@@ -137,6 +138,12 @@ namespace TheSicker.Projectile
             if (oldWeapon)
             {
                 Destroy(oldWeapon.gameObject);
+            }
+
+            Transform oldMuzzler = gunPosition.Find(MUZZLER_NAME);
+            if (oldMuzzler)
+            {
+                Destroy(oldMuzzler.gameObject);
             }
         }
 
