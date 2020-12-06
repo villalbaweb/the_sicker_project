@@ -38,6 +38,7 @@ namespace TheSicker.Projectile
         // cache
         ObjectPooler _objectPooler;
         MonoBehaviour _weaponHoldingCharacter;
+        Transform _weaponTransform;
 
         // state
         bool isCustomFiring;
@@ -49,18 +50,19 @@ namespace TheSicker.Projectile
         {
             _objectPooler = objectPooler;
             _weaponHoldingCharacter = weaponHoldingCharacter;
+            _weaponTransform = gunPosition;
 
-            DestroyOldWeapon(gunPosition);
+            DestroyOldWeapon();
 
             if(muzzlerParticleSystemPrefab)
             {
-                muzzleParticleSystem = Instantiate(muzzlerParticleSystemPrefab, gunPosition);
+                muzzleParticleSystem = Instantiate(muzzlerParticleSystemPrefab, _weaponTransform);
                 muzzleParticleSystem.gameObject.name = MUZZLER_NAME;
             }
 
             if(projectileCustomFirePrefab)
             {
-                projectileCustomFire = Instantiate(projectileCustomFirePrefab, gunPosition);
+                projectileCustomFire = Instantiate(projectileCustomFirePrefab, _weaponTransform);
                 projectileCustomFire.gameObject.name = WEAPON_NAME;
             }
         }
@@ -122,9 +124,9 @@ namespace TheSicker.Projectile
 
         private void ShootProjectile()
         {
-            GameObject projectileGameObject = _objectPooler.SpawnFromPool(projectile.ToString(), _weaponHoldingCharacter.transform.position, Quaternion.identity);
+            GameObject projectileGameObject = _objectPooler.SpawnFromPool(projectile.ToString(), _weaponTransform.position, Quaternion.identity);
             ProjectileMovement projectileInstance = projectileGameObject?.GetComponent<ProjectileMovement>();
-            projectileInstance?.SetRotation(_weaponHoldingCharacter.transform.rotation);
+            projectileInstance?.SetRotation(_weaponTransform.rotation);
         }
 
         private void PlayShootSFX()
@@ -132,15 +134,15 @@ namespace TheSicker.Projectile
             AudioSource.PlayClipAtPoint(onFireSoundClip, Camera.main.transform.position, fireSoundVolume);
         }
 
-        private void DestroyOldWeapon(Transform gunPosition)
+        private void DestroyOldWeapon()
         {
-            Transform oldWeapon = gunPosition.Find(WEAPON_NAME);
+            Transform oldWeapon = _weaponTransform?.Find(WEAPON_NAME);
             if (oldWeapon)
             {
                 Destroy(oldWeapon.gameObject);
             }
 
-            Transform oldMuzzler = gunPosition.Find(MUZZLER_NAME);
+            Transform oldMuzzler = _weaponTransform?.Find(MUZZLER_NAME);
             if (oldMuzzler)
             {
                 Destroy(oldMuzzler.gameObject);
