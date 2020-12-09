@@ -69,9 +69,10 @@ namespace TheSicker.Projectile
 
         public void StartFiring()
         {
+            muzzleParticleSystem?.Play();
+
             if (isProjectileBased)
             {
-                muzzleParticleSystem?.Play();
                 _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : _weaponHoldingCharacter.StartCoroutine(Fire());
             }
             else if (!isCustomFiring)
@@ -83,9 +84,10 @@ namespace TheSicker.Projectile
 
         public void StopFiring()
         {
+            muzzleParticleSystem?.Stop();
+            
             if (isProjectileBased && _firingCoroutine != null)
             {
-                muzzleParticleSystem?.Stop();
                 _weaponHoldingCharacter.StopCoroutine(_firingCoroutine);
                 _firingCoroutine = null;
             }
