@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2097696299090926783}
   - component: {fileID: 2097696299090926776}
   m_Layer: 0
-  m_Name: Electricity Particle System Projectile
+  m_Name: Projectile Electricity Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,6 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2093475888035202459}
+  - {fileID: 6757501485884787722}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleSystems:
   - {fileID: 2296155819856452947}
+  audioSource: {fileID: 6757501485884787721}
 --- !u!1001 &2097696300868477861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,4 +114,71 @@ Transform:
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198464213672787702, guid: 0310b8628b5599c4295215fedba1a232, type: 3}
   m_PrefabInstance: {fileID: 2097696300868477861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3332238695151448608
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2097696299090926783}
+    m_Modifications:
+    - target: {fileID: 8356722387206962728, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_Name
+      value: Electricity Custom Projectile Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+--- !u!4 &6757501485884787722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8356722387206962730, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+  m_PrefabInstance: {fileID: 3332238695151448608}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &6757501485884787721 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8356722387206962729, guid: e4f9a1cd7be985249a6788012b90e723, type: 3}
+  m_PrefabInstance: {fileID: 3332238695151448608}
   m_PrefabAsset: {fileID: 0}

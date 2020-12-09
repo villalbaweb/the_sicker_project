@@ -6,6 +6,7 @@ namespace TheSicker.Projectile
     {
         // config
         [SerializeField] ParticleSystem[] particleSystems = null;
+        [SerializeField] AudioSource audioSource = null;
 
         // state
         bool hasToPlay;
@@ -14,6 +15,8 @@ namespace TheSicker.Projectile
 
         public void FireStart()
         {
+            StartPlayingSFX();
+
             foreach(ParticleSystem particles in particleSystems)
             {
                 if(!particles.isPlaying)
@@ -25,12 +28,38 @@ namespace TheSicker.Projectile
 
         public void FireStop()
         {
+            StopPlayingSFX();
+
             foreach (ParticleSystem particles in particleSystems)
             {
                 if (particles.isPlaying)
                 {
                     particles.Stop();
                 }
+            }
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void StartPlayingSFX()
+        {
+            if(!audioSource) return;
+
+            if(!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+
+        private void StopPlayingSFX()
+        {
+            if (!audioSource) return;
+
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
             }
         }
 
