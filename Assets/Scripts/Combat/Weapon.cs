@@ -41,7 +41,6 @@ namespace TheSicker.Projectile
         Transform _weaponTransform;
 
         // state
-        bool isCustomFiring;
         Coroutine _firingCoroutine;
 
         #region Public Methods
@@ -75,9 +74,8 @@ namespace TheSicker.Projectile
             {
                 _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : _weaponHoldingCharacter.StartCoroutine(Fire());
             }
-            else if (!isCustomFiring)
+            else
             {
-                isCustomFiring = true;
                 StartCustomFire();
             }
         }
@@ -85,15 +83,14 @@ namespace TheSicker.Projectile
         public void StopFiring()
         {
             muzzleParticleSystem?.Stop();
-            
+
             if (isProjectileBased && _firingCoroutine != null)
             {
                 _weaponHoldingCharacter.StopCoroutine(_firingCoroutine);
                 _firingCoroutine = null;
             }
-            else if (isCustomFiring)
+            else
             {
-                isCustomFiring = false;
                 StopCustomFire();
             }
         }
