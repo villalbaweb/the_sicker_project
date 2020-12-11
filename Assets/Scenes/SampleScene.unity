@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &569588798
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.5722384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.7272881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665103, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4672451030396665137, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+      propertyPath: m_Name
+      value: Electricity Weapon PickUp Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
 --- !u!1 &622104788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2163542816022937522, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
