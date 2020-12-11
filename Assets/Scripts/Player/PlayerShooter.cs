@@ -73,7 +73,7 @@ namespace TheSicker.Player
 
         public void EquipWeapon(Weapon newWeapon)
         {
-            if(!newWeapon) return;
+            if(currentWeapon == newWeapon || !newWeapon) return;
 
             isEquipWeaponRunning = true;
 
