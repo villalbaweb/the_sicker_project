@@ -18,6 +18,7 @@ namespace TheSicker.Player
         // State
         bool isDead;
         bool isCustomFiring;
+        bool isEquipWeaponRunning;
         Weapon currentWeapon;
 
         // cache
@@ -40,7 +41,7 @@ namespace TheSicker.Player
 
         private void Fire()
         {
-            if(!currentWeapon) return;
+            if(isEquipWeaponRunning || !currentWeapon) return;
 
             if (IsTargetFound())
             {
@@ -74,8 +75,16 @@ namespace TheSicker.Player
         {
             if(!newWeapon) return;
 
+            isEquipWeaponRunning = true;
+
+            // this will kill the firing coroutine started from the weapon
+            // when its a projectile based weapon
+            if(currentWeapon && currentWeapon.IsProjectileBased) StopAllCoroutines();    
+
             currentWeapon = newWeapon;
             currentWeapon?.SetupWeapon(weaponPos ?? transform, _objectPooler, this);
+
+            isEquipWeaponRunning = false;
         }
 
         // called from Unity Event

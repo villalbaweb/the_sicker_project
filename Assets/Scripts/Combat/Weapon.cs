@@ -35,6 +35,7 @@ namespace TheSicker.Combat
 
         // properties
         public float ProjectileDistance => projectileDistance;
+        public bool IsProjectileBased => isProjectileBased;
 
         // cache
         ObjectPooler _objectPooler;
