@@ -1,5 +1,5 @@
-﻿using TheSicker.Core;
-using TheSicker.Projectile;
+﻿using TheSicker.Combat;
+using TheSicker.Core;
 using UnityEngine;
 
 namespace TheSicker.Player

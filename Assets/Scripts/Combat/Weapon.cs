@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using TheSicker.Core;
+using TheSicker.Projectile;
 using UnityEngine;
 
-namespace TheSicker.Projectile
+namespace TheSicker.Combat
 {
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Make New Weapon", order = 0)]
     public class Weapon : ScriptableObject
