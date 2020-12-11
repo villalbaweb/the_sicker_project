@@ -11,7 +11,7 @@ namespace TheSicker.Combat
         // config
         [Header("Object Pool")]
         [SerializeField] bool isProjectileBased = true;
-        [SerializeField] ObjectPoolIds projectile;
+        [SerializeField] ObjectPoolIds projectile = ObjectPoolIds.PlayerProjectile;
 
         [Header("Custom Fire")]
         [SerializeField] ProjectileCustomFire projectileCustomFirePrefab = null;

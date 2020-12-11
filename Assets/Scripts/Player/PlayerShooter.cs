@@ -8,8 +8,8 @@ namespace TheSicker.Player
     {
         // config
         [Header("Weapon Selected")]
-        [SerializeField] Weapon selectedWeapon;
-        [SerializeField] Transform weaponPos;
+        [SerializeField] Weapon selectedWeapon = null;
+        [SerializeField] Transform weaponPos = null;
 
         [Header("Target Control")]
         [SerializeField] LayerMask enemyLayers = new LayerMask();
@@ -84,7 +84,7 @@ namespace TheSicker.Player
             currentWeapon = newWeapon;
             currentWeapon?.SetupWeapon(weaponPos ?? transform, _objectPooler, this);
 
-            isEquipWeaponRunning = false;
+            isEquipWeaponRunning = false; 
         }
 
         // called from Unity Event

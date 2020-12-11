@@ -4,6 +4,8 @@
     {
         FollowOnDistanceAttacker,
         PlayerProjectile,
-        FollowOnDistanceSmallAttacker
+        FollowOnDistanceSmallAttacker,
+
+        None
     }
 }
