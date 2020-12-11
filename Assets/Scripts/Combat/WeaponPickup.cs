@@ -9,7 +9,11 @@ namespace TheSicker.Combat
 
         private void OnTriggerEnter2D(Collider2D other) 
         {
-            print("Pickup collision...");    
+            if(other.tag != "Player") return;
+
+            IWeaponPIcker _weaponPicker = other.GetComponent<IWeaponPIcker>();
+
+            _weaponPicker.EquipWeapon(weapon);
         }
     }
 }

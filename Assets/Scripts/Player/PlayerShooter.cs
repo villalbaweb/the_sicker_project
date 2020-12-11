@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TheSicker.Player
 {
-    public class PlayerShooter : MonoBehaviour
+    public class PlayerShooter : MonoBehaviour, IWeaponPIcker
     {
         // config
         [Header("Weapon Selected")]
@@ -18,14 +18,18 @@ namespace TheSicker.Player
         // State
         bool isDead;
         bool isCustomFiring;
+        Weapon currentWeapon;
 
         // cache
         ObjectPooler _objectPooler;
 
+        #region  Private Methods
+
         private void Awake() 
         {
             _objectPooler = FindObjectOfType<ObjectPooler>();
-            selectedWeapon?.SetupWeapon(weaponPos ?? transform, _objectPooler, this);    
+
+            EquipWeapon(selectedWeapon);   
         }
 
         // Update is called once per frame
@@ -36,15 +40,15 @@ namespace TheSicker.Player
 
         private void Fire()
         {
-            if(!selectedWeapon) return;
+            if(!currentWeapon) return;
 
             if (IsTargetFound())
             {
-                selectedWeapon.StartFiring();
+                currentWeapon.StartFiring();
             }
             else
             {
-                selectedWeapon.StopFiring();
+                currentWeapon.StopFiring();
             }
         }
 
@@ -52,7 +56,7 @@ namespace TheSicker.Player
         {
             if (isDead) return false;
 
-            RaycastHit2D raycastHit = Physics2D.CircleCast(transform.position, circleRayCastRadious, transform.right, selectedWeapon.ProjectileDistance, enemyLayers);
+            RaycastHit2D raycastHit = Physics2D.CircleCast(transform.position, circleRayCastRadious, transform.right, currentWeapon.ProjectileDistance, enemyLayers);
 
             return raycastHit.collider != null && IsInLayerMask(raycastHit.collider.gameObject.layer, enemyLayers);
         }
@@ -62,10 +66,24 @@ namespace TheSicker.Player
             return layermask == (layermask | (1 << layer));
         }
 
+        #endregion
+
+        #region Public Methods
+
+        public void EquipWeapon(Weapon newWeapon)
+        {
+            if(!newWeapon) return;
+
+            currentWeapon = newWeapon;
+            currentWeapon?.SetupWeapon(weaponPos ?? transform, _objectPooler, this);
+        }
+
         // called from Unity Event
         public void OnDie()
         {
             isDead = true;
         }
+
+        #endregion
     }
 }
