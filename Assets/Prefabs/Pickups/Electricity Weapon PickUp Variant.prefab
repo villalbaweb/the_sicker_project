@@ -161,6 +161,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1227939887973264906, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 08818815b4ad92a41a854e0f0dd84722, type: 2}
     - target: {fileID: 2272527749695093197, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_Name
       value: Electricity Weapon PickUp Variant
