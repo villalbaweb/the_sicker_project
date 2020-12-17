@@ -9,6 +9,8 @@ namespace TheSicker.Player
         [Header("VFX")]
         [SerializeField] ParticleSystem engineParticleSystem = null;
         [SerializeField] ParticleSystem speedEngineParticleSystem = null;
+        [SerializeField] ParticleSystem leftTrailParticleSystem = null;
+        [SerializeField] ParticleSystem rightTrailParticleSystem = null;
 
         [Header("Speed")]
         [SerializeField] float speed = 5;
