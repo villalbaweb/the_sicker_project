@@ -217,8 +217,6 @@ MonoBehaviour:
   trailParticleSystem:
   - {fileID: 4101493305425850752}
   - {fileID: 8251285215384489688}
-  leftTrailParticleSystem: {fileID: 4101493305425850752}
-  rightTrailParticleSystem: {fileID: 8251285215384489688}
   speed: 5
   turboSpeedIncreaseTimes: 3
   turboSpeedTime: 3
@@ -428,8 +426,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df4bcf5ee43d124d8607079af87cbe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  engineParticleSystem: {fileID: 4509175915654213224}
-  speedEngineParticleSystem: {fileID: 4509027190622097880}
+  playersParticleSystems:
+  - {fileID: 4509175915654213224}
+  - {fileID: 4509027190622097880}
+  - {fileID: 4101493305425850752}
+  - {fileID: 8251285215384489688}
 --- !u!1 &8607063162740585190
 GameObject:
   m_ObjectHideFlags: 0
