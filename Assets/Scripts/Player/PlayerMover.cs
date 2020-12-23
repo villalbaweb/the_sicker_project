@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace TheSicker.Player
@@ -6,11 +7,6 @@ namespace TheSicker.Player
     public class PlayerMover : MonoBehaviour
     {
         // config
-        [Header("VFX")]
-        [SerializeField] ParticleSystem engineParticleSystem = null;
-        [SerializeField] ParticleSystem speedEngineParticleSystem = null;
-        [SerializeField] ParticleSystem[] trailParticleSystem = null;
-
         [Header("Speed")]
         [SerializeField] float speed = 5;
         [SerializeField] int turboSpeedIncreaseTimes = 3;
@@ -29,6 +25,11 @@ namespace TheSicker.Player
         [Header("Debug")]
         [SerializeField] bool useAdditionalMoveKey = false;
 
+        // events
+        public Action OnStartMovement;
+        public Action OnStopMovement;
+        public Action OnTurboSpeedStart;
+
         // state
         bool isDead;
         bool IsMoveBtnPressed;
@@ -46,13 +47,18 @@ namespace TheSicker.Player
             
             ThrottleMove();
             RemainMove();
-            UpdateParticleSystems();
         }
 
         private void ThrottleMove()
         {
             if(IsMoveBtnPressed || (useAdditionalMoveKey && Input.GetKey(KeyCode.Z)))
-            {   
+            {
+                OnStartMovement?.Invoke();
+                if(IsTurboSpeed)
+                {
+                    OnTurboSpeedStart?.Invoke();
+                }
+
                 IsKeepMoving = false;
                 MoveForward();
             }
@@ -62,6 +68,7 @@ namespace TheSicker.Player
         {
             if(IsMoveBtnReleased || (useAdditionalMoveKey && Input.GetKeyUp(KeyCode.Z)))
             {
+                OnStopMovement?.Invoke();
                 IsMoveBtnReleased = false;
                 IsKeepMoving = true;
                 remainMovingTimeLeft = remainMovingTime;
@@ -74,60 +81,6 @@ namespace TheSicker.Player
                 MoveRemain(remainMovingSpeed);
                 remainMovingTimeLeft -= Time.deltaTime;
                 remainMovingSpeed -= (remainMovingSpeed * remainMovingSlowFactor * Time.deltaTime);
-            }
-        }
-
-        private void UpdateParticleSystems() 
-        {
-            if (IsMoveBtnPressed || (useAdditionalMoveKey && Input.GetKey(KeyCode.Z)))
-            {
-                if (!engineParticleSystem.isPlaying)
-                {
-                    engineParticleSystem.Play();
-                }
-
-                if (IsTurboSpeed && !speedEngineParticleSystem.isPlaying)
-                {
-                    speedEngineParticleSystem.Play();
-                    TrailParticleSystemStart(true);
-                }
-
-                if (!IsTurboSpeed && !speedEngineParticleSystem.isStopped)
-                {
-                    speedEngineParticleSystem.Stop();
-                    TrailParticleSystemStart(false);
-                }
-            }
-            else
-            {
-                if (!engineParticleSystem.isStopped)
-                {
-                    engineParticleSystem.Stop();
-                }
-
-                if (!speedEngineParticleSystem.isStopped)
-                {
-                    speedEngineParticleSystem.Stop();
-                    TrailParticleSystemStart(false);
-                }
-            }
-        }
-
-        private void TrailParticleSystemStart(bool start)
-        {
-            if(start)
-            {
-                foreach(ParticleSystem trail in trailParticleSystem)
-                {
-                    trail.Play();
-                }
-            }
-            else
-            {
-                foreach (ParticleSystem trail in trailParticleSystem)
-                {
-                    trail.Stop();
-                } 
             }
         }
         

@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 8913777666363664495}
   - component: {fileID: 3361929770079272406}
   - component: {fileID: 3268834983714859410}
+  - component: {fileID: 4736222968671313335}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -429,6 +430,23 @@ MonoBehaviour:
   playersParticleSystems:
   - {fileID: 4509175915654213224}
   - {fileID: 4509027190622097880}
+  - {fileID: 4101493305425850752}
+  - {fileID: 8251285215384489688}
+--- !u!114 &4736222968671313335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576423509886590863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0096cdeb39f25498f54161ff748769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  engineParticleSystem: {fileID: 4509175915654213224}
+  speedEngineParticleSystem: {fileID: 4509027190622097880}
+  trailParticleSystem:
   - {fileID: 4101493305425850752}
   - {fileID: 8251285215384489688}
 --- !u!1 &8607063162740585190
