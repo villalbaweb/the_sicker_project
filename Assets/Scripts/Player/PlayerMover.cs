@@ -9,8 +9,7 @@ namespace TheSicker.Player
         [Header("VFX")]
         [SerializeField] ParticleSystem engineParticleSystem = null;
         [SerializeField] ParticleSystem speedEngineParticleSystem = null;
-        [SerializeField] ParticleSystem leftTrailParticleSystem = null;
-        [SerializeField] ParticleSystem rightTrailParticleSystem = null;
+        [SerializeField] ParticleSystem[] trailParticleSystem = null;
 
         [Header("Speed")]
         [SerializeField] float speed = 5;
@@ -90,11 +89,13 @@ namespace TheSicker.Player
                 if (IsTurboSpeed && !speedEngineParticleSystem.isPlaying)
                 {
                     speedEngineParticleSystem.Play();
+                    TrailParticleSystemStart(true);
                 }
 
                 if (!IsTurboSpeed && !speedEngineParticleSystem.isStopped)
                 {
                     speedEngineParticleSystem.Stop();
+                    TrailParticleSystemStart(false);
                 }
             }
             else
@@ -107,7 +108,26 @@ namespace TheSicker.Player
                 if (!speedEngineParticleSystem.isStopped)
                 {
                     speedEngineParticleSystem.Stop();
+                    TrailParticleSystemStart(false);
                 }
+            }
+        }
+
+        private void TrailParticleSystemStart(bool start)
+        {
+            if(start)
+            {
+                foreach(ParticleSystem trail in trailParticleSystem)
+                {
+                    trail.Play();
+                }
+            }
+            else
+            {
+                foreach (ParticleSystem trail in trailParticleSystem)
+                {
+                    trail.Stop();
+                } 
             }
         }
         

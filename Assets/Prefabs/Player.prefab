@@ -214,6 +214,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   engineParticleSystem: {fileID: 4509175915654213224}
   speedEngineParticleSystem: {fileID: 4509027190622097880}
+  trailParticleSystem:
+  - {fileID: 4101493305425850752}
+  - {fileID: 8251285215384489688}
   leftTrailParticleSystem: {fileID: 4101493305425850752}
   rightTrailParticleSystem: {fileID: 8251285215384489688}
   speed: 5
