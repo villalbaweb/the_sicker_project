@@ -27,6 +27,7 @@ namespace TheSicker.Player
             _playerMover.OnStartMovement += OnStartMovementEvent; 
             _playerMover.OnStopMovement += OnStopMovementEvent;
             _playerMover.OnTurboSpeedStart += OnTurboSpeedStartEvent;
+            _playerMover.OnTurboSpeedStop += OnTurboSpeedStopEvent;
         }
 
         private void OnDisable() 
@@ -34,6 +35,7 @@ namespace TheSicker.Player
             _playerMover.OnStartMovement -= OnStartMovementEvent;  
             _playerMover.OnStopMovement -= OnStopMovementEvent;
             _playerMover.OnTurboSpeedStart -= OnTurboSpeedStartEvent;
+            _playerMover.OnTurboSpeedStop -= OnTurboSpeedStopEvent;
         }
 
         private void OnStartMovementEvent()
@@ -64,6 +66,15 @@ namespace TheSicker.Player
             {
                 speedEngineParticleSystem.Play();
                 TrailParticleSystemStart(true);
+            }
+        }
+
+        private void OnTurboSpeedStopEvent()
+        {
+            if (!speedEngineParticleSystem.isStopped)
+            {
+                speedEngineParticleSystem.Stop();
+                TrailParticleSystemStart(false);
             }
         }
 

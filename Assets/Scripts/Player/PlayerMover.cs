@@ -29,6 +29,7 @@ namespace TheSicker.Player
         public Action OnStartMovement;
         public Action OnStopMovement;
         public Action OnTurboSpeedStart;
+        public Action OnTurboSpeedStop;
 
         // state
         bool isDead;
@@ -105,6 +106,7 @@ namespace TheSicker.Player
 
             speed = originalSpeed;
             IsTurboSpeed = false;
+            OnTurboSpeedStop?.Invoke();
         }
 
         public void OnDie()
