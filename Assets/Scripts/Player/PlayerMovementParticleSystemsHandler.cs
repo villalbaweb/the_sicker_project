@@ -40,7 +40,7 @@ namespace TheSicker.Player
 
         private void OnStartMovementEvent()
         {
-            if (!engineParticleSystem.isPlaying)
+            if (engineParticleSystem && !engineParticleSystem.isPlaying)
             {
                 engineParticleSystem.Play();
             }
@@ -48,12 +48,12 @@ namespace TheSicker.Player
 
         private void OnStopMovementEvent()
         {
-            if (!engineParticleSystem.isStopped)
+            if (engineParticleSystem && !engineParticleSystem.isStopped)
             {
                 engineParticleSystem.Stop();
             }
 
-            if (!speedEngineParticleSystem.isStopped)
+            if (speedEngineParticleSystem && !speedEngineParticleSystem.isStopped)
             {
                 speedEngineParticleSystem.Stop();
                 TrailParticleSystemStart(false);
@@ -62,7 +62,7 @@ namespace TheSicker.Player
 
         private void OnTurboSpeedStartEvent()
         {
-            if(!speedEngineParticleSystem.isPlaying)
+            if(speedEngineParticleSystem && !speedEngineParticleSystem.isPlaying)
             {
                 speedEngineParticleSystem.Play();
                 TrailParticleSystemStart(true);
@@ -71,7 +71,7 @@ namespace TheSicker.Player
 
         private void OnTurboSpeedStopEvent()
         {
-            if (!speedEngineParticleSystem.isStopped)
+            if (speedEngineParticleSystem && !speedEngineParticleSystem.isStopped)
             {
                 speedEngineParticleSystem.Stop();
                 TrailParticleSystemStart(false);
