@@ -8,7 +8,7 @@ namespace TheSicker.Player
         [Header("VFX")]
         [SerializeField] ParticleSystem engineParticleSystem = null;
         [SerializeField] ParticleSystem speedEngineParticleSystem = null;
-        [SerializeField] ParticleSystem[] trailParticleSystem = null;
+        [SerializeField] TrailRenderer[] trailRenderers = null;
 
         // cache
         PlayerMover _playerMover;
@@ -19,7 +19,7 @@ namespace TheSicker.Player
 
             engineParticleSystem.Stop();
             speedEngineParticleSystem.Stop();
-            TrailParticleSystemStart(false);
+            TrailRenderersStart(false);
         }
 
         private void OnEnable() 
@@ -56,7 +56,7 @@ namespace TheSicker.Player
             if (speedEngineParticleSystem && !speedEngineParticleSystem.isStopped)
             {
                 speedEngineParticleSystem.Stop();
-                TrailParticleSystemStart(false);
+                TrailRenderersStart(false);
             }
         }
 
@@ -65,7 +65,7 @@ namespace TheSicker.Player
             if(speedEngineParticleSystem && !speedEngineParticleSystem.isPlaying)
             {
                 speedEngineParticleSystem.Play();
-                TrailParticleSystemStart(true);
+                TrailRenderersStart(true);
             }
         }
 
@@ -74,24 +74,24 @@ namespace TheSicker.Player
             if (speedEngineParticleSystem && !speedEngineParticleSystem.isStopped)
             {
                 speedEngineParticleSystem.Stop();
-                TrailParticleSystemStart(false);
+                TrailRenderersStart(false);
             }
         }
 
-        private void TrailParticleSystemStart(bool start)
+        private void TrailRenderersStart(bool start)
         {
             if (start)
             {
-                foreach (ParticleSystem trail in trailParticleSystem)
+                foreach (TrailRenderer trail in trailRenderers)
                 {
-                    trail.Play();
+                    trail.emitting = true;
                 }
             }
             else
             {
-                foreach (ParticleSystem trail in trailParticleSystem)
+                foreach (TrailRenderer trail in trailRenderers)
                 {
-                    trail.Stop();
+                    trail.emitting = false;
                 }
             }
         }
