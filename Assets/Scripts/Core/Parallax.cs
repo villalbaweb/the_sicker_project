@@ -5,14 +5,17 @@ namespace TheSicker.Core
     public class Parallax : MonoBehaviour
     {
         // config params
-        [SerializeField] Camera m_camera = null;
         [SerializeField] float parallaxEffect = 0.0f;
 
+        // state
+        private Camera m_camera;
         private float lengthX, lengthY, startposX, startposY;
 
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
+            m_camera = Camera.main;
+
             SpriteRenderer renderer = GetComponent<SpriteRenderer>();
 
             startposX = transform.position.x;
