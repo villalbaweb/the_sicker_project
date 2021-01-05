@@ -94,5 +94,18 @@ namespace TheSicker.Player
         }
 
         #endregion
+
+        #region Gizmoz Area
+
+        // called by Unity
+        private void OnDrawGizmosSelected()
+        {
+            if(!selectedWeapon) return;
+            
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, selectedWeapon.ProjectileDistance);
+        }
+
+        #endregion
     }
 }

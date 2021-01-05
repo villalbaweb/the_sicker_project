@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isProjectileBased: 1
   projectile: 1
+  projectileCustomFirePrefab: {fileID: 0}
   projectileFiringPeriod: 0.1
-  projectileDistance: 20
+  projectileDistance: 10
   muzzlerParticleSystemPrefab: {fileID: 198561448080344486, guid: 9abeea789432c024ba3fbf0cd8669087, type: 3}
   onFireSoundClip: {fileID: 8300000, guid: 514146b278b937d498330b73c1d1331d, type: 3}
   fireSoundVolume: 0.5
