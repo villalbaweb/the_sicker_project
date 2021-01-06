@@ -46,7 +46,7 @@ namespace TheSicker.Player
 
         private bool IsInSafeZone()
         {
-            if(!_safeZone) { return false; }
+            if(!_safeZone) { return true; }
 
             Vector2 safeZoneSize = _safeZone.EllipseSafeZoneSize;
 
@@ -57,6 +57,8 @@ namespace TheSicker.Player
         {
             while(true)
             {
+                print("TakeDamage from coroutine...");
+
                 _health.TakeDamage(stormDamagePerSecond);
                 yield return new WaitForSeconds(stormDamageSecondsRate);
             }
