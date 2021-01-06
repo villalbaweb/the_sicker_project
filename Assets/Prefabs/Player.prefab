@@ -732,8 +732,6 @@ MonoBehaviour:
   playersParticleSystems:
   - {fileID: 4509175915654213224}
   - {fileID: 4509027190622097880}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &4736222968671313335
 MonoBehaviour:
   m_ObjectHideFlags: 0
