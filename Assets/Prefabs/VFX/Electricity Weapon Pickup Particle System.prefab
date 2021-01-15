@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8632882653306713105}
   - component: {fileID: 8632882653306713104}
   - component: {fileID: 8632882653306713107}
+  - component: {fileID: 1220186809613405868}
   m_Layer: 13
   m_Name: Electricity Weapon Pickup Particle System
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8632882653306713106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.49, y: 31.24, z: 0}
+  m_LocalPosition: {x: -0.25, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -865,7 +866,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 30
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4812,3 +4813,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &1220186809613405868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8632882653306713106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ef9279b6e85354dab63de8fcf18bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementFactor: 0
+  movementVector: {x: 0.5, y: 0, z: 0}
+  period: 1
