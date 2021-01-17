@@ -53,7 +53,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643787943664794472, guid: 966f73136e771f642a5b3a2ba5f1842e, type: 3}
       propertyPath: m_Name
-      value: Rounding Particles Particle System
+      value: Laser Pickup Rounding Particles Particle System Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7672635439519436187, guid: 966f73136e771f642a5b3a2ba5f1842e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.atime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672635439519436187, guid: 966f73136e771f642a5b3a2ba5f1842e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672635439519436187, guid: 966f73136e771f642a5b3a2ba5f1842e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672635439519436187, guid: 966f73136e771f642a5b3a2ba5f1842e, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411285871138740889, guid: 966f73136e771f642a5b3a2ba5f1842e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d62acf24efd08544a8c6e7743f8d6620, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966f73136e771f642a5b3a2ba5f1842e, type: 3}
