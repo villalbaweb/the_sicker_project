@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &3996504500581659153
+--- !u!1001 &129338915850547618
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -92,10 +92,6 @@ PrefabInstance:
     - target: {fileID: 1539375946306989661, guid: af6f6473887cdb9469f0b83a46f1679d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539375946306989661, guid: af6f6473887cdb9469f0b83a46f1679d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1539375946306989661, guid: af6f6473887cdb9469f0b83a46f1679d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -135,7 +131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3824660663977188820, guid: af6f6473887cdb9469f0b83a46f1679d, type: 3}
       propertyPath: m_Name
-      value: Electricity Rounding Particles Particle System Variant
+      value: Electricity Pickup Rounding Particles Particle System Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6f6473887cdb9469f0b83a46f1679d, type: 3}
