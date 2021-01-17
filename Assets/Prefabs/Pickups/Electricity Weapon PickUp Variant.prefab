@@ -129,6 +129,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3151745483579604005, guid: af6f6473887cdb9469f0b83a46f1679d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3824660663977188820, guid: af6f6473887cdb9469f0b83a46f1679d, type: 3}
       propertyPath: m_Name
       value: Electricity Pickup Rounding Particles Particle System Variant

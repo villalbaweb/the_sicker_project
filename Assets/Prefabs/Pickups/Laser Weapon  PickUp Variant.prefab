@@ -167,6 +167,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 51668291543946564}
     m_Modifications:
+    - target: {fileID: 796760634311505432, guid: 8ef121dadc6db70498d9c38671f05625, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1558380568844425193, guid: 8ef121dadc6db70498d9c38671f05625, type: 3}
       propertyPath: m_Name
       value: Laser Pickup Rounding Particles Particle System Variant
