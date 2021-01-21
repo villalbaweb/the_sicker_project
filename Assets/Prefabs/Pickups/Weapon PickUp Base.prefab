@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2272527749695093234}
   - component: {fileID: 2272527749695093232}
   - component: {fileID: 1227939887973264906}
+  - component: {fileID: 7921299116560040970}
   m_Layer: 13
   m_Name: Weapon PickUp Base
   m_TagString: Untagged
@@ -76,6 +77,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7921299116560040970}
+        m_TargetAssemblyTypeName: TheSicker.Combat.WeaponPickupVisualEffectHandler,
+          Assembly-CSharp
+        m_MethodName: VFXParticlesPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1227939887973264906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,3 +103,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
+--- !u!114 &7921299116560040970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272527749695093197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87852db97ec3af1448df3bec54bb5ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupParticleSystems: []
