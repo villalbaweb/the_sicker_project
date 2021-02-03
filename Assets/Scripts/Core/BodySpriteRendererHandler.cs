@@ -8,25 +8,25 @@ namespace TheSicker.Core
         [SerializeField] GameObject body = null;
 
         // cache
-        SpriteRenderer _spriteRenderer;
+        MeshRenderer _meshRenderer;
 
         private void Awake() 
         {
-            _spriteRenderer = body.GetComponent<SpriteRenderer>();    
+            _meshRenderer = body.GetComponent<MeshRenderer>();    
         }
 
         public void EnableSpriteRenderer()
         {
-            if(!_spriteRenderer) return;
+            if(!_meshRenderer) return;
 
-            _spriteRenderer.enabled = true;
+            _meshRenderer.enabled = true;
         }
 
         public void DisableSpriteRenderer()
         {
-            if (!_spriteRenderer) return;
+            if (!_meshRenderer) return;
 
-            _spriteRenderer.enabled = false;
+            _meshRenderer.enabled = false;
         }
     }
 }
