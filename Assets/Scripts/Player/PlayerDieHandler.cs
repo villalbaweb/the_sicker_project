@@ -1,5 +1,4 @@
-﻿using TheSicker.Core;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TheSicker.Player
 {
@@ -7,24 +6,24 @@ namespace TheSicker.Player
     public class PlayerDieHandler : MonoBehaviour
     {
         // cache
-        BodySpriteRendererHandler _bodySpriteRendererHandler;
+        PlayerBodyRendererHandler _bodyRendererHandler;
         PlayerEngineParticleEffectsStopper _playerEngineParticleEffectsStopper;
 
         private void Awake() 
         {
-            _bodySpriteRendererHandler = GetComponent<BodySpriteRendererHandler>();
+            _bodyRendererHandler = GetComponent<PlayerBodyRendererHandler>();
             _playerEngineParticleEffectsStopper = GetComponent<PlayerEngineParticleEffectsStopper>();    
         }
 
         public void OnStartDieCoroutine()
         {
-            _bodySpriteRendererHandler.DisableSpriteRenderer();
+            _bodyRendererHandler.DisableSpriteRenderer();
             _playerEngineParticleEffectsStopper.EngineParticleSystemsTurnOff();
         }
 
         public void OnCompleteDieCoroutine()
         {
-            _bodySpriteRendererHandler.EnableSpriteRenderer();
+            _bodyRendererHandler.EnableSpriteRenderer();
         }
     }
 }

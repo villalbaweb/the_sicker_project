@@ -1,23 +1,23 @@
 ﻿using UnityEngine;
 
-namespace TheSicker.Core
+namespace TheSicker.Player
 {
-    public class BodySpriteRendererHandler : MonoBehaviour
+    public class PlayerBodyRendererHandler : MonoBehaviour
     {
         // config
-        [SerializeField] GameObject body = null;
+        [SerializeField] MeshRenderer bodyMeshRenderer = null;
 
         // cache
         MeshRenderer _meshRenderer;
 
-        private void Awake() 
+        private void Awake()
         {
-            _meshRenderer = body.GetComponent<MeshRenderer>();    
+            _meshRenderer = bodyMeshRenderer.GetComponent<MeshRenderer>();
         }
 
         public void EnableSpriteRenderer()
         {
-            if(!_meshRenderer) return;
+            if (!_meshRenderer) return;
 
             _meshRenderer.enabled = true;
         }
