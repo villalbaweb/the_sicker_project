@@ -7,26 +7,18 @@ namespace TheSicker.Player
         // config
         [SerializeField] MeshRenderer bodyMeshRenderer = null;
 
-        // cache
-        MeshRenderer _meshRenderer;
-
-        private void Awake()
-        {
-            _meshRenderer = bodyMeshRenderer.GetComponent<MeshRenderer>();
-        }
-
         public void EnableSpriteRenderer()
         {
-            if (!_meshRenderer) return;
+            if (!bodyMeshRenderer) return;
 
-            _meshRenderer.enabled = true;
+            bodyMeshRenderer.enabled = true;
         }
 
         public void DisableSpriteRenderer()
         {
-            if (!_meshRenderer) return;
+            if (!bodyMeshRenderer) return;
 
-            _meshRenderer.enabled = false;
+            bodyMeshRenderer.enabled = false;
         }
     }
 }
