@@ -5,11 +5,13 @@ namespace TheSicker.Combat
     public class WeaponPickupVisualEffectHandler : MonoBehaviour
     {
         // config
-        [SerializeField] ParticleSystem[] pickupParticleSystems = null;
+        [SerializeField] ParticleSystem pickupParticleSystem = null;
 
-        public void VFXParticlesPlay()
+        public void VFXParticlesPlay(GameObject equipWeaponTo)
         {
-            print("Playing particle systems after pickup...");
+            IWeaponPIcker _weaponPicker = equipWeaponTo.GetComponent<IWeaponPIcker>();
+
+            _weaponPicker.PlayWeaponPickupParticles(pickupParticleSystem);
         }
     }
 }

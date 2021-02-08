@@ -87,6 +87,12 @@ namespace TheSicker.Player
             isEquipWeaponRunning = false; 
         }
 
+        public void PlayWeaponPickupParticles(ParticleSystem particles)
+        {
+            ParticleSystem weaponPickedUpParticleSystem = Instantiate(particles, weaponPos ?? transform);
+            weaponPickedUpParticleSystem.Play();
+        }
+
         // called from Unity Event
         public void OnDie()
         {
