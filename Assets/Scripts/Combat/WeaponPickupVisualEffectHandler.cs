@@ -9,6 +9,8 @@ namespace TheSicker.Combat
 
         public void VFXParticlesPlay(GameObject equipWeaponTo)
         {
+            if(!pickupParticleSystem) return;
+
             IWeaponPIcker _weaponPicker = equipWeaponTo.GetComponent<IWeaponPIcker>();
 
             _weaponPicker.PlayWeaponPickupParticles(pickupParticleSystem);

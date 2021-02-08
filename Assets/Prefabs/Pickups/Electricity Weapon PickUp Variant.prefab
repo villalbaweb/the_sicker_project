@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: weapon
       value: 
       objectReference: {fileID: 11400000, guid: 08818815b4ad92a41a854e0f0dd84722, type: 2}
+    - target: {fileID: 2272527749695093232, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
+      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2272527749695093234, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_Size.x
       value: 0.75
@@ -168,11 +172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2272527749695093235, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 27.15
       objectReference: {fileID: 0}
     - target: {fileID: 2272527749695093235, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 10.4
       objectReference: {fileID: 0}
     - target: {fileID: 2272527749695093235, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_LocalPosition.z
@@ -180,15 +184,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2272527749695093235, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2272527749695093235, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2272527749695093235, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2272527749695093235, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_LocalRotation.w
@@ -210,6 +214,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7921299116560040970, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
+      propertyPath: pickupParticleSystem
+      value: 
+      objectReference: {fileID: 5617060277119367587, guid: c2a053b8902ee2f449c9c4b81f4741ec, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
 --- !u!4 &4672451030396665103 stripped

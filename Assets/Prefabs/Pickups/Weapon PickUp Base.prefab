@@ -81,7 +81,7 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: TheSicker.Combat.WeaponPickupVisualEffectHandler,
           Assembly-CSharp
         m_MethodName: VFXParticlesPlay
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -115,4 +115,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87852db97ec3af1448df3bec54bb5ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupParticleSystems: []
+  pickupParticleSystem: {fileID: 0}
