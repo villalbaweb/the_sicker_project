@@ -269,11 +269,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
---- !u!20 &622104791 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2163542816022937532, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
-  m_PrefabInstance: {fileID: 2163542815164454101}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &635500537 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7652430659498474477, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
@@ -579,22 +574,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Nebula Game Playable Area
       objectReference: {fileID: 0}
-    - target: {fileID: 2640086588703128953, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-      propertyPath: m_camera
-      value: 
-      objectReference: {fileID: 622104791}
-    - target: {fileID: 2640086589481389559, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-      propertyPath: m_camera
-      value: 
-      objectReference: {fileID: 622104791}
-    - target: {fileID: 2640086589492059672, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-      propertyPath: m_camera
-      value: 
-      objectReference: {fileID: 622104791}
-    - target: {fileID: 7037913817547122996, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-      propertyPath: m_camera
-      value: 
-      objectReference: {fileID: 622104791}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
 --- !u!1001 &2687863318535800436
@@ -607,10 +586,6 @@ PrefabInstance:
     - target: {fileID: 2687863319717090786, guid: ee2a806b9754d38479880075c962c0b1, type: 3}
       propertyPath: m_Name
       value: Enemy Spawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 2687863319717090786, guid: ee2a806b9754d38479880075c962c0b1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2687863319717090787, guid: ee2a806b9754d38479880075c962c0b1, type: 3}
       propertyPath: m_LocalPosition.x
