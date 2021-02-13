@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  turboSpeedIncreaseTimes: 3
+  turboSpeedIncreaseTimes: 1.5
   turboSpeedTime: 3
   remainMovingTime: 3
   remainMovingSlowFactor: 0.75

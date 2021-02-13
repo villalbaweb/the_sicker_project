@@ -9,7 +9,7 @@ namespace TheSicker.Player
         // config
         [Header("Speed")]
         [SerializeField] float speed = 5;
-        [SerializeField] int turboSpeedIncreaseTimes = 3;
+        [SerializeField] float turboSpeedIncreaseTimes = 1.5f;
         [SerializeField] int turboSpeedTime = 3;
 
         [Header("Remaining Move")]
