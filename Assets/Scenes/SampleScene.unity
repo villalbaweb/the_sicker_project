@@ -340,14 +340,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8331345817104429397, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: timeBetweenEdgeDetectionCast
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8331345817104429397, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: circleRayCastRadious
-      value: 0.125
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
 --- !u!4 &1390106839 stripped
