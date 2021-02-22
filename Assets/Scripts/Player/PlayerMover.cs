@@ -11,6 +11,7 @@ namespace TheSicker.Player
         [SerializeField] float speed = 5;
         [SerializeField] float turboSpeedIncreaseTimes = 1.5f;
         [SerializeField] int turboSpeedTime = 3;
+        [SerializeField] float edgeDetectedSpeed = 5;
 
         [Header("Remaining Move")]
         [SerializeField] float remainMovingTime = 3f;
@@ -112,6 +113,11 @@ namespace TheSicker.Player
         public void OnDie()
         {
             isDead = true;
+        }
+
+        public void OnEdgeDetected()
+        {
+            speed = edgeDetectedSpeed;
         }
 
         #region UI Button Related Methods

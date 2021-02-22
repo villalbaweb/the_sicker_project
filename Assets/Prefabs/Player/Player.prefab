@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 3268834983714859410}
   - component: {fileID: 4736222968671313335}
   - component: {fileID: 277456199856092611}
+  - component: {fileID: 4821140322007750091}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -439,6 +440,7 @@ MonoBehaviour:
   speed: 5
   turboSpeedIncreaseTimes: 1.5
   turboSpeedTime: 3
+  edgeDetectedSpeed: 5
   remainMovingTime: 3
   remainMovingSlowFactor: 0.75
   clickTimes: 0
@@ -651,6 +653,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyMeshRenderer: {fileID: 0}
+--- !u!114 &4821140322007750091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576423509886590863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d530fa906dfb045ad9063e2920ef64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenEdgeDetectionCast: 0.3
+  edgeLayers:
+    serializedVersion: 2
+    m_Bits: 4096
+  circleRayCastRadious: 0.5
+  rayCastDistance: 1
+  OnEdgeDetected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6576423509886590835}
+        m_TargetAssemblyTypeName: TheSicker.Player.PlayerMover, Assembly-CSharp
+        m_MethodName: OnEdgeDetected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8607063162740585190
 GameObject:
   m_ObjectHideFlags: 0
