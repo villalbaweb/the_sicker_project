@@ -180,13 +180,21 @@ PrefabInstance:
       propertyPath: body
       value: 
       objectReference: {fileID: 4626758584971233429}
+    - target: {fileID: 4821140322007750091, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
+      propertyPath: timeBetweenEdgeDetectionCast
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4821140322007750091, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
+      propertyPath: circleRayCastRadious
+      value: 0.125
+      objectReference: {fileID: 0}
     - target: {fileID: 6576423509886590832, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16
+      value: 5.9
       objectReference: {fileID: 0}
     - target: {fileID: 6576423509886590832, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.05
+      value: 5.03
       objectReference: {fileID: 0}
     - target: {fileID: 6576423509886590832, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
       propertyPath: m_LocalPosition.z
