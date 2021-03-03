@@ -336,11 +336,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 51668291543946564, guid: d541228d19cae3a468f4d27892e884ee, type: 3}
   m_PrefabInstance: {fileID: 556797904}
   m_PrefabAsset: {fileID: 0}
---- !u!60 &1431424806 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 8803724580745831751, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
-  m_PrefabInstance: {fileID: 2317112454102229766}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1864721022 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9081871809912873811, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
@@ -352,11 +347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0dae2c814e389949a813309d58b5ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1864721027 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
-  m_PrefabInstance: {fileID: 546315486}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1892489837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -445,10 +435,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1699797536, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
-      propertyPath: m_BoundingShape2D
-      value: 
-      objectReference: {fileID: 1431424806}
     - target: {fileID: 2163542815728084042, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
       propertyPath: m_Name
       value: Cameras
@@ -497,10 +483,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2163542815788306122, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 1864721027}
     - target: {fileID: 2163542815788306123, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.005564
@@ -511,11 +493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2163542816022937535, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.107785
+      value: -13.005564
       objectReference: {fileID: 0}
     - target: {fileID: 2163542816022937535, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.67077
+      value: -12.670767
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}

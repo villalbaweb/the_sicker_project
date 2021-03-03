@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 2163542815788306123}
   - component: {fileID: 2163542815788306122}
   - component: {fileID: 1699797536}
+  - component: {fileID: 5461226386130163687}
   m_Layer: 0
   m_Name: Follow Virtual Camera
   m_TagString: Untagged
@@ -206,6 +207,18 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 0}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!114 &5461226386130163687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2163542815788306120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 039a7d511fef27a4d968f748a2e5a65d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2163542816022937522
 GameObject:
   m_ObjectHideFlags: 0

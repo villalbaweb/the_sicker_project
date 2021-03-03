@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2638469271912753720}
   - component: {fileID: 6813493371303714972}
+  - component: {fileID: 8673279053137669890}
   m_Layer: 11
   m_Name: Virtual Camera Confiner
   m_TagString: Untagged
@@ -60,6 +61,18 @@ PolygonCollider2D:
       - {x: -20.48, y: -20.48}
       - {x: 20.48, y: -20.48}
       - {x: 20.48, y: 20.48}
+--- !u!114 &8673279053137669890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150538360969091388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95dd092c3a290ce4daf7feb9a06ed4e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &327479932660388573
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b25f7ccaf90a1748963a9d2573ac4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_camera: {fileID: 0}
   parallaxEffect: 0.1
 --- !u!1 &327479933279196206
 GameObject:
@@ -289,7 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b25f7ccaf90a1748963a9d2573ac4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_camera: {fileID: 0}
   parallaxEffect: 0.5
 --- !u!1 &327479934238913134
 GameObject:
@@ -386,7 +397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b25f7ccaf90a1748963a9d2573ac4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_camera: {fileID: 0}
   parallaxEffect: 0.3
 --- !u!1 &3140348955894871123
 GameObject:
