@@ -665,11 +665,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d530fa906dfb045ad9063e2920ef64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenEdgeDetectionCast: 0.3
+  timeBetweenEdgeDetectionCast: 0.1
   edgeLayers:
     serializedVersion: 2
     m_Bits: 4096
-  circleRayCastRadious: 0.5
+  circleRayCastRadious: 0.125
   rayCastDistance: 1
   OnEdgeDetected:
     m_PersistentCalls:
