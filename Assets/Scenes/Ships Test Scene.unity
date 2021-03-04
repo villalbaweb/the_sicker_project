@@ -123,129 +123,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &422564867
+--- !u!1001 &291291078
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8269542087381529007, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 8535430674788273454, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
+      propertyPath: m_Name
+      value: Blue And Whithe Ship Player Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873808, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+    - target: {fileID: 8535430674788273617, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9081871809912873903, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
-      propertyPath: m_Name
-      value: Red Ship Player Variant
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 95434f5d89d62fc4d8c49dcc8ca1213f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 26b9734328c310d44bf61d996bf1abd4, type: 3}
 --- !u!20 &622104791 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2163542816022937532, guid: 5de6d6778e0787d4bb88a34a6268bf0b, type: 3}
   m_PrefabInstance: {fileID: 2163542815164454101}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1248876342
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7652430659498474257, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_Name
-      value: Yellow Ship Player Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7652430659498474478, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
 --- !u!60 &1431424806 stripped
 PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 8803724580745831751, guid: e90f2c9096568464bb9aee55a440a680, type: 3}
