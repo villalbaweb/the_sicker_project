@@ -5,6 +5,7 @@
         FollowOnDistanceAttacker,
         PlayerProjectile,
         FollowOnDistanceSmallAttacker,
+        PlayerGreenProjectile,
 
         None
     }
