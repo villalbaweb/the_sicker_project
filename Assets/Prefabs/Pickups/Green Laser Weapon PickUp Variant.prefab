@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: weapon
       value: 
       objectReference: {fileID: 11400000, guid: ae415279eaa4d6e41aa0aacd1dccd67f, type: 2}
+    - target: {fileID: 1449083720905174188, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
+      propertyPath: sfxAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 26c44f819f3d4004d87feefff994c086, type: 3}
     - target: {fileID: 2272527749695093197, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_Name
       value: Green Laser Weapon PickUp Variant
