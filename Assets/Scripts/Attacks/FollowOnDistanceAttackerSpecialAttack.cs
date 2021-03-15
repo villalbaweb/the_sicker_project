@@ -9,7 +9,7 @@ namespace TheSicker.Attacks
         ObjectPooler _objectPooler;
 
         private void Awake()
-        {
+        {   
             _objectPooler = FindObjectOfType<ObjectPooler>();
         }
 
