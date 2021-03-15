@@ -7,6 +7,7 @@ namespace TheSicker.Projectile
     {
         // config   
         [SerializeField] int particleSystemDamage = 1000;
+        [SerializeField] ParticleSystem collisionParticles = null;
 
         // cache
         Health _health;
@@ -15,9 +16,23 @@ namespace TheSicker.Projectile
         // and send messages enable, other is the object receiving the impact
         private void OnParticleCollision(GameObject other)
         {
+            HandleDamage(other);
+            
+            CollisionParticlePlay();
+        }
+
+        private void HandleDamage(GameObject other)
+        {
             _health = other?.GetComponent<Health>();
 
             _health?.TakeDamage(particleSystemDamage);
+        }
+
+        private void CollisionParticlePlay()
+        {
+            if(!collisionParticles) return;
+
+            collisionParticles.Play();
         }
     }
 }
