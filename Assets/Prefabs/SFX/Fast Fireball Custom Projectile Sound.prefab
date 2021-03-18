@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8356722387206962730}
   - component: {fileID: 8356722387206962729}
   m_Layer: 0
-  m_Name: Electricity Custom Projectile Sound
+  m_Name: Fast Fireball Custom Projectile Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7425e88fd0d7e81448591ca3e236b2f7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e10b84c34e2225c4e8ab7db9a7f912f4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
