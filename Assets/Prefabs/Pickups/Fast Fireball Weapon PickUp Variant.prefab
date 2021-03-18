@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: weapon
       value: 
       objectReference: {fileID: 11400000, guid: 9db37fbaa034bc149a8b57d488699ce2, type: 2}
+    - target: {fileID: 1449083720905174188, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
+      propertyPath: sfxAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 26c44f819f3d4004d87feefff994c086, type: 3}
     - target: {fileID: 2272527749695093197, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
       propertyPath: m_Name
       value: Fast Fireball Weapon PickUp Variant
@@ -223,6 +227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7921299116560040970, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
+      propertyPath: pickupParticleSystem
+      value: 
+      objectReference: {fileID: 5617060277119367587, guid: 8d1c65066dfe9bc48b3000d47e343de2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
 --- !u!4 &5677092675062683760 stripped
