@@ -19,7 +19,7 @@ namespace TheSicker.Projectile
 
             foreach(ParticleSystem particles in particleSystems)
             {
-                if(!particles.isPlaying)
+                if(!particles.isEmitting)
                 {
                     particles.Play();
                 }
@@ -32,7 +32,7 @@ namespace TheSicker.Projectile
 
             foreach (ParticleSystem particles in particleSystems)
             {
-                if (particles.isPlaying)
+                if (particles.isEmitting)
                 {
                     particles.Stop();
                 }
