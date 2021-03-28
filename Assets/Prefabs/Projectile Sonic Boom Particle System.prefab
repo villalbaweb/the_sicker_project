@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 897195790709414915}
   - component: {fileID: 3454514703685590981}
   m_Layer: 0
-  m_Name: ProjectileSonic Boom Particle System
+  m_Name: Projectile Sonic Boom Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
