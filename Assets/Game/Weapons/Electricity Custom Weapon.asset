@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Electricity Custom Weapon
   m_EditorClassIdentifier: 
   isProjectileBased: 0
-  projectile: 3
+  projectile: 4
   projectileCustomFirePrefab: {fileID: 2097696299090926776, guid: d55b6bcc3f3582d428f493ee99141aaf, type: 3}
   projectileFiringPeriod: 0.1
   projectileDistance: 7
