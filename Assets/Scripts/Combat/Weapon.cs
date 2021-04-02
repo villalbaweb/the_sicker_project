@@ -13,7 +13,6 @@ namespace TheSicker.Combat
         [SerializeField] bool isProjectileBased = true;
         [SerializeField] ObjectPoolIds projectile = ObjectPoolIds.PlayerProjectile;
         [SerializeField] float projectileFiringPeriod = 0.1f;
-        [SerializeField] float projectileDistance = 20f;
         [SerializeField] AudioClip onFireSoundClip = null;
         [SerializeField] [Range(0, 1)] float fireSoundVolume = 0.5f;
 
@@ -21,6 +20,7 @@ namespace TheSicker.Combat
         [SerializeField] ProjectileCustomFire projectileCustomFirePrefab = null;
 
         [Header("Shared")]
+        [SerializeField] float projectileDistance = 20f;
         [SerializeField] ParticleSystem muzzlerParticleSystemPrefab = null;
 
         // state
