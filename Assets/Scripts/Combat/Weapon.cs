@@ -9,23 +9,19 @@ namespace TheSicker.Combat
     public class Weapon : ScriptableObject
     {
         // config
-        [Header("Object Pool")]
+        [Header("Object Pool Based")]
         [SerializeField] bool isProjectileBased = true;
         [SerializeField] ObjectPoolIds projectile = ObjectPoolIds.PlayerProjectile;
-
-        [Header("Custom Fire")]
-        [SerializeField] ProjectileCustomFire projectileCustomFirePrefab = null;
-
-        [Header("Control")]
         [SerializeField] float projectileFiringPeriod = 0.1f;
         [SerializeField] float projectileDistance = 20f;
-
-        [Header("VFX")]
-        [SerializeField] ParticleSystem muzzlerParticleSystemPrefab = null;
-
-        [Header("SFX")]
         [SerializeField] AudioClip onFireSoundClip = null;
         [SerializeField] [Range(0, 1)] float fireSoundVolume = 0.5f;
+
+        [Header("Custom Fire Based")]
+        [SerializeField] ProjectileCustomFire projectileCustomFirePrefab = null;
+
+        [Header("Shared")]
+        [SerializeField] ParticleSystem muzzlerParticleSystemPrefab = null;
 
         // state
         const string WEAPON_NAME = "Weapon";
