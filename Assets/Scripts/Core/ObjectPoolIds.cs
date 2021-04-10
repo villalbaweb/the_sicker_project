@@ -7,6 +7,8 @@
         FollowOnDistanceSmallAttacker,
         PlayerGreenProjectile,
 
-        None
+        None,
+
+        FollowOnDistanceExplosive
     }
 }
