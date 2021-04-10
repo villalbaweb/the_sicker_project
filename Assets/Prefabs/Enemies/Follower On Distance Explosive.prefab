@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5299097299117265117}
   - component: {fileID: 6236296128824799007}
   - component: {fileID: 2267945823416491831}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Follower On Distance Explosive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
