@@ -92,11 +92,15 @@ GameObject:
   m_Component:
   - component: {fileID: 6236296128824799006}
   - component: {fileID: 5299097299117265117}
-  - component: {fileID: 6236296128824799007}
   - component: {fileID: 2267945823416491831}
+  - component: {fileID: 6236296128824799007}
   - component: {fileID: 7423731432210318032}
   - component: {fileID: 8753640932968778827}
   - component: {fileID: 1440686920806897267}
+  - component: {fileID: 6729334637424921983}
+  - component: {fileID: 5914732636260687596}
+  - component: {fileID: 7372774986862676824}
+  - component: {fileID: 4068915785558012767}
   m_Layer: 9
   m_Name: Follower On Distance Explosive
   m_TagString: Untagged
@@ -140,6 +144,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &2267945823416491831
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!95 &6236296128824799007
 Animator:
   serializedVersion: 3
@@ -159,22 +179,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &2267945823416491831
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6236296128824799001}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &7423731432210318032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,3 +221,101 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagToIdentifyAndTurn: Playable Area Delimiter
+--- !u!114 &6729334637424921983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8341a79fc473994791433c7db8ce0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  onDieEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5914732636260687596}
+        m_TargetAssemblyTypeName: TheSicker.Core.DieHandler, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5914732636260687596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b2b47f0034cba47b618e180d2f4950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDisableAfterDie: 0
+  onStartDieCoroutineEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7372774986862676824}
+        m_TargetAssemblyTypeName: TheSicker.Core.SoundEffectHandler, Assembly-CSharp
+        m_MethodName: StartSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4068915785558012767}
+        m_TargetAssemblyTypeName: TheSicker.Core.VisualEffectHandler, Assembly-CSharp
+        m_MethodName: ExplosionVFXParentPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCompleteDieCoroutineEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7372774986862676824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec87943bfb9e24441b82213423ad6a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxAudio: {fileID: 8300000, guid: 165ea7e2667af024d977a46e7d0ce4cf, type: 3}
+  sfxAudioVolume: 0.5
+--- !u!114 &4068915785558012767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9874747ec6c6944a32f9ec3b07a8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionVfxPrefab: {fileID: 6107377662465563500, guid: 6b17825c7c284484b96ba57f5b4ee73d, type: 3}
