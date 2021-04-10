@@ -94,6 +94,9 @@ GameObject:
   - component: {fileID: 5299097299117265117}
   - component: {fileID: 6236296128824799007}
   - component: {fileID: 2267945823416491831}
+  - component: {fileID: 7423731432210318032}
+  - component: {fileID: 8753640932968778827}
+  - component: {fileID: 1440686920806897267}
   m_Layer: 9
   m_Name: Follower On Distance Explosive
   m_TagString: Untagged
@@ -172,3 +175,45 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &7423731432210318032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3913a0502a12f4b9a018344eb33cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalSpeed: 2
+  followingSpeed: 4
+  target: {fileID: 0}
+  isFollowing: 0
+--- !u!114 &8753640932968778827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659ec164c272a144b8f80128a37dc888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chaseDistance: 12
+--- !u!114 &1440686920806897267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6fca6c0b968a454a8ef3f869a47f89a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToIdentifyAndTurn: Playable Area Delimiter
