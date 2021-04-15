@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 7372774986862676824}
   - component: {fileID: 4068915785558012767}
   - component: {fileID: 7949449604252686631}
+  - component: {fileID: 839225255224697515}
   m_Layer: 9
   m_Name: Follower On Distance Explosive
   m_TagString: Untagged
@@ -209,7 +210,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659ec164c272a144b8f80128a37dc888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseDistance: 12
+  chaseDistance: 6
+  onRangeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 839225255224697515}
+        m_TargetAssemblyTypeName: TheSicker.Enemies.FollowOnDistanceExplosiveAnimatorHandler,
+          Assembly-CSharp
+        m_MethodName: SetIsAttackingAnimation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1440686920806897267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +348,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c84804fbe69931047a3697be712fd4c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionDamage: 50
+--- !u!114 &839225255224697515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 296a5e9f32d35524c9f8909b65e5481b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7202870627977749741

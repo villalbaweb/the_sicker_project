@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TheSicker.Core;
 using TheSicker.Player;
+using UnityEngine.Events;
 
 namespace TheSicker.Enemies
 {
@@ -8,11 +9,18 @@ namespace TheSicker.Enemies
     {
         // config
         [SerializeField] float chaseDistance = 4.0f;
+        [SerializeField] OnRangeEvent onRangeEvent = null;
+
+        [System.Serializable]
+        public class OnRangeEvent: UnityEvent<bool> {}
 
         // Cache
         Health _health;
         PlayerMarker _player;
         Follower _follower;
+
+        // state
+        bool isInAttackRange;
 
         private void Awake()
         {
@@ -34,7 +42,9 @@ namespace TheSicker.Enemies
 
         private bool IsInAttackRange()
         {
-            return Vector2.Distance(_player.transform.position, transform.position) <= chaseDistance;
+            isInAttackRange = Vector2.Distance(_player.transform.position, transform.position) <= chaseDistance;
+            onRangeEvent?.Invoke(isInAttackRange);
+            return isInAttackRange;
         }
 
         // called by Unity
