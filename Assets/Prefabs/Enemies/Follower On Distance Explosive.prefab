@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 4068915785558012767}
   - component: {fileID: 7949449604252686631}
   - component: {fileID: 839225255224697515}
+  - component: {fileID: 1796668431597181457}
   m_Layer: 9
   m_Name: Follower On Distance Explosive
   m_TagString: Untagged
@@ -351,6 +352,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionDamage: 50
+  onExplosionAttack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1796668431597181457}
+        m_TargetAssemblyTypeName: TheSicker.Core.SpecialEffectsHandler, Assembly-CSharp
+        m_MethodName: PlaySpecialEffects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &839225255224697515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +379,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296a5e9f32d35524c9f8909b65e5481b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1796668431597181457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189ea9da0b4044f42957ddad19d68eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFx: []
+  sfxAudioVolume: 0.5
+  visualFxPrefab: {fileID: 0}
 --- !u!1 &7202870627977749741
 GameObject:
   m_ObjectHideFlags: 0
