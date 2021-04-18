@@ -15,7 +15,8 @@ namespace TheSicker.Attacks
             if(other.gameObject.tag != "Player") return;
 
             other.gameObject.GetComponent<Health>().TakeDamage(explosionDamage);
-            onExplosionAttack?.Invoke();    // this will invoke a few SFX
+            onExplosionAttack?.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }
