@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TheSicker.Core
@@ -11,11 +12,32 @@ namespace TheSicker.Core
         [SerializeField] float sfxAudioVolume = 0.5f;
 
         [Header("Visual Effects to Play")]
-        [SerializeField] GameObject visualFxPrefab = null;
+        [SerializeField] GameObject[] visualEffectPrefabs = null;
 
         public void PlaySpecialEffects()
         {
-            print("How to play all the events async ???");
+            StartCoroutine(VisualFxRunCoroutine());
+            StartCoroutine(SoundFxRunCoroutine());
+        }
+
+        IEnumerator VisualFxRunCoroutine()
+        {
+            foreach(GameObject go in visualEffectPrefabs)
+            {
+                Instantiate(go, transform.position, Quaternion.identity);
+            }
+
+            yield return null;
+        }
+
+        IEnumerator SoundFxRunCoroutine()
+        {
+            foreach(AudioClip clip in soundFx)
+            {
+                AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, sfxAudioVolume);
+            }
+
+            yield return null;
         }
     }
 }
