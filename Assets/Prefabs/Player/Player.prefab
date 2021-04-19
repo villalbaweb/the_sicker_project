@@ -702,7 +702,7 @@ MonoBehaviour:
   soundFx: []
   sfxAudioVolume: 0.5
   visualEffectPrefabs:
-  - {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
+  - {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
 --- !u!1 &8607063162740585190
 GameObject:
   m_ObjectHideFlags: 0
