@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 3179042334273323237}
   - component: {fileID: 6864307452848962350}
   - component: {fileID: 2392046885893926995}
+  - component: {fileID: 4529114709476997343}
   m_Layer: 0
   m_Name: Healt Text
   m_TagString: Untagged
@@ -466,6 +467,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4529114709476997343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979203796650670670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676cbd7cb00e95042babcd6b997087f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1667114160201724121
 GameObject:
   m_ObjectHideFlags: 0

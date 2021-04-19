@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace TheSicker.Core
@@ -12,14 +13,22 @@ namespace TheSicker.Core
         // state
         int initialHealth;
 
+        // properties
+        public int CurrentHealth => health;
+
+        // events
+        public Action OnHealthChange;
+
         private void Awake() 
         {
-            initialHealth = health;    
+            initialHealth = health;
+            OnHealthChange?.Invoke();   
         }
 
         public void TakeDamage(int damage)
         {
             health -= damage;
+            OnHealthChange?.Invoke();
 
             if(health <= Mathf.Epsilon) 
             {
@@ -30,6 +39,7 @@ namespace TheSicker.Core
         public void RestoreInitialHealth()
         {
             health = initialHealth;
+            OnHealthChange?.Invoke();
         }
     }
 }
