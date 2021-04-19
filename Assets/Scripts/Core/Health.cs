@@ -28,12 +28,14 @@ namespace TheSicker.Core
         public void TakeDamage(int damage)
         {
             health -= damage;
-            OnHealthChange?.Invoke();
 
             if(health <= Mathf.Epsilon) 
             {
+                health = 0;
                 onDieEvent.Invoke();
             }
+
+            OnHealthChange?.Invoke();
         }
 
         public void RestoreInitialHealth()
