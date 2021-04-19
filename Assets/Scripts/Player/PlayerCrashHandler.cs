@@ -17,6 +17,7 @@ namespace TheSicker.Player
         // cache
         CapsuleCollider2D _capsuleCollider2D;
         Health _health;
+        SpecialEffectsHandler _specialEffectsHandler;
 
         // state
         Coroutine _crashDamageCoroutine = null;
@@ -25,6 +26,7 @@ namespace TheSicker.Player
         {
             _capsuleCollider2D = GetComponent<CapsuleCollider2D>();
             _health = GetComponent<Health>();
+            _specialEffectsHandler = GetComponent<SpecialEffectsHandler>();
         }
 
         // Update is called once per frame
@@ -56,6 +58,7 @@ namespace TheSicker.Player
             while(true)
             {
                 _health.TakeDamage(crashDamagePerSecond);
+                _specialEffectsHandler.PlaySpecialEffects();
                 yield return new WaitForSeconds(crashDamageSecondsRate);
             }
         }
