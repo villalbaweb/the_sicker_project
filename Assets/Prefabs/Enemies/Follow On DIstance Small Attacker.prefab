@@ -19,6 +19,8 @@ GameObject:
   - component: {fileID: 1351618561373446504}
   - component: {fileID: -7638109951089467436}
   - component: {fileID: 4125402817293693547}
+  - component: {fileID: 7376063050369105888}
+  - component: {fileID: 239634305175508062}
   m_Layer: 9
   m_Name: Follow On DIstance Small Attacker
   m_TagString: Untagged
@@ -155,6 +157,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 8
+  onRangeEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6061016980342541746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +243,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionVfxPrefab: {fileID: 6107377662465563500, guid: 84b6f02f085566c4eae445c2123cbb1d, type: 3}
+--- !u!114 &7376063050369105888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851036243965729061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf9cd78d7893634da61fbe0b0705ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchDamagePerPeriod: 2
+  touchDamagePeriodRate: 1
+--- !u!114 &239634305175508062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851036243965729061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189ea9da0b4044f42957ddad19d68eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFx: []
+  sfxAudioVolume: 0.5
+  visualEffectPrefabs:
+  - {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
 --- !u!1 &7851036244985414995
 GameObject:
   m_ObjectHideFlags: 0
