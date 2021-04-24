@@ -20,11 +20,27 @@ namespace TheSicker.Core
             StartCoroutine(SoundFxRunCoroutine());
         }
 
+        public void PlaySpecialEffectsOnPosition(Vector3 playPosition)
+        {
+            StartCoroutine(PositionedVisualFxRunCoroutine(playPosition));
+            StartCoroutine(SoundFxRunCoroutine());
+        }
+
         IEnumerator VisualFxRunCoroutine()
         {
             foreach(GameObject go in visualEffectPrefabs)
             {
                 Instantiate(go, transform.position, Quaternion.identity);
+            }
+
+            yield return null;
+        }
+
+        IEnumerator PositionedVisualFxRunCoroutine(Vector3 playPosition)
+        {
+            foreach (GameObject go in visualEffectPrefabs)
+            {
+                Instantiate(go, playPosition, Quaternion.identity);
             }
 
             yield return null;

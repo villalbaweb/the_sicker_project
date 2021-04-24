@@ -14,6 +14,7 @@ namespace TheSicker.Attacks
         Coroutine _touchDamageCoroutine = null;
         Health _health;
         SpecialEffectsHandler _specialEffectsHandler;
+        ContactPoint2D _contactPoint;
 
         private void Awake() 
         {
@@ -24,6 +25,8 @@ namespace TheSicker.Attacks
         {
             if (other.gameObject.tag != "Player") return;
 
+            GetCollisionContactPoint(other);
+            
             GetPlayerReference(other.gameObject);
 
             HandleTouchAttack();
@@ -35,6 +38,11 @@ namespace TheSicker.Attacks
             if (other.gameObject.tag != "Player") return;
 
             StopTouchAttack();
+        }
+
+        private void GetCollisionContactPoint(Collision2D other)
+        {
+            _contactPoint = other.GetContact(0);
         }
 
         private void GetPlayerReference(GameObject player)
@@ -52,7 +60,7 @@ namespace TheSicker.Attacks
             while(true)
             {
                 _health.TakeDamage(touchDamagePerPeriod);
-                _specialEffectsHandler.PlaySpecialEffects();
+                _specialEffectsHandler.PlaySpecialEffectsOnPosition(_contactPoint.point);
                 yield return new WaitForSeconds(touchDamagePeriodRate);
             }
         }
