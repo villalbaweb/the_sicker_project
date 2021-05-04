@@ -14,6 +14,14 @@ namespace TheSicker.Core
         [Header("Visual Effects to Play")]
         [SerializeField] GameObject[] visualEffectPrefabs = null;
 
+        // cache
+        TemporaryGameObjectsHandler _temporaryGameObjectsHandler;
+
+        private void Awake()
+        {
+            _temporaryGameObjectsHandler = FindObjectOfType<TemporaryGameObjectsHandler>();
+        }
+
         public void PlaySpecialEffects()
         {
             StartCoroutine(VisualFxRunCoroutine());
@@ -30,7 +38,8 @@ namespace TheSicker.Core
         {
             foreach(GameObject go in visualEffectPrefabs)
             {
-                Instantiate(go, transform.position, Quaternion.identity);
+                GameObject obj = Instantiate(go, transform.position, Quaternion.identity);
+                obj.transform.parent = _temporaryGameObjectsHandler.TemporaryObjectParentTransform;
             }
 
             yield return null;
@@ -40,7 +49,8 @@ namespace TheSicker.Core
         {
             foreach (GameObject go in visualEffectPrefabs)
             {
-                Instantiate(go, playPosition, Quaternion.identity);
+                GameObject obj = Instantiate(go, playPosition, Quaternion.identity);
+                obj.transform.parent = _temporaryGameObjectsHandler.TemporaryObjectParentTransform;
             }
 
             yield return null;
