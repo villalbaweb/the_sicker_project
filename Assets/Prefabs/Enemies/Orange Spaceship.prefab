@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b2b47f0034cba47b618e180d2f4950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDisableAfterDie: 1.5
+  timeToDisableAfterDie: 0
   onStartDieCoroutineEvent:
     m_PersistentCalls:
       m_Calls:
