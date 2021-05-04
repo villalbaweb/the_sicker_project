@@ -9,6 +9,7 @@
 
         None,
 
-        FollowOnDistanceExplosive
+        FollowOnDistanceExplosive,
+        OrangeSpaceship
     }
 }
