@@ -15,6 +15,10 @@ GameObject:
   - component: {fileID: 4302025786186872026}
   - component: {fileID: 1697175721404656389}
   - component: {fileID: 6090073822305624609}
+  - component: {fileID: 2083523147843212205}
+  - component: {fileID: 989409625066302987}
+  - component: {fileID: 303987859334519311}
+  - component: {fileID: 2884649953732582568}
   m_Layer: 9
   m_Name: Orange Spaceship
   m_TagString: Untagged
@@ -139,6 +143,104 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagToIdentifyAndTurn: Playable Area Delimiter
+--- !u!114 &2083523147843212205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8341a79fc473994791433c7db8ce0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  onDieEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 989409625066302987}
+        m_TargetAssemblyTypeName: TheSicker.Core.DieHandler, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &989409625066302987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b2b47f0034cba47b618e180d2f4950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDisableAfterDie: 1.5
+  onStartDieCoroutineEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 303987859334519311}
+        m_TargetAssemblyTypeName: TheSicker.Core.SoundEffectHandler, Assembly-CSharp
+        m_MethodName: StartSfx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2884649953732582568}
+        m_TargetAssemblyTypeName: TheSicker.Core.VisualEffectHandler, Assembly-CSharp
+        m_MethodName: ExplosionVFXParentPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onCompleteDieCoroutineEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &303987859334519311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec87943bfb9e24441b82213423ad6a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxAudio: {fileID: 8300000, guid: f9170ea9108980f4fa58c045ac99aa33, type: 3}
+  sfxAudioVolume: 0.5
+--- !u!114 &2884649953732582568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9874747ec6c6944a32f9ec3b07a8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionVfxPrefab: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
 --- !u!1 &5022083766171125538
 GameObject:
   m_ObjectHideFlags: 0
