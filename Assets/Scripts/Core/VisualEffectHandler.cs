@@ -7,15 +7,12 @@ namespace TheSicker.Core
         // config
         [SerializeField] GameObject explosionVfxPrefab = null;
 
-        // consts
-        const string TEMPORARY_VISUALFX_PARENT_NAME = "Temporary Visual Effects";
-
-        // state
-        GameObject _temporaryVisualEffectsParent;
+        // cache
+        TemporaryGameObjectsHandler _temporaryGameObjectsHandler;
 
         private void Awake() 
         {
-            _temporaryVisualEffectsParent = CreateTemporaryVisualEffectsParent(TEMPORARY_VISUALFX_PARENT_NAME);
+            _temporaryGameObjectsHandler = FindObjectOfType<TemporaryGameObjectsHandler>();
         }
 
         private void StartSpecificVfx(GameObject vfxPrefab, Vector2 position)
@@ -23,7 +20,7 @@ namespace TheSicker.Core
             if (!vfxPrefab) return;
 
             GameObject obj = Instantiate(vfxPrefab, position, Quaternion.identity);
-            obj.transform.parent = _temporaryVisualEffectsParent.transform;
+            obj.transform.parent = _temporaryGameObjectsHandler.TemporaryObjectParentTransform;
         }
 
         public void ExplosionVfx(Vector2 position)
@@ -34,18 +31,6 @@ namespace TheSicker.Core
         public void ExplosionVFXParentPosition()
         {
             ExplosionVfx(transform.position);
-        }
-
-        private GameObject CreateTemporaryVisualEffectsParent(string parentName)
-        {
-            GameObject parent = GameObject.Find(parentName);
-
-            if (!parent)
-            {
-                parent = new GameObject(parentName);
-            }
-
-            return parent;
         }
     }
 }
