@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenSpawns: 3
-  availableEnemies: 0000000005000000
+  availableEnemies: 000000000500000006000000
