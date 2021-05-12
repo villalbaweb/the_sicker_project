@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 989409625066302987}
   - component: {fileID: 303987859334519311}
   - component: {fileID: 2884649953732582568}
+  - component: {fileID: 4518290841797209031}
   m_Layer: 9
   m_Name: Orange Spaceship
   m_TagString: Untagged
@@ -241,6 +242,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionVfxPrefab: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
+--- !u!114 &4518290841797209031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a54a390d81a9e204aab0af952a296fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopDistance: 5
 --- !u!1 &5022083766171125538
 GameObject:
   m_ObjectHideFlags: 0
