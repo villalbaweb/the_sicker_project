@@ -21,13 +21,15 @@ namespace TheSicker.Enemies
 
         void Update()
         {
-            print($"is in range to stop ... {IsInAttackRange()}");
+            HandleInStopRange();
         }
 
-        private bool IsInAttackRange()
+        private void HandleInStopRange()
         {
+            if(!_follower.IsFollowing) return;
+
             bool isInStopRange = Vector2.Distance(_player.transform.position, transform.position) <= stopDistance;
-            return isInStopRange;
+            _follower.OverideMovement(isInStopRange);
         }
 
         // called by Unity

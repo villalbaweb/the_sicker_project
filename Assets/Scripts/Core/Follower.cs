@@ -11,10 +11,14 @@ namespace TheSicker.Core
         
         [Tooltip("Follower's Target")]
         [SerializeField] public Transform target;
-        [SerializeField] bool isFollowing = false;
+
+        // properties
+        public bool IsFollowing => isFollowing;
 
         // state
         float speed;
+        bool isMovementStopped = false;
+        bool isFollowing = false;
 
         // Update is called once per frame
         void Update()
@@ -31,6 +35,11 @@ namespace TheSicker.Core
             isFollowing = isFollowingState;
 
             speed = isFollowing ? followingSpeed : normalSpeed;
+        }
+
+        public void OverideMovement(bool isOverrrideMovementRequired)
+        {
+            isMovementStopped = isOverrrideMovementRequired;
         }
 
         private float CalculateStep()
@@ -50,6 +59,8 @@ namespace TheSicker.Core
 
         private void MoveRight(float step)
         {
+            if(isMovementStopped) return;
+
             transform.position += transform.right * step;
         }
     }
