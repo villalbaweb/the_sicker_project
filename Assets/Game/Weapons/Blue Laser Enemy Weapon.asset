@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isProjectileBased: 1
   projectile: 7
-  projectileFiringPeriod: 0.5
+  projectileFiringPeriod: 0.25
   onFireSoundClip: {fileID: 8300000, guid: 514146b278b937d498330b73c1d1331d, type: 3}
   fireSoundVolume: 0.5
   projectileCustomFirePrefab: {fileID: 0}
