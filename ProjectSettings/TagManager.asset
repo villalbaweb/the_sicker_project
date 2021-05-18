@@ -60,3 +60,6 @@ TagManager:
   - name: Enemy Layer
     uniqueID: 1268459709
     locked: 0
+  - name: Projectile Enemy
+    uniqueID: 510735803
+    locked: 0
