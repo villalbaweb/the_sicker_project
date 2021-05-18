@@ -21,7 +21,7 @@ TagManager:
   - Playable Area
   - Pickups
   - Minimap
-  - 
+  - Projectile Enemy
   - 
   - 
   - 
@@ -56,4 +56,7 @@ TagManager:
     locked: 0
   - name: Projectile Player
     uniqueID: 1759472331
+    locked: 0
+  - name: Enemy Layer
+    uniqueID: 1268459709
     locked: 0
