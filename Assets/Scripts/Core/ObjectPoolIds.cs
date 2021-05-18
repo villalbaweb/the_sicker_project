@@ -10,6 +10,7 @@
         None,
 
         FollowOnDistanceExplosive,
-        OrangeSpaceship
+        OrangeSpaceship,
+        EnemyBlueProjectile
     }
 }
