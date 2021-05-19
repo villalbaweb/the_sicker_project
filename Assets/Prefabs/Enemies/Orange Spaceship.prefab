@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aeb66f82e2f7f949bee0255336d12b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedWeapon: {fileID: 11400000, guid: 7d7a53f3e9cc69d42825152d4badd6c9, type: 2}
+  selectedEnemyWeapon: {fileID: 11400000, guid: 7d7a53f3e9cc69d42825152d4badd6c9, type: 2}
   weaponPos: {fileID: 30420299411137521}
   enemyLayers:
     serializedVersion: 2

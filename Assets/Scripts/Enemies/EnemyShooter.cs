@@ -10,7 +10,7 @@ namespace TheSicker.Enemies
     {
         // config
         [Header("Weapon Selected")]
-        [SerializeField] EnemyWeapon selectedWeapon = null;
+        [SerializeField] EnemyWeapon selectedEnemyWeapon = null;
         [SerializeField] Transform weaponPos = null;
 
         [Header("Target Control")]
@@ -18,12 +18,10 @@ namespace TheSicker.Enemies
         [SerializeField] float circleRayCastRadious = 0.5f;
 
         // constatnts
-        const string WEAPON_NAME = "Weapon";
         const string MUZZLER_NAME = "Muzzler";
 
         // State
         bool isDead;
-        bool isCustomFiring;
         EnemyWeapon currentWeapon;
         ParticleSystem muzzleParticleSystem; 
         Coroutine _firingCoroutine;
@@ -38,7 +36,7 @@ namespace TheSicker.Enemies
         {
             _objectPooler = FindObjectOfType<ObjectPooler>();
 
-            EquipWeapon(selectedWeapon);
+            EquipWeapon();
         }
 
         // Update is called once per frame
@@ -73,13 +71,13 @@ namespace TheSicker.Enemies
             return layermask == (layermask | (1 << layer));
         }
 
-        private void EquipWeapon(EnemyWeapon newWeapon)
+        private void EquipWeapon()
         {
             // this will kill the firing coroutine started from the weapon
             // when its a projectile based weapon
             StopAllCoroutines();
 
-            currentWeapon = newWeapon;
+            currentWeapon = selectedEnemyWeapon;
 
             SetupWeapon(weaponPos ?? transform);
         }
