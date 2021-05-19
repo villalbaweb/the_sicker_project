@@ -13,5 +13,13 @@ namespace TheSicker.Combat
         [SerializeField] [Range(0, 1)] float fireSoundVolume = 0.5f;
         [SerializeField] float projectileDistance = 20f;
         [SerializeField] ParticleSystem muzzlerParticleSystemPrefab = null;
+
+        // properties
+        public ObjectPoolIds Projectile => projectile;
+        public float ProjectileFiringPeriod => projectileFiringPeriod;
+        public AudioClip OnFireSoundClip => onFireSoundClip;
+        public float FireSoundVolume => fireSoundVolume;
+        public float ProjectileDistance => projectileDistance;
+        public ParticleSystem MuzzlerParticleSystemPrefab => muzzlerParticleSystemPrefab;
     }
 }
