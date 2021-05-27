@@ -26,8 +26,6 @@ namespace TheSicker.Player
         bool isCustomFiring;
         bool isEquipWeaponRunning;
         Weapon currentWeapon;
-
-        // state
         ParticleSystem muzzleParticleSystem;
         ProjectileCustomFire projectileCustomFire;
         Coroutine _firingCoroutine;
@@ -79,7 +77,59 @@ namespace TheSicker.Player
             return layermask == (layermask | (1 << layer));
         }
 
-        public void SetupWeapon(Transform gunPosition)
+        private void StartFiring()
+        {
+            muzzleParticleSystem?.Play();
+
+            if (currentWeapon.IsProjectileBased)
+            {
+                _firingCoroutine = _firingCoroutine != null ? _firingCoroutine : StartCoroutine(Fire());
+            }
+            else
+            {
+                StartCustomFire();
+            }
+        }
+
+        private IEnumerator Fire()
+        {
+            while (true)
+            {
+                PlayShootSFX();
+                ShootProjectile();
+
+                yield return new WaitForSeconds(currentWeapon.ProjectileFiringPeriod);
+            }
+        }
+
+        private void PlayShootSFX()
+        {
+            AudioSource.PlayClipAtPoint(currentWeapon.OnFireSoundClip, Camera.main.transform.position, currentWeapon.FireSoundVolume);
+        }
+
+        private void ShootProjectile()
+        {
+            GameObject projectileGameObject = _objectPooler.SpawnFromPool(currentWeapon.Projectile.ToString(), _weaponTransform.position, Quaternion.identity);
+            ProjectileMovement projectileInstance = projectileGameObject?.GetComponent<ProjectileMovement>();
+            projectileInstance?.SetRotation(_weaponTransform.rotation);
+        }
+
+        private void StopFiring()
+        {
+            muzzleParticleSystem?.Stop();
+
+            if (currentWeapon.IsProjectileBased && _firingCoroutine != null)
+            {
+                StopCoroutine(_firingCoroutine);
+                _firingCoroutine = null;
+            }
+            else
+            {
+                StopCustomFire();
+            }
+        }
+
+        private void SetupWeapon(Transform gunPosition)
         {
             _weaponTransform = gunPosition;
 
@@ -113,50 +163,10 @@ namespace TheSicker.Player
             }
         }
 
-        private void StartFiring()
-        {
-            muzzleParticleSystem?.Play();
-
-            if (currentWeapon.IsProjectileBased)
-            {
-                _firingCoroutine = _firingCoroutine != null ? _firingCoroutine :StartCoroutine(Fire());
-            }
-            else
-            {
-                StartCustomFire();
-            }
-        }
-
-        private IEnumerator Fire()
-        {
-            while (true)
-            {
-                PlayShootSFX();
-                ShootProjectile();
-
-                yield return new WaitForSeconds(currentWeapon.ProjectileFiringPeriod);
-            }
-        }
-
-        private void StopFiring()
-        {
-            muzzleParticleSystem?.Stop();
-
-            if (currentWeapon.IsProjectileBased && _firingCoroutine != null)
-            {
-                StopCoroutine(_firingCoroutine);
-                _firingCoroutine = null;
-            }
-            else
-            {
-                StopCustomFire();
-            }
-        }
-
         private void StartCustomFire()
         {
             if (!currentWeapon.ProjectileCustomFirePrefab) return;
-            
+
             projectileCustomFire?.FireStart();
         }
 
@@ -167,17 +177,7 @@ namespace TheSicker.Player
             projectileCustomFire?.FireStop();
         }
 
-        private void ShootProjectile()
-        {
-            GameObject projectileGameObject = _objectPooler.SpawnFromPool(currentWeapon.Projectile.ToString(), _weaponTransform.position, Quaternion.identity);
-            ProjectileMovement projectileInstance = projectileGameObject?.GetComponent<ProjectileMovement>();
-            projectileInstance?.SetRotation(_weaponTransform.rotation);
-        }
 
-        private void PlayShootSFX()
-        {
-            AudioSource.PlayClipAtPoint(currentWeapon.OnFireSoundClip, Camera.main.transform.position, currentWeapon.FireSoundVolume);
-        }
 
         #endregion
 
