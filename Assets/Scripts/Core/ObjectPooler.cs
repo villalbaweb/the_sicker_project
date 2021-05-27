@@ -64,9 +64,9 @@ namespace TheSicker.Core
             objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
 
-            // execute specific action on spawn
-            IPooledObject pooledObject = objectToSpawn.GetComponent<IPooledObject>();
-            if(pooledObject != null)
+            // execute specific actions on spawn
+            IPooledObject[] pooledObjects = objectToSpawn.GetComponents<IPooledObject>();
+            foreach (IPooledObject pooledObject in pooledObjects)
             {
                 pooledObject.OnObjectSpawn();
             }

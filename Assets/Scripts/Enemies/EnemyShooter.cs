@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TheSicker.Enemies
 {
-    public class EnemyShooter : MonoBehaviour
+    public class EnemyShooter : MonoBehaviour, IPooledObject
     {
         // config
         [Header("Weapon Selected")]
@@ -142,7 +142,13 @@ namespace TheSicker.Enemies
         // called from Unity Event
         public void OnDie()
         {
-            //isDead = true;
+            isDead = true;
+        }
+
+        // execute specific action on spawn
+        public void OnObjectSpawn()
+        {
+            isDead = false;
         }
 
         #endregion

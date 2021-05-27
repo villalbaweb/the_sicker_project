@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using TheSicker.Core;
+﻿using TheSicker.Core;
 using TheSicker.Projectile;
 using UnityEngine;
 

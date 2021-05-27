@@ -177,8 +177,6 @@ namespace TheSicker.Player
             projectileCustomFire?.FireStop();
         }
 
-
-
         #endregion
 
         #region Public Methods
