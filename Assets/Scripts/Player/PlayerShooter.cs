@@ -1,5 +1,7 @@
-﻿using TheSicker.Combat;
+﻿using System.Collections;
+using TheSicker.Combat;
 using TheSicker.Core;
+using TheSicker.Projectile;
 using UnityEngine;
 
 namespace TheSicker.Player
@@ -15,14 +17,24 @@ namespace TheSicker.Player
         [SerializeField] LayerMask enemyLayers = new LayerMask();
         [SerializeField] float circleRayCastRadious = 0.5f;
 
+        // constants
+        const string WEAPON_NAME = "Weapon";
+        const string MUZZLER_NAME = "Muzzler";
+
         // State
         bool isDead;
         bool isCustomFiring;
         bool isEquipWeaponRunning;
         Weapon currentWeapon;
 
+        // state
+        ParticleSystem muzzleParticleSystem;
+        ProjectileCustomFire projectileCustomFire;
+        Coroutine _firingCoroutine;
+
         // cache
         ObjectPooler _objectPooler;
+        Transform _weaponTransform;
 
         #region  Private Methods
 
@@ -36,20 +48,20 @@ namespace TheSicker.Player
         // Update is called once per frame
         void Update()
         {
-            Fire();
+            FireHandler();
         }
 
-        private void Fire()
+        private void FireHandler()
         {
             if(isEquipWeaponRunning || !currentWeapon) return;
 
             if (IsTargetFound())
             {
-                currentWeapon.StartFiring();
+                StartFiring();
             }
             else
             {
-                currentWeapon.StopFiring();
+                StopFiring();
             }
         }
 
@@ -67,6 +79,106 @@ namespace TheSicker.Player
             return layermask == (layermask | (1 << layer));
         }
 
+        public void SetupWeapon(Transform gunPosition)
+        {
+            _weaponTransform = gunPosition;
+
+            DestroyOldWeapon();
+
+            if (currentWeapon.MuzzlerParticleSystemPrefab)
+            {
+                muzzleParticleSystem = Instantiate(currentWeapon.MuzzlerParticleSystemPrefab, _weaponTransform);
+                muzzleParticleSystem.gameObject.name = MUZZLER_NAME;
+            }
+
+            if (currentWeapon.ProjectileCustomFirePrefab)
+            {
+                projectileCustomFire = Instantiate(currentWeapon.ProjectileCustomFirePrefab, _weaponTransform);
+                projectileCustomFire.gameObject.name = WEAPON_NAME;
+            }
+        }
+
+        private void DestroyOldWeapon()
+        {
+            Transform oldWeapon = _weaponTransform?.Find(WEAPON_NAME);
+            if (oldWeapon)
+            {
+                Destroy(oldWeapon.gameObject);
+            }
+
+            Transform oldMuzzler = _weaponTransform?.Find(MUZZLER_NAME);
+            if (oldMuzzler)
+            {
+                Destroy(oldMuzzler.gameObject);
+            }
+        }
+
+        private void StartFiring()
+        {
+            muzzleParticleSystem?.Play();
+
+            if (currentWeapon.IsProjectileBased)
+            {
+                _firingCoroutine = _firingCoroutine != null ? _firingCoroutine :StartCoroutine(Fire());
+            }
+            else
+            {
+                StartCustomFire();
+            }
+        }
+
+        private IEnumerator Fire()
+        {
+            while (true)
+            {
+                PlayShootSFX();
+                ShootProjectile();
+
+                yield return new WaitForSeconds(currentWeapon.ProjectileFiringPeriod);
+            }
+        }
+
+        private void StopFiring()
+        {
+            muzzleParticleSystem?.Stop();
+
+            if (currentWeapon.IsProjectileBased && _firingCoroutine != null)
+            {
+                StopCoroutine(_firingCoroutine);
+                _firingCoroutine = null;
+            }
+            else
+            {
+                StopCustomFire();
+            }
+        }
+
+        private void StartCustomFire()
+        {
+            if (!currentWeapon.ProjectileCustomFirePrefab) return;
+            
+            projectileCustomFire?.FireStart();
+        }
+
+        private void StopCustomFire()
+        {
+            if(!currentWeapon.ProjectileCustomFirePrefab) return;
+            
+            projectileCustomFire?.FireStop();
+        }
+
+        private void ShootProjectile()
+        {
+            GameObject projectileGameObject = _objectPooler.SpawnFromPool(currentWeapon.Projectile.ToString(), _weaponTransform.position, Quaternion.identity);
+            ProjectileMovement projectileInstance = projectileGameObject?.GetComponent<ProjectileMovement>();
+            projectileInstance?.SetRotation(_weaponTransform.rotation);
+        }
+
+        private void PlayShootSFX()
+        {
+            AudioSource.PlayClipAtPoint(currentWeapon.OnFireSoundClip, Camera.main.transform.position, currentWeapon.FireSoundVolume);
+        }
+
         #endregion
 
         #region Public Methods
@@ -82,7 +194,7 @@ namespace TheSicker.Player
             if(currentWeapon && currentWeapon.IsProjectileBased) StopAllCoroutines();    
 
             currentWeapon = newWeapon;
-            currentWeapon?.SetupWeapon(weaponPos ?? transform, _objectPooler, this);
+            SetupWeapon(weaponPos ?? transform);
 
             isEquipWeaponRunning = false; 
         }
