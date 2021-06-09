@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 420902}
   - component: {fileID: 2724668338696947873}
   - component: {fileID: 1745870344866003867}
-  - component: {fileID: 9509168}
+  - component: {fileID: 7596268282847901364}
   - component: {fileID: 4302025786186872026}
   - component: {fileID: 1697175721404656389}
   - component: {fileID: 6090073822305624609}
@@ -82,7 +82,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.3, y: 0.6}
   m_Direction: 0
---- !u!95 &9509168
+--- !u!95 &7596268282847901364
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
