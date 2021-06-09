@@ -11,6 +11,7 @@
 
         FollowOnDistanceExplosive,
         OrangeSpaceship,
-        EnemyBlueProjectile
+        EnemyBlueProjectile,
+        CapsuleSpaceship
     }
 }
