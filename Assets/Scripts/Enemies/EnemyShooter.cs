@@ -29,6 +29,7 @@ namespace TheSicker.Enemies
         // cache
         ObjectPooler _objectPooler;
         Transform _weaponTransform;
+        WaitForSeconds _fireWaitForSeconds;
 
         #region  Private Methods
 
@@ -80,6 +81,8 @@ namespace TheSicker.Enemies
             currentWeapon = selectedEnemyWeapon;
 
             SetupWeapon(weaponPos ?? transform);
+
+            _fireWaitForSeconds = new WaitForSeconds(currentWeapon.ProjectileFiringPeriod);
         }
 
         private void SetupWeapon(Transform gunPosition)
@@ -119,7 +122,7 @@ namespace TheSicker.Enemies
                 PlayShootSFX();
                 ShootProjectile();
 
-                yield return new WaitForSeconds(currentWeapon.ProjectileFiringPeriod);
+                yield return _fireWaitForSeconds;
             }
         }
 

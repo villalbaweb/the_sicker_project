@@ -16,9 +16,13 @@ namespace TheSicker.Attacks
         SpecialEffectsHandler _specialEffectsHandler;
         ContactPoint2D _contactPoint;
 
+        // cache
+        WaitForSeconds _crashDamageWaitForSeconds;
+
         private void Awake() 
         {
             _specialEffectsHandler = GetComponent<SpecialEffectsHandler>();
+            _crashDamageWaitForSeconds = new WaitForSeconds(touchDamagePeriodRate);
         }
 
         private void OnCollisionStay2D(Collision2D other) 
@@ -61,7 +65,7 @@ namespace TheSicker.Attacks
             {
                 _health.TakeDamage(touchDamagePerPeriod);
                 _specialEffectsHandler.PlaySpecialEffectsOnPosition(_contactPoint.point);
-                yield return new WaitForSeconds(touchDamagePeriodRate);
+                yield return _crashDamageWaitForSeconds;
             }
         }
 

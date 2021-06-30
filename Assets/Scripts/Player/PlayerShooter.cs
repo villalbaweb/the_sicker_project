@@ -33,6 +33,7 @@ namespace TheSicker.Player
         // cache
         ObjectPooler _objectPooler;
         Transform _weaponTransform;
+        WaitForSeconds _fireWaitForSeconds;
 
         #region  Private Methods
 
@@ -98,7 +99,7 @@ namespace TheSicker.Player
                 PlayShootSFX();
                 ShootProjectile();
 
-                yield return new WaitForSeconds(currentWeapon.ProjectileFiringPeriod);
+                yield return _fireWaitForSeconds;
             }
         }
 
@@ -194,7 +195,9 @@ namespace TheSicker.Player
             currentWeapon = newWeapon;
             SetupWeapon(weaponPos ?? transform);
 
-            isEquipWeaponRunning = false; 
+            isEquipWeaponRunning = false;
+
+            _fireWaitForSeconds = new WaitForSeconds(currentWeapon.ProjectileFiringPeriod);
         }
 
         public void PlayWeaponPickupParticles(ParticleSystem particles)

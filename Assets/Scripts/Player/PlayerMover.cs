@@ -42,6 +42,14 @@ namespace TheSicker.Player
         Vector2 remainMovementDirection;
         float remainMovingSpeed;
 
+        // cache
+        WaitForSeconds _turboSpeedWaitForSeconds;
+
+        private void Awake() 
+        {
+            _turboSpeedWaitForSeconds = new WaitForSeconds(turboSpeedTime);
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -103,7 +111,7 @@ namespace TheSicker.Player
             IsTurboSpeed = true;
             speed = speed * turboSpeedIncreaseTimes;
 
-            yield return new WaitForSeconds(turboSpeedTime);
+            yield return _turboSpeedWaitForSeconds;
 
             speed = originalSpeed;
             IsTurboSpeed = false;

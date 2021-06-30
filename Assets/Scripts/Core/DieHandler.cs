@@ -13,10 +13,12 @@ namespace TheSicker.Core
 
         // cache
         Rigidbody2D _rigidBody2D;
+        WaitForSecondsRealtime _dieWaitForSeconds;
 
         private void Awake()
         {
             _rigidBody2D = GetComponent<Rigidbody2D>();
+            _dieWaitForSeconds = new WaitForSecondsRealtime(timeToDisableAfterDie);
         }
 
         // Common actions to be executed when die
@@ -26,7 +28,7 @@ namespace TheSicker.Core
 
             _rigidBody2D.simulated = false;
 
-            yield return new WaitForSecondsRealtime(timeToDisableAfterDie);
+            yield return _dieWaitForSeconds;
 
             _rigidBody2D.simulated = true;
             gameObject.SetActive(false);
