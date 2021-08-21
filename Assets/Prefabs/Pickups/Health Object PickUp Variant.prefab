@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 9032571241211539465}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6811999835916087326
 SpriteRenderer:
@@ -272,3 +272,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6957081469493636010, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
   m_PrefabInstance: {fileID: 2150089574549576611}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8610513470654843344
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 9032571241211539465}
+    m_Modifications:
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4661590573993401527, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958286620389710285, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958286620389710285, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958286620389710285, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958286620389710285, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958286620389710285, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989112962124492606, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_Name
+      value: Health Pickup Rounding Particles Particle System Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101918299887963855, guid: 7456480340ec4ec428db03b045574177, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3703ec977ea22d745978935bddf2044a, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7456480340ec4ec428db03b045574177, type: 3}
