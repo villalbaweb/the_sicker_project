@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b864c8fafaed54eb0027ec4f74b12c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxAudio: {fileID: 8300000, guid: 26c44f819f3d4004d87feefff994c086, type: 3}
+  sfxAudio: {fileID: 8300000, guid: 415732a71073087489530aa1ebd8463c, type: 3}
   sfxAudioVolume: 0.5
 --- !u!114 &2674212991599005681
 MonoBehaviour:
