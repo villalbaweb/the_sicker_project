@@ -43,5 +43,11 @@ namespace TheSicker.Core
             health = initialHealth;
             OnHealthChange?.Invoke();
         }
+
+        public void IncreaseHealth(int healthToIncrease)
+        {
+            health += healthToIncrease;
+            OnHealthChange?.Invoke();
+        }
     }
 }
