@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87852db97ec3af1448df3bec54bb5ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupParticleSystem: {fileID: 5617060277119367587, guid: c2a053b8902ee2f449c9c4b81f4741ec, type: 3}
+  pickupParticleSystem: {fileID: 5617060277119367587, guid: 3dc8c7f41635de646a7b245f1d1660a3, type: 3}
 --- !u!1 &6096375279733827682
 GameObject:
   m_ObjectHideFlags: 0
