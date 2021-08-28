@@ -111,7 +111,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 3868490161565199190}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1980450213580458132
 SpriteRenderer:
@@ -193,7 +193,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5862567811410015556}
-  - {fileID: 1300237903763141041}
   - {fileID: 1483785767884906495}
   - {fileID: 4687470830350818433}
   m_Father: {fileID: 4672451030396665103}
@@ -220,7 +219,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1539375946306989661, guid: af6f6473887cdb9469f0b83a46f1679d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1539375946306989661, guid: af6f6473887cdb9469f0b83a46f1679d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -362,66 +361,4 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2272527749695093235, guid: 64347caa54e92ff4b80116fa662ee061, type: 3}
   m_PrefabInstance: {fileID: 6872003226719765756}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7333397812198409632
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 3868490161565199190}
-    m_Modifications:
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8632882653306713106, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-      propertyPath: m_Name
-      value: Electricity Weapon Pickup Particle System
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
---- !u!4 &1300237903763141041 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8632882653306713105, guid: 4865ed3fa7df69142a6a42d5bb0bbc15, type: 3}
-  m_PrefabInstance: {fileID: 7333397812198409632}
   m_PrefabAsset: {fileID: 0}
