@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace TheSicker.Core
 {
-    public class ObjectPickUpSpawner : MonoBehaviour
+    public class ObjectPoolSpawner : MonoBehaviour
     {
-                // config
+        // config
         [SerializeField] float timeBetweenSpawns = 5f;
-        [SerializeField] List<ObjectPoolIds> availablePickUps = new List<ObjectPoolIds>();
+        [SerializeField] List<ObjectPoolIds> availableObjectstoSpawn = new List<ObjectPoolIds>();
 
         // cache
         ObjectPooler _objectPooler;
@@ -25,16 +25,16 @@ namespace TheSicker.Core
         // Update is called once per frame
         void Update()
         {
-            SpawnPickUp();
+            PoolObjectSpawn();
         }
 
-        private void SpawnPickUp()
+        private void PoolObjectSpawn()
         {
             spawnTimer += Time.deltaTime;
 
             if (spawnTimer > timeBetweenSpawns)
             {
-                _objectPooler.SpawnFromPool(RandomPickUpToSpawn(), GetRandomPos(), Quaternion.identity);
+                _objectPooler.SpawnFromPool(RandomObjectToSpawn(), GetRandomPos(), Quaternion.identity);
                 spawnTimer = 0;
             }
         }
@@ -47,9 +47,9 @@ namespace TheSicker.Core
             return Camera.main.ViewportToWorldPoint(new Vector3(xValue, yValue, Camera.main.nearClipPlane));
         }
 
-        private string RandomPickUpToSpawn()
+        private string RandomObjectToSpawn()
         {
-            return availablePickUps.OrderBy(x => System.Guid.NewGuid()).FirstOrDefault().ToString();
+            return availableObjectstoSpawn.OrderBy(x => System.Guid.NewGuid()).FirstOrDefault().ToString();
         }
     }
 }
