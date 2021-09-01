@@ -82,20 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1623343264424186097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305767141131278074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b864c8fafaed54eb0027ec4f74b12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxAudio: {fileID: 8300000, guid: 415732a71073087489530aa1ebd8463c, type: 3}
-  sfxAudioVolume: 0.5
 --- !u!114 &2674212991599005681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,19 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increaseHealthPoints: 50
---- !u!114 &3348113221555104325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305767141131278074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87852db97ec3af1448df3bec54bb5ef4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickupParticleSystem: {fileID: 5617060277119367587, guid: 3dc8c7f41635de646a7b245f1d1660a3, type: 3}
 --- !u!1 &6096375279733827682
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,84 +230,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1835076487770836508, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
+      propertyPath: sfxAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 415732a71073087489530aa1ebd8463c, type: 3}
     - target: {fileID: 1866999931643989337, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
       propertyPath: m_Name
       value: Health Object PickUp Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
       propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 2674212991599005681}
     - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1623343264424186097}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 3348113221555104325}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: IncreaseHealth
       objectReference: {fileID: 0}
     - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PickupSoundEffectPlay
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: VFXParticlesPlay
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: TheSicker.Player.PlayerHealthIncreaseHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: TheSicker.Combat.WeaponPickupSoundEffectHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: TheSicker.Combat.WeaponPickupVisualEffectHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615341336583869782, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
-      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: onPickUpEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6957081469493636010, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
@@ -381,6 +310,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6971114018972388125, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
+      propertyPath: pickupParticleSystem
+      value: 
+      objectReference: {fileID: 5617060277119367587, guid: 3dc8c7f41635de646a7b245f1d1660a3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95e42125cf0a6aa419db8d4260d0b258, type: 3}
 --- !u!1 &305767141131278074 stripped
