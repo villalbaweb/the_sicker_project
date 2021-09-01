@@ -68,3 +68,18 @@ MonoBehaviour:
   - tag: 8
     prefab: {fileID: 147846, guid: 637174da73817a44dbfe7355d69f6b87, type: 3}
     size: 10
+  - tag: 9
+    prefab: {fileID: 4672451030396665137, guid: c135f8db3bb01d14bad0cb33fc24adce, type: 3}
+    size: 2
+  - tag: 10
+    prefab: {fileID: 51668291543946618, guid: d541228d19cae3a468f4d27892e884ee, type: 3}
+    size: 2
+  - tag: 11
+    prefab: {fileID: 4131759605117842097, guid: 891e8139aca2473428231e26c9643ca6, type: 3}
+    size: 2
+  - tag: 12
+    prefab: {fileID: 5677092675062683726, guid: e9c9682a9af34da4f9b579b730c2c01a, type: 3}
+    size: 2
+  - tag: 13
+    prefab: {fileID: 305767141131278074, guid: c7f65fec23782fb4c98df78ea7735636, type: 3}
+    size: 4

@@ -2,6 +2,7 @@
 {
     public enum ObjectPoolIds
     {
+        // Attackers / Projectiles
         FollowOnDistanceAttacker,
         PlayerProjectile,
         FollowOnDistanceSmallAttacker,
@@ -9,9 +10,17 @@
 
         None,
 
+        // Enemies
         FollowOnDistanceExplosive,
         OrangeSpaceship,
         EnemyBlueProjectile,
-        CapsuleSpaceship
+        CapsuleSpaceship,
+
+        // Pickups
+        ElectricityWeaponPickup,
+        LaserWeaponPickup,
+        GreenLaserWeaponPickup,
+        FastFireballWeaponPickup,
+        HealthObjectPickup
     }
 }
