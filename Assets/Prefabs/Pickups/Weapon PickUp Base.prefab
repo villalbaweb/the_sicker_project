@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 6138952006317720493}
   - component: {fileID: 2272527749695093234}
   - component: {fileID: 8438229197716182122}
+  - component: {fileID: 2031399517200985776}
+  - component: {fileID: 4369918641761919104}
   - component: {fileID: 2272527749695093232}
   - component: {fileID: 1227939887973264906}
   - component: {fileID: 7921299116560040970}
   - component: {fileID: 1449083720905174188}
-  - component: {fileID: 2031399517200985776}
-  - component: {fileID: 4369918641761919104}
+  - component: {fileID: 7639039527897272720}
   m_Layer: 13
   m_Name: Weapon PickUp Base
   m_TagString: Untagged
@@ -102,6 +103,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2031399517200985776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272527749695093197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106fdc801b06a6946be931e4648dce50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!114 &4369918641761919104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2272527749695093197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6fca6c0b968a454a8ef3f869a47f89a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToIdentifyAndTurn: Playable Area Delimiter
 --- !u!114 &2272527749695093232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +182,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7639039527897272720}
+        m_TargetAssemblyTypeName: TheSicker.Core.ObjectPickUpPickedHandler, Assembly-CSharp
+        m_MethodName: PickUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1227939887973264906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxAudio: {fileID: 0}
   sfxAudioVolume: 0.5
---- !u!114 &2031399517200985776
+--- !u!114 &7639039527897272720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,20 +243,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2272527749695093197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 106fdc801b06a6946be931e4648dce50, type: 3}
+  m_Script: {fileID: 11500000, guid: 90664122f01c0974c9cc4e87c885b29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
---- !u!114 &4369918641761919104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2272527749695093197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6fca6c0b968a454a8ef3f869a47f89a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagToIdentifyAndTurn: Playable Area Delimiter

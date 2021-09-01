@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1666880441301350256}
   - component: {fileID: 5846176715086637588}
   - component: {fileID: 8777031468240370375}
-  - component: {fileID: 6615341336583869782}
   - component: {fileID: 4051427699514372041}
   - component: {fileID: 251577226310897411}
+  - component: {fileID: 6615341336583869782}
   - component: {fileID: 5656211724276293001}
   - component: {fileID: 1835076487770836508}
   - component: {fileID: 6971114018972388125}
@@ -102,6 +102,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4051427699514372041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866999931643989337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106fdc801b06a6946be931e4648dce50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!114 &251577226310897411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866999931643989337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6fca6c0b968a454a8ef3f869a47f89a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToIdentifyAndTurn: Playable Area Delimiter
 --- !u!114 &6615341336583869782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,32 +181,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4051427699514372041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866999931643989337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 106fdc801b06a6946be931e4648dce50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
---- !u!114 &251577226310897411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866999931643989337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6fca6c0b968a454a8ef3f869a47f89a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagToIdentifyAndTurn: Playable Area Delimiter
 --- !u!114 &5656211724276293001
 MonoBehaviour:
   m_ObjectHideFlags: 0
