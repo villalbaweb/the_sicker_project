@@ -1,0 +1,5 @@
+* Fix the VisualEffectHandler.cs issue where it instantiate the VFX 
+in favor of use the Object Pool. At the same time I have to Refactor the 
+VisualEffect.cs so instead of Destroy a VFX it will set inactive to work
+properly with Object Pool. With this change the TemporaryGameObjectsHandler.cs
+object is not required anymore.
