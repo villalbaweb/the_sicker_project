@@ -21,6 +21,12 @@
         LaserWeaponPickup,
         GreenLaserWeaponPickup,
         FastFireballWeaponPickup,
-        HealthObjectPickup
+        HealthObjectPickup,
+
+        // Vfx
+        LazerRayHitEffect,
+        Explosion,
+        EnemyCellExplosion,
+        SmallEnemyCellExplosion
     }
 }

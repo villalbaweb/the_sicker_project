@@ -115,7 +115,6 @@ MonoBehaviour:
   normalSpeed: 1
   followingSpeed: 4
   target: {fileID: 0}
-  isFollowing: 0
 --- !u!114 &4977548991574540643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionVfxPrefab: {fileID: 6107377662465563500, guid: 84b6f02f085566c4eae445c2123cbb1d, type: 3}
+  visualEffectToSpawn: 17
 --- !u!114 &7376063050369105888
 MonoBehaviour:
   m_ObjectHideFlags: 0

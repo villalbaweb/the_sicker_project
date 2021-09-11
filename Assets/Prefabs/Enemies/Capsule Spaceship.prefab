@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionVfxPrefab: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
+  visualEffectToSpawn: 15
 --- !u!114 &4518290841797209031
 MonoBehaviour:
   m_ObjectHideFlags: 0

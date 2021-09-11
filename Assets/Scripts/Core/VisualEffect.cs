@@ -16,10 +16,10 @@ namespace TheSicker.Core
             StartCoroutine(Destruction()); //launching the timer of destruction
         }
 
-        IEnumerator Destruction() //wait for the estimated time, and destroying or deactivating the object
+        IEnumerator Destruction() //wait for the estimated time, and deactivating the object
         {
             yield return new WaitForSeconds(destructionTime); 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

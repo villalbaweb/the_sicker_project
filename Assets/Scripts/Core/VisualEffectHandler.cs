@@ -5,27 +5,24 @@ namespace TheSicker.Core
     public class VisualEffectHandler : MonoBehaviour
     {
         // config
-        [SerializeField] GameObject explosionVfxPrefab = null;
+        [SerializeField] ObjectPoolIds visualEffectToSpawn = ObjectPoolIds.None;
 
         // cache
-        TemporaryGameObjectsHandler _temporaryGameObjectsHandler;
+        ObjectPooler _objectPooler;
 
         private void Awake() 
         {
-            _temporaryGameObjectsHandler = FindObjectOfType<TemporaryGameObjectsHandler>();
+            _objectPooler = FindObjectOfType<ObjectPooler>();
         }
 
-        private void StartSpecificVfx(GameObject vfxPrefab, Vector2 position)
+        private void StartSpecificVfx(Vector2 position)
         {
-            if (!vfxPrefab) return;
-
-            GameObject obj = Instantiate(vfxPrefab, position, Quaternion.identity);
-            obj.transform.parent = _temporaryGameObjectsHandler.TemporaryObjectParentTransform;
+            _objectPooler.SpawnFromPool(visualEffectToSpawn.ToString(), position, Quaternion.identity);
         }
 
         public void ExplosionVfx(Vector2 position)
         {
-            StartSpecificVfx(explosionVfxPrefab, position);
+            StartSpecificVfx(position);
         }
 
         public void ExplosionVFXParentPosition()
