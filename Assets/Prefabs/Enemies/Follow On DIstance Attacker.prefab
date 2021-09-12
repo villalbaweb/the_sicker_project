@@ -419,7 +419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9874747ec6c6944a32f9ec3b07a8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionVfxPrefab: {fileID: 6107377662465563500, guid: 6b17825c7c284484b96ba57f5b4ee73d, type: 3}
   visualEffectToSpawn: 16
 --- !u!114 &4148759486683174341
 MonoBehaviour:
@@ -464,3 +463,4 @@ MonoBehaviour:
   sfxAudioVolume: 0.5
   visualEffectPrefabs:
   - {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
+  visualEffectsToSpawn: 0e000000

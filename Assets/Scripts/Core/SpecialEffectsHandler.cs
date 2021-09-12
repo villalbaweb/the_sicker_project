@@ -12,14 +12,14 @@ namespace TheSicker.Core
         [SerializeField] float sfxAudioVolume = 0.5f;
 
         [Header("Visual Effects to Play")]
-        [SerializeField] GameObject[] visualEffectPrefabs = null;
+        [SerializeField] ObjectPoolIds[] visualEffectsToSpawn;
 
         // cache
-        TemporaryGameObjectsHandler _temporaryGameObjectsHandler;
+        ObjectPooler _objectPooler;
 
         private void Awake()
         {
-            _temporaryGameObjectsHandler = FindObjectOfType<TemporaryGameObjectsHandler>();
+            _objectPooler = FindObjectOfType<ObjectPooler>();
         }
 
         public void PlaySpecialEffects()
@@ -36,10 +36,9 @@ namespace TheSicker.Core
 
         IEnumerator VisualFxRunCoroutine()
         {
-            foreach(GameObject go in visualEffectPrefabs)
+            foreach(ObjectPoolIds objectPoolId in visualEffectsToSpawn)
             {
-                GameObject obj = Instantiate(go, transform.position, Quaternion.identity);
-                obj.transform.parent = _temporaryGameObjectsHandler.TemporaryObjectParentTransform;
+                _objectPooler.SpawnFromPool(objectPoolId.ToString(), transform.position, Quaternion.identity);
             }
 
             yield return null;
@@ -47,10 +46,9 @@ namespace TheSicker.Core
 
         IEnumerator PositionedVisualFxRunCoroutine(Vector3 playPosition)
         {
-            foreach (GameObject go in visualEffectPrefabs)
+            foreach(ObjectPoolIds objectPoolId in visualEffectsToSpawn)
             {
-                GameObject obj = Instantiate(go, playPosition, Quaternion.identity);
-                obj.transform.parent = _temporaryGameObjectsHandler.TemporaryObjectParentTransform;
+                _objectPooler.SpawnFromPool(objectPoolId.ToString(), playPosition, Quaternion.identity);
             }
 
             yield return null;
