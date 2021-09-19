@@ -8,6 +8,8 @@ namespace TheSicker.UI
         // config
         [SerializeField] float disappearTimerConfig = 1f;
         [SerializeField] float dissapearSpeedConfig = 3f;
+        [SerializeField] float increaseScaleAmount = 1f;
+        [SerializeField] float decreaseScaleAmount = 1f;
 
         // cache
         private TextMeshPro _textMesh;
@@ -24,6 +26,7 @@ namespace TheSicker.UI
         private void Update()
         {
             MoveText();
+            ScaleText();
             DissappearText();
         }
 
@@ -31,6 +34,18 @@ namespace TheSicker.UI
         {
             float moveYSpeed = 2f;
             transform.position += new Vector3(0, moveYSpeed) * Time.deltaTime;
+        }
+
+        private void ScaleText()
+        {
+            if (_disappearTimer > disappearTimerConfig * 0.5)
+            {
+                transform.localScale += Vector3.one * increaseScaleAmount * Time.deltaTime;
+            }
+            else
+            {
+                transform.localScale -= Vector3.one * decreaseScaleAmount * Time.deltaTime;
+            }
         }
 
         private void DissappearText()
