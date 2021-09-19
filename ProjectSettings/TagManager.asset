@@ -63,3 +63,6 @@ TagManager:
   - name: Projectile Enemy
     uniqueID: 510735803
     locked: 0
+  - name: Mesh Renderer UI
+    uniqueID: 3377314645
+    locked: 0
