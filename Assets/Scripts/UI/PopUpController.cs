@@ -6,16 +6,28 @@ namespace TheSicker.UI
     public class PopUpController : MonoBehaviour
     {
         // config
+        [Range(0, 5)]
         [SerializeField] float disappearTimerConfig = 1f;
+        
+        [Range(0, 5)]
         [SerializeField] float dissapearSpeedConfig = 3f;
+        
+        [Range(0, 5)]
         [SerializeField] float increaseScaleAmount = 1f;
+
+        [Range(0, 5)]
         [SerializeField] float decreaseScaleAmount = 1f;
+
+        [SerializeField] Vector3 moveVectorConfig;
+        [Range(0, 5)]
+        [SerializeField] float moveVectorFactorConfig = 2.5f;
 
         // cache
         private TextMeshPro _textMesh;
 
         private float _disappearTimer;
         private float _dissapearSpeed;
+        private Vector3 _moveVector;
         private Color _textColor;
 
         private void Awake()
@@ -32,8 +44,8 @@ namespace TheSicker.UI
 
         private void MoveText()
         {
-            float moveYSpeed = 2f;
-            transform.position += new Vector3(0, moveYSpeed) * Time.deltaTime;
+            transform.position += _moveVector * Time.deltaTime;
+            _moveVector -= _moveVector * moveVectorFactorConfig * 0.5f * Time.deltaTime;
         }
 
         private void ScaleText()
@@ -77,6 +89,7 @@ namespace TheSicker.UI
             _textMesh.SetText(message);
             _disappearTimer = disappearTimerConfig;
             _dissapearSpeed = dissapearSpeedConfig;
+            _moveVector = moveVectorConfig * moveVectorFactorConfig;
             _textColor = _textMesh.color;
         }
     }

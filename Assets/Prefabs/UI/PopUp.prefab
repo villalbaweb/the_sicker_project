@@ -187,3 +187,5 @@ MonoBehaviour:
   dissapearSpeedConfig: 3
   increaseScaleAmount: 1
   decreaseScaleAmount: 1
+  moveVectorConfig: {x: 0.16, y: 0.23, z: 0}
+  moveVectorFactorConfig: 2.5
