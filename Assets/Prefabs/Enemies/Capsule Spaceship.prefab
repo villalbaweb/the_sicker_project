@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2884649953732582568}
   - component: {fileID: 4518290841797209031}
   - component: {fileID: 4778678693817552706}
+  - component: {fileID: 8828480207918080690}
   m_Layer: 9
   m_Name: Capsule Spaceship
   m_TagString: Untagged
@@ -225,6 +226,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8828480207918080690}
+        m_TargetAssemblyTypeName: TheSicker.UI.PopUpSpawner, Assembly-CSharp
+        m_MethodName: PopUpSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onCompleteDieCoroutineEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -254,7 +267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9874747ec6c6944a32f9ec3b07a8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionVfxPrefab: {fileID: 1587261729604890, guid: 600ec83cba1cec448bf41a6607229741, type: 3}
   visualEffectToSpawn: 15
 --- !u!114 &4518290841797209031
 MonoBehaviour:
@@ -287,6 +299,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   circleRayCastRadious: 0.5
+--- !u!114 &8828480207918080690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29eb796afe55cf1439497650f67d6d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupMessage: Killed
+  popUpObjectPoolId: 18
 --- !u!1 &822203135745703537
 GameObject:
   m_ObjectHideFlags: 0

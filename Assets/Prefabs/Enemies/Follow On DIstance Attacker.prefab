@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 4148759486683174341}
   - component: {fileID: 1037327947986325738}
   - component: {fileID: -4790462043829827051}
+  - component: {fileID: 2870403694235600745}
   m_Layer: 9
   m_Name: Follow On DIstance Attacker
   m_TagString: Untagged
@@ -404,6 +405,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2870403694235600745}
+        m_TargetAssemblyTypeName: TheSicker.UI.PopUpSpawner, Assembly-CSharp
+        m_MethodName: PopUpSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onCompleteDieCoroutineEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -461,6 +474,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundFx: []
   sfxAudioVolume: 0.5
-  visualEffectPrefabs:
-  - {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
   visualEffectsToSpawn: 0e000000
+--- !u!114 &2870403694235600745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501752544267082893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29eb796afe55cf1439497650f67d6d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupMessage: Killed
+  popUpObjectPoolId: 18

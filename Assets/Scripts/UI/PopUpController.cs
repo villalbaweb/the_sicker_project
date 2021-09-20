@@ -77,9 +77,7 @@ namespace TheSicker.UI
 
         private void PopUpCompleteHandle()
         {
-            // once this is configured to work with object pool
-            // we need to setactive false
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
         public void Setup(string message)
