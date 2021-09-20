@@ -27,6 +27,9 @@
         LazerRayHitEffect,
         Explosion,
         EnemyCellExplosion,
-        SmallEnemyCellExplosion
+        SmallEnemyCellExplosion,
+
+        // PopUp
+        PopUp
     }
 }
