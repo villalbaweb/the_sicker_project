@@ -40,7 +40,7 @@ namespace TheSicker.Core
                 {
                     GameObject obj = Instantiate(pool.prefab);
                     obj.SetActive(false);
-                    obj.transform.parent = objectPoolDivision.transform;
+                    obj.transform.SetParent(objectPoolDivision.transform);
                     objectPool.Enqueue(obj);
                 }
 
