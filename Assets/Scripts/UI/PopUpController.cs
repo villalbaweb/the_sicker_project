@@ -7,20 +7,11 @@ namespace TheSicker.UI
     public class PopUpController : MonoBehaviour, IPooledObject
     {
         // config
-        [Range(0, 5)]
         [SerializeField] float disappearTimerConfig = 1f;
-        
-        [Range(0, 5)]
         [SerializeField] float dissapearSpeedConfig = 3f;
-        
-        [Range(0, 5)]
         [SerializeField] float increaseScaleAmount = 1f;
-
-        [Range(0, 5)]
         [SerializeField] float decreaseScaleAmount = 1f;
-
         [SerializeField] Vector3 moveVectorConfig;
-        [Range(0, 5)]
         [SerializeField] float moveVectorFactorConfig = 2.5f;
 
         // cache
@@ -30,11 +21,13 @@ namespace TheSicker.UI
         private float _dissapearSpeed;
         private Vector3 _moveVector;
         private Color _textColor;
+        private Vector3 _initialScale;
         private bool _isRunning;
 
         private void Awake()
         {
             _textMesh = GetComponent<TextMeshPro>();
+            _initialScale = transform.localScale;
         }
 
         private void Update()
@@ -90,10 +83,6 @@ namespace TheSicker.UI
             if (!_textMesh) return;
 
             _textMesh.SetText(message);
-            _disappearTimer = disappearTimerConfig;
-            _dissapearSpeed = dissapearSpeedConfig;
-            _moveVector = moveVectorConfig * moveVectorFactorConfig;
-            _textColor = _textMesh.color;
 
             _isRunning = true;
         }
@@ -101,6 +90,11 @@ namespace TheSicker.UI
         public void OnObjectSpawn()
         {
             _textMesh.alpha = 1;
+            _textColor = _textMesh.color;
+            _disappearTimer = disappearTimerConfig;
+            _dissapearSpeed = dissapearSpeedConfig;
+            _moveVector = moveVectorConfig * moveVectorFactorConfig;
+            transform.localScale = _initialScale;
         }
     }
 }
