@@ -20,7 +20,6 @@ namespace TheSicker.UI
         private float _disappearTimer;
         private float _dissapearSpeed;
         private Vector3 _moveVector;
-        private Color _textColor;
         private Vector3 _initialScale;
         private bool _isRunning;
 
@@ -62,10 +61,9 @@ namespace TheSicker.UI
             _disappearTimer -= Time.deltaTime;
             if (_disappearTimer < 0)
             {
-                _textColor.a -= _dissapearSpeed * Time.deltaTime;
-                _textMesh.color = _textColor;
+                _textMesh.alpha -= _dissapearSpeed * Time.deltaTime;
 
-                if (_textColor.a < 0)
+                if (_textMesh.alpha < 0)
                 {
                     PopUpCompleteHandle();
                 }
@@ -90,7 +88,6 @@ namespace TheSicker.UI
         public void OnObjectSpawn()
         {
             _textMesh.alpha = 1;
-            _textColor = _textMesh.color;
             _disappearTimer = disappearTimerConfig;
             _dissapearSpeed = dissapearSpeedConfig;
             _moveVector = moveVectorConfig * moveVectorFactorConfig;
