@@ -19,7 +19,8 @@ namespace TheSicker.UI
 
         public void PopUpSpawn()
         {
-            GameObject popUpGameObject = _objectPooler.SpawnFromPool(popUpObjectPoolId.ToString(), transform.position, Quaternion.identity);
+            Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, 0);
+            GameObject popUpGameObject = _objectPooler.SpawnFromPool(popUpObjectPoolId.ToString(), spawnPos, Quaternion.identity);
             PopUpController popUpController = popUpGameObject?.GetComponent<PopUpController>();
             popUpController?.Setup(popupMessage);
         }

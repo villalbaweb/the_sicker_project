@@ -1,9 +1,10 @@
 using UnityEngine;
 using TMPro;
+using TheSicker.Core;
 
 namespace TheSicker.UI
 {
-    public class PopUpController : MonoBehaviour
+    public class PopUpController : MonoBehaviour, IPooledObject
     {
         // config
         [Range(0, 5)]
@@ -29,6 +30,7 @@ namespace TheSicker.UI
         private float _dissapearSpeed;
         private Vector3 _moveVector;
         private Color _textColor;
+        private bool _isRunning;
 
         private void Awake()
         {
@@ -37,6 +39,8 @@ namespace TheSicker.UI
 
         private void Update()
         {
+            if (!_isRunning) return;
+
             MoveText();
             ScaleText();
             DissappearText();
@@ -77,6 +81,7 @@ namespace TheSicker.UI
 
         private void PopUpCompleteHandle()
         {
+            _isRunning = false;
             gameObject.SetActive(false);
         }
 
@@ -89,6 +94,13 @@ namespace TheSicker.UI
             _dissapearSpeed = dissapearSpeedConfig;
             _moveVector = moveVectorConfig * moveVectorFactorConfig;
             _textColor = _textMesh.color;
+
+            _isRunning = true;
+        }
+
+        public void OnObjectSpawn()
+        {
+            _textMesh.alpha = 1;
         }
     }
 }
