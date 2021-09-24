@@ -184,8 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disappearTimerConfig: 1
-  dissapearSpeedConfig: 3
-  increaseScaleAmount: 1
-  decreaseScaleAmount: 1
+  dissapearSpeedConfig: 1.5
+  increaseScaleAmount: 3
+  decreaseScaleAmount: 1.5
   moveVectorConfig: {x: 0.16, y: 0.23, z: 0}
   moveVectorFactorConfig: 2.5
