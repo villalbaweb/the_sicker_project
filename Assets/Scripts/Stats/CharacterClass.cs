@@ -1,0 +1,12 @@
+namespace TheSicker.Stats
+{
+    public enum CharacterClass
+    {
+        Player,
+        FollowOnDistanceAttacker,
+        FollowOnDistanceSmallAttacker,
+        FollowOnDistanceExplosive,
+        OrangeSpaceship,
+        CapsuleSpaceship
+    }
+}

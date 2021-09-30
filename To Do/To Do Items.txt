@@ -1,5 +1,9 @@
 * Implement experience points XP System
 
+0.- Create Scriptable Object Progression to keep track and config of the data.
+	a) Define if there is a need of 2 Scriptable Objects one for stats and the second one for Game Level Advance ???
+	b) Define which stats want to control.
+
 1.- Each enemy should have a XP value that will be given to the Player when killed.
 2.- Explosion enemies that manage to damage the Player does not add points.
 3.- Whenever an enemy is killed a popup with the XP provided should be displayed.
