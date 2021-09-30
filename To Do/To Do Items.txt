@@ -1,28 +1,16 @@
-* Fix the VisualEffectHandler.cs issue where it instantiate the VFX 
-in favor of use the Object Pool. At the same time I have to Refactor the 
-VisualEffect.cs so instead of Destroy a VFX it will set inactive to work
-properly with Object Pool. With this change the TemporaryGameObjectsHandler.cs
-object is not required anymore.
+* Implement experience points XP System
 
-1.- Identify which Prefabs are using the VisualEffectHandler.cs and which 
-Visual Effect is using.
+1.- Each enemy should have a XP value that will be given to the Player when killed.
+2.- Explosion enemies that manage to damage the Player does not add points.
+3.- Whenever an enemy is killed a popup with the XP provided should be displayed.
+4.- The XP value should be displayed to the player below the Life Points available.
+5.- Based on XP levels the difficulty of the Game should increase:
+	a) Adding more enemies
+	b) Differente combinations of enemies
+	c) Increasing teh damage caused by the enemies.
+	d) Reducing the Spawing of the PickUps for player.
 
-Projectile                          - Lazer Ray Hit Effect  -   Has VisualEffect.cs component
-Player                              - Explosion VFX  -   Has VisualEffect.cs component
-Orange Spaceship                    - Explosion VFX  -   Has VisualEffect.cs component
-Capsule Spaceship                   - Explosion VFX  -   Has VisualEffect.cs component 
-Follow On Distance Attacker         - Enemy Cell Explosion Particle System  -   Has VisualEffect.cs component
-Follow On Distance Small Attacker   - Small Enemy Cell Explosion Particle System  -   Has VisualEffect.cs component
-Follower On Distance Explosive      - Enemy Cell Explosion Particle System  -   Has VisualEffect.cs component
+6.- Max reached XP level should be saved.
 
-2.- Setup those VFX in Object Pool system.
-2.a.- Create VfxPooledObject.cs
 
-3.- Refactor VisualEffectHandler.cs to use the proper Object Pool Id of the 
-Visual Effect.
-
-4.- Refactor VisualEffect.cs (probably change its name) so it SetActive(false) the visuals from the 
-Object Pool system.
-
-5.- Remove TemporaryGameObjectsHandler.cs related components since the objects will not
-be instantiated anylonger during gameplay, Object Pool will handle that.
+* Implement Saving System
