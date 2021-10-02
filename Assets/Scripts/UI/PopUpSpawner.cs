@@ -17,12 +17,32 @@ namespace TheSicker.UI
             _objectPooler = FindObjectOfType<ObjectPooler>();
         }
 
+        #region Public Methods
+
         public void PopUpSpawn()
+        {
+            PopUpController popUpController = GetPopupControllerFromPool();
+            popUpController?.Setup(popupMessage);
+        }
+
+        public void PopUpSpawn(string customPopupMessage)
+        {
+            PopUpController popUpController = GetPopupControllerFromPool();
+            popUpController?.Setup(customPopupMessage);
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private PopUpController GetPopupControllerFromPool()
         {
             Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, 0);
             GameObject popUpGameObject = _objectPooler.SpawnFromPool(popUpObjectPoolId.ToString(), spawnPos, Quaternion.identity);
             PopUpController popUpController = popUpGameObject?.GetComponent<PopUpController>();
-            popUpController?.Setup(popupMessage);
+            return popUpController;
         }
+
+        #endregion
     }
 }
