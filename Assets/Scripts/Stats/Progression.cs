@@ -7,9 +7,13 @@ namespace TheSicker.Stats
     [CreateAssetMenu(fileName = "Progression", menuName = "Stats/New Progression", order = 0)]
     public class Progression : ScriptableObject
     {
+        // config
         [SerializeField] ProgressionCharacterClass[] characterClasses = null;
 
+        // private properties
         Dictionary<CharacterClass, Dictionary<Stat, float[]>> lookupTable = null;
+
+        #region Public Methods
 
         public float GetStat(Stat stat, CharacterClass characterClass, int level)
         {
@@ -39,6 +43,11 @@ namespace TheSicker.Stats
             return levels.Count();
         }
 
+        #endregion
+
+
+        #region Private Methods
+
         private void BuildLookup()
         {
             if (lookupTable != null) return;
@@ -56,5 +65,7 @@ namespace TheSicker.Stats
                 lookupTable.Add(progressionClass.character, statsLookupTable);
             }
         }
+
+        #endregion
     }
 }
