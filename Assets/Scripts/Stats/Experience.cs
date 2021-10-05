@@ -8,8 +8,16 @@ namespace TheSicker.Stats
         // config
         [SerializeField] float experiencePoints = 0;
 
+        // properties
+        public float ExperiencePoints => experiencePoints;
+
         // events
         public event Action OnExperienceGainedEvent;
+
+        private void Awake()
+        {
+            OnExperienceGainedEvent?.Invoke();
+        }
 
         public void GainExperience(float experience)
         {
