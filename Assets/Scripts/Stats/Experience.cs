@@ -1,9 +1,10 @@
 using System;
+using TheSicker.SaveSystem;
 using UnityEngine;
 
 namespace TheSicker.Stats
 {
-    public class Experience : MonoBehaviour
+    public class Experience : MonoBehaviour, ISaveableComponent
     {
         // config
         [SerializeField] float experiencePoints = 0;
@@ -30,5 +31,21 @@ namespace TheSicker.Stats
         {
             return experiencePoints;
         }
+
+
+        #region ISaveableComponent Implementation
+
+        public object CaptureState()
+        {
+            return experiencePoints;
+        }
+
+        public void RestoreState(object state)
+        {
+            experiencePoints = (float)state;
+            OnExperienceGainedEvent?.Invoke();
+        }
+
+        #endregion
     }
 }

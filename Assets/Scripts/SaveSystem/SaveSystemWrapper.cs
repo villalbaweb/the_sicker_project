@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace TheSicker.SaveSystem
 {
-    public class SaveSystemaWrapper : MonoBehaviour
+    public class SaveSystemWrapper : MonoBehaviour
     {
         private const string DEFAULT_SAVE_FILE = "sicker_game_advance";
 
