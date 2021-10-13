@@ -4,17 +4,15 @@
 	a) Define if there is a need of 2 Scriptable Objects one for stats and the second one for Game Level Advance ???
 	b) Define which stats want to control.
 
-1.- Each enemy should have a XP value that will be given to the Player when killed.
-2.- Explosion enemies that manage to damage the Player does not add points.
-3.- Whenever an enemy is killed a popup with the XP provided should be displayed.
-4.- The XP value should be displayed to the player below the Life Points available.
+1.- 
+2.- 
+3.- 
+4.- 
 5.- Based on XP levels the difficulty of the Game should increase:
 	a) Adding more enemies
 	b) Differente combinations of enemies
 	c) Increasing teh damage caused by the enemies.
 	d) Reducing the Spawing of the PickUps for player.
 
-6.- Max reached XP level should be saved.
-
-
-* Implement Saving System
+6.- Max reached XP level should be saved when Player dies.
+7.- Max XP from previous plays should also be displayed when a new game starts.

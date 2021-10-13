@@ -58,3 +58,12 @@ MonoBehaviour:
       - 125
       - 175
       - 225
+  - character: 0
+    stats:
+    - stat: 2
+      levels:
+      - 150
+      - 300
+      - 600
+      - 1000
+      - 1500
