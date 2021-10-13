@@ -10,6 +10,12 @@ namespace TheSicker.Stats
         [SerializeField] CharacterClass characterClass;
         [SerializeField] Progression progression = null;
 
+        // properties
+        public int StartingLevel => startingLevel;
+        public Progression Progression => progression;
+        public CharacterClass CharacterClass => characterClass;
+
+
         #region Public Methods
 
         public float GetStat(Stat statToGet)
