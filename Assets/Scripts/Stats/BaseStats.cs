@@ -1,3 +1,4 @@
+using TheSicker.GameLevel;
 using UnityEngine;
 
 namespace TheSicker.Stats
@@ -15,6 +16,13 @@ namespace TheSicker.Stats
         public Progression Progression => progression;
         public CharacterClass CharacterClass => characterClass;
 
+        // cache
+        GameLevelController _gameLevelController;
+
+        private void Awake()
+        {
+            _gameLevelController = FindObjectOfType<GameLevelController>();
+        }
 
         #region Public Methods
 
@@ -29,7 +37,7 @@ namespace TheSicker.Stats
 
         private float GetBaseStat(Stat statToGet)
         {
-            return progression.GetStat(statToGet, characterClass, startingLevel);
+            return progression.GetStat(statToGet, characterClass, _gameLevelController.PlayerCurrentLevel);
         }
 
         #endregion

@@ -6,14 +6,12 @@ namespace TheSicker.Player
 {
     public class PlayerXpLevelHandler : MonoBehaviour
     {
-        // config test
-        [SerializeField] int currentLevel = 0;
-
         // cache
         Experience _experience;
         BaseStats _baseStats;
 
         // state
+        int currentLevel = 1;
         public int CurrentLevel => currentLevel;
 
         // events
