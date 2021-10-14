@@ -25,10 +25,8 @@ namespace TheSicker.Stats
             {
                 float[] statLevels = lookupTable[characterClass][stat];
 
-                if (statLevels.Length >= level)
-                {
-                    statValue = statLevels[level - 1];
-                }
+                int maxStatAvailableLevel = statLevels.Length;
+                statValue = maxStatAvailableLevel >= level ? statLevels[level - 1] : statLevels[maxStatAvailableLevel - 1];
             }
 
             return statValue;
