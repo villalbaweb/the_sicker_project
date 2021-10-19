@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using TheSicker.Core;
 using System.Collections;
+using TheSicker.Stats;
 
 namespace TheSicker.Attacks
 {
     public class FollowOnDistanceTouchAttack : MonoBehaviour
     {
         // config
-        [SerializeField] int touchDamagePerPeriod = 10;
+        [SerializeField] int defaultTouchDamagePerPeriod = 10;
         [SerializeField] float touchDamagePeriodRate = 2.0f;
 
         // state
@@ -18,10 +19,12 @@ namespace TheSicker.Attacks
 
         // cache
         WaitForSeconds _crashDamageWaitForSeconds;
+        BaseStats _baseStats;
 
         private void Awake() 
         {
             _specialEffectsHandler = GetComponent<SpecialEffectsHandler>();
+            _baseStats = GetComponent<BaseStats>();
             _crashDamageWaitForSeconds = new WaitForSeconds(touchDamagePeriodRate);
         }
 
@@ -63,7 +66,8 @@ namespace TheSicker.Attacks
         {
             while(true)
             {
-                _health.TakeDamage(touchDamagePerPeriod);
+                int damage = _baseStats ? (int)_baseStats.GetStat(Stat.Damage) : defaultTouchDamagePerPeriod;
+                _health.TakeDamage(damage);
                 _specialEffectsHandler.PlaySpecialEffectsOnPosition(_contactPoint.point);
                 yield return _crashDamageWaitForSeconds;
             }
