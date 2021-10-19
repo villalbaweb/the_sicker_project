@@ -24,7 +24,6 @@ namespace TheSicker.Attacks
             if(other.gameObject.tag != "Player") return;
 
             int damage = _baseStats ? (int)_baseStats.GetStat(Stat.Damage) : defaultExplosionDamage;
-            print($"follow explosive damage {damage} points...");
             other.gameObject.GetComponent<Health>().TakeDamage(damage);
             onExplosionAttack?.Invoke();
             gameObject.SetActive(false);
