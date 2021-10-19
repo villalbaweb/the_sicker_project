@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b273d4699a00c324080278122f6d3228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  defaultDamage: 15
 --- !u!114 &8607404590703842589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9874747ec6c6944a32f9ec3b07a8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionVfxPrefab: {fileID: 1256001557233130, guid: 2dd0bdb7830e6644da169b32252dca96, type: 3}
   visualEffectToSpawn: 14
 --- !u!114 &4205084049151588961
 MonoBehaviour:
