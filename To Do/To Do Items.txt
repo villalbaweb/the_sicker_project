@@ -1,7 +1,6 @@
 * Implement experience points XP System
 
 .- Based on Player XP levels the difficulty of the Game should increase:
-	a) Adding more enemies - Enemy Spawner component
 	b) Differente combinations of enemies - Enemy Spawner component
 
 	d) Reducing the Spawing of the PickUps for player. - Pickup Spawner component

@@ -12,13 +12,15 @@ namespace TheSicker.Core
 
         // cache
         ObjectPooler _objectPooler;
+        ObjectPoolSpawnerLevelHandler _objectPoolSpawnerLevelHandler;
 
         // state
         float spawnTimer = Mathf.Infinity;
 
         private void Awake() 
         {
-            _objectPooler = FindObjectOfType<ObjectPooler>();    
+            _objectPooler = FindObjectOfType<ObjectPooler>();
+            _objectPoolSpawnerLevelHandler = GetComponent<ObjectPoolSpawnerLevelHandler>();
         }
 
         // Update is called once per frame
@@ -31,11 +33,18 @@ namespace TheSicker.Core
         {
             spawnTimer += Time.deltaTime;
 
-            if (spawnTimer > timeBetweenSpawns)
+            if (spawnTimer > GetTimeToSpawnBasedOnGameLevel())
             {
                 _objectPooler.SpawnFromPool(RandomObjectToSpawn(), GetRandomPos(), Quaternion.identity);
                 spawnTimer = 0;
             }
+        }
+
+        private float GetTimeToSpawnBasedOnGameLevel()
+        {
+            return _objectPoolSpawnerLevelHandler 
+                ? _objectPoolSpawnerLevelHandler.GameLevelBasedTimeToSpawn 
+                : timeBetweenSpawns;
         }
 
         private Vector3 GetRandomPos()
