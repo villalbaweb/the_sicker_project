@@ -36,8 +36,9 @@ namespace TheSicker.Core
         {
             if (!_baseStats) return;
 
-            print($"[{gameObject.name}] Game level up to {_gameLevelController.GameCurrentLevel}");
-            //gameLevelBasedTimeToSpawn = (int)_baseStats.GetStat(Stat.ExperienceReward);// change to specific statistics
+            gameLevelBasedTimeToSpawn = (int)_baseStats.GetStat(Stat.Wildcard);
+
+            print($"[{gameObject.name}] Game level up to {_gameLevelController.GameCurrentLevel} spwan time {gameLevelBasedTimeToSpawn}");
         }
     }
 }
