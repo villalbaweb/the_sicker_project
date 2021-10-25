@@ -6,6 +6,9 @@ namespace TheSicker.Core
 {
     public class ObjectPoolSpawnerLevelHandler : MonoBehaviour
     {
+        // config
+        [SerializeField] float defaultTimeToSpawn = 5f;
+
         // cache
         GameLevelController _gameLevelController;
         BaseStats _baseStats;
@@ -20,7 +23,7 @@ namespace TheSicker.Core
         {
             _gameLevelController = FindObjectOfType<GameLevelController>();
             _baseStats = GetComponent<BaseStats>();
-            gameLevelBasedTimeToSpawn = _baseStats ? _baseStats.GetStat(Stat.Wildcard) : 5f;
+            gameLevelBasedTimeToSpawn = defaultTimeToSpawn;
         }
 
         private void OnEnable()
