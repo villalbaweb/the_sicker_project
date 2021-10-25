@@ -5,6 +5,7 @@ namespace TheSicker.Stats
         Health,
         ExperienceReward,
         ExperienceToLevelUp,
-        Damage
+        Damage,
+        Wildcard
     }
 }

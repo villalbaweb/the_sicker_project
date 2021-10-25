@@ -8,6 +8,8 @@ namespace TheSicker.Stats
         FollowOnDistanceExplosive,
         OrangeSpaceship,
         CapsuleSpaceship,
-        EnemyProjectile
+        EnemyProjectile,
+        EnemySpawner,
+        PickUpSpawner
     }
 }
