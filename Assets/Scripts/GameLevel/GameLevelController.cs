@@ -1,3 +1,4 @@
+using System;
 using TheSicker.Player;
 using UnityEngine;
 
@@ -8,6 +9,9 @@ namespace TheSicker.GameLevel
         // cache
         PlayerMarker _playerMarker;
         PlayerXpLevelHandler _playerXpLevelHandler;
+
+        // events
+        public event Action OnGameLevelUpEvent;
 
         // state
         int gameCurrentLevel;
@@ -37,6 +41,8 @@ namespace TheSicker.GameLevel
 
             if (!_playerXpLevelHandler) return;
             gameCurrentLevel = _playerXpLevelHandler.CurrentLevel;
+
+            OnGameLevelUpEvent?.Invoke();
         }
     }
 }
