@@ -37,7 +37,7 @@ namespace TheSicker.Stats
 
         private float GetBaseStat(Stat statToGet)
         {
-            return progression.GetStat(statToGet, characterClass, _gameLevelController.PlayerCurrentLevel);
+            return progression.GetStat(statToGet, characterClass, _gameLevelController.GameCurrentLevel);
         }
 
         #endregion

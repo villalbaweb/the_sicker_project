@@ -10,33 +10,33 @@ namespace TheSicker.GameLevel
         PlayerXpLevelHandler _playerXpLevelHandler;
 
         // state
-        int playerCurrentLevel;
+        int gameCurrentLevel;
 
         // properties
-        public int PlayerCurrentLevel => playerCurrentLevel;
+        public int GameCurrentLevel => gameCurrentLevel;
 
         private void Awake()
         {
             _playerMarker = FindObjectOfType<PlayerMarker>();
             _playerXpLevelHandler = _playerMarker?.GetComponent<PlayerXpLevelHandler>();
-            playerCurrentLevel = _playerXpLevelHandler.CurrentLevel;
+            gameCurrentLevel = _playerXpLevelHandler.CurrentLevel;
         }
 
         private void OnEnable()
         {
-            _playerXpLevelHandler.OnLevelUpEvent += OnPlayerLevelUp;
+            _playerXpLevelHandler.OnPlayerLevelUpEvent += OnPlayerLevelUp;
         }
 
         private void OnDisable()
         {
-            _playerXpLevelHandler.OnLevelUpEvent -= OnPlayerLevelUp;
+            _playerXpLevelHandler.OnPlayerLevelUpEvent -= OnPlayerLevelUp;
         }
 
         private void OnPlayerLevelUp()
         {
 
             if (!_playerXpLevelHandler) return;
-            playerCurrentLevel = _playerXpLevelHandler.CurrentLevel;
+            gameCurrentLevel = _playerXpLevelHandler.CurrentLevel;
         }
     }
 }

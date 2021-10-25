@@ -15,7 +15,7 @@ namespace TheSicker.Player
         public int CurrentLevel => currentLevel;
 
         // events
-        public event Action OnLevelUpEvent;
+        public event Action OnPlayerLevelUpEvent;
 
 
         private void Awake()
@@ -49,7 +49,7 @@ namespace TheSicker.Player
             if (calculatedLevel > currentLevel)
             {
                 currentLevel = calculatedLevel;
-                OnLevelUpEvent?.Invoke();
+                OnPlayerLevelUpEvent?.Invoke();
             }
         }
 

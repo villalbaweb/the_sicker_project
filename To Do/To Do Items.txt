@@ -3,9 +3,7 @@
 .- Based on Player XP levels the difficulty of the Game should increase:
 	a) Adding more enemies - Enemy Spawner component
 	b) Differente combinations of enemies - Enemy Spawner component
-	c) Increasing teh damage caused by the enemies. - Enemy component
-		Capsule Spaceship - Uses Enemy Blue Projectiles (Added base stats here)
-		Orange Spaceship - Uses Enemy Blue Projectiles (Added base stats here)
+
 	d) Reducing the Spawing of the PickUps for player. - Pickup Spawner component
 	e) Add more life based on level for enemies
 	f) Add new Player Projectiles based on configuration (Add base stats to Projectile base prefab)
