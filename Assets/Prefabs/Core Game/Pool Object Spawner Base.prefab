@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5023217561615154024}
   - component: {fileID: 5128178523886735760}
+  - component: {fileID: -1883889299293154417}
   m_Layer: 0
   m_Name: Pool Object Spawner Base
   m_TagString: Untagged
@@ -45,3 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenSpawns: 5
   availableObjectstoSpawn: 
+--- !u!114 &-1883889299293154417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5023217561615154026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99fa2c95613f474998d26d6152c5454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
