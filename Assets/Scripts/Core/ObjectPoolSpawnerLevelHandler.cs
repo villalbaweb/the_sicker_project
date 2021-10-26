@@ -15,9 +15,11 @@ namespace TheSicker.Core
 
         // state
         float gameLevelBasedTimeToSpawn;
+        int gameLevel;
 
         // properties
         public float GameLevelBasedTimeToSpawn => gameLevelBasedTimeToSpawn;
+        public int GameLevel => gameLevel;
 
         private void Awake()
         {
@@ -41,6 +43,7 @@ namespace TheSicker.Core
             if (!_baseStats) return;
 
             gameLevelBasedTimeToSpawn = _baseStats.GetStat(Stat.Wildcard);
+            gameLevel = _gameLevelController.GameCurrentLevel;
         }
     }
 }

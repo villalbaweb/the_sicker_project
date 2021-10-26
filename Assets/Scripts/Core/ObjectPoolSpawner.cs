@@ -57,7 +57,11 @@ namespace TheSicker.Core
 
         private string RandomObjectToSpawn()
         {
-            return availableObjectstoSpawn.OrderBy(x => System.Guid.NewGuid()).FirstOrDefault().ToString();
+            return availableObjectstoSpawn
+                .Take(_objectPoolSpawnerLevelHandler ? _objectPoolSpawnerLevelHandler.GameLevel : 1)
+                .OrderBy(x => System.Guid.NewGuid())
+                .FirstOrDefault()
+                .ToString();
         }
     }
 }

@@ -100,15 +100,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5128178523886735760, guid: ad1f2debfaee6cc4984de87a5b6471f4, type: 3}
       propertyPath: availableObjectstoSpawn.Array.data[0]
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5128178523886735760, guid: ad1f2debfaee6cc4984de87a5b6471f4, type: 3}
-      propertyPath: availableObjectstoSpawn.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5128178523886735760, guid: ad1f2debfaee6cc4984de87a5b6471f4, type: 3}
-      propertyPath: availableObjectstoSpawn.Array.data[2]
+      propertyPath: availableObjectstoSpawn.Array.data[1]
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5128178523886735760, guid: ad1f2debfaee6cc4984de87a5b6471f4, type: 3}
+      propertyPath: availableObjectstoSpawn.Array.data[2]
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5128178523886735760, guid: ad1f2debfaee6cc4984de87a5b6471f4, type: 3}
       propertyPath: availableObjectstoSpawn.Array.data[3]
@@ -116,7 +116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5128178523886735760, guid: ad1f2debfaee6cc4984de87a5b6471f4, type: 3}
       propertyPath: availableObjectstoSpawn.Array.data[4]
-      value: 13
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad1f2debfaee6cc4984de87a5b6471f4, type: 3}
