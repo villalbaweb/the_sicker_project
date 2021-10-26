@@ -1,4 +1,5 @@
 ﻿using System;
+using TheSicker.Stats;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,18 +11,19 @@ namespace TheSicker.Core
         [SerializeField] int health = 100;
         [SerializeField] UnityEvent onDieEvent = null;
 
-        // state
-        int initialHealth;
-
         // properties
         public int CurrentHealth => health;
 
         // events
         public Action OnHealthChange;
 
+        // cache
+        IBaseStatsGetter _baseStatsGetter;
+
         private void Awake() 
         {
-            initialHealth = health;
+            _baseStatsGetter = GetComponent<IBaseStatsGetter>();
+
             OnHealthChange?.Invoke();   
         }
 
@@ -40,7 +42,7 @@ namespace TheSicker.Core
 
         public void RestoreInitialHealth()
         {
-            health = initialHealth;
+            health = _baseStatsGetter != null ? (int)_baseStatsGetter.GetStat(Stat.Health) : health;
             OnHealthChange?.Invoke();
         }
 
