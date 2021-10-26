@@ -7,21 +7,21 @@ namespace TheSicker.Enemies
     public class ExperiencePointsProviderHandler : MonoBehaviour
     {
         // cache
-        BaseStats _baseStats;
+        IBaseStatsGetter _baseStatsGetter;
         PlayerMarker _playerMarker;
 
         private void Awake()
         {
-            _baseStats = GetComponent<BaseStats>();
+            _baseStatsGetter = GetComponent<IBaseStatsGetter>();
             _playerMarker = FindObjectOfType<PlayerMarker>();
         }
 
         public void ExperienceAward()
         {
-            if (!_baseStats || !_playerMarker) return;
+            if (_baseStatsGetter == null || !_playerMarker) return;
 
             Experience playerExperience = _playerMarker.GetComponent<Experience>();
-            playerExperience.GainExperience(_baseStats.GetStat(Stat.ExperienceReward));
+            playerExperience.GainExperience(_baseStatsGetter.GetStat(Stat.ExperienceReward));
         }
     }
 }

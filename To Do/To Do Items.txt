@@ -1,7 +1,6 @@
 * Implement experience points XP System
 
 .- Based on Player XP levels the difficulty of the Game should increase:
-	* Different combinations of enemies based on level
 	e) Add more life based on level for enemies
 	f) Add new Player Projectiles based on configuration (Add base stats to Projectile base prefab)
 

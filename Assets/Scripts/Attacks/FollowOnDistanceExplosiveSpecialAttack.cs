@@ -12,18 +12,18 @@ namespace TheSicker.Attacks
         [SerializeField] UnityEvent onExplosionAttack = null;
 
         // cache
-        BaseStats _baseStats;
+        IBaseStatsGetter _baseStatsGetter;
 
         private void Awake()
         {
-            _baseStats = GetComponent<BaseStats>();
+            _baseStatsGetter = GetComponent<IBaseStatsGetter>();
         }
 
         private void OnCollisionEnter2D(Collision2D other) 
         {
             if(other.gameObject.tag != "Player") return;
 
-            int damage = _baseStats ? (int)_baseStats.GetStat(Stat.Damage) : defaultExplosionDamage;
+            int damage = _baseStatsGetter != null ? (int)_baseStatsGetter.GetStat(Stat.Damage) : defaultExplosionDamage;
             other.gameObject.GetComponent<Health>().TakeDamage(damage);
             onExplosionAttack?.Invoke();
             gameObject.SetActive(false);

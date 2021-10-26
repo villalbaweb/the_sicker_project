@@ -11,7 +11,7 @@ namespace TheSicker.Core
 
         // cache
         GameLevelController _gameLevelController;
-        BaseStats _baseStats;
+        IBaseStatsGetter _baseStatsGetter;
 
         // state
         float gameLevelBasedTimeToSpawn;
@@ -24,7 +24,7 @@ namespace TheSicker.Core
         private void Awake()
         {
             _gameLevelController = FindObjectOfType<GameLevelController>();
-            _baseStats = GetComponent<BaseStats>();
+            _baseStatsGetter = GetComponent<IBaseStatsGetter>();
             gameLevelBasedTimeToSpawn = defaultTimeToSpawn;
         }
 
@@ -40,9 +40,9 @@ namespace TheSicker.Core
 
         private void OnGameLevelUp()
         {
-            if (!_baseStats) return;
+            if (_baseStatsGetter == null) return;
 
-            gameLevelBasedTimeToSpawn = _baseStats.GetStat(Stat.Wildcard);
+            gameLevelBasedTimeToSpawn = _baseStatsGetter.GetStat(Stat.Wildcard);
             gameLevel = _gameLevelController.GameCurrentLevel;
         }
     }

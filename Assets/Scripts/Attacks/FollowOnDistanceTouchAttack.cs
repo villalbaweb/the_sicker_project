@@ -19,12 +19,12 @@ namespace TheSicker.Attacks
 
         // cache
         WaitForSeconds _crashDamageWaitForSeconds;
-        BaseStats _baseStats;
+        IBaseStatsGetter _baseStatsGetter;
 
         private void Awake() 
         {
             _specialEffectsHandler = GetComponent<SpecialEffectsHandler>();
-            _baseStats = GetComponent<BaseStats>();
+            _baseStatsGetter = GetComponent<IBaseStatsGetter>();
             _crashDamageWaitForSeconds = new WaitForSeconds(touchDamagePeriodRate);
         }
 
@@ -66,7 +66,7 @@ namespace TheSicker.Attacks
         {
             while(true)
             {
-                int damage = _baseStats ? (int)_baseStats.GetStat(Stat.Damage) : defaultTouchDamagePerPeriod;
+                int damage = _baseStatsGetter != null ? (int)_baseStatsGetter.GetStat(Stat.Damage) : defaultTouchDamagePerPeriod;
                 _health.TakeDamage(damage);
                 _specialEffectsHandler.PlaySpecialEffectsOnPosition(_contactPoint.point);
                 yield return _crashDamageWaitForSeconds;

@@ -11,12 +11,12 @@ namespace TheSicker.Projectile
 
         // cache
         VisualEffectHandler _visualEffectHandler;
-        BaseStats _baseStats;
+        IBaseStatsGetter _baseStatsGetter;
 
         private void Awake() 
         {
             _visualEffectHandler = GetComponent<VisualEffectHandler>();
-            _baseStats = GetComponent<BaseStats>();
+            _baseStatsGetter = GetComponent<IBaseStatsGetter>();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -30,7 +30,7 @@ namespace TheSicker.Projectile
         {
             if (targetHealth)
             {
-                int damage = _baseStats ? (int)_baseStats.GetStat(Stat.Damage) : defaultDamage;
+                int damage = _baseStatsGetter != null ? (int)_baseStatsGetter.GetStat(Stat.Damage) : defaultDamage;
                 targetHealth.TakeDamage(damage);
             }
         }
