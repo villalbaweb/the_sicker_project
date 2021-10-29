@@ -141,3 +141,12 @@ MonoBehaviour:
       - 15
       - 20
       - 25
+  - character: 6
+    stats:
+    - stat: 3
+      levels:
+      - 5
+      - 15
+      - 20
+      - 25
+      - 30
