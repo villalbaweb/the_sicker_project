@@ -10,6 +10,7 @@ namespace TheSicker.Stats
         CapsuleSpaceship,
         EnemyProjectile,
         EnemySpawner,
-        PickUpSpawner
+        PickUpSpawner,
+        PlayerProjectile
     }
 }
