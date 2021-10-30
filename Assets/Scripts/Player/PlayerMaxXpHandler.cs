@@ -8,6 +8,21 @@ namespace TheSicker.Player
         // config
         [SerializeField] int maxXpLevel = 10;
 
+        // cache
+        SaveSystemWrapper _saveSystemWrapper;
+
+        private void Awake()
+        {
+            _saveSystemWrapper = FindObjectOfType<SaveSystemWrapper>();
+        }
+
+        private void Start()
+        {
+            _saveSystemWrapper?.GetMaxXpPoint();
+        }
+
+        #region ISaveableComponent Implementation
+
         public object CaptureState(StateType stateType)
         {
             if (stateType != StateType.MaxXp) return null;
@@ -21,5 +36,7 @@ namespace TheSicker.Player
 
             maxXpLevel = (int)state;
         }
+
+        #endregion
     }
 }

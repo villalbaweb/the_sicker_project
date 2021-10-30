@@ -32,16 +32,6 @@ namespace TheSicker.SaveSystem
             {
                 Delete();
             }
-
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                SaveMaxPoint();
-            }
-
-            if (Input.GetKeyDown(KeyCode.N))
-            {
-                GetMaxPoint();
-            }
         }
 
         #region Public Methods
@@ -61,12 +51,12 @@ namespace TheSicker.SaveSystem
             _saveSystemRoot.Delete(GENERAL_SAVE_FILE);
         }
 
-        public void SaveMaxPoint()
+        public void SaveMaxXpPoint()
         {
             _saveSystemRoot.Save(StateType.MaxXp, MAX_XP_SAVE_FILE);
         }
 
-        public void GetMaxPoint()
+        public void GetMaxXpPoint()
         {
             _saveSystemRoot.Load(StateType.MaxXp, MAX_XP_SAVE_FILE);
         }
