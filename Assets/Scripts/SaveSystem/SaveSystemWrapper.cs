@@ -49,6 +49,7 @@ namespace TheSicker.SaveSystem
         public void Delete()
         {
             _saveSystemRoot.Delete(GENERAL_SAVE_FILE);
+            _saveSystemRoot.Delete(MAX_XP_SAVE_FILE);
         }
 
         public void SaveMaxXpPoint()

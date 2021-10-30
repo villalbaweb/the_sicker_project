@@ -1,3 +1,4 @@
+using System;
 using TheSicker.SaveSystem;
 using TheSicker.Stats;
 using UnityEngine;
@@ -6,8 +7,6 @@ namespace TheSicker.Player
 {
     public class PlayerMaxXpHandler : MonoBehaviour, ISaveableComponent
     {
-        // config
-        [SerializeField] float maxXpLevel = 10;
 
         // cache
         SaveSystemWrapper _saveSystemWrapper;
@@ -15,6 +14,13 @@ namespace TheSicker.Player
 
         // state
         bool isMaxXpLevelReached = false;
+        float maxExperiencePoints;
+
+        // events
+        public Action OnMaxXpUpdated;
+
+        // props
+        public float MaxExperiencePoints => maxExperiencePoints;
 
         private void Awake()
         {
@@ -25,6 +31,7 @@ namespace TheSicker.Player
         private void Start()
         {
             _saveSystemWrapper?.GetMaxXpPoint();
+            OnMaxXpUpdated?.Invoke();
         }
 
         private void OnEnable()
@@ -54,11 +61,12 @@ namespace TheSicker.Player
         private void OnExperienceGained()
         {
             float currentXP = _experience.GetExperience();
-            isMaxXpLevelReached = currentXP >= maxXpLevel;
+            isMaxXpLevelReached = currentXP >= maxExperiencePoints;
 
             if (isMaxXpLevelReached)
             {
-                maxXpLevel = currentXP;
+                maxExperiencePoints = currentXP;
+                OnMaxXpUpdated?.Invoke();
             }
         }
 
@@ -68,14 +76,14 @@ namespace TheSicker.Player
         {
             if (stateType != StateType.MaxXp) return null;
 
-            return maxXpLevel;
+            return maxExperiencePoints;
         }
 
         public void RestoreState(StateType stateType, object state)
         {
             if (stateType != StateType.MaxXp) return;
 
-            maxXpLevel = (float)state;
+            maxExperiencePoints = (float)state;
         }
 
         #endregion
