@@ -2,8 +2,8 @@ namespace TheSicker.SaveSystem
 {
     public interface ISaveableComponent
     {
-        object CaptureState();
+        object CaptureState(StateType stateType);
 
-        void RestoreState(object state);
+        void RestoreState(StateType stateType, object state);
     }
 }

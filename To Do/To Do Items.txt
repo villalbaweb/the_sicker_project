@@ -1,2 +1,7 @@
 .- Max reached XP level should be saved when Player dies.
-.- Max XP from previous plays should also be displayed when a new game starts.
+
+	* Added StateType property that allow us to save a file per enum type,
+	all is tight with wrapper as of now.
+
+	* Need to update PLayerMaxHpHandler component to check xp when die to see if needs to be updated
+

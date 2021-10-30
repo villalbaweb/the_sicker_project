@@ -9,16 +9,16 @@ namespace TheSicker.SaveSystem
     {
         #region Public Methods
 
-        public void Save(string saveFile)
+        public void Save(StateType stateType, string saveFile)
         {
             Dictionary<string, object> state = LoadFile(saveFile);
-            CaptureState(state);
+            CaptureState(stateType, state);
             SaveFile(saveFile, state);
         }
 
-        public void Load(string saveFile)
+        public void Load(StateType stateType, string saveFile)
         {
-            RestoreState(LoadFile(saveFile));
+            RestoreState(stateType, LoadFile(saveFile));
         }
 
         public void Delete(string saveFile)
@@ -55,22 +55,22 @@ namespace TheSicker.SaveSystem
             }
         }
 
-        private void CaptureState(Dictionary<string, object> state)
+        private void CaptureState(StateType stateType, Dictionary<string, object> state)
         {
             foreach (SaveableGameObject saveableGameObject in FindObjectsOfType<SaveableGameObject>())
             {
-                state[saveableGameObject.GetUniqueIdentifier()] = saveableGameObject.CaptureState();
+                state[saveableGameObject.GetUniqueIdentifier()] = saveableGameObject.CaptureState(stateType);
             }
         }
 
-        private void RestoreState(Dictionary<string, object> state)
+        private void RestoreState(StateType stateType, Dictionary<string, object> state)
         {
             foreach (SaveableGameObject saveableGameObject in FindObjectsOfType<SaveableGameObject>())
             {
                 string id = saveableGameObject.GetUniqueIdentifier();
                 if (state.ContainsKey(id))
                 {
-                    saveableGameObject.RestoreState(state[id]);
+                    saveableGameObject.RestoreState(stateType, state[id]);
                 }
             }
         }

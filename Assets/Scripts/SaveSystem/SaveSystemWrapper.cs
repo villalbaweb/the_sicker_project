@@ -4,7 +4,8 @@ namespace TheSicker.SaveSystem
 {
     public class SaveSystemWrapper : MonoBehaviour
     {
-        private const string DEFAULT_SAVE_FILE = "sicker_game_advance";
+        private const string GENERAL_SAVE_FILE = "sicker_game_advance";
+        private const string MAX_XP_SAVE_FILE = "sicker_game_max_points";
 
         // cache
         SaveSystemRoot _saveSystemRoot;
@@ -31,23 +32,43 @@ namespace TheSicker.SaveSystem
             {
                 Delete();
             }
+
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                SaveMaxPoint();
+            }
+
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                GetMaxPoint();
+            }
         }
 
         #region Public Methods
 
         public void Save()
         {
-            _saveSystemRoot.Save(DEFAULT_SAVE_FILE);
+            _saveSystemRoot.Save(StateType.General, GENERAL_SAVE_FILE);
         }
 
         public void Load()
         {
-            _saveSystemRoot.Load(DEFAULT_SAVE_FILE);
+            _saveSystemRoot.Load(StateType.General, GENERAL_SAVE_FILE);
         }
 
         public void Delete()
         {
-            _saveSystemRoot.Delete(DEFAULT_SAVE_FILE);
+            _saveSystemRoot.Delete(GENERAL_SAVE_FILE);
+        }
+
+        public void SaveMaxPoint()
+        {
+            _saveSystemRoot.Save(StateType.MaxXp, MAX_XP_SAVE_FILE);
+        }
+
+        public void GetMaxPoint()
+        {
+            _saveSystemRoot.Load(StateType.MaxXp, MAX_XP_SAVE_FILE);
         }
 
         #endregion

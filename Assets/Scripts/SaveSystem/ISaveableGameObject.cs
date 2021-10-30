@@ -2,10 +2,10 @@ namespace TheSicker.SaveSystem
 {
     public interface ISaveableGameObject
     {
-        object CaptureState();
+        object CaptureState(StateType stateType);
 
         string GetUniqueIdentifier();
 
-        void RestoreState(object state);
+        void RestoreState(StateType stateType, object state);
     }
 }

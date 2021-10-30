@@ -35,13 +35,17 @@ namespace TheSicker.Stats
 
         #region ISaveableComponent Implementation
 
-        public object CaptureState()
+        public object CaptureState(StateType stateType)
         {
+            if (stateType != StateType.General) return null;
+
             return experiencePoints;
         }
 
-        public void RestoreState(object state)
+        public void RestoreState(StateType stateType, object state)
         {
+            if (stateType != StateType.General) return;
+
             experiencePoints = (float)state;
             OnExperienceGainedEvent?.Invoke();
         }

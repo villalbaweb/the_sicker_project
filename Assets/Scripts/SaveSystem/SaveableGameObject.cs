@@ -14,12 +14,12 @@ namespace TheSicker.SaveSystem
 
         #region Public Methods
 
-        public object CaptureState()
+        public object CaptureState(StateType stateType)
         {
             Dictionary<string, object> state = new Dictionary<string, object>();
             foreach (ISaveableComponent saveableComponent in GetComponents<ISaveableComponent>())
             {
-                state[saveableComponent.GetType().ToString()] = saveableComponent.CaptureState();
+                state[saveableComponent.GetType().ToString()] = saveableComponent.CaptureState(stateType);
             }
             return state;
         }
@@ -29,7 +29,7 @@ namespace TheSicker.SaveSystem
             return uniqueIdentifier;
         }
 
-        public void RestoreState(object state)
+        public void RestoreState(StateType stateType, object state)
         {
             Dictionary<string, object> stateDict = (Dictionary<string, object>)state;
             foreach (ISaveableComponent saveableComponent in GetComponents<ISaveableComponent>())
@@ -37,7 +37,7 @@ namespace TheSicker.SaveSystem
                 string typeString = saveableComponent.GetType().ToString();
                 if (stateDict.ContainsKey(typeString))
                 {
-                    saveableComponent.RestoreState(stateDict[typeString]);
+                    saveableComponent.RestoreState(stateType, stateDict[typeString]);
                 }
             }
         }
