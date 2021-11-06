@@ -21,7 +21,7 @@ namespace TheSicker.Controls
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            _playerMover.MoveBtnUp();
+            _playerMover?.MoveBtnUp();
         }
 
 

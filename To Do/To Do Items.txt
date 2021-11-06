@@ -1,7 +1,7 @@
-.- Max reached XP level should be saved when Player dies.
+* Add Splash screen
+* Add Music
+* Add Menu
+* Add Ads
 
-	* Added StateType property that allow us to save a file per enum type,
-	all is tight with wrapper as of now.
-
-	* Need to update PLayerMaxHpHandler component to check xp when die to see if needs to be updated
++ Bug Fix the out of screen based on speed, I need to increase the number of rays
 
