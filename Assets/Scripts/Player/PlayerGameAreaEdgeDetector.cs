@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace TheSicker.Player
@@ -10,27 +11,51 @@ namespace TheSicker.Player
         [SerializeField] float rayCastDistance = 1f;
         [SerializeField] UnityEvent OnEdgeDetected = new UnityEvent();
 
-        private void FixedUpdate()
+        // state
+        List<Vector2> directionsToCheck;
+
+        private void Awake()
         {
-            HasEdgeCollission(transform.right);
-            HasEdgeCollission((transform.up + transform.right).normalized);
-            HasEdgeCollission(transform.up);
-            HasEdgeCollission((transform.up - transform.right).normalized);
-            HasEdgeCollission(-transform.right);
-            HasEdgeCollission((-transform.up - transform.right).normalized);
-            HasEdgeCollission(-transform.up);
-            HasEdgeCollission((transform.right - transform.up).normalized);
+            directionsToCheck = new List<Vector2>
+            {
+                transform.right,
+                (transform.up + transform.right).normalized,
+                transform.up,
+                (transform.up - transform.right).normalized,
+                -transform.right,
+                (-transform.up - transform.right).normalized,
+                -transform.up,
+                (transform.right - transform.up).normalized
+            };
         }
 
-        private void HasEdgeCollission(Vector2 direction)
+        private void FixedUpdate()
+        {
+            EdgeDetectionMechanism();
+        }
+
+        private void EdgeDetectionMechanism()
+        {
+            foreach(Vector2 direction in directionsToCheck)
+            {
+                if(HasEdgeCollission(direction))
+                {
+                    return;
+                }
+            }
+        }
+
+        private bool HasEdgeCollission(Vector2 direction)
         {
             RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, direction, rayCastDistance, edgeLayers);
 
             if (raycastHit.collider != null && IsInLayerMask(raycastHit.collider.gameObject.layer, edgeLayers))
             {
-                print($"OnEdgeDetected invoked direction {direction}...");
                 OnEdgeDetected?.Invoke();
+                return true;
             }
+
+            return false;
         }
 
         private bool IsInLayerMask(int layer, LayerMask layermask)
