@@ -6,26 +6,29 @@ namespace TheSicker.Player
     public class PlayerGameAreaEdgeDetector : MonoBehaviour
     {
         // config
-        [SerializeField] float timeBetweenEdgeDetectionCast = 0.3f;
         [SerializeField] LayerMask edgeLayers = new LayerMask();
-        [SerializeField] float circleRayCastRadious = 0.5f;
         [SerializeField] float rayCastDistance = 1f;
         [SerializeField] UnityEvent OnEdgeDetected = new UnityEvent();
 
-        // Start is called before the first frame update
-        private void Start()
+        private void FixedUpdate()
         {
-            InvokeRepeating("GameAreaCircleCast", timeBetweenEdgeDetectionCast, timeBetweenEdgeDetectionCast);
+            HasEdgeCollission(transform.right);
+            HasEdgeCollission((transform.up + transform.right).normalized);
+            HasEdgeCollission(transform.up);
+            HasEdgeCollission((transform.up - transform.right).normalized);
+            HasEdgeCollission(-transform.right);
+            HasEdgeCollission((-transform.up - transform.right).normalized);
+            HasEdgeCollission(-transform.up);
+            HasEdgeCollission((transform.right - transform.up).normalized);
         }
 
-        private void GameAreaCircleCast()
+        private void HasEdgeCollission(Vector2 direction)
         {
-            // to check if Player its alive ????
+            RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, direction, rayCastDistance, edgeLayers);
 
-            RaycastHit2D raycastHit = Physics2D.CircleCast(transform.position, circleRayCastRadious, transform.right, rayCastDistance, edgeLayers);
-
-            if(raycastHit.collider != null && IsInLayerMask(raycastHit.collider.gameObject.layer, edgeLayers))
+            if (raycastHit.collider != null && IsInLayerMask(raycastHit.collider.gameObject.layer, edgeLayers))
             {
+                print($"OnEdgeDetected invoked direction {direction}...");
                 OnEdgeDetected?.Invoke();
             }
         }
