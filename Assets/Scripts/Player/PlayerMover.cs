@@ -39,7 +39,7 @@ namespace TheSicker.Player
         bool IsTurboSpeed = false;
         bool IsKeepMoving = false;
         float remainMovingTimeLeft;
-        Vector2 remainMovementDirection;
+        Vector3 remainMovementDirection;
         float remainMovingSpeed;
 
         // cache
@@ -101,7 +101,7 @@ namespace TheSicker.Player
 
         private void MoveRemain(float remainingMovingSpeed)
         {
-            transform.Translate(remainMovementDirection * remainingMovingSpeed * Time.deltaTime, Space.World);
+            transform.position += remainMovementDirection * remainingMovingSpeed * Time.deltaTime;
         }
 
         private IEnumerator TurboSpeedCoroutine()
