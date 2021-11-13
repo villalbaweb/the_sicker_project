@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 6576423509886590832}
   - component: {fileID: 7166979554211692731}
   - component: {fileID: 4795391533518896671}
+  - component: {fileID: 2804517172213135548}
   - component: {fileID: 6576423509886590833}
   - component: {fileID: 6576423509886590834}
   - component: {fileID: 6576423509886590835}
@@ -397,6 +398,22 @@ CapsuleCollider2D:
   m_Offset: {x: -0.08472015, y: -0.01060254}
   m_Size: {x: 0.830562, y: 0.40627936}
   m_Direction: 1
+--- !u!58 &2804517172213135548
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576423509886590863}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!114 &6576423509886590833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -664,11 +681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d530fa906dfb045ad9063e2920ef64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenEdgeDetectionCast: 0.1
   edgeLayers:
     serializedVersion: 2
     m_Bits: 4096
-  circleRayCastRadious: 0.125
   rayCastDistance: 1
   OnEdgeDetected:
     m_PersistentCalls:
@@ -750,7 +765,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5e1ca12519d1428b1be9822ce4dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxXpLevel: 10
 --- !u!1 &8607063162740585190
 GameObject:
   m_ObjectHideFlags: 0
