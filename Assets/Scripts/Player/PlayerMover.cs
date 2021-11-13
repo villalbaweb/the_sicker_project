@@ -8,7 +8,7 @@ namespace TheSicker.Player
     {
         // config
         [Header("Speed")]
-        [SerializeField] float speed = 5;
+        [SerializeField] float playerSpeed = 5;
         [SerializeField] float turboSpeedIncreaseTimes = 1.5f;
         [SerializeField] int turboSpeedTime = 3;
         [SerializeField] float edgeDetectedSpeed = 5;
@@ -41,6 +41,7 @@ namespace TheSicker.Player
         float remainMovingTimeLeft;
         Vector3 remainMovementDirection;
         float remainMovingSpeed;
+        float playerGameSpeed;
 
         // cache
         WaitForSeconds _turboSpeedWaitForSeconds;
@@ -48,6 +49,7 @@ namespace TheSicker.Player
         private void Awake() 
         {
             _turboSpeedWaitForSeconds = new WaitForSeconds(turboSpeedTime);
+            playerGameSpeed = playerSpeed;
         }
 
         // Update is called once per frame
@@ -83,11 +85,12 @@ namespace TheSicker.Player
                 IsKeepMoving = true;
                 remainMovingTimeLeft = remainMovingTime;
                 remainMovementDirection = transform.right;
-                remainMovingSpeed = speed;
+                remainMovingSpeed = playerGameSpeed;
             }
 
             if(IsKeepMoving && remainMovingTimeLeft > Mathf.Epsilon) 
             {
+                print($"danger zone - TO FIX, speed: {remainMovingSpeed}");
                 MoveRemain(remainMovingSpeed);
                 remainMovingTimeLeft -= Time.deltaTime;
                 remainMovingSpeed -= (remainMovingSpeed * remainMovingSlowFactor * Time.deltaTime);
@@ -96,7 +99,7 @@ namespace TheSicker.Player
         
         private void MoveForward()
         {
-            transform.position += transform.right * speed * Time.deltaTime;
+            transform.position += transform.right * playerGameSpeed * Time.deltaTime;
         }
 
         private void MoveRemain(float remainingMovingSpeed)
@@ -106,14 +109,14 @@ namespace TheSicker.Player
 
         private IEnumerator TurboSpeedCoroutine()
         {
-            float originalSpeed = speed;
+            float originalSpeed = playerGameSpeed;
 
             IsTurboSpeed = true;
-            speed = speed * turboSpeedIncreaseTimes;
+            playerGameSpeed = playerGameSpeed * turboSpeedIncreaseTimes;
 
             yield return _turboSpeedWaitForSeconds;
 
-            speed = originalSpeed;
+            playerGameSpeed = originalSpeed;
             IsTurboSpeed = false;
             OnTurboSpeedStop?.Invoke();
         }
@@ -125,7 +128,7 @@ namespace TheSicker.Player
 
         public void OnEdgeDetected()
         {
-            speed = edgeDetectedSpeed;
+            playerGameSpeed = edgeDetectedSpeed;
         }
 
         #region UI Button Related Methods
