@@ -42,6 +42,7 @@ namespace TheSicker.Player
         Vector3 remainMovementDirection;
         float remainMovingSpeed;
         float playerGameSpeed;
+        bool isInEdge;
 
         // cache
         WaitForSeconds _turboSpeedWaitForSeconds;
@@ -90,7 +91,11 @@ namespace TheSicker.Player
 
             if(IsKeepMoving && remainMovingTimeLeft > Mathf.Epsilon) 
             {
-                print($"danger zone - TO FIX, speed: {remainMovingSpeed}");
+                if (isInEdge)
+                {
+                    remainMovingSpeed = remainMovingSpeed <= edgeDetectedSpeed ? remainMovingSpeed : edgeDetectedSpeed;
+                }
+
                 MoveRemain(remainMovingSpeed);
                 remainMovingTimeLeft -= Time.deltaTime;
                 remainMovingSpeed -= (remainMovingSpeed * remainMovingSlowFactor * Time.deltaTime);
@@ -129,6 +134,12 @@ namespace TheSicker.Player
         public void OnEdgeDetected()
         {
             playerGameSpeed = edgeDetectedSpeed;
+            isInEdge = true;
+        }
+
+        public void OnEdgeLeaved()
+        {
+            isInEdge = false;
         }
 
         #region UI Button Related Methods
@@ -154,7 +165,7 @@ namespace TheSicker.Player
             {
                 clickedTime = Time.time;
             }
-            else if (!IsTurboSpeed && clickTimes > 1 && IsDoubleClickOnTime())
+            else if (!isInEdge && !IsTurboSpeed && clickTimes > 1 && IsDoubleClickOnTime())
             {
                 clickTimes = 0;
                 clickedTime = 0;

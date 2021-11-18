@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0dae2c814e389949a813309d58b5ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  playerSpeed: 5
   turboSpeedIncreaseTimes: 3
   turboSpeedTime: 3
   edgeDetectedSpeed: 5
@@ -681,16 +681,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d530fa906dfb045ad9063e2920ef64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  edgeLayers:
-    serializedVersion: 2
-    m_Bits: 4096
-  rayCastDistance: 1
   OnEdgeDetected:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6576423509886590835}
         m_TargetAssemblyTypeName: TheSicker.Player.PlayerMover, Assembly-CSharp
         m_MethodName: OnEdgeDetected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnEdgeLeaved:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6576423509886590835}
+        m_TargetAssemblyTypeName: TheSicker.Player.PlayerMover, Assembly-CSharp
+        m_MethodName: OnEdgeLeaved
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
