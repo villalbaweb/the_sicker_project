@@ -3,5 +3,4 @@
 * Add Menu
 * Add Ads
 
-+ Bug Fix the out of screen based on speed, I need to increase the number of rays
 
