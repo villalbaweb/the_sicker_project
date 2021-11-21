@@ -319,7 +319,6 @@ GameObject:
   - component: {fileID: 6576423509886590832}
   - component: {fileID: 7166979554211692731}
   - component: {fileID: 4795391533518896671}
-  - component: {fileID: 2804517172213135548}
   - component: {fileID: 6576423509886590833}
   - component: {fileID: 6576423509886590834}
   - component: {fileID: 6576423509886590835}
@@ -331,12 +330,12 @@ GameObject:
   - component: {fileID: 3268834983714859410}
   - component: {fileID: 4736222968671313335}
   - component: {fileID: 277456199856092611}
-  - component: {fileID: 4821140322007750091}
   - component: {fileID: -659562274088436471}
   - component: {fileID: 1168182138794527012}
   - component: {fileID: 22194285402380798}
   - component: {fileID: -6449545908469731882}
   - component: {fileID: 2153678468328165604}
+  - component: {fileID: 407349586705978953}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -398,22 +397,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.08472015, y: -0.01060254}
   m_Size: {x: 0.830562, y: 0.40627936}
   m_Direction: 1
---- !u!58 &2804517172213135548
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6576423509886590863}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!114 &6576423509886590833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,7 +444,6 @@ MonoBehaviour:
   playerSpeed: 5
   turboSpeedIncreaseTimes: 3
   turboSpeedTime: 3
-  edgeDetectedSpeed: 5
   remainMovingTime: 3
   remainMovingSlowFactor: 0.75
   clickTimes: 0
@@ -669,48 +651,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyMeshRenderer: {fileID: 0}
---- !u!114 &4821140322007750091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6576423509886590863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06d530fa906dfb045ad9063e2920ef64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnEdgeDetected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6576423509886590835}
-        m_TargetAssemblyTypeName: TheSicker.Player.PlayerMover, Assembly-CSharp
-        m_MethodName: OnEdgeDetected
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnEdgeLeaved:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6576423509886590835}
-        m_TargetAssemblyTypeName: TheSicker.Player.PlayerMover, Assembly-CSharp
-        m_MethodName: OnEdgeLeaved
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &-659562274088436471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,6 +714,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00f5e1ca12519d1428b1be9822ce4dde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &407349586705978953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576423509886590863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d03e41fb87494409fb6e1d8a96be9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8607063162740585190

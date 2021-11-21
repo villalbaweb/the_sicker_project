@@ -11,7 +11,6 @@ namespace TheSicker.Player
         [SerializeField] float playerSpeed = 5;
         [SerializeField] float turboSpeedIncreaseTimes = 1.5f;
         [SerializeField] int turboSpeedTime = 3;
-        [SerializeField] float edgeDetectedSpeed = 5;
 
         [Header("Remaining Move")]
         [SerializeField] float remainMovingTime = 3f;
@@ -42,7 +41,6 @@ namespace TheSicker.Player
         Vector3 remainMovementDirection;
         float remainMovingSpeed;
         float playerGameSpeed;
-        bool isInEdge;
 
         // cache
         WaitForSeconds _turboSpeedWaitForSeconds;
@@ -91,11 +89,6 @@ namespace TheSicker.Player
 
             if(IsKeepMoving && remainMovingTimeLeft > Mathf.Epsilon) 
             {
-                if (isInEdge)
-                {
-                    remainMovingSpeed = remainMovingSpeed <= edgeDetectedSpeed ? remainMovingSpeed : edgeDetectedSpeed;
-                }
-
                 MoveRemain(remainMovingSpeed);
                 remainMovingTimeLeft -= Time.deltaTime;
                 remainMovingSpeed -= (remainMovingSpeed * remainMovingSlowFactor * Time.deltaTime);
@@ -131,17 +124,6 @@ namespace TheSicker.Player
             isDead = true;
         }
 
-        public void OnEdgeDetected()
-        {
-            playerGameSpeed = edgeDetectedSpeed;
-            isInEdge = true;
-        }
-
-        public void OnEdgeLeaved()
-        {
-            isInEdge = false;
-        }
-
         #region UI Button Related Methods
 
         public void MoveBtnDown()
@@ -165,7 +147,7 @@ namespace TheSicker.Player
             {
                 clickedTime = Time.time;
             }
-            else if (!isInEdge && !IsTurboSpeed && clickTimes > 1 && IsDoubleClickOnTime())
+            else if (!IsTurboSpeed && clickTimes > 1 && IsDoubleClickOnTime())
             {
                 clickTimes = 0;
                 clickedTime = 0;
