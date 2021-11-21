@@ -4,6 +4,12 @@ namespace TheSicker.Player
 {
     public class PlayerInScreenHandler : MonoBehaviour
     {
+        // config
+        [Range(0.005f, 0.1f)]
+        [SerializeField] float lowerLeftCorner = 0.005f;
+        [Range(0.9f, 0.995f)]
+        [SerializeField] float upperRightCorner = 0.995f;
+
         // cache
         Camera _mainCamera;
 
@@ -13,9 +19,14 @@ namespace TheSicker.Player
         }
         void Update()
         {
+            RestrictPlayerMovementWithinScreen();
+        }
+
+        private void RestrictPlayerMovementWithinScreen()
+        {
             Vector3 pos = _mainCamera.WorldToViewportPoint(transform.position);
-            pos.x = Mathf.Clamp01(pos.x);
-            pos.y = Mathf.Clamp01(pos.y);
+            pos.x = Mathf.Clamp(pos.x, lowerLeftCorner, upperRightCorner);
+            pos.y = Mathf.Clamp(pos.y, lowerLeftCorner, upperRightCorner);
             transform.position = _mainCamera.ViewportToWorldPoint(pos);
         }
     }
