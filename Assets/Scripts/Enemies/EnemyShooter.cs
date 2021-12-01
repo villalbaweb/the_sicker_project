@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using TheSicker.Combat;
 using TheSicker.Core;
+using TheSicker.Game;
 using TheSicker.Projectile;
 using UnityEngine;
 
@@ -30,12 +31,14 @@ namespace TheSicker.Enemies
         ObjectPooler _objectPooler;
         Transform _weaponTransform;
         WaitForSeconds _fireWaitForSeconds;
+        GameSoundController _gameSoundController;
 
         #region  Private Methods
 
         private void Awake()
         {
             _objectPooler = FindObjectOfType<ObjectPooler>();
+            _gameSoundController = FindObjectOfType<GameSoundController>();
 
             EquipWeapon();
         }
@@ -135,7 +138,7 @@ namespace TheSicker.Enemies
 
         private void PlayShootSFX()
         {
-            AudioSource.PlayClipAtPoint(currentWeapon.OnFireSoundClip, Camera.main.transform.position, currentWeapon.FireSoundVolume);
+            _gameSoundController?.PlayClipAtCamera(currentWeapon.OnFireSoundClip);
         }
 
         #endregion

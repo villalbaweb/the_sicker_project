@@ -2,6 +2,7 @@
 using TheSicker.Combat;
 using TheSicker.Core;
 using TheSicker.Projectile;
+using TheSicker.Game;
 using UnityEngine;
 
 namespace TheSicker.Player
@@ -23,7 +24,6 @@ namespace TheSicker.Player
 
         // State
         bool isDead;
-        bool isCustomFiring;
         bool isEquipWeaponRunning;
         Weapon currentWeapon;
         ParticleSystem muzzleParticleSystem;
@@ -34,12 +34,14 @@ namespace TheSicker.Player
         ObjectPooler _objectPooler;
         Transform _weaponTransform;
         WaitForSeconds _fireWaitForSeconds;
+        GameSoundController _gameSoundController;
 
         #region  Private Methods
 
         private void Awake() 
         {
             _objectPooler = FindObjectOfType<ObjectPooler>();
+            _gameSoundController = FindObjectOfType<GameSoundController>();
 
             EquipWeapon(selectedWeapon);   
         }
@@ -105,7 +107,7 @@ namespace TheSicker.Player
 
         private void PlayShootSFX()
         {
-            AudioSource.PlayClipAtPoint(currentWeapon.OnFireSoundClip, Camera.main.transform.position, currentWeapon.FireSoundVolume);
+            _gameSoundController?.PlayClipAtCamera(currentWeapon.OnFireSoundClip);
         }
 
         private void ShootProjectile()

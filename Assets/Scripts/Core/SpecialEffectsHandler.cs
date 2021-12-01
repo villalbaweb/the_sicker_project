@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TheSicker.Game;
 using UnityEngine;
 
 namespace TheSicker.Core
@@ -9,17 +10,18 @@ namespace TheSicker.Core
         // config
         [Header("Sound Effects to Play")]
         [SerializeField] List<AudioClip> soundFx = null;
-        [SerializeField] float sfxAudioVolume = 0.5f;
 
         [Header("Visual Effects to Play")]
         [SerializeField] ObjectPoolIds[] visualEffectsToSpawn;
 
         // cache
         ObjectPooler _objectPooler;
+        GameSoundController _gameSoundController;
 
         private void Awake()
         {
             _objectPooler = FindObjectOfType<ObjectPooler>();
+            _gameSoundController = FindObjectOfType<GameSoundController>();
         }
 
         public void PlaySpecialEffects()
@@ -58,7 +60,7 @@ namespace TheSicker.Core
         {
             foreach(AudioClip clip in soundFx)
             {
-                AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, sfxAudioVolume);
+                _gameSoundController?.PlayClipAtCamera(clip);
             }
 
             yield return null;

@@ -1,17 +1,25 @@
-﻿using UnityEngine;
+﻿using TheSicker.Game;
+using UnityEngine;
 
 namespace TheSicker.Core
 {
     public class SoundEffectHandler : MonoBehaviour
     {
         [SerializeField] AudioClip sfxAudio = null;
-        [SerializeField] float sfxAudioVolume = 0.5f;
+
+        // cache
+        GameSoundController _gameSoundController;
+
+        private void Awake()
+        {
+            _gameSoundController = FindObjectOfType<GameSoundController>();
+        }
 
         public void StartSfx()
         {
             if (!sfxAudio) return;
 
-            AudioSource.PlayClipAtPoint(sfxAudio, Camera.main.transform.position, sfxAudioVolume);
+            _gameSoundController?.PlayClipAtCamera(sfxAudio);
         }
     }
 }
