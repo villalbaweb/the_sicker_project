@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TheSicker.Player
+namespace TheSicker.Game
 {
     public class GameSoundController : MonoBehaviour
     {
