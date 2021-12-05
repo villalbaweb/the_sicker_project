@@ -6,7 +6,7 @@ namespace TheSicker.UI
     {
         public void ExitButtonPressed()
         {
-            print("Exit button pressed...");
+            Application.Quit();
         }
     }
 }
