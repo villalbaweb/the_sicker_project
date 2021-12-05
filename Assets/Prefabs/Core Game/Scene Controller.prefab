@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSceneName: Game Scene
-  gameOverSceneName: 
-  gameSplashSceneName: 
+  gameOverSceneName: Game Over Scene
+  gameSplashSceneName: Splash Scene
   timeToGameOverLoad: 3

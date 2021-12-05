@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,6 +19,22 @@ namespace TheSicker.Game
         public void LoadPlayLevel()
         {
             SceneManager.LoadScene(gameSceneName);
+        }
+
+        public void LoadMainMenu()
+        {
+            SceneManager.LoadScene(gameSplashSceneName);
+        }
+
+        public void LoadGameOver()
+        {
+            StartCoroutine(LoadGameOverLevel());
+        }
+
+        private IEnumerator LoadGameOverLevel()
+        {
+            yield return new WaitForSeconds(timeToGameOverLoad);
+            SceneManager.LoadScene(gameOverSceneName);
         }
     }
 }
