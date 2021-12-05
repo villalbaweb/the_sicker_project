@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc840f5886232744c90a8a04506bab27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Sample Scene
+  gameSceneName: Game Scene
   gameOverSceneName: 
   gameSplashSceneName: 
   timeToGameOverLoad: 3
