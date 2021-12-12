@@ -353,7 +353,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxAudio: {fileID: 8300000, guid: 165ea7e2667af024d977a46e7d0ce4cf, type: 3}
-  sfxAudioVolume: 0.5
 --- !u!114 &4068915785558012767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84804fbe69931047a3697be712fd4c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionDamage: 50
+  defaultExplosionDamage: 50
   onExplosionAttack:
     m_PersistentCalls:
       m_Calls:
@@ -419,8 +418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189ea9da0b4044f42957ddad19d68eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundFx: []
-  sfxAudioVolume: 0.5
+  soundFx:
+  - {fileID: 8300000, guid: f9170ea9108980f4fa58c045ac99aa33, type: 3}
   visualEffectsToSpawn: 0f000000
 --- !u!114 &1471520676571161766
 MonoBehaviour:
