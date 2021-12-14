@@ -1,4 +1,4 @@
-* Add Splash screen
+  
 * Add Music
 * Add Menu
 * Add Ads
