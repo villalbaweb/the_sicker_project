@@ -1,4 +1,6 @@
   
+Display XP point per play and historic in game over screen
+
 * Add Music
 * Add Menu
 * Add Ads
