@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TheSicker.Stats
+namespace TheSicker.Game
 {
     [CreateAssetMenu(fileName = "GameStats", menuName = "Stats/New GameStats", order = 0)]
     public class GameStats : ScriptableObject
