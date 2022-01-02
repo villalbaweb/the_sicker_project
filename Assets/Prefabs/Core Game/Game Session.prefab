@@ -53,7 +53,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2481074073570772397}
-  - component: {fileID: 1704565905686392674}
   m_Layer: 0
   m_Name: Game Session
   m_TagString: Untagged
@@ -77,18 +76,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1704565905686392674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4855283929919872223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 158269acf76609e4bbd8c79494e10852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6011596495037607592
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,4 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb11a65fb6143a419da70601b5e43ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxXp: 0
+  gameStats: {fileID: 11400000, guid: e31e5a2c5bda53441857969a8a5dd837, type: 2}

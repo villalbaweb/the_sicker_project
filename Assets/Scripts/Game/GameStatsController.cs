@@ -11,13 +11,12 @@ namespace TheSicker.Game
         PlayerMaxXpHandler _playerMaxXpHandler;
         Experience _experience;
 
-        // private members
-        [SerializeField] private float playerMaxXp;
-        [SerializeField] private float playerXp;
+        // config
+        [SerializeField] GameStats gameStats = null;
 
         // properties
-        public float PlayerMaxXp => playerMaxXp;
-        public float PlayerXp => playerXp;
+        public float PlayerMaxXp => gameStats.PlayerMaxXp;
+        public float PlayerXp => gameStats.PlayerXp;
 
         private void Awake()
         {
@@ -38,12 +37,12 @@ namespace TheSicker.Game
 
         void OnMaxXpUpdated()
         {
-            playerMaxXp = _playerMaxXpHandler.MaxExperiencePoints;
+            gameStats.PlayerMaxXp = _playerMaxXpHandler.MaxExperiencePoints;
         }
 
         private void OnExperienceGained()
         {
-            playerXp = _experience.ExperiencePoints;
+            gameStats.PlayerXp = _experience.ExperiencePoints;
         }
 
         private void SubscribeEvents()
