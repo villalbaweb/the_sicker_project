@@ -1,6 +1,4 @@
   
-Display XP point per play and historic in game over screen - fix bug where the session objects gets duplicated
-
 * Add Music
 * Add Menu
 * Add Ads
