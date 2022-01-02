@@ -5,26 +5,18 @@ namespace TheSicker.Game
     public class GameSoundController : MonoBehaviour
     {
         // config params
-        [SerializeField] float audioVolume = 1f;
-
-        // state
-        public bool IsSoundMute
-        {
-            get { return _isSoundMute; }
-        }
-        private bool _isSoundMute = false;
+        [SerializeField] GameSound gameSound = null;
 
         public void SwitchSoundMute(bool isMuted)
         {
-            print($"Set sound {isMuted}");
-            _isSoundMute = isMuted;
+            gameSound.IsSoundMute = isMuted;
         }
 
         public void PlayClipAtCamera(AudioClip clip, float specificVolume = -1)
         {
-            if (!clip || _isSoundMute) return;
+            if (!clip || gameSound.IsSoundMute) return;
 
-            float playSoundVolume = specificVolume == -1 ? audioVolume : specificVolume;
+            float playSoundVolume = specificVolume == -1 ? gameSound.AudioVolume : specificVolume;
 
             AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, playSoundVolume);
         }
