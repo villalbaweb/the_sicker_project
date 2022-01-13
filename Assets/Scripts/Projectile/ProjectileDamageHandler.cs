@@ -40,7 +40,7 @@ namespace TheSicker.Projectile
         {
             if (directionalDamageSpawner == null) return;
 
-            directionalDamageSpawner.DirectionalDamageVfxSpawn(transform.position);
+            directionalDamageSpawner.DirectionalDamageVfxSpawn(transform.position, transform.eulerAngles);
         }
     }
 }

@@ -17,9 +17,10 @@ namespace TheSicker.Core
 
         #region Interface Implementation 
 
-        public void DirectionalDamageVfxSpawn(Vector2 position)
+        public void DirectionalDamageVfxSpawn(Vector2 position, Vector3 eulerAngles)
         {
-            GameObject popUpGameObject = _objectPooler.SpawnFromPool(popUpObjectPoolId.ToString(), position, Quaternion.identity);
+            GameObject directionalDamageVfxObject = _objectPooler.SpawnFromPool(popUpObjectPoolId.ToString(), position, Quaternion.identity);
+            directionalDamageVfxObject.transform.eulerAngles = eulerAngles;
         }
 
         #endregion
