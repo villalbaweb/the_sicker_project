@@ -1,4 +1,6 @@
-* Add directed Blood when shooting virus
+* Finetune Enemy Cell Directional Damage particle system prefab
+* Create a Enemy Ship Directional Damage particle system prefab
+* Add Directional Damage Spwner to all enemies
 * Add shake camera when player gets hit or damage
 * Add Menu
 * Add Ads
