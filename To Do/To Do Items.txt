@@ -1,5 +1,5 @@
-  
-* Add Music
+* Add directed Blood when shooting virus
+* Add shake camera when player gets hit or damage
 * Add Menu
 * Add Ads
 
