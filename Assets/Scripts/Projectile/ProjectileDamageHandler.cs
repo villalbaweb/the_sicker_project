@@ -22,6 +22,7 @@ namespace TheSicker.Projectile
         private void OnTriggerEnter2D(Collider2D collision)
         {
             DealDamage(collision.gameObject.GetComponent<Health>());
+            DealDamageDirectionalVfx(collision.gameObject.GetComponent<IDirectionalDamageSpawner>());
             
             _visualEffectHandler.ExplosionVfx(transform.position);
         }
@@ -33,6 +34,13 @@ namespace TheSicker.Projectile
                 int damage = _baseStatsGetter != null ? (int)_baseStatsGetter.GetStat(Stat.Damage) : defaultDamage;
                 targetHealth.TakeDamage(damage);
             }
+        }
+
+        private void DealDamageDirectionalVfx(IDirectionalDamageSpawner directionalDamageSpawner)
+        {
+            if (directionalDamageSpawner == null) return;
+
+            directionalDamageSpawner.DirectionalDamageVfxSpawn(transform.position);
         }
     }
 }
