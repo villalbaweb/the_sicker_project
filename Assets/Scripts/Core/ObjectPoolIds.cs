@@ -32,6 +32,7 @@
         // PopUp
         PopUp,
 
-        EnemyCellDirectionalDamage
+        EnemyCellDirectionalDamage,
+        SmallEnemyCellDirectionalDamage
     }
 }
