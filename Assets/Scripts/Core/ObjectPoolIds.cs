@@ -32,7 +32,9 @@
         // PopUp
         PopUp,
 
+        // Directional VFX
         EnemyCellDirectionalDamage,
-        SmallEnemyCellDirectionalDamage
+        SmallEnemyCellDirectionalDamage,
+        ShipDirectionalDamage
     }
 }
