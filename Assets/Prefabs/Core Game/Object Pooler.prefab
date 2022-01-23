@@ -100,10 +100,10 @@ MonoBehaviour:
     size: 5
   - tag: 19
     prefab: {fileID: 6107377662465563500, guid: 9dc255c9041601443aebaaa8b30903f4, type: 3}
-    size: 10
+    size: 20
   - tag: 20
     prefab: {fileID: 6107377662465563500, guid: bb5a561ff98024c488ef8ab21d0ee917, type: 3}
-    size: 10
+    size: 20
   - tag: 21
     prefab: {fileID: 1587261729604890, guid: 15d28716cb600964381bae96a5aafe66, type: 3}
-    size: 10
+    size: 20
