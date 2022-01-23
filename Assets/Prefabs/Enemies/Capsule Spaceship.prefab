@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 8828480207918080690}
   - component: {fileID: 7324759510219404161}
   - component: {fileID: 1047811868201272491}
+  - component: {fileID: 6265911497979315081}
   m_Layer: 9
   m_Name: Capsule Spaceship
   m_TagString: Untagged
@@ -367,6 +368,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d666e144381b51b43b1cc7c49e48c951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6265911497979315081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8ec6c70bab3634389788d2eaecc759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpObjectPoolId: 21
 --- !u!1 &822203135745703537
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 8802462219582624118}
   - component: {fileID: 3348577750294505204}
   - component: {fileID: 3097740800583950400}
+  - component: {fileID: 8884017788013808649}
   m_Layer: 9
   m_Name: Orange Spaceship
   m_TagString: Untagged
@@ -270,7 +271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxAudio: {fileID: 8300000, guid: f9170ea9108980f4fa58c045ac99aa33, type: 3}
-  sfxAudioVolume: 0.5
 --- !u!114 &2884649953732582568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +368,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d666e144381b51b43b1cc7c49e48c951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8884017788013808649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8ec6c70bab3634389788d2eaecc759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpObjectPoolId: 21
 --- !u!1 &822203135745703537
 GameObject:
   m_ObjectHideFlags: 0
