@@ -228,5 +228,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade2987ed8f9365408804efb0f9afe7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraShakeIntensity: 1
-  cameraShakeTime: 0.5
+  cameraShakeIntensity: 2.5
+  cameraShakeTime: 0.3
