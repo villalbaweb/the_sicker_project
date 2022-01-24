@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: -8782166883816765356}
   - component: {fileID: 4205084049151588961}
   - component: {fileID: 3984262720734725600}
+  - component: {fileID: 7722380056650246113}
   m_Layer: 10
   m_Name: Projectile
   m_TagString: Untagged
@@ -215,3 +216,17 @@ MonoBehaviour:
   startingLevel: 1
   characterClass: 9
   progression: {fileID: 11400000, guid: b96dfa7ffbeb6cd41a902fc511137d51, type: 2}
+--- !u!114 &7722380056650246113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541223225210814284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade2987ed8f9365408804efb0f9afe7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraShakeIntensity: 1
+  cameraShakeTime: 0.5

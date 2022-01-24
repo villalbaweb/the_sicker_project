@@ -11,11 +11,13 @@ namespace TheSicker.Projectile
 
         // cache
         VisualEffectHandler _visualEffectHandler;
+        ProjectileCameraShakeController _projectileCameraShakeController;
         IBaseStatsGetter _baseStatsGetter;
 
         private void Awake() 
         {
             _visualEffectHandler = GetComponent<VisualEffectHandler>();
+            _projectileCameraShakeController = GetComponent<ProjectileCameraShakeController>();
             _baseStatsGetter = GetComponent<IBaseStatsGetter>();
         }
 
@@ -25,6 +27,7 @@ namespace TheSicker.Projectile
             DealDamageDirectionalVfx(collision.gameObject.GetComponent<IDirectionalDamageSpawner>());
             
             _visualEffectHandler.ExplosionVfx(transform.position);
+            _projectileCameraShakeController.CameraShake();
         }
 
         private void DealDamage(Health targetHealth)

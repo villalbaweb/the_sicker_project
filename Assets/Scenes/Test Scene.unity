@@ -1034,8 +1034,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3913a0502a12f4b9a018344eb33cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 1.5
-  followingSpeed: 3
+  normalSpeed: 0
+  followingSpeed: 0
   target: {fileID: 0}
 --- !u!212 &5418650604630850091
 SpriteRenderer:
@@ -1191,8 +1191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3913a0502a12f4b9a018344eb33cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 1.5
-  followingSpeed: 3
+  normalSpeed: 0
+  followingSpeed: 0
   target: {fileID: 0}
 --- !u!50 &5808165787479093313
 Rigidbody2D:
