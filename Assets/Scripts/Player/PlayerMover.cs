@@ -19,7 +19,6 @@ namespace TheSicker.Player
         // double click manual implementation
         [Header("Double Click")]
         [SerializeField] int clickTimes = 0;
-        [SerializeField] float clickedTime;
         [SerializeField] float doubleClickDelay = 1.5f;
 
         [Header("Debug")]
@@ -41,6 +40,7 @@ namespace TheSicker.Player
         Vector3 remainMovementDirection;
         float remainMovingSpeed;
         float playerGameSpeed;
+        float turboTimeLeft;
 
         // cache
         WaitForSeconds _turboSpeedWaitForSeconds;
@@ -55,7 +55,8 @@ namespace TheSicker.Player
         void Update()
         {
             if(isDead) return;
-            
+
+            TurboTimeLeftCheck();
             ThrottleMove();
             RemainMove();
         }
@@ -143,26 +144,38 @@ namespace TheSicker.Player
         {
             clickTimes++;
 
-            if (clickTimes == 1)
+            if (!IsTurboSpeed && clickTimes == 1)
             {
-                clickedTime = Time.time;
+                turboTimeLeft = doubleClickDelay;
             }
             else if (!IsTurboSpeed && clickTimes > 1 && IsDoubleClickOnTime())
             {
                 clickTimes = 0;
-                clickedTime = 0;
+                turboTimeLeft = 0;
 
                 StartCoroutine(TurboSpeedCoroutine());
             }
             else if (clickTimes > 2)
             {
                 clickTimes = 0;
+                turboTimeLeft = 0;
             } 
         }
 
         private bool IsDoubleClickOnTime()
         {
-            return Time.time - clickedTime < doubleClickDelay;
+            return turboTimeLeft > Mathf.Epsilon;
+        }
+
+        private void TurboTimeLeftCheck()
+        {
+            if (turboTimeLeft < Mathf.Epsilon)
+            {
+                clickTimes = 0;
+                return;
+            }
+
+            turboTimeLeft -= Time.deltaTime;
         }
 
         #endregion
