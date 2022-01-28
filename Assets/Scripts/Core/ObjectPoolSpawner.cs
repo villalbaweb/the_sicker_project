@@ -7,8 +7,12 @@ namespace TheSicker.Core
     public class ObjectPoolSpawner : MonoBehaviour
     {
         // config
+        [Header("Object Spawn Settings")]
         [SerializeField] float timeBetweenSpawns = 5f;
         [SerializeField] List<ObjectPoolIds> availableObjectstoSpawn = new List<ObjectPoolIds>();
+
+        [Header("Object Spawn Position")]
+        [SerializeField] float viewportToWorldZPos = 10.0f;
 
         // cache
         ObjectPooler _objectPooler;
@@ -52,7 +56,7 @@ namespace TheSicker.Core
             float xValue = Random.Range(0f, 1f);
             float yValue = Random.Range(0f, 1f);
 
-            return Camera.main.ViewportToWorldPoint(new Vector3(xValue, yValue, Camera.main.nearClipPlane));
+            return Camera.main.ViewportToWorldPoint(new Vector3(xValue, yValue, viewportToWorldZPos));
         }
 
         private string RandomObjectToSpawn()

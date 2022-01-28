@@ -1,5 +1,4 @@
 
-* Add shake camera when player gets hit or damage
 * Add Menu
 * Add Ads
 * Make iOS version
