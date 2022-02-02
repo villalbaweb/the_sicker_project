@@ -11,7 +11,6 @@ namespace TheSicker.UI
         [SerializeField] float dissapearSpeedConfig = 3f;
         [SerializeField] float increaseScaleAmount = 1f;
         [SerializeField] float decreaseScaleAmount = 1f;
-        [SerializeField] Vector3 moveVectorConfig;
         [SerializeField] float moveVectorFactorConfig = 2.5f;
 
         // cache
@@ -76,13 +75,15 @@ namespace TheSicker.UI
             gameObject.SetActive(false);
         }
 
-        public void Setup(string message)
+        public void Setup(string message, Vector3 rotation)
         {
             if (!_textMesh) return;
 
             _textMesh.SetText(message);
 
             _isRunning = true;
+
+            _moveVector = Quaternion.Euler(rotation) * Vector3.right * moveVectorFactorConfig;
         }
 
         public void OnObjectSpawn()
@@ -90,7 +91,6 @@ namespace TheSicker.UI
             _textMesh.alpha = 1;
             _disappearTimer = disappearTimerConfig;
             _dissapearSpeed = dissapearSpeedConfig;
-            _moveVector = moveVectorConfig * moveVectorFactorConfig;
             transform.localScale = _initialScale;
         }
     }

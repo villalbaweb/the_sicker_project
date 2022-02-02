@@ -25,7 +25,8 @@ namespace TheSicker.Projectile
         {
             DealDamage(collision.gameObject.GetComponent<Health>());
             DealDamageDirectionalVfx(collision.gameObject.GetComponent<IDirectionalDamageSpawner>());
-            
+            SetLastDirectionalAttack(collision.gameObject.GetComponent<IDirectionalKeeper>());
+
             _visualEffectHandler.ExplosionVfx(transform.position);
             _projectileCameraShakeController.CameraShake();
         }
@@ -44,6 +45,13 @@ namespace TheSicker.Projectile
             if (directionalDamageSpawner == null) return;
 
             directionalDamageSpawner.DirectionalDamageVfxSpawn(transform.position, transform.eulerAngles);
+        }
+
+        private void SetLastDirectionalAttack(IDirectionalKeeper directionalKeeper)
+        {
+            if (directionalKeeper == null) return;
+
+            directionalKeeper.StoreDirectionEulerVector(transform.eulerAngles);
         }
     }
 }

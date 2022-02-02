@@ -11,10 +11,12 @@ namespace TheSicker.UI
 
         // cache
         ObjectPooler _objectPooler;
+        DirectionalKeeper _directionalKeeper;
 
         private void Awake()
         {
             _objectPooler = FindObjectOfType<ObjectPooler>();
+            _directionalKeeper = GetComponent<DirectionalKeeper>();
         }
 
         #region Public Methods
@@ -22,13 +24,13 @@ namespace TheSicker.UI
         public void PopUpSpawn()
         {
             PopUpController popUpController = GetPopupControllerFromPool();
-            popUpController?.Setup(popupMessage);
+            popUpController?.Setup(popupMessage, _directionalKeeper.LastEulerDirection);
         }
 
         public void PopUpSpawn(string customPopupMessage)
         {
             PopUpController popUpController = GetPopupControllerFromPool();
-            popUpController?.Setup(customPopupMessage);
+            popUpController?.Setup(customPopupMessage, _directionalKeeper.LastEulerDirection);
         }
 
         #endregion

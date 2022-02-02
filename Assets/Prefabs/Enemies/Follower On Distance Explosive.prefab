@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 6816338531031898171}
   - component: {fileID: 2837157064901283256}
   - component: {fileID: -3915663946900836632}
+  - component: {fileID: 6901686054564574141}
   m_Layer: 9
   m_Name: Follower On Distance Explosive
   m_TagString: Untagged
@@ -488,6 +489,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpObjectPoolId: 19
+--- !u!114 &6901686054564574141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7cd77728a581b439bd8c27139ba890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7202870627977749741
 GameObject:
   m_ObjectHideFlags: 0
