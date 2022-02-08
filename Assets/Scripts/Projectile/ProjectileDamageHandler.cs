@@ -23,9 +23,10 @@ namespace TheSicker.Projectile
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            DealDamage(collision.gameObject.GetComponent<Health>());
             DealDamageDirectionalVfx(collision.gameObject.GetComponent<IDirectionalDamageSpawner>());
             SetLastDirectionalAttack(collision.gameObject.GetComponent<IDirectionalKeeper>());
+            
+            DealDamage(collision.gameObject.GetComponent<Health>());
 
             _visualEffectHandler.ExplosionVfx(transform.position);
             _projectileCameraShakeController.CameraShake();
