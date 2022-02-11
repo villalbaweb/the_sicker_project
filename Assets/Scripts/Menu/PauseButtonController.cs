@@ -23,17 +23,22 @@ namespace TheSicker.Menu
 
         public void OnPointerDown(PointerEventData eventData)
         {
-            print("Pause pointer down...");
             isPaused = !isPaused;
 
-            if (isPaused)
-            {
-                _image.sprite = resumeSprite;
-            }
-            else
-            {
-                _image.sprite = pauseSprite;
-            }
+            SetTimeScale(isPaused);
+            SetImage(isPaused);
+        }
+
+        private void SetTimeScale(bool isPaused)
+        {
+            Time.timeScale = isPaused ? 1 : 0;
+        }
+
+        private void SetImage(bool isPaused)
+        {
+            if (!_image) return;
+
+            _image.sprite = isPaused ? pauseSprite : resumeSprite;
         }
     }
 }
