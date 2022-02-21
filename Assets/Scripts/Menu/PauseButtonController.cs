@@ -15,10 +15,14 @@ namespace TheSicker.Menu
 
         // cache
         Image _image;
+        GameMenuPanelController _gameMenuPanelController;
 
         private void Awake()
         {
             _image = GetComponent<Image>();
+
+            _gameMenuPanelController = FindObjectOfType<GameMenuPanelController>();
+            _gameMenuPanelController?.gameObject.SetActive(false);
         }
 
         public void OnPointerDown(PointerEventData eventData)
@@ -27,6 +31,7 @@ namespace TheSicker.Menu
 
             SetTimeScale(isPaused);
             SetImage(isPaused);
+            SetPanel(isPaused);
         }
 
         private void SetTimeScale(bool isPaused)
@@ -39,6 +44,13 @@ namespace TheSicker.Menu
             if (!_image) return;
 
             _image.sprite = isPaused ? pauseSprite : resumeSprite;
+        }
+
+        private void SetPanel(bool isPaused)
+        {
+            if(!_gameMenuPanelController) return;
+
+            _gameMenuPanelController.gameObject.SetActive(!isPaused);
         }
     }
 }
