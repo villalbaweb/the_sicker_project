@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3617811941200103644}
   - component: {fileID: 792750410209940967}
   - component: {fileID: 6832755521718649116}
+  - component: {fileID: 608348845605211628}
   m_Layer: 0
   m_Name: Main Menu Button
   m_TagString: Untagged
@@ -134,6 +135,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &608348845605211628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021711665565131297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcf921abc152b84c8deb8bef3099032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4371193761460368806
 GameObject:
   m_ObjectHideFlags: 0
