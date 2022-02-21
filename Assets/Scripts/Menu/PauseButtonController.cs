@@ -17,6 +17,8 @@ namespace TheSicker.Menu
         Image _image;
         GameMenuPanelController _gameMenuPanelController;
 
+        #region Private Methods
+
         private void Awake()
         {
             _image = GetComponent<Image>();
@@ -25,14 +27,6 @@ namespace TheSicker.Menu
             _gameMenuPanelController?.gameObject.SetActive(false);
         }
 
-        public void OnPointerDown(PointerEventData eventData)
-        {
-            isPaused = !isPaused;
-
-            SetTimeScale(isPaused);
-            SetImage(isPaused);
-            SetPanel(isPaused);
-        }
 
         private void SetTimeScale(bool isPaused)
         {
@@ -52,5 +46,31 @@ namespace TheSicker.Menu
 
             _gameMenuPanelController.gameObject.SetActive(!isPaused);
         }
+
+        #endregion
+
+
+        #region Public Methods
+
+        public void PauseButtonClick()
+        {
+            isPaused = !isPaused;
+
+            SetTimeScale(isPaused);
+            SetImage(isPaused);
+            SetPanel(isPaused);
+        }
+
+        #endregion
+
+
+        #region IPointerDownHandler Implementation 
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            PauseButtonClick();
+        }
+
+        #endregion
     }
 }
