@@ -6,7 +6,7 @@ namespace TheSicker.Game
     public class GameSound : ScriptableObject
     {
         // config
-        [SerializeField] float audioVolume = 1f;
+        [SerializeField][Range(0, 1)] float audioVolume = 1f;
         [SerializeField] bool isSoundMute = false;
 
         // properties

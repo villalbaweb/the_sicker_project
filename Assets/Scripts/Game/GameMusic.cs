@@ -9,12 +9,18 @@ namespace TheSicker.Game
         [SerializeField] AudioClip gamePlayMusic;
         [SerializeField] AudioClip gameOverMusic;
         [SerializeField] AudioClip splashScreenMusic;
-        [SerializeField] [Range(0, 1)] float gameMusicVolumenLevel = 1f;
+        [SerializeField][Range(0, 1)] float gameMusicVolumenLevel = 1f;
+        [SerializeField] bool isMusicMute = false;
 
         // properties
         public AudioClip GamePlayMusic => gamePlayMusic;
         public AudioClip GameOverMusic => gameOverMusic;
         public AudioClip SplashScreenMusic => splashScreenMusic;
         public float GameMusicVolumenLevel => gameMusicVolumenLevel;
+        public bool IsMusicMute
+        {
+            get => isMusicMute;
+            set => isMusicMute = value;
+        }
     }
 }
