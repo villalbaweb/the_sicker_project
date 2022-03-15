@@ -664,6 +664,7 @@ GameObject:
   - component: {fileID: 7894119552357663299}
   - component: {fileID: 8627266058885881732}
   - component: {fileID: 8646427991071678548}
+  - component: {fileID: 3036114729506258415}
   m_Layer: 0
   m_Name: Music Control Buton
   m_TagString: Untagged
@@ -728,6 +729,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3036114729506258415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6159463787751037893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb35d972d52a0843bb01e9dad0b96eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6389660096825099721
 GameObject:
   m_ObjectHideFlags: 0
