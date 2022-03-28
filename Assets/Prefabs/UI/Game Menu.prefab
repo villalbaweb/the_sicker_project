@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 242989594929759848}
   - component: {fileID: 258388877636151279}
   - component: {fileID: 5215729945086588258}
+  - component: {fileID: 3343209894806635096}
   m_Layer: 0
   m_Name: Sound Control Buton
   m_TagString: Untagged
@@ -222,6 +223,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3343209894806635096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4205830818360684892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa30c2e6b8940f4b91ef17792638336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSound: {fileID: 11400000, guid: 4557e16f949da334eaac005a0d14eff0, type: 2}
 --- !u!1 &4371193761460368806
 GameObject:
   m_ObjectHideFlags: 0
