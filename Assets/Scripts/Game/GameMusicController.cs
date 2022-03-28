@@ -16,6 +16,20 @@ namespace TheSicker.Game
             _musicAudioSource = GetComponent<AudioSource>();
         }
 
+        private void OnEnable()
+        {
+            if (!gameMusic) return;
+
+            gameMusic.OnIsMusicMuteChange += OnIsMusicMuteChange;
+        }
+
+        private void OnDisable()
+        {
+            if (!gameMusic) return;
+
+            gameMusic.OnIsMusicMuteChange -= OnIsMusicMuteChange;
+        }
+
         private void Start()
         {
             switch (musicType)
@@ -27,6 +41,11 @@ namespace TheSicker.Game
                 case MusicType.SplashScreen: PlaySplashScreenMusic();
                     break;
             }
+        }
+
+        private void OnIsMusicMuteChange()
+        {
+            _musicAudioSource.mute = gameMusic.IsMusicMute;
         }
 
         public void PlayRegularGameMusic()

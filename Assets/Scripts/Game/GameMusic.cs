@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace TheSicker.Game
@@ -22,5 +23,8 @@ namespace TheSicker.Game
             get => isMusicMute;
             set => isMusicMute = value;
         }
+
+        // events
+        public Action OnIsMusicMuteChange;
     }
 }
