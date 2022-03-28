@@ -14,6 +14,8 @@ namespace TheSicker.Game
         private void Awake()
         {
             _musicAudioSource = GetComponent<AudioSource>();
+
+            OnIsMusicMuteChange();
         }
 
         private void OnEnable()
