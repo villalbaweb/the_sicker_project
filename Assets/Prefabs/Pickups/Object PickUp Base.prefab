@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 5656211724276293001}
   - component: {fileID: 1835076487770836508}
   - component: {fileID: 6971114018972388125}
+  - component: {fileID: 6236263629804183306}
+  - component: {fileID: 2838383334449056751}
   m_Layer: 13
   m_Name: Object PickUp Base
   m_TagString: Untagged
@@ -181,6 +183,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2838383334449056751}
+        m_TargetAssemblyTypeName: TheSicker.Enemies.ExperiencePointsProviderHandler,
+          Assembly-CSharp
+        m_MethodName: ExperienceAward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5656211724276293001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +221,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxAudio: {fileID: 0}
-  sfxAudioVolume: 0.5
 --- !u!114 &6971114018972388125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,3 +234,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupParticleSystem: {fileID: 0}
+--- !u!114 &6236263629804183306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866999931643989337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb96294be55b14340b1ea6b7387bef6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingLevel: 1
+  characterClass: 11
+  progression: {fileID: 11400000, guid: b96dfa7ffbeb6cd41a902fc511137d51, type: 2}
+--- !u!114 &2838383334449056751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866999931643989337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d666e144381b51b43b1cc7c49e48c951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

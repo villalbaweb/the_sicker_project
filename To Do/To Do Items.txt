@@ -1,4 +1,5 @@
-
+* Refactor the Health pickup to provide points based on progression
+* Add XP points popup when object and weapon pickup
 * Add Menu
 * Add Ads
 * Make iOS version
