@@ -13,6 +13,7 @@ namespace TheSicker.Stats
         PickUpSpawner,
         PlayerProjectile,
         WeaponPickup,
-        ObjectPickup
+        ObjectPickup,
+        HealthPickup
     }
 }
