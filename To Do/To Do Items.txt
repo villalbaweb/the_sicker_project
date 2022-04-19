@@ -1,6 +1,8 @@
-* Refactor the Health pickup to provide points based on progression
-* Add XP points popup when object and weapon pickup
+* Add 3 difficulty levels
+* Check save points for each level
 * Add Menu
+	* select ship (no additional features just the ship)
+	* select difficulty level
 * Add Ads
 * Make iOS version
 
