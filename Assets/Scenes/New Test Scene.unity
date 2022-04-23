@@ -241,63 +241,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36a82ae12b36e874aa0ab5b7d1ddb594, type: 3}
---- !u!1001 &567617258
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854924, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2317112455548854927, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
-      propertyPath: m_Name
-      value: Aqua Nebula Game Playable Area
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7a7c3541c42f5bb4c9b8a5cf7fe6d2d0, type: 3}
 --- !u!1001 &938238869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -526,6 +469,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c8272c7b42a91b458ee5ce885dc44d1, type: 3}
+--- !u!1001 &1799317325
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854924, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317112455548854927, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
+      propertyPath: m_Name
+      value: Red Nebula Game Playable Area
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d6db32e95fbf72c4fa1e56fcf44a9d37, type: 3}
 --- !u!1001 &1892489837
 PrefabInstance:
   m_ObjectHideFlags: 0
