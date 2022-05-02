@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 327479934232606786}
   - component: {fileID: 1845233708}
   m_Layer: 11
-  m_Name: Stars Small_1
+  m_Name: Stars Small 9-slicing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,7 +233,7 @@ Transform:
   m_GameObject: {fileID: 327479934232606784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 20, y: 20, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 327479933279196201}
   m_RootOrder: 2
@@ -278,12 +278,12 @@ SpriteRenderer:
   m_SortingLayerID: -1662660931
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: efe6ce32a6a4408489775c70e5d32f11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 524684ab11cb50c418fa1b9e57288721, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 40.96, y: 40.96}
+  m_DrawMode: 2
+  m_Size: {x: 85, y: 85}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 327479934238913128}
   - component: {fileID: 1012906146}
   m_Layer: 11
-  m_Name: Stars-Big_1
+  m_Name: Stars Big 9-slicing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 327479934238913134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 20, y: 20, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 327479933279196201}
   m_RootOrder: 1
@@ -374,12 +374,12 @@ SpriteRenderer:
   m_SortingLayerID: -1662660931
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c6944f9f15bd0ca4087bcdf033f0e162, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99793dd064cd36c48ae7dc3ef1e1b1f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 20.48, y: 20.48}
+  m_DrawMode: 2
+  m_Size: {x: 42, y: 42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
