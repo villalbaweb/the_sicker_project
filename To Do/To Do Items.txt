@@ -1,4 +1,5 @@
 * Add 3 difficulty levels
+* Add enum to idenitfy the different levels and avoid maguc strings
 * Check save points for each level
 * Add Menu
 	* select ship (no additional features just the ship)
