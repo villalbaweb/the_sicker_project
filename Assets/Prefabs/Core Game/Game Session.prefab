@@ -141,6 +141,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameMusic: {fileID: 11400000, guid: 069d9d524c3eb3f47a358766164b2563, type: 2}
+  musicType: 1
+--- !u!1 &2317330517902127916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1420230586708282654}
+  - component: {fileID: 3651846272802909990}
+  m_Layer: 0
+  m_Name: Game Difficulty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1420230586708282654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317330517902127916}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2481074073570772397}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3651846272802909990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317330517902127916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6a14b349bad814f956b1587ebea1ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameDifficulty: {fileID: 11400000, guid: 1cbb9b60878e3c14fae5d0d1260f15e3, type: 2}
 --- !u!1 &3855466812187949603
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +260,7 @@ Transform:
   - {fileID: 6696405424423961943}
   - {fileID: 6799261818036003068}
   - {fileID: 506546969577165054}
+  - {fileID: 1420230586708282654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
