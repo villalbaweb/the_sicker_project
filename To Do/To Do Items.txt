@@ -1,5 +1,6 @@
-* Add 3 difficulty levels
 * Add enum to idenitfy the different levels and avoid maguc strings
+* Add Diff difficulty factor for each level
+* Add Diff background images, planets and stars
 * Check save points for each level
 * Add Menu
 	* select ship (no additional features just the ship)
