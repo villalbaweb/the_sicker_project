@@ -1,4 +1,5 @@
 using System.Collections;
+using TheSicker.GameDifficulty;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

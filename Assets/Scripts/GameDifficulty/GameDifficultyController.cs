@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TheSicker.Game
+namespace TheSicker.GameDifficulty
 {
     public class GameDifficultyController : MonoBehaviour
     {

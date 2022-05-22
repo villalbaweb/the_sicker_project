@@ -1,4 +1,4 @@
-namespace TheSicker.Game
+namespace TheSicker.GameDifficulty
 {
     public enum DifficultyLevel
     {
