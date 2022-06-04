@@ -13,8 +13,6 @@ Get Stats
 
 FollowOnDistanceExplosiveSpecialAttack - Damage - Increase Damage based on Difficulty Level
 FollowOnDistanceTouchAttack - Damage - Increase Damage based on Difficulty Level
-ObjectPoolSpawnerLevelHandler - Wildcard - Increase for Enemy Spwner and Decrease for Pickup Objects
-PlayerHealthIncreaseHandler - ExperienceReward - Reduce factor for Player based on Difficulty Level
 ProjectileDamageHandler - Damage - Increase Damage based on Difficulty Level
 
 
