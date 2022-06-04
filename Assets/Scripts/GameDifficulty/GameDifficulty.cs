@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace TheSicker.Game
+namespace TheSicker.GameDifficulty
 {
     [CreateAssetMenu(fileName = "GameDifficulty", menuName = "Game Configuration/New GameDifficulty", order = 1)]
     public class GameDifficulty : ScriptableObject
