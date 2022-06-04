@@ -7,8 +7,14 @@ namespace TheSicker.GameDifficulty
     {
         // config props
         [SerializeField] DifficultyLevel gameDifficultySelected;
+        [SerializeField] float easyEnemyDamageFactor = 1.0f;
+        [SerializeField] float mediumEnemyDamageFactor = 1.25f;
+        [SerializeField] float hardEnemyDamageFactor = 1.5f;
 
         // properties
         public DifficultyLevel GameDifficultySelected => gameDifficultySelected;
+        public float EasyEnemyDamageFactor => easyEnemyDamageFactor;
+        public float MediumEnemyDamageFactor => mediumEnemyDamageFactor;
+        public float HardEnemyDamageFactor => hardEnemyDamageFactor;
     }
 }

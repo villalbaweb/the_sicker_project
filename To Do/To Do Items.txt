@@ -11,8 +11,8 @@
 
 Get Stats
 
-FollowOnDistanceExplosiveSpecialAttack - Damage - Increase Damage based on Difficulty Level
-FollowOnDistanceTouchAttack - Damage - Increase Damage based on Difficulty Level
+FollowOnDistanceExplosiveSpecialAttack - Damage - Increase Damage based on Difficulty Level - Done
+FollowOnDistanceTouchAttack - Damage - Increase Damage based on Difficulty Level - Done
 ProjectileDamageHandler - Damage - Increase Damage based on Difficulty Level
 
 

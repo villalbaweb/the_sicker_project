@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: -7638109951089467436}
   - component: {fileID: 4125402817293693547}
   - component: {fileID: 7376063050369105888}
+  - component: {fileID: 8117156640746353212}
   - component: {fileID: 239634305175508062}
   - component: {fileID: 1106300293839235862}
   - component: {fileID: -8915920339110803416}
@@ -286,6 +287,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultTouchDamagePerPeriod: 10
   touchDamagePeriodRate: 1
+--- !u!114 &8117156640746353212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7851036243965729061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ff90aee752a3d45abe7d8041b9816e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &239634305175508062
 MonoBehaviour:
   m_ObjectHideFlags: 0
