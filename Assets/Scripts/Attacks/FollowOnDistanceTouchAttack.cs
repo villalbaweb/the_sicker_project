@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TheSicker.Core;
 using System.Collections;
+using TheSicker.GameDifficulty;
 
 namespace TheSicker.Attacks
 {
@@ -18,12 +19,12 @@ namespace TheSicker.Attacks
 
         // cache
         WaitForSeconds _crashDamageWaitForSeconds;
-        FollowOnDistanceTouchAttackProvider _followOnDistanceTouchAttackProvider;
+        GameDifficultyDamageLevelProvider _gameDifficultyDamageLevelProvider;
 
         private void Awake() 
         {
             _specialEffectsHandler = GetComponent<SpecialEffectsHandler>();
-            _followOnDistanceTouchAttackProvider = GetComponent<FollowOnDistanceTouchAttackProvider>();
+            _gameDifficultyDamageLevelProvider = GetComponent<GameDifficultyDamageLevelProvider>();
             _crashDamageWaitForSeconds = new WaitForSeconds(touchDamagePeriodRate);
         }
 
@@ -65,7 +66,7 @@ namespace TheSicker.Attacks
         {
             while(true)
             {
-                int damage = _followOnDistanceTouchAttackProvider ? _followOnDistanceTouchAttackProvider.GetTouchAttackDamage() : defaultTouchDamagePerPeriod;
+                int damage = _gameDifficultyDamageLevelProvider ? _gameDifficultyDamageLevelProvider.GetDamageLevel() : defaultTouchDamagePerPeriod;
                 _health.TakeDamage(damage);
                 _specialEffectsHandler.PlaySpecialEffectsOnPosition(_contactPoint.point);
                 yield return _crashDamageWaitForSeconds;

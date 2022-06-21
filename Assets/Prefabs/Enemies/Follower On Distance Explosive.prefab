@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: 4068915785558012767}
   - component: {fileID: 7949449604252686631}
   - component: {fileID: 839225255224697515}
-  - component: {fileID: 2811279330249912627}
   - component: {fileID: 1796668431597181457}
   - component: {fileID: 1471520676571161766}
   - component: {fileID: -6600439028868885870}
@@ -111,6 +110,7 @@ GameObject:
   - component: {fileID: 2837157064901283256}
   - component: {fileID: -3915663946900836632}
   - component: {fileID: 6901686054564574141}
+  - component: {fileID: 3521508392057708096}
   m_Layer: 9
   m_Name: Follower On Distance Explosive
   m_TagString: Untagged
@@ -409,18 +409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296a5e9f32d35524c9f8909b65e5481b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2811279330249912627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6236296128824799001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ff90aee752a3d45abe7d8041b9816e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1796668431597181457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +500,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7cd77728a581b439bd8c27139ba890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3521508392057708096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6236296128824799001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee01a54f7c6d2540aada0baeb2440bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7202870627977749741

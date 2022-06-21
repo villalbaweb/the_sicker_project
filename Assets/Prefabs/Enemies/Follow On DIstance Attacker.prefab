@@ -186,7 +186,6 @@ GameObject:
   - component: {fileID: 8037166126745038395}
   - component: {fileID: 4148759486683174341}
   - component: {fileID: 1037327947986325738}
-  - component: {fileID: 8743378274945536220}
   - component: {fileID: -4790462043829827051}
   - component: {fileID: 6591156826656617334}
   - component: {fileID: 2870403694235600745}
@@ -194,6 +193,7 @@ GameObject:
   - component: {fileID: 8598231172521650046}
   - component: {fileID: 3842216524664702813}
   - component: {fileID: 6731369599388616773}
+  - component: {fileID: 6694653292875248625}
   m_Layer: 9
   m_Name: Follow On DIstance Attacker
   m_TagString: Untagged
@@ -478,18 +478,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultTouchDamagePerPeriod: 10
   touchDamagePeriodRate: 1
---- !u!114 &8743378274945536220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3501752544267082893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84ff90aee752a3d45abe7d8041b9816e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-4790462043829827051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,5 +568,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d7cd77728a581b439bd8c27139ba890, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6694653292875248625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501752544267082893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee01a54f7c6d2540aada0baeb2440bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

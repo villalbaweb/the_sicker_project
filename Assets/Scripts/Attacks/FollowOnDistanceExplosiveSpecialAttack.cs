@@ -1,4 +1,5 @@
 ﻿using TheSicker.Core;
+using TheSicker.GameDifficulty;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,18 +12,18 @@ namespace TheSicker.Attacks
         [SerializeField] UnityEvent onExplosionAttack = null;
 
         // cache
-        FollowOnDistanceTouchAttackProvider _followOnDistanceTouchAttackProvider;
+        GameDifficultyDamageLevelProvider _gameDifficultyDamageLevelProvider;
 
         private void Awake()
         {
-            _followOnDistanceTouchAttackProvider = GetComponent<FollowOnDistanceTouchAttackProvider>();
+            _gameDifficultyDamageLevelProvider = GetComponent<GameDifficultyDamageLevelProvider>();
         }
 
         private void OnCollisionEnter2D(Collision2D other) 
         {
             if(other.gameObject.tag != "Player") return;
 
-            int damage = _followOnDistanceTouchAttackProvider ? _followOnDistanceTouchAttackProvider.GetTouchAttackDamage() : defaultExplosionDamage;
+            int damage = _gameDifficultyDamageLevelProvider ? _gameDifficultyDamageLevelProvider.GetDamageLevel() : defaultExplosionDamage;
             other.gameObject.GetComponent<Health>().TakeDamage(damage);
             onExplosionAttack?.Invoke();
             gameObject.SetActive(false);
