@@ -1,5 +1,5 @@
 ﻿using TheSicker.Core;
-using TheSicker.Stats;
+using TheSicker.GameDifficulty;
 using UnityEngine;
 
 namespace TheSicker.Projectile
@@ -12,13 +12,13 @@ namespace TheSicker.Projectile
         // cache
         VisualEffectHandler _visualEffectHandler;
         ProjectileCameraShakeController _projectileCameraShakeController;
-        IBaseStatsGetter _baseStatsGetter;
+        GameDifficultyDamageLevelProvider _gameDifficultyDamageLevelProvider;
 
         private void Awake() 
         {
             _visualEffectHandler = GetComponent<VisualEffectHandler>();
             _projectileCameraShakeController = GetComponent<ProjectileCameraShakeController>();
-            _baseStatsGetter = GetComponent<IBaseStatsGetter>();
+            _gameDifficultyDamageLevelProvider = GetComponent<GameDifficultyDamageLevelProvider>();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -36,7 +36,7 @@ namespace TheSicker.Projectile
         {
             if (targetHealth)
             {
-                int damage = _baseStatsGetter != null ? (int)_baseStatsGetter.GetStat(Stat.Damage) : defaultDamage;
+                int damage = _gameDifficultyDamageLevelProvider ? (int)_gameDifficultyDamageLevelProvider.GetDamageLevel() : defaultDamage;
                 targetHealth.TakeDamage(damage);
             }
         }
