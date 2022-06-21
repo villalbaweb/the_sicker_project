@@ -1,5 +1,4 @@
 ﻿using TheSicker.Core;
-using TheSicker.Stats;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,18 +11,18 @@ namespace TheSicker.Attacks
         [SerializeField] UnityEvent onExplosionAttack = null;
 
         // cache
-        IBaseStatsGetter _baseStatsGetter;
+        FollowOnDistanceTouchAttackProvider _followOnDistanceTouchAttackProvider;
 
         private void Awake()
         {
-            _baseStatsGetter = GetComponent<IBaseStatsGetter>();
+            _followOnDistanceTouchAttackProvider = GetComponent<FollowOnDistanceTouchAttackProvider>();
         }
 
         private void OnCollisionEnter2D(Collision2D other) 
         {
             if(other.gameObject.tag != "Player") return;
 
-            int damage = _baseStatsGetter != null ? (int)_baseStatsGetter.GetStat(Stat.Damage) : defaultExplosionDamage;
+            int damage = _followOnDistanceTouchAttackProvider ? _followOnDistanceTouchAttackProvider.GetTouchAttackDamage() : defaultExplosionDamage;
             other.gameObject.GetComponent<Health>().TakeDamage(damage);
             onExplosionAttack?.Invoke();
             gameObject.SetActive(false);
