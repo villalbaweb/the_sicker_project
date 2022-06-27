@@ -1,7 +1,7 @@
 
 
+* Check save points for each level - The key to save data is the Class Type not the type StateType itself
 * Add Diff background images, planets and stars
-* Check save points for each level
 * Add Menu
 	* select ship (no additional features just the ship)
 	* select difficulty level
