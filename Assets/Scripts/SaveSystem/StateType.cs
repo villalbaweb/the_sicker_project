@@ -4,6 +4,9 @@ namespace TheSicker.SaveSystem
     {
         Unknown,
         General,
-        MaxXp
+        MaxXp,
+        MaxXpEasy,
+        MaxXpMedium,
+        MaxXpHard
     }
 }

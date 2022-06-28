@@ -52,14 +52,14 @@ namespace TheSicker.SaveSystem
             _saveSystemRoot.Delete(MAX_XP_SAVE_FILE);
         }
 
-        public void SaveMaxXpPoint()
+        public void SaveMaxXpPoint(StateType stateType)
         {
-            _saveSystemRoot.Save(StateType.MaxXp, MAX_XP_SAVE_FILE);
+            _saveSystemRoot.Save(stateType, MAX_XP_SAVE_FILE);
         }
 
-        public void GetMaxXpPoint()
+        public void GetMaxXpPoint(StateType stateType)
         {
-            _saveSystemRoot.Load(StateType.MaxXp, MAX_XP_SAVE_FILE);
+            _saveSystemRoot.Load(stateType, MAX_XP_SAVE_FILE);
         }
 
         #endregion

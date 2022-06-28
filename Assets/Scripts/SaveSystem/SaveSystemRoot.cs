@@ -37,7 +37,7 @@ namespace TheSicker.SaveSystem
             {
                 return new Dictionary<string, object>();
             }
-            using (FileStream stream = File.Open(path, FileMode.Open))
+            using (FileStream stream = File.Open(path, FileMode.OpenOrCreate))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
                 return (Dictionary<string, object>)formatter.Deserialize(stream);
@@ -48,7 +48,7 @@ namespace TheSicker.SaveSystem
         {
             string path = GetPathFromSaveFile(saveFile);
             print("Saving to " + path);
-            using (FileStream stream = File.Open(path, FileMode.Create))
+            using (FileStream stream = File.Open(path, FileMode.OpenOrCreate))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(stream, state);
@@ -59,7 +59,7 @@ namespace TheSicker.SaveSystem
         {
             foreach (SaveableGameObject saveableGameObject in FindObjectsOfType<SaveableGameObject>())
             {
-                state[saveableGameObject.GetUniqueIdentifier()] = saveableGameObject.CaptureState(stateType);
+                state[saveableGameObject.GetUniqueIdentifier()] = saveableGameObject.CaptureState(stateType);   //TODO: This is the reason we are replacing the previous file content, this needs to be fixed
             }
         }
 

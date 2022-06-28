@@ -1,4 +1,5 @@
 using System;
+using TheSicker.GameDifficulty;
 using TheSicker.SaveSystem;
 using TheSicker.Stats;
 using UnityEngine;
@@ -10,11 +11,13 @@ namespace TheSicker.Player
 
         // cache
         SaveSystemWrapper _saveSystemWrapper;
+        GameDifficultyController _gameDifficultyController;
         Experience _experience;
 
         // state
         bool isMaxXpLevelReached = false;
         float maxExperiencePoints;
+        StateType selectedStateType;
 
         // events
         public Action OnMaxXpUpdated;
@@ -25,12 +28,14 @@ namespace TheSicker.Player
         private void Awake()
         {
             _saveSystemWrapper = FindObjectOfType<SaveSystemWrapper>();
+            _gameDifficultyController = FindObjectOfType<GameDifficultyController>();
             _experience = GetComponent<Experience>();
         }
 
         private void Start()
         {
-            _saveSystemWrapper?.GetMaxXpPoint();
+            SetStateTypeBasedOnDifficulty();
+            _saveSystemWrapper?.GetMaxXpPoint(selectedStateType);
             OnMaxXpUpdated?.Invoke();
         }
 
@@ -54,7 +59,7 @@ namespace TheSicker.Player
         {
             if (!isMaxXpLevelReached) return;
 
-            _saveSystemWrapper.SaveMaxXpPoint();
+            _saveSystemWrapper.SaveMaxXpPoint(selectedStateType);
         }
 
 
@@ -70,18 +75,40 @@ namespace TheSicker.Player
             }
         }
 
+        private void SetStateTypeBasedOnDifficulty()
+        {
+            DifficultyLevel difficultyLevel = _gameDifficultyController 
+                ? _gameDifficultyController.GetSelectedDifficultyLevel() 
+                : DifficultyLevel.Easy;
+
+            switch (difficultyLevel)
+            {
+                case DifficultyLevel.Easy:
+                    selectedStateType = StateType.MaxXpEasy;
+                    break;
+
+                case DifficultyLevel.Medium:
+                    selectedStateType = StateType.MaxXpMedium;
+                    break;
+
+                case DifficultyLevel.Hard:
+                    selectedStateType = StateType.MaxXpHard;
+                    break;
+            }
+        }
+
         #region ISaveableComponent Implementation
 
         public object CaptureState(StateType stateType)
         {
-            if (stateType != StateType.MaxXp) return null;
+            if (stateType != StateType.MaxXpEasy && stateType != StateType.MaxXpMedium && stateType != StateType.MaxXpHard) return null;
 
             return maxExperiencePoints;
         }
 
         public void RestoreState(StateType stateType, object state)
         {
-            if (stateType != StateType.MaxXp) return;
+            if (stateType != StateType.MaxXpEasy && stateType != StateType.MaxXpMedium && stateType != StateType.MaxXpHard) return;
 
             maxExperiencePoints = (float)state;
         }
