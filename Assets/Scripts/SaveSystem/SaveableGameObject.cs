@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -19,7 +20,8 @@ namespace TheSicker.SaveSystem
             Dictionary<string, object> state = new Dictionary<string, object>();
             foreach (ISaveableComponent saveableComponent in GetComponents<ISaveableComponent>())
             {
-                state[saveableComponent.GetType().ToString()] = saveableComponent.CaptureState(stateType);
+                string saveKey = BuildSaveKey(saveableComponent.GetType(), stateType);
+                state[saveKey] = saveableComponent.CaptureState(stateType);
             }
             return state;
         }
@@ -34,10 +36,10 @@ namespace TheSicker.SaveSystem
             Dictionary<string, object> stateDict = (Dictionary<string, object>)state;
             foreach (ISaveableComponent saveableComponent in GetComponents<ISaveableComponent>())
             {
-                string typeString = saveableComponent.GetType().ToString();
-                if (stateDict.ContainsKey(typeString))
+                string saveKey = BuildSaveKey(saveableComponent.GetType(), stateType);
+                if (stateDict.ContainsKey(saveKey))
                 {
-                    saveableComponent.RestoreState(stateType, stateDict[typeString]);
+                    saveableComponent.RestoreState(stateType, stateDict[saveKey]);
                 }
             }
         }
@@ -84,6 +86,11 @@ namespace TheSicker.SaveSystem
             }
 
             return false;
+        }
+
+        private string BuildSaveKey(Type saveableComponentType, StateType stateType)
+        {
+            return $"{saveableComponentType}_{stateType}";
         }
 
         #endregion
