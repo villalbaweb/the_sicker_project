@@ -15,9 +15,8 @@ namespace TheSicker.SaveSystem
 
         #region Public Methods
 
-        public object CaptureState(StateType stateType)
+        public object CaptureState(StateType stateType, Dictionary<string, object> saveableGameObjectCurrentState)
         {
-            Dictionary<string, object> state = new Dictionary<string, object>();
             foreach (ISaveableComponent saveableComponent in GetComponents<ISaveableComponent>())
             {
                 object capturedState = saveableComponent.CaptureState(stateType);
@@ -25,10 +24,18 @@ namespace TheSicker.SaveSystem
                 if(capturedState != null)
                 {
                     string saveKey = BuildSaveKey(saveableComponent.GetType(), stateType);
-                    state[saveKey] = capturedState;
+
+                    if (saveableGameObjectCurrentState.ContainsKey(saveKey))
+                    {
+                        saveableGameObjectCurrentState[saveKey] = capturedState;
+                    }
+                    else
+                    {
+                        saveableGameObjectCurrentState.Add(saveKey, capturedState);
+                    }
                 }
             }
-            return state;
+            return saveableGameObjectCurrentState;
         }
 
         public string GetUniqueIdentifier()

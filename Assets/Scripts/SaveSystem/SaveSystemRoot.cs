@@ -59,7 +59,13 @@ namespace TheSicker.SaveSystem
         {
             foreach (SaveableGameObject saveableGameObject in FindObjectsOfType<SaveableGameObject>())
             {
-                state[saveableGameObject.GetUniqueIdentifier()] = saveableGameObject.CaptureState(stateType);   //TODO: This is the reason we are replacing the previous file content, this needs to be fixed
+                string id = saveableGameObject.GetUniqueIdentifier();
+
+                Dictionary<string, object> saveableGameObjectState = state.ContainsKey(id)
+                    ? state[id] as Dictionary<string, object>
+                    : new Dictionary<string, object>();
+
+                state[id] = saveableGameObject.CaptureState(stateType, saveableGameObjectState);
             }
         }
 
