@@ -20,8 +20,13 @@ namespace TheSicker.SaveSystem
             Dictionary<string, object> state = new Dictionary<string, object>();
             foreach (ISaveableComponent saveableComponent in GetComponents<ISaveableComponent>())
             {
-                string saveKey = BuildSaveKey(saveableComponent.GetType(), stateType);
-                state[saveKey] = saveableComponent.CaptureState(stateType);
+                object capturedState = saveableComponent.CaptureState(stateType);
+
+                if(capturedState != null)
+                {
+                    string saveKey = BuildSaveKey(saveableComponent.GetType(), stateType);
+                    state[saveKey] = capturedState;
+                }
             }
             return state;
         }
