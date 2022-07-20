@@ -1,5 +1,4 @@
 * Add Diff background images, planets and stars
-	* Add diff stars constellations for Medium and Hard (easy is done)
 	* Add differente plannet combinations
 	* Try to identify how to create a black hole with particle system
 * Add Menu
