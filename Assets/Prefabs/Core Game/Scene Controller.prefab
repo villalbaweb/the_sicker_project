@@ -48,4 +48,5 @@ MonoBehaviour:
   hardGameSceneName: Hard Game Scene
   gameOverSceneName: Game Over Scene
   gameSplashSceneName: Splash Scene
+  gameDifficultySelectionSceneName: Setup Scene
   timeToGameOverLoad: 3

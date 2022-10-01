@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TheSicker.UI
 {
-    public class SplashSceneStartButtonHandler : MonoBehaviour
+    public class DifficultySelectionSceneStartButtonHandler : MonoBehaviour
     {
         // cache
         GameSceneController _gameSceneController;
@@ -15,7 +15,7 @@ namespace TheSicker.UI
 
         public void StartButtonPressed()
         {
-            _gameSceneController.LoadDifficultySelectionMenu();
+            _gameSceneController.LoadPlayLevel();
         }
     }
 }

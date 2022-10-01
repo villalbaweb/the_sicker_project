@@ -15,6 +15,7 @@ namespace TheSicker.Game
         [SerializeField] string hardGameSceneName;
         [SerializeField] string gameOverSceneName;
         [SerializeField] string gameSplashSceneName;
+        [SerializeField] string gameDifficultySelectionSceneName;
 
         [Header("Game Over Control")]
         [SerializeField] float timeToGameOverLoad = 3.0f;
@@ -25,6 +26,11 @@ namespace TheSicker.Game
         private void Awake()
         {
             _gameDifficultyController = FindObjectOfType<GameDifficultyController>();
+        }
+
+        public void LoadDifficultySelectionMenu()
+        {
+            SceneManager.LoadScene(gameDifficultySelectionSceneName);
         }
 
         public void LoadPlayLevel()

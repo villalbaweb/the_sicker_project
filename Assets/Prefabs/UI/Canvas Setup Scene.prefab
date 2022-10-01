@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 290844008352790529}
   - component: {fileID: 290844008352790530}
   - component: {fileID: 290844008352790531}
-  - component: {fileID: 1281369919631316982}
+  - component: {fileID: 4746954309532993228}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -121,8 +121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1281369919631316982}
-        m_TargetAssemblyTypeName: TheSicker.UI.SplashSceneStartButtonHandler, Assembly-CSharp
+      - m_Target: {fileID: 4746954309532993228}
+        m_TargetAssemblyTypeName: TheSicker.UI.DifficultySelectionSceneStartButtonHandler,
+          Assembly-CSharp
         m_MethodName: StartButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -133,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1281369919631316982
+--- !u!114 &4746954309532993228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 290844008352790533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c479c0b642574249bcadae181e4f1fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 451b01a5ae928d346a6219327a62b5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &290844008679018633
@@ -157,9 +158,9 @@ GameObject:
   - component: {fileID: 290844008679018645}
   - component: {fileID: 290844008679018646}
   - component: {fileID: 290844008679018647}
-  - component: {fileID: 82101766504245679}
+  - component: {fileID: 1784391766836063669}
   m_Layer: 5
-  m_Name: Exit Button
+  m_Name: Back Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,9 +267,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 82101766504245679}
-        m_TargetAssemblyTypeName: TheSicker.UI.SplashSceneExitButtonHandler, Assembly-CSharp
-        m_MethodName: ExitButtonPressed
+      - m_Target: {fileID: 1784391766836063669}
+        m_TargetAssemblyTypeName: TheSicker.UI.DifficultySelectionSceneBackButtonHandler,
+          Assembly-CSharp
+        m_MethodName: BackButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -278,7 +280,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &82101766504245679
+--- !u!114 &1784391766836063669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,7 +289,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 290844008679018633}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87fbdcc42e2b60439ee1ae99cd3ec8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 826e55bea206ed543814561f99eb2ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &290844009285319634
