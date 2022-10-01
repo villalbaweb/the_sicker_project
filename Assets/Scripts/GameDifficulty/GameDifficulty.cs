@@ -13,6 +13,7 @@ namespace TheSicker.GameDifficulty
 
         // properties
         public DifficultyLevel GameDifficultySelected => gameDifficultySelected;
+        public DifficultyLevel SetDifficultyLevel { set { gameDifficultySelected = value; } }
         public float EasyEnemyDamageFactor => easyEnemyDamageFactor;
         public float MediumEnemyDamageFactor => mediumEnemyDamageFactor;
         public float HardEnemyDamageFactor => hardEnemyDamageFactor;

@@ -39,5 +39,10 @@ namespace TheSicker.GameDifficulty
 
             return damageFactor;
         }
+
+        public void SetDifficultyLevel(DifficultyLevel difficultyLevel)
+        {
+            gameDifficulty.SetDifficultyLevel = difficultyLevel;
+        }
     }
 }
