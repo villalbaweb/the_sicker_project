@@ -405,6 +405,8 @@ GameObject:
   - component: {fileID: 1109339983895448469}
   - component: {fileID: 5707572834759034908}
   - component: {fileID: 8642121261108884340}
+  - component: {fileID: 1094347295366468541}
+  - component: {fileID: 7970382365932789803}
   m_Layer: 5
   m_Name: Hard Level
   m_TagString: Untagged
@@ -469,6 +471,48 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1094347295366468541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289344033225146084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7970382365932789803}
+          m_TargetAssemblyTypeName: TheSicker.UI.GameLevelSelectionController, Assembly-CSharp
+          m_MethodName: SetDifficultyLevelClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Hard
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &7970382365932789803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289344033225146084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d5e684cf5c3c24b9d70aad64b7e776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyLevel: 2
 --- !u!1 &2619941854548232463
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +524,8 @@ GameObject:
   - component: {fileID: 3727358056874143470}
   - component: {fileID: 8733917289354308440}
   - component: {fileID: 8872219943578021788}
+  - component: {fileID: 102521518151195687}
+  - component: {fileID: 2432371143837925567}
   m_Layer: 5
   m_Name: Medium Level
   m_TagString: Untagged
@@ -544,6 +590,48 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &102521518151195687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619941854548232463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2432371143837925567}
+          m_TargetAssemblyTypeName: TheSicker.UI.GameLevelSelectionController, Assembly-CSharp
+          m_MethodName: SetDifficultyLevelClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Medium
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &2432371143837925567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619941854548232463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d5e684cf5c3c24b9d70aad64b7e776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyLevel: 1
 --- !u!1 &5415194433198275968
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +643,8 @@ GameObject:
   - component: {fileID: 3653807793866617816}
   - component: {fileID: 1203735609805217795}
   - component: {fileID: 4916302022908230152}
+  - component: {fileID: 5617503819450682474}
+  - component: {fileID: 4811203549851664068}
   m_Layer: 5
   m_Name: Easy Level
   m_TagString: Untagged
@@ -619,3 +709,45 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5617503819450682474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415194433198275968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4811203549851664068}
+          m_TargetAssemblyTypeName: TheSicker.UI.GameLevelSelectionController, Assembly-CSharp
+          m_MethodName: SetDifficultyLevelClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Easy
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &4811203549851664068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415194433198275968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d5e684cf5c3c24b9d70aad64b7e776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyLevel: 0
