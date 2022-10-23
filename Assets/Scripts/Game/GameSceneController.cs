@@ -30,6 +30,14 @@ namespace TheSicker.Game
 
         private void Awake()
         {
+            int numGameSceneController = FindObjectsOfType<GameSceneController>().Length;
+
+            if (numGameSceneController > 1)
+                Destroy(gameObject);
+            else
+                DontDestroyOnLoad(gameObject);
+
+
             _gameDifficultyController = FindObjectOfType<GameDifficultyController>();
         }
 
@@ -68,6 +76,8 @@ namespace TheSicker.Game
             yield return new WaitForSeconds(timeToTransition);
 
             SceneManager.LoadScene(scene);
+
+            sceneTransitionController.StartSceneInTransitionAnimation();
         }
 
         private string GetSceneName()
