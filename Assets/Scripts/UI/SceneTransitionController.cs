@@ -10,9 +10,9 @@ namespace TheSicker.UI
         [SerializeField] Animator animator;
 
 
-        public void StartSceneTransitionAnimation()
+        public void StartSceneAwayTransitionAnimation()
         {
-            animator.SetTrigger("StartTransition");
+            animator.SetTrigger("StartAwayTransition");
         }
     }
 }

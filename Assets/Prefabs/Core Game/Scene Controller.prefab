@@ -50,6 +50,7 @@ MonoBehaviour:
   gameOverSceneName: Game Over Scene
   gameSplashSceneName: Splash Scene
   gameDifficultySelectionSceneName: Setup Scene
+  sceneTransitionController: {fileID: 241259276536089210}
   timeToGameOverLoad: 3
 --- !u!1001 &1725578840144486365
 PrefabInstance:
@@ -113,3 +114,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1509973014349907089, guid: 7eb3e6485ba0c8b48b406a2805243e37, type: 3}
   m_PrefabInstance: {fileID: 1725578840144486365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &241259276536089210 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1489386187277571495, guid: 7eb3e6485ba0c8b48b406a2805243e37, type: 3}
+  m_PrefabInstance: {fileID: 1725578840144486365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc01c446668501468f6ecda7bc6a48e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

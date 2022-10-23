@@ -1,5 +1,6 @@
 using System.Collections;
 using TheSicker.GameDifficulty;
+using TheSicker.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,10 @@ namespace TheSicker.Game
         [SerializeField] string gameSplashSceneName;
         [SerializeField] string gameDifficultySelectionSceneName;
 
+        [Header("Scene Transition")]
+        [SerializeField] SceneTransitionController sceneTransitionController;
+        [SerializeField] float timeToTransition = 2.0f;
+
         [Header("Game Over Control")]
         [SerializeField] float timeToGameOverLoad = 3.0f;
 
@@ -30,7 +35,7 @@ namespace TheSicker.Game
 
         public void LoadDifficultySelectionMenu()
         {
-            SceneManager.LoadScene(gameDifficultySelectionSceneName);
+            StartCoroutine(LoadSceneWithTransition(gameDifficultySelectionSceneName));
         }
 
         public void LoadPlayLevel()
@@ -54,6 +59,15 @@ namespace TheSicker.Game
         {
             yield return new WaitForSeconds(timeToGameOverLoad);
             SceneManager.LoadScene(gameOverSceneName);
+        }
+
+        private IEnumerator LoadSceneWithTransition(string scene)
+        {
+            sceneTransitionController.StartSceneAwayTransitionAnimation();
+
+            yield return new WaitForSeconds(timeToTransition);
+
+            SceneManager.LoadScene(scene);
         }
 
         private string GetSceneName()
