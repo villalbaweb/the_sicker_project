@@ -14,10 +14,5 @@ namespace TheSicker.UI
         {
             animator.SetTrigger("StartAwayTransition");
         }
-
-        public void StartSceneInTransitionAnimation()
-        {
-            animator.SetTrigger("StartInTransition");
-        }
     }
 }

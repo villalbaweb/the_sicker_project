@@ -22,22 +22,11 @@ namespace TheSicker.Game
         [SerializeField] SceneTransitionController sceneTransitionController;
         [SerializeField] float timeToTransition = 2.0f;
 
-        [Header("Game Over Control")]
-        [SerializeField] float timeToGameOverLoad = 3.0f;
-
         // cache
         GameDifficultyController _gameDifficultyController;
 
         private void Awake()
         {
-            int numGameSceneController = FindObjectsOfType<GameSceneController>().Length;
-
-            if (numGameSceneController > 1)
-                Destroy(gameObject);
-            else
-                DontDestroyOnLoad(gameObject);
-
-
             _gameDifficultyController = FindObjectOfType<GameDifficultyController>();
         }
 
@@ -48,26 +37,20 @@ namespace TheSicker.Game
 
         public void LoadPlayLevel()
         {
-            SceneManager.LoadScene(GetSceneName());
+            StartCoroutine(LoadSceneWithTransition(GetSceneName()));
         }
 
         public void LoadMainMenu()
         {
-            SceneManager.LoadScene(gameSplashSceneName);
+            StartCoroutine(LoadSceneWithTransition(gameSplashSceneName));
         }
 
         public void LoadGameOver()
         {
-            StartCoroutine(LoadGameOverLevel());
+            StartCoroutine(LoadSceneWithTransition(gameOverSceneName));
         }
 
         #region Private Methods
-
-        private IEnumerator LoadGameOverLevel()
-        {
-            yield return new WaitForSeconds(timeToGameOverLoad);
-            SceneManager.LoadScene(gameOverSceneName);
-        }
 
         private IEnumerator LoadSceneWithTransition(string scene)
         {
@@ -76,8 +59,6 @@ namespace TheSicker.Game
             yield return new WaitForSeconds(timeToTransition);
 
             SceneManager.LoadScene(scene);
-
-            sceneTransitionController.StartSceneInTransitionAnimation();
         }
 
         private string GetSceneName()
