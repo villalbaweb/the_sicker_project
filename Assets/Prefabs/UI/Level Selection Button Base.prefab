@@ -193,6 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficultyLevel: 0
+  animator: {fileID: 2982151647599434862}
 --- !u!95 &2982151647599434862
 Animator:
   serializedVersion: 3
