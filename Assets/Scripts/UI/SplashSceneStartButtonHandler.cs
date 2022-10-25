@@ -7,6 +7,7 @@ namespace TheSicker.UI
     {
         // config
         [SerializeField] AudioClip _clip;
+
         // cache
         GameSceneController _gameSceneController;
         GameSoundController _gameSoundController;
