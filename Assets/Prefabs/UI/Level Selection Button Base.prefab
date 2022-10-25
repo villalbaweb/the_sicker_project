@@ -194,6 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difficultyLevel: 0
   animator: {fileID: 2982151647599434862}
+  _clip: {fileID: 8300000, guid: d8f05a376005f674a8aa08d69c5d6f3b, type: 3}
 --- !u!95 &2982151647599434862
 Animator:
   serializedVersion: 3
