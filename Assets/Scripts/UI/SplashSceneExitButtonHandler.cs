@@ -6,9 +6,6 @@ namespace TheSicker.UI
 {
     public class SplashSceneExitButtonHandler : MonoBehaviour
     {
-        // config
-        [SerializeField] AudioClip _clip;
-
         // cache
         GameSoundController _gameSoundController;
 
@@ -24,8 +21,6 @@ namespace TheSicker.UI
 
         private IEnumerator ExitWithSound()
         {
-            _gameSoundController.PlayClipAtCamera(_clip);
-
             yield return new WaitForSeconds(2.0f);
 
             Application.Quit();
