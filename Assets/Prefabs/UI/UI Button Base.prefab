@@ -263,6 +263,7 @@ MonoBehaviour:
   clip: {fileID: 0}
   buttonText: 
   animator: {fileID: 6822203573394650151}
+  text: {fileID: 101874427596082355}
 --- !u!95 &6822203573394650151
 Animator:
   serializedVersion: 3

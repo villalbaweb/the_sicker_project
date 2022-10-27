@@ -1,4 +1,5 @@
 using TheSicker.Game;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,7 +10,10 @@ namespace TheSicker.UI
         // config
         [SerializeField] AudioClip clip;
         [SerializeField] string buttonText;
+
+        [Header("Base Config")]
         [SerializeField] Animator animator;
+        [SerializeField] TextMeshProUGUI text;
 
         // cache
         GameSoundController _gameSoundController;
@@ -17,6 +21,8 @@ namespace TheSicker.UI
         private void Awake()
         {
             _gameSoundController = FindObjectOfType<GameSoundController>();
+
+            text.text = buttonText;
         }
 
 
