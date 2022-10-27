@@ -1,6 +1,7 @@
 using TheSicker.Game;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace TheSicker.UI
@@ -8,8 +9,12 @@ namespace TheSicker.UI
     public class BaseButtonHandler : MonoBehaviour, IPointerDownHandler
     {
         // config
+        [Header("Config")]
         [SerializeField] AudioClip clip;
         [SerializeField] string buttonText;
+
+        [Header("Event")]
+        [SerializeField] UnityEvent onClick = null;
 
         [Header("Base Config")]
         [SerializeField] Animator animator;
@@ -32,6 +37,7 @@ namespace TheSicker.UI
         {
             _gameSoundController.PlayClipAtCamera(clip);
             animator.SetTrigger("buttonClicked");
+            onClick?.Invoke();
         }
 
         #endregion
