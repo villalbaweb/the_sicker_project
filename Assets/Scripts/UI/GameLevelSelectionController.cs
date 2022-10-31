@@ -1,5 +1,6 @@
 using TheSicker.Game;
 using TheSicker.GameDifficulty;
+using TMPro;
 using UnityEngine;
 
 namespace TheSicker.UI
@@ -10,6 +11,7 @@ namespace TheSicker.UI
         [SerializeField] DifficultyLevel difficultyLevel;
         [SerializeField] Animator animator;
         [SerializeField] AudioClip _clip;
+        [SerializeField] TextMeshProUGUI _levelName;
 
         // cache
         GameDifficultyController _gameDifficultyController;
@@ -19,6 +21,7 @@ namespace TheSicker.UI
         {
             _gameDifficultyController = FindObjectOfType<GameDifficultyController>();
             _gameSoundController = FindObjectOfType<GameSoundController>();
+            _levelName.text = difficultyLevel.ToString();
         }
 
         // Update is called once per frame
