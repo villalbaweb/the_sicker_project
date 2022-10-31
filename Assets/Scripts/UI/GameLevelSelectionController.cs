@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using TheSicker.Game;
 using TheSicker.GameDifficulty;
 using TheSicker.SaveSystem;
@@ -64,6 +66,14 @@ namespace TheSicker.UI
             if(!_saveSystemWrapper) return;
 
             var fullFile = _saveSystemWrapper.GetFullMaxXpSavedFile();
+
+            string playerId = fullFile.First().Key;
+
+            Dictionary<string, object> maxXps = fullFile[playerId] as Dictionary<string, object>;
+
+            var mxXpKeyForDifficulty = maxXps.FirstOrDefault(x => x.Key.Contains(difficultyLevel.ToString())).Key;
+
+            maxScore.text = maxXps[mxXpKeyForDifficulty].ToString();
         }
 
     }
