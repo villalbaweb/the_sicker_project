@@ -21,6 +21,11 @@ namespace TheSicker.SaveSystem
             RestoreState(stateType, LoadFile(saveFile));
         }
 
+        public Dictionary<string, object> LoadFullFile(string saveFile)
+        {
+            return LoadFile(saveFile);
+        }
+
         public void Delete(string saveFile)
         {
             File.Delete(GetPathFromSaveFile(saveFile));

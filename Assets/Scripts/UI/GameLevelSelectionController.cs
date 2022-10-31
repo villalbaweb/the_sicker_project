@@ -1,5 +1,6 @@
 using TheSicker.Game;
 using TheSicker.GameDifficulty;
+using TheSicker.SaveSystem;
 using TMPro;
 using UnityEngine;
 
@@ -17,13 +18,19 @@ namespace TheSicker.UI
         // cache
         GameDifficultyController _gameDifficultyController;
         GameSoundController _gameSoundController;
+        SaveSystemWrapper _saveSystemWrapper;
 
         private void Awake()
         {
             _gameDifficultyController = FindObjectOfType<GameDifficultyController>();
             _gameSoundController = FindObjectOfType<GameSoundController>();
+            _saveSystemWrapper = FindObjectOfType<SaveSystemWrapper>();
+        }
 
+        private void Start()
+        {
             SetLevelText();
+            SetMaxXpText();
         }
 
         // Update is called once per frame
@@ -50,6 +57,13 @@ namespace TheSicker.UI
         private void SetLevelText()
         {
             levelName.text = difficultyLevel.ToString();
+        }
+
+        private void SetMaxXpText()
+        {
+            if(!_saveSystemWrapper) return;
+
+            var fullFile = _saveSystemWrapper.GetFullMaxXpSavedFile();
         }
 
     }

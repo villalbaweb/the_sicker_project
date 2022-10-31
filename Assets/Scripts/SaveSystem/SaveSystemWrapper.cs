@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TheSicker.SaveSystem
@@ -60,6 +61,11 @@ namespace TheSicker.SaveSystem
         public void GetMaxXpPoint(StateType stateType)
         {
             _saveSystemRoot.Load(stateType, MAX_XP_SAVE_FILE);
+        }
+
+        public Dictionary<string, object> GetFullMaxXpSavedFile()
+        {
+            return _saveSystemRoot.LoadFullFile(MAX_XP_SAVE_FILE);
         }
 
         #endregion
