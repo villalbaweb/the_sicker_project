@@ -10,8 +10,9 @@ namespace TheSicker.UI
         // config params
         [SerializeField] DifficultyLevel difficultyLevel;
         [SerializeField] Animator animator;
-        [SerializeField] AudioClip _clip;
-        [SerializeField] TextMeshProUGUI _levelName;
+        [SerializeField] AudioClip clip;
+        [SerializeField] TextMeshProUGUI levelName;
+        [SerializeField] TextMeshProUGUI maxScore;
 
         // cache
         GameDifficultyController _gameDifficultyController;
@@ -21,7 +22,8 @@ namespace TheSicker.UI
         {
             _gameDifficultyController = FindObjectOfType<GameDifficultyController>();
             _gameSoundController = FindObjectOfType<GameSoundController>();
-            _levelName.text = difficultyLevel.ToString();
+
+            SetLevelText();
         }
 
         // Update is called once per frame
@@ -35,7 +37,7 @@ namespace TheSicker.UI
             if (!_gameDifficultyController) return;
 
             _gameDifficultyController.SetDifficultyLevel(difficultyLevel);
-            _gameSoundController.PlayClipAtCamera(_clip);
+            _gameSoundController.PlayClipAtCamera(clip);
         }
 
 
@@ -44,5 +46,11 @@ namespace TheSicker.UI
             bool isSelected = _gameDifficultyController.GetSelectedDifficultyLevel() == difficultyLevel;
             animator.SetBool("Selected", isSelected);
         }
+
+        private void SetLevelText()
+        {
+            levelName.text = difficultyLevel.ToString();
+        }
+
     }
 }
