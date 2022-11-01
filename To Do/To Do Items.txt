@@ -1,7 +1,6 @@
 * Enemies to spawn outside the camera view
 * Add Menu
 	* select ship (no additional features just the ship)
-	* display max xp based on selected difficulty level
 * Add Ads
 * Make iOS version
 
