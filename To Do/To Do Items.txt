@@ -1,4 +1,3 @@
-* Enemies to spawn outside the camera view
 * Add Menu
 	* select ship (no additional features just the ship)
 * Add Ads
