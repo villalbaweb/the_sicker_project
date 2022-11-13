@@ -15,7 +15,7 @@ namespace TheSicker.Menu
 
         // cache
         Image _image;
-        GameMenuPanelController _gameMenuPanelController;
+        GameMenuController _gameMenuController;
 
         #region Private Methods
 
@@ -23,8 +23,7 @@ namespace TheSicker.Menu
         {
             _image = GetComponent<Image>();
 
-            _gameMenuPanelController = FindObjectOfType<GameMenuPanelController>();
-            _gameMenuPanelController?.gameObject.SetActive(false);
+            _gameMenuController = FindObjectOfType<GameMenuController>();
         }
 
 
@@ -42,9 +41,9 @@ namespace TheSicker.Menu
 
         private void SetPanel(bool isPaused)
         {
-            if(!_gameMenuPanelController) return;
+            if(!_gameMenuController) return;
 
-            _gameMenuPanelController.gameObject.SetActive(!isPaused);
+            _gameMenuController.SetGameMenuEnabled(!isPaused);
         }
 
         #endregion
