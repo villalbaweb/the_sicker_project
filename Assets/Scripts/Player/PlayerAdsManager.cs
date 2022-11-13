@@ -1,3 +1,4 @@
+using TheSicker.Menu;
 using UnityEngine;
 
 namespace TheSicker.Player
@@ -5,11 +6,29 @@ namespace TheSicker.Player
     public class PlayerAdsManager : MonoBehaviour
     {
         // state
-        bool IsAdsUsed = false;
+        private bool IsAdsBeenUsed = false;
+
+        // cache
+        GameMenuController _gameMenuController;
+        PlayerDieSceneHandler _playerDieSceneHandler;
+
+        private void Awake()
+        {
+            _gameMenuController = FindObjectOfType<GameMenuController>();
+            _playerDieSceneHandler = GetComponent<PlayerDieSceneHandler>();
+        }
 
         public void DisplayAdsButtonOnDie()
         {
-            print("Here to display the OnDie Ads menu...");
+            if(_gameMenuController && !IsAdsBeenUsed)
+            {
+                _gameMenuController.SetAdsMenuEnabled(true);
+                IsAdsBeenUsed = true;
+            }
+            else
+            {
+                _playerDieSceneHandler.GameOverScreenShow();
+            }
         }
     }
 }
