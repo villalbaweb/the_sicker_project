@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
+using UnityEngine.Events;
 
 namespace TheSicker.AdSystem
 {
@@ -10,6 +11,8 @@ namespace TheSicker.AdSystem
         [SerializeField] string _androidAdUnitId = "Rewarded_Android";
         [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
         string _adUnitId = null; // This will remain null for unsupported platforms
+
+        RewardManager _rewardManager;
 
         void Awake()
         {
@@ -22,6 +25,8 @@ namespace TheSicker.AdSystem
 
             //Disable the button until the ad is ready to show:
             _showAdButton.interactable = false;
+
+            _rewardManager =  FindObjectOfType<RewardManager>();
         }
 
         // Load content to the Ad Unit:
@@ -63,7 +68,7 @@ namespace TheSicker.AdSystem
                 Debug.Log("Unity Ads Rewarded Ad Completed");
                 // Grant a reward.
 
-                Debug.Log("In here we need to reward the player...");
+                _rewardManager?.GrandReward();
 
                 // Load another ad:
                 Advertisement.Load(_adUnitId, this);
