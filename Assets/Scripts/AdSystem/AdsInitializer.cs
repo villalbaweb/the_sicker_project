@@ -1,3 +1,4 @@
+using TheSicker.Menu;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
@@ -12,11 +13,15 @@ namespace TheSicker.AdSystem
 
         // cache
         RewardedAdsButton _rewardedAdsButton;
+        GameMenuController _gameMenuController;
 
         void Awake()
         {
             InitializeAds();
 
+            _gameMenuController = FindObjectOfType<GameMenuController>();
+            _gameMenuController.SetAdsMenuEnabled(true);
+            
             _rewardedAdsButton = FindObjectOfType<RewardedAdsButton>();
         }
 
@@ -32,6 +37,8 @@ namespace TheSicker.AdSystem
         {
             Debug.Log("Unity Ads initialization complete.");
             _rewardedAdsButton?.LoadAd();
+
+            _gameMenuController.SetAdsMenuEnabled(false);
         }
 
         public void OnInitializationFailed(UnityAdsInitializationError error, string message)
