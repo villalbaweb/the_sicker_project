@@ -71,9 +71,11 @@ namespace TheSicker.UI
 
             Dictionary<string, object> maxXps = fullFile[playerId] as Dictionary<string, object>;
 
-            var mxXpKeyForDifficulty = maxXps.FirstOrDefault(x => x.Key.Contains(difficultyLevel.ToString())).Key;
+            var maxXpKeyForDifficulty = maxXps.FirstOrDefault(x => x.Key.Contains(difficultyLevel.ToString())).Key;
 
-            maxScore.text = maxXps[mxXpKeyForDifficulty].ToString();
+            maxScore.text = maxXpKeyForDifficulty is null 
+                ? "0"
+                : maxXps[maxXpKeyForDifficulty].ToString();
         }
 
     }
