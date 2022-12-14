@@ -123,6 +123,13 @@ MonoBehaviour:
       - 600
       - 1000
       - 1500
+    - stat: 0
+      levels:
+      - 250
+      - 500
+      - 1000
+      - 2000
+      - 4000
   - character: 7
     stats:
     - stat: 4
