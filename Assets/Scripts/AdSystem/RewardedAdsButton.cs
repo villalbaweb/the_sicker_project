@@ -68,7 +68,7 @@ namespace TheSicker.AdSystem
                 Debug.Log("Unity Ads Rewarded Ad Completed");
                 // Grant a reward.
 
-                _rewardManager?.GrandReward();
+                _rewardManager?.GrantPlayerReward();
 
                 // Load another ad:
                 Advertisement.Load(_adUnitId, this);

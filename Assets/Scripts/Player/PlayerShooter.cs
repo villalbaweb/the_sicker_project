@@ -214,6 +214,11 @@ namespace TheSicker.Player
             isDead = true;
         }
 
+        public void RestoreShootingAbility()
+        {
+            isDead = false;
+        }
+
         #endregion
 
         #region Gizmoz Area

@@ -17,16 +17,21 @@ namespace TheSicker.AdSystem
             _gameMenuController = FindObjectOfType<GameMenuController>();
         }
 
-        public void GrandReward()
+        public void GrantPlayerReward()
         {
             if (!_playerAdsManager) return;
 
             _gameMenuController?.SetAdsMenuEnabled(false);
 
+            RestorePlayerAbilities();
+        }
+
+        private void RestorePlayerAbilities()
+        {
             _playerAdsManager.gameObject.SetActive(true);
             _playerAdsManager.GetComponent<Health>().RestoreInitialHealth();
-
-            print("Reward granted!!!");
+            _playerAdsManager.GetComponent<PlayerMover>().RestoreMovementAbility();
+            _playerAdsManager.GetComponent<PlayerShooter>().RestoreShootingAbility();
         }
     }
 }

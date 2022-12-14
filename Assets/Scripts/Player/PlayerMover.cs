@@ -125,6 +125,11 @@ namespace TheSicker.Player
             isDead = true;
         }
 
+        public void RestoreMovementAbility()
+        {
+            isDead = false;
+        }
+
         #region UI Button Related Methods
 
         public void MoveBtnDown()
