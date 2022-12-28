@@ -1,7 +1,7 @@
 * Add Menu
 	* select ship (no additional features just the ship)
 * Add Ads
-	The basic implementation for Rewarded Ads is setup, need to add logic to Reward lifer when die
+	- Add Particle System when the player gets life reward to kill enemies around
 * Make iOS version
 
 

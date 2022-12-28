@@ -240,8 +240,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1761423671551010326}
         m_TargetAssemblyTypeName: TheSicker.Menu.GameMenuController, Assembly-CSharp
-        m_MethodName: SetAdsMenuEnabled
-        m_Mode: 6
+        m_MethodName: DeclineAdsView
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

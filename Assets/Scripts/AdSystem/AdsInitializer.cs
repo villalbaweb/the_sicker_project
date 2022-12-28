@@ -17,15 +17,40 @@ namespace TheSicker.AdSystem
 
         void Awake()
         {
-            InitializeAds();
-
             _gameMenuController = FindObjectOfType<GameMenuController>();
+
+            // Retrieve RewardedAdsButton, this belongs to GameMenuController component 
             _gameMenuController.SetAdsMenuEnabled(true);
-            
             _rewardedAdsButton = FindObjectOfType<RewardedAdsButton>();
+            _gameMenuController.SetAdsMenuEnabled(false);
+
+            AdsStartUp();
         }
 
-        public void InitializeAds()
+        public void OnInitializationComplete()
+        {
+            Debug.Log("Unity Ads initialization complete.");
+            LoadNewAd();
+        }
+
+        public void OnInitializationFailed(UnityAdsInitializationError error, string message)
+        {
+            Debug.Log($"Unity Ads Initialization Failed: {error.ToString()} - {message}");
+        }
+
+        private void AdsStartUp()
+        {
+            if(!Advertisement.isInitialized)
+            {
+                InitializeAds();
+            }
+            else
+            {
+                LoadNewAd();
+            }
+        }
+
+        private void InitializeAds()
         {
             _gameId = (Application.platform == RuntimePlatform.IPhonePlayer)
                 ? _iOSGameId
@@ -33,17 +58,9 @@ namespace TheSicker.AdSystem
             Advertisement.Initialize(_gameId, _testMode, this);
         }
 
-        public void OnInitializationComplete()
+        private void LoadNewAd()
         {
-            Debug.Log("Unity Ads initialization complete.");
             _rewardedAdsButton?.LoadAd();
-
-            _gameMenuController.SetAdsMenuEnabled(false);
-        }
-
-        public void OnInitializationFailed(UnityAdsInitializationError error, string message)
-        {
-            Debug.Log($"Unity Ads Initialization Failed: {error.ToString()} - {message}");
         }
     }
 }
