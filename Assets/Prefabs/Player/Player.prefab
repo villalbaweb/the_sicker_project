@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 4586797512289558487}
   - component: {fileID: 2831157175842798640}
   - component: {fileID: 3959243671922180135}
+  - component: {fileID: 6907865490018719999}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -781,24 +782,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb50b719d2fd54347af81e08dec34fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onRejectAd:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4586797512289558487}
-        m_TargetAssemblyTypeName: TheSicker.Player.PlayerDieSceneHandler, Assembly-CSharp
-        m_MethodName: GameOverScreenShow
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onViewAd:
-    m_PersistentCalls:
-      m_Calls: []
+--- !u!114 &6907865490018719999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576423509886590863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0c959b6ffeaad4b90e3f7eaa4ba6a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupParticleSystem: {fileID: 5617060277119367587, guid: fe557500bb547e14ab3c91941e536991, type: 3}
 --- !u!1 &8607063162740585190
 GameObject:
   m_ObjectHideFlags: 0

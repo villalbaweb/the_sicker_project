@@ -32,6 +32,7 @@ namespace TheSicker.AdSystem
             _playerAdsManager.GetComponent<Health>().RestoreInitialHealth();
             _playerAdsManager.GetComponent<PlayerMover>().RestoreMovementAbility();
             _playerAdsManager.GetComponent<PlayerShooter>().RestoreShootingAbility();
+            _playerAdsManager.GetComponent<PlayerBackToLifeVisualEffectHandler>().PlayBackToLifeParticles();
         }
     }
 }
