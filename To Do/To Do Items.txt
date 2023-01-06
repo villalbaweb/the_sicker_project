@@ -1,7 +1,11 @@
 * Add Menu
-	* select ship (no additional features just the ship)
+	- Randomly generate a player ship to be used each time the game starts
+
 * Add Ads
-	- Add Particle System when the player gets life reward to kill enemies around
+	- Fix bug after Ad has been rewarded if the player restarts the game we get error:
+		placementId cannot be nil or empty
+
+		Note: this behavior is not present in Easy Game scene!!!
 * Make iOS version
 
 
