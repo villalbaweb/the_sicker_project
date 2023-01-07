@@ -24,6 +24,10 @@ namespace TheSicker.AdSystem
             _rewardedAdsButton = FindObjectOfType<RewardedAdsButton>();
             _gameMenuController.SetAdsMenuEnabled(false);
 
+        }
+
+        private void Start()
+        {
             AdsStartUp();
         }
 
