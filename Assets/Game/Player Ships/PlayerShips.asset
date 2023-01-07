@@ -13,6 +13,33 @@ MonoBehaviour:
   m_Name: PlayerShips
   m_EditorClassIdentifier: 
   ships:
-  - Name: 
-    Body: {fileID: 0}
-    MinimapIcon: {fileID: 0}
+  - Name: Black Ship
+    Body: {fileID: 1819210613620524, guid: 206dc24d514cdd146a07be8e731a56e9, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: 5bf91eac3e523164da40f122237f8c93, type: 3}
+  - Name: Blue And Whithe Ship
+    Body: {fileID: 1570034556958308, guid: dae7a3955bbf76e409d09988296acacb, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: b10c184401323ac4b9278cb7354a5c6f, type: 3}
+  - Name: Blue Ship
+    Body: {fileID: 1970447681998018, guid: 4d54efa43b03b1845b929768cf25e790, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: 020140c576b3f944b9cc5d539084a74f, type: 3}
+  - Name: Gray Ship
+    Body: {fileID: 1405876428854690, guid: 12e2965e034095b40b035c26bdecd5ed, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: 79f821507a413c34ea722a0813783709, type: 3}
+  - Name: Green Ship
+    Body: {fileID: 1741139820255028, guid: 7861019a7b8cb6f4db5310695263b29a, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: 12786f8ed18e9e24ea275655f7911606, type: 3}
+  - Name: Orange Ship
+    Body: {fileID: 1404724577958374, guid: e261f7b66a8f0fd4492d87df1eee4222, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: 8f3be09f6e6e48845a87b21ef0ab1c3a, type: 3}
+  - Name: Purple Ship
+    Body: {fileID: 1626707168461546, guid: 79e4c0d1647edb24e82e40e6b4bcaa7b, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: a172f58576d2a0445845e9e61a3b855f, type: 3}
+  - Name: Red Ship
+    Body: {fileID: 1510364872509504, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: d9f9a37a302f3b84e8b15ff425764703, type: 3}
+  - Name: White Ship
+    Body: {fileID: 1734771206656390, guid: 33942a27e06a55e498652847d7d15f99, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: 1f4674665090caf4b9bbdda8fca825f0, type: 3}
+  - Name: Yellow Ship
+    Body: {fileID: 4989485371433737551, guid: 2fd9a66f89a600f4182e424f2986c9f4, type: 3}
+    MinimapIcon: {fileID: 21300000, guid: 26d7d623cd56a7b4c86db9a052e5c74e, type: 3}
