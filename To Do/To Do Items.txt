@@ -1,11 +1,7 @@
 * Add Menu
-	- Randomly generate a player ship to be used each time the game starts
+	- Randomly generate a player ship to be used each time the game starts, already added
+	component to randomly select ship from scriptable object, still need to be rendered!
 
-* Add Ads
-	- Fix bug after Ad has been rewarded if the player restarts the game we get error:
-		placementId cannot be nil or empty
-
-		Note: this behavior is not present in Easy Game scene!!!
 * Make iOS version
 
 
