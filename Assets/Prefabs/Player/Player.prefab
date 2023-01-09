@@ -892,6 +892,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerShips: {fileID: 11400000, guid: e00f36c50da3a4243b5e62b2cce22d13, type: 2}
+  shipScale: {x: 0.07, y: 0.07, z: 0.07}
+  shipPosition: {x: 0, y: 0, z: -0.1}
+  shipRotation: {x: 0, y: 90, z: -90}
 --- !u!1 &8607063162740585190
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4149348083623876, guid: b74db332333018b499e28761076c3582, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.37
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4149348083623876, guid: b74db332333018b499e28761076c3582, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1019,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4972846095673184, guid: b74db332333018b499e28761076c3582, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.36
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4972846095673184, guid: b74db332333018b499e28761076c3582, type: 3}
       propertyPath: m_LocalPosition.y
