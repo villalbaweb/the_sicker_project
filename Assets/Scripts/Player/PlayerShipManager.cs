@@ -15,7 +15,7 @@ namespace TheSicker.Player
         {
             Ships selectedShip = RandomlySelectShip();
 
-            print($"{selectedShip.Name}");
+            if (selectedShip is null) return;
 
             MiniMapIconSetup(selectedShip);
             ShipBodySetup(selectedShip);
@@ -33,16 +33,19 @@ namespace TheSicker.Player
         {
             SpriteRenderer spriteRenderer = transform.Find("Minimap Icon")?.GetComponent<SpriteRenderer>();
 
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.sprite = generatedShip.MinimapIcon;
-            }
+            if (spriteRenderer is null) return;
+             
+            spriteRenderer.sprite = generatedShip.MinimapIcon;
         }
 
         private void ShipBodySetup(Ships generatedShip)
         {
             GameObject shipBodyGameObject = Instantiate(generatedShip.Body, transform);
+            if(shipBodyGameObject is null) return;
+
             Transform shipBodyTransform = shipBodyGameObject.transform;
+            if(shipBodyTransform is null) return;
+
             shipBodyTransform.localPosition = new Vector3(shipPosition.x, shipPosition.y, shipPosition.z);
             shipBodyTransform.localScale = new Vector3(shipScale.x, shipScale.y, shipScale.z);
             shipBodyTransform.localRotation = Quaternion.Euler(shipRotation.x, shipRotation.y, shipRotation.z);
