@@ -1,7 +1,6 @@
-* Add Menu
-	- Randomly generate a player ship to be used each time the game starts, already added
-	component to randomly select ship from scriptable object, still need to be rendered!
-
+* Add multiple play songs and play randomly
+* Improve the HUD with better letters and probably a health bar, a bar for turbo left also
+* Fix the double tapping of the turbo, it should be enabled by shorrting or destroying enemies
 * Make iOS version
 
 
