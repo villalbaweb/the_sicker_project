@@ -12,6 +12,9 @@ namespace TheSicker.Game
         // cache
         AudioSource _musicAudioSource;
 
+
+        #region Private Methods
+
         private void Awake()
         {
             _musicAudioSource = GetComponent<AudioSource>();
@@ -51,12 +54,26 @@ namespace TheSicker.Game
             _musicAudioSource.mute = gameMusic.IsMusicMute;
         }
 
+
+        private AudioClip RandomlySelectPlayMusic()
+        {
+            return gameMusic.GamePlayMusic
+            .OrderBy(x => System.Guid.NewGuid())
+            .Take(1)
+            .FirstOrDefault();
+        }
+
+        #endregion
+
+
+        #region Public Methods
+
         public void PlayRegularGameMusic()
         {
             if (!_musicAudioSource) return;
 
             _musicAudioSource.Stop();
-            _musicAudioSource.clip = gameMusic.GamePlayMusic.FirstOrDefault();
+            _musicAudioSource.clip = RandomlySelectPlayMusic();
             _musicAudioSource.volume = gameMusic.GameMusicVolumenLevel;
             _musicAudioSource.Play();
         }
@@ -80,6 +97,9 @@ namespace TheSicker.Game
             _musicAudioSource.volume = gameMusic.GameMusicVolumenLevel;
             _musicAudioSource.Play();
         }
+
+        #endregion
+
     }
 
     public enum MusicType
