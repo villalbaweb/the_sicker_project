@@ -65,9 +65,9 @@ namespace TheSicker.UI
         {
             if(!_saveSystemWrapper) return;
 
-            var fullFile = _saveSystemWrapper.GetFullMaxXpSavedFile();
+            Dictionary<string, object> fullFile = _saveSystemWrapper.GetFullMaxXpSavedFile();  // This can be retrieved just once Lazy Loading
 
-            string playerId = fullFile.First().Key;
+            string playerId = GetPlayerId(fullFile);
 
             Dictionary<string, object> maxXps = fullFile[playerId] as Dictionary<string, object>;
 
@@ -78,5 +78,42 @@ namespace TheSicker.UI
                 : maxXps[maxXpKeyForDifficulty].ToString();
         }
 
+
+        private StateType SetStateTypeBasedOnDifficulty()
+        {
+            switch (difficultyLevel)
+            {
+                case DifficultyLevel.Easy:
+                    return StateType.MaxXpEasy;
+
+                case DifficultyLevel.Medium:
+                    return StateType.MaxXpMedium;
+
+                case DifficultyLevel.Hard:
+                    return StateType.MaxXpHard;
+            }
+
+            return StateType.MaxXpEasy;
+        }
+
+
+        private string GetPlayerId(Dictionary<string, object> fullFile)
+        {
+            var stateType = SetStateTypeBasedOnDifficulty().ToString();
+
+            foreach (string key in fullFile.Keys)
+            {
+                var test = (Dictionary<string, object>)fullFile[key];
+                foreach (var value in test)
+                {
+                    if (value.Key.Contains(stateType))
+                    {
+                        return key;
+                    }
+                }
+            }
+
+            return null;
+        }
     }
 }
