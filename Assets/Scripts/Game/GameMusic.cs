@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TheSicker.Game
@@ -7,14 +8,14 @@ namespace TheSicker.Game
     public class GameMusic : ScriptableObject
     {
         // config props
-        [SerializeField] AudioClip gamePlayMusic;
+        [SerializeField] List<AudioClip> gamePlayMusic;
         [SerializeField] AudioClip gameOverMusic;
         [SerializeField] AudioClip splashScreenMusic;
         [SerializeField][Range(0, 1)] float gameMusicVolumenLevel = 1f;
         [SerializeField] bool isMusicMute = false;
 
         // properties
-        public AudioClip GamePlayMusic => gamePlayMusic;
+        public List<AudioClip> GamePlayMusic => gamePlayMusic;
         public AudioClip GameOverMusic => gameOverMusic;
         public AudioClip SplashScreenMusic => splashScreenMusic;
         public float GameMusicVolumenLevel => gameMusicVolumenLevel;

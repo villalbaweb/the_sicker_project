@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 namespace TheSicker.Game
@@ -55,7 +56,7 @@ namespace TheSicker.Game
             if (!_musicAudioSource) return;
 
             _musicAudioSource.Stop();
-            _musicAudioSource.clip = gameMusic.GamePlayMusic;
+            _musicAudioSource.clip = gameMusic.GamePlayMusic.FirstOrDefault();
             _musicAudioSource.volume = gameMusic.GameMusicVolumenLevel;
             _musicAudioSource.Play();
         }

@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d273d958e4138049b5db4ed571c9c08, type: 3}
   m_Name: GameMusic
   m_EditorClassIdentifier: 
-  gamePlayMusic: {fileID: 8300000, guid: 0fa6a925127e8ec41af4d85fddcb8370, type: 3}
+  gamePlayMusic:
+  - {fileID: 8300000, guid: 0fa6a925127e8ec41af4d85fddcb8370, type: 3}
+  - {fileID: 8300000, guid: 76b52b4f2b7be9e47a1d4f9871792cee, type: 3}
+  - {fileID: 8300000, guid: 14ddd418d94ba9047ab40ef0c5b7cf7c, type: 3}
+  - {fileID: 8300000, guid: 4666a22dea362094ea4268425a0eb97f, type: 3}
   gameOverMusic: {fileID: 8300000, guid: 4c39982462045f24993a9d4c8b90b2ac, type: 3}
   splashScreenMusic: {fileID: 8300000, guid: bc21b68ebb3bfc145add8c847a426380, type: 3}
   gameMusicVolumenLevel: 0.15
