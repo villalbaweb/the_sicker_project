@@ -12,19 +12,21 @@ namespace TheSicker.Core
         [SerializeField] UnityEvent onDieEvent = null;
 
         // properties
-        public int CurrentHealth => health;
+        public float CurrentHealth => health / _initialHealth * 100;
 
         // events
         public Action OnHealthChange;
 
+
         // cache
         IBaseStatsGetter _baseStatsGetter;
+        float _initialHealth = 0;
 
         private void Awake() 
         {
             _baseStatsGetter = GetComponent<IBaseStatsGetter>();
 
-            OnHealthChange?.Invoke();   
+            RestoreInitialHealth();  
         }
 
         public void TakeDamage(int damage)
@@ -43,6 +45,7 @@ namespace TheSicker.Core
         public void RestoreInitialHealth()
         {
             health = _baseStatsGetter != null ? (int)_baseStatsGetter.GetStat(Stat.Health) : health;
+            _initialHealth = health;
             OnHealthChange?.Invoke();
         }
 
