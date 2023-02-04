@@ -1,5 +1,5 @@
 
-* Improve the HUD with better letters and probably a health bar, a bar for turbo left also
+* Improve the HUD with  health bar, a bar for turbo left also
 * Fix the double tapping of the turbo, it should be enabled by shorrting or destroying enemies
 * Make small tutorial scene
 * Make iOS version
