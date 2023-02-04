@@ -28,7 +28,7 @@ namespace TheSicker.Stats
 
         public float GetStat(Stat statToGet)
         {
-            return progression ? GetBaseStat(statToGet) : 0;
+            return progression && _gameLevelController ? GetBaseStat(statToGet) : 0;
         }
 
         #endregion
