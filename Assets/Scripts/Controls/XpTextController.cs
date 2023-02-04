@@ -37,7 +37,7 @@ namespace TheSicker.Controls
         {
             if (!_xpText) return;
 
-            _xpText.text = $"XP: { _experience.ExperiencePoints }";
+            _xpText.text = $"XP    { _experience.ExperiencePoints }";
         }
     }
 }

@@ -36,7 +36,7 @@ namespace TheSicker.Controls
         {
             if (!_xpText) return;
 
-            _xpText.text = $"Max XP: { _playerMaxXpHandler.MaxExperiencePoints }";
+            _xpText.text = $"MAX { _playerMaxXpHandler.MaxExperiencePoints }";
         }
     }
 }
