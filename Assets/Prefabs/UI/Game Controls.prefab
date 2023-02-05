@@ -588,9 +588,9 @@ MonoBehaviour:
   BarBackGroundSprite: {fileID: 21300000, guid: 7cda1f7db3aff084f9f09462a0f7f99f, type: 3}
   Alert: 20
   BarAlertColor: {r: 0.990566, g: 0, b: 0, a: 1}
-  sound: {fileID: 0}
-  repeat: 0
-  RepeatRate: 1
+  sound: {fileID: 8300000, guid: 3aa238859df00e04eb24c2db9921ff63, type: 3}
+  repeat: 1
+  RepeatRate: 1.5
 --- !u!82 &3105580302562483999
 AudioSource:
   m_ObjectHideFlags: 0
@@ -603,13 +603,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.2
+  m_Pitch: 1.6
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 133
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
