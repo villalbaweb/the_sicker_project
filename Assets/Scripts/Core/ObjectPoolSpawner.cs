@@ -53,10 +53,12 @@ namespace TheSicker.Core
 
         private Vector3 GetRandomPos()
         {
-            float xValue = Random.Range(-1f, 0f);
-            float yValue = Random.Range(0f, 1f);
+            return Camera.main.ViewportToWorldPoint(new Vector3(CalculateRandomViewportPos(), CalculateRandomViewportPos(), viewportToWorldZPos));
+        }
 
-            return Camera.main.ViewportToWorldPoint(new Vector3(xValue, yValue, viewportToWorldZPos));
+        private float CalculateRandomViewportPos()
+        {
+            return Random.Range(0f, 1f) >= 0.5f ? Random.Range(1f, 2f) : Random.Range(-1f, 0f);
         }
 
         private string RandomObjectToSpawn()
