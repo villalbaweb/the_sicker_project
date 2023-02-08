@@ -13,6 +13,8 @@ namespace TheSicker.Core
 
         [Header("Object Spawn Position")]
         [SerializeField] float viewportToWorldZPos = 10.0f;
+        [SerializeField] float maxPosValue = 80.0f;
+        [SerializeField] float minPosValue = -40.0f;
 
         // cache
         ObjectPooler _objectPooler;
@@ -20,6 +22,8 @@ namespace TheSicker.Core
 
         // state
         float spawnTimer = Mathf.Infinity;
+        Vector3 worldPos;
+        bool isCorrectPosition;
 
         private void Awake() 
         {
@@ -53,7 +57,18 @@ namespace TheSicker.Core
 
         private Vector3 GetRandomPos()
         {
-            return Camera.main.ViewportToWorldPoint(new Vector3(CalculateRandomViewportPos(), CalculateRandomViewportPos(), viewportToWorldZPos));
+            do
+            {
+                worldPos = Camera.main.ViewportToWorldPoint(new Vector3(CalculateRandomViewportPos(), CalculateRandomViewportPos(), viewportToWorldZPos));
+                isCorrectPosition =
+                    worldPos.x > minPosValue &&
+                    worldPos.y > minPosValue &&
+                    worldPos.x < maxPosValue &&
+                    worldPos.y < maxPosValue;
+            }
+            while (!isCorrectPosition);
+
+            return worldPos;
         }
 
         private float CalculateRandomViewportPos()
