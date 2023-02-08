@@ -469,7 +469,7 @@ RectTransform:
   m_GameObject: {fileID: 3043166842194266293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2.1124716, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2964302814269502537}
   m_RootOrder: 2
@@ -530,6 +530,7 @@ GameObject:
   - component: {fileID: 3146443919786413219}
   - component: {fileID: 3105580302562483999}
   - component: {fileID: 3626820081254600888}
+  - component: {fileID: 853423451230043930}
   m_Layer: 5
   m_Name: UI ProgressBar
   m_TagString: Untagged
@@ -699,8 +700,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6a7e36835c473449a1be20e76fbbd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _value: 0
   _progressBar: {fileID: 3146443919786413219}
+--- !u!95 &853423451230043930
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3043211597006085775}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 399572c15cd5d0b45935842812329e7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3043919134964091811
 GameObject:
   m_ObjectHideFlags: 0

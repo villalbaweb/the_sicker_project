@@ -12,11 +12,13 @@ namespace TheSicker.UI
         // cache
         PlayerMarker _player;
         Health _health;
+        Animator _lifeBarAnimator;
 
         void Awake()
         {
             _player = FindObjectOfType<PlayerMarker>();
             _health = _player?.GetComponent<Health>();
+            _lifeBarAnimator = GetComponent<Animator>();
         }
 
         void OnEnable()
@@ -42,7 +44,9 @@ namespace TheSicker.UI
 
         void HealthBelowAlertCheck()
         {
-            if (_progressBar.Alert >= _health.CurrentHealth) print("Warning!!!");
+            if (!_lifeBarAnimator) return;
+            bool isHealthAlert = _progressBar.Alert >= _health.CurrentHealth;
+            _lifeBarAnimator.SetBool("IsHealthAlert", isHealthAlert);
         }
     }
 }
