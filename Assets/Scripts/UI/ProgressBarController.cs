@@ -7,7 +7,6 @@ namespace TheSicker.UI
     public class ProgressBarController : MonoBehaviour
     {
         // config
-        [SerializeField] float _value = 0.0f;
         [SerializeField] ProgressBar _progressBar;
 
         // cache
@@ -25,6 +24,7 @@ namespace TheSicker.UI
             if (!_health) return;
 
             _health.OnHealthChange += OnHealthChange;
+            _health.OnHealthChange += HealthBelowAlertCheck;
         }
 
         void OnDisable()
@@ -32,11 +32,17 @@ namespace TheSicker.UI
             if (!_health) return;
 
             _health.OnHealthChange -= OnHealthChange;
+            _health.OnHealthChange -= HealthBelowAlertCheck;
         }
 
         void OnHealthChange()
         {
             _progressBar.BarValue = _health.CurrentHealth;
+        }
+
+        void HealthBelowAlertCheck()
+        {
+            if (_progressBar.Alert >= _health.CurrentHealth) print("Warning!!!");
         }
     }
 }
