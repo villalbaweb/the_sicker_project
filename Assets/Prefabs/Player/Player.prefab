@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 7.5
-  turboSpeedIncreaseTimes: 3
+  turboSpeedIncreaseTimes: 1.25
   turboSpeedTime: 3
   remainMovingTime: 3
   remainMovingSlowFactor: 0.75
