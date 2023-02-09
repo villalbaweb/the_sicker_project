@@ -29,21 +29,21 @@ namespace TheSicker.Menu
 
         private void SetTimeScale(bool isPaused)
         {
-            Time.timeScale = isPaused ? 1 : 0;
+            Time.timeScale = isPaused ? 0 : 1;
         }
 
         private void SetImage(bool isPaused)
         {
             if (!_image) return;
 
-            _image.sprite = isPaused ? pauseSprite : resumeSprite;
+            _image.sprite = isPaused ? resumeSprite : pauseSprite;
         }
 
         private void SetPanel(bool isPaused)
         {
             if(!_gameMenuController) return;
 
-            _gameMenuController.SetGameMenuEnabled(!isPaused);
+            _gameMenuController.SetGameMenuEnabled(isPaused);
         }
 
         #endregion
