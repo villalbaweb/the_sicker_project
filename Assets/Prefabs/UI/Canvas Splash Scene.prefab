@@ -30,6 +30,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 7040222090692779206}
   - {fileID: 5445414673001716620}
   - {fileID: 4587903639362229814}
   m_Father: {fileID: 0}
@@ -101,6 +102,108 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1001 &1592980961971912901
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3131097377024496742}
+    m_Modifications:
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 996
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151345175364166094, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+      propertyPath: m_Name
+      value: Splash Start Tutorial UI Button Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+--- !u!224 &7040222090692779206 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8622285584428309507, guid: 78d93ca8a83089046a634dde30fb42e7, type: 3}
+  m_PrefabInstance: {fileID: 1592980961971912901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3689996625066496362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,7 +225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 909166838000306012, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 909166838000306012, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
       propertyPath: m_AnchorMax.x
@@ -196,66 +299,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2432745643535171733, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-      propertyPath: clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 6f8a2bad38a7f694c9b74cfeea2fae0b, type: 3}
-    - target: {fileID: 2432745643535171733, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-      propertyPath: buttonText
-      value: exit
-      objectReference: {fileID: 0}
-    - target: {fileID: 2432745643535171733, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2432745643535171733, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2432745643535171733, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4824699633798047828}
-    - target: {fileID: 2432745643535171733, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2432745643535171733, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitButtonPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 2432745643535171733, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: TheSicker.UI.SplashSceneExitButtonHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2432745643535171733, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
---- !u!1 &3964041716296231931 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 303599972686772881, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
-  m_PrefabInstance: {fileID: 3689996625066496362}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4587903639362229814 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 909166838000306012, guid: e23c4e1e7cb42af47977a37def3fd613, type: 3}
   m_PrefabInstance: {fileID: 3689996625066496362}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4824699633798047828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3964041716296231931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87fbdcc42e2b60439ee1ae99cd3ec8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5447595363919605266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273,7 +323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2323086414820766, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2323086414820766, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
       propertyPath: m_AnchorMax.x
@@ -351,63 +401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Splash Start UI Button Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 3266407152084873815, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-      propertyPath: clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 70145c3d03927504e9bb0f2dfc3d6728, type: 3}
-    - target: {fileID: 3266407152084873815, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-      propertyPath: buttonText
-      value: start
-      objectReference: {fileID: 0}
-    - target: {fileID: 3266407152084873815, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3266407152084873815, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3266407152084873815, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1639584827727796242}
-    - target: {fileID: 3266407152084873815, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3266407152084873815, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartButtonPressed
-      objectReference: {fileID: 0}
-    - target: {fileID: 3266407152084873815, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: TheSicker.UI.SplashSceneStartButtonHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3266407152084873815, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
---- !u!1 &4844016357445297729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 621734417803200595, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
-  m_PrefabInstance: {fileID: 5447595363919605266}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5445414673001716620 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2323086414820766, guid: c05642ba322f53c488febd4abcda01ad, type: 3}
   m_PrefabInstance: {fileID: 5447595363919605266}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1639584827727796242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4844016357445297729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c479c0b642574249bcadae181e4f1fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

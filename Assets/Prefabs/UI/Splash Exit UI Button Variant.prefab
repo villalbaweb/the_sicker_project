@@ -7,6 +7,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6491571354836530726, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f8a2bad38a7f694c9b74cfeea2fae0b, type: 3}
+    - target: {fileID: 6491571354836530726, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+      propertyPath: buttonText
+      value: exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491571354836530726, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491571354836530726, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491571354836530726, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8519532701433535262}
+    - target: {fileID: 6491571354836530726, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491571354836530726, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491571354836530726, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TheSicker.UI.SplashSceneExitButtonHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491571354836530726, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8595800395475333615, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -93,7 +129,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9215193971729026082, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
       propertyPath: m_Name
-      value: UI Button Base
+      value: Splash Exit UI Button Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+--- !u!1 &303599972686772881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9215193971729026082, guid: ae82f30064b99864eb2faa5cdf0a2727, type: 3}
+  m_PrefabInstance: {fileID: 8922871690101978803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8519532701433535262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303599972686772881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b87fbdcc42e2b60439ee1ae99cd3ec8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
