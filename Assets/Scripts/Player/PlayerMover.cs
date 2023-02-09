@@ -40,7 +40,7 @@ namespace TheSicker.Player
         Vector3 remainMovementDirection;
         float remainMovingSpeed;
         float playerGameSpeed;
-        float turboTimeLeft;
+        float doubleclickTimeLeft;
 
         // cache
         WaitForSeconds _turboSpeedWaitForSeconds;
@@ -151,36 +151,36 @@ namespace TheSicker.Player
 
             if (!IsTurboSpeed && clickTimes == 1)
             {
-                turboTimeLeft = doubleClickDelay;
+                doubleclickTimeLeft = doubleClickDelay;
             }
             else if (!IsTurboSpeed && clickTimes > 1 && IsDoubleClickOnTime())
             {
                 clickTimes = 0;
-                turboTimeLeft = 0;
+                doubleclickTimeLeft = 0;
 
                 StartCoroutine(TurboSpeedCoroutine());
             }
             else if (clickTimes > 2)
             {
                 clickTimes = 0;
-                turboTimeLeft = 0;
+                doubleclickTimeLeft = 0;
             } 
         }
 
         private bool IsDoubleClickOnTime()
         {
-            return turboTimeLeft > Mathf.Epsilon;
+            return doubleclickTimeLeft > Mathf.Epsilon;
         }
 
         private void TurboTimeLeftCheck()
         {
-            if (turboTimeLeft < Mathf.Epsilon)
+            if (doubleclickTimeLeft < Mathf.Epsilon)
             {
                 clickTimes = 0;
                 return;
             }
 
-            turboTimeLeft -= Time.deltaTime;
+            doubleclickTimeLeft -= Time.deltaTime;
         }
 
         #endregion
