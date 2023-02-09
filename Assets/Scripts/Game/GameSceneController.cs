@@ -12,6 +12,7 @@ namespace TheSicker.Game
 
         [Header("Scenes Available")]
         [SerializeField] string easyGameSceneName;
+        [SerializeField] string tutorialSceneName;
         [SerializeField] string mediumGameSceneName;
         [SerializeField] string hardGameSceneName;
         [SerializeField] string gameOverSceneName;
@@ -48,6 +49,11 @@ namespace TheSicker.Game
         public void LoadGameOver()
         {
             StartCoroutine(LoadSceneWithTransition(gameOverSceneName));
+        }
+
+        public void LoadTutorialScene()
+        {
+            StartCoroutine(LoadSceneWithTransition(tutorialSceneName));
         }
 
         #region Private Methods

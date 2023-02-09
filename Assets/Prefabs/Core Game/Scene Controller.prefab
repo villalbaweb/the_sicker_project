@@ -45,13 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   easyGameSceneName: Easy Game Scene
+  tutorialSceneName: Tutorial Scene
   mediumGameSceneName: Medium Game Scene
   hardGameSceneName: Hard Game Scene
   gameOverSceneName: Game Over Scene
   gameSplashSceneName: Splash Scene
   gameDifficultySelectionSceneName: Setup Scene
   sceneTransitionController: {fileID: 241259276536089210}
-  timeToGameOverLoad: 3
+  timeToTransition: 2
 --- !u!1001 &1725578840144486365
 PrefabInstance:
   m_ObjectHideFlags: 0
