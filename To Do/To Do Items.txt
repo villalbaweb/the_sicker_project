@@ -1,7 +1,5 @@
-* Health bar to tilt when in danger and limit health to current max level
-* Improve the HUD with a bar for turbo left 
-* Fix the double tapping of the turbo, it should be enabled by shorrting or destroying enemies
 * Make small tutorial scene
+* Add delete records button in setup.
 * Make iOS version
 
 

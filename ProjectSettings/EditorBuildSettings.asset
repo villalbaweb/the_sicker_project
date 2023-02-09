@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Splash Scene.unity
     guid: 592298b2c4eb76944a11e4b289558599
   - enabled: 1
+    path: Assets/Scenes/Tutorial Scene.unity
+    guid: b2d09dae0d29c9e4b808d387bbaf9201
+  - enabled: 1
     path: Assets/Scenes/Setup Scene.unity
     guid: e9d9aec62d2ab6846afe4d3f579650cd
   - enabled: 1
