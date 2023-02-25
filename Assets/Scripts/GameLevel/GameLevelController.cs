@@ -23,7 +23,12 @@ namespace TheSicker.GameLevel
         {
             _playerMarker = FindObjectOfType<PlayerMarker>();
             _playerXpLevelHandler = _playerMarker?.GetComponent<PlayerXpLevelHandler>();
-            gameCurrentLevel = _playerXpLevelHandler.CurrentLevel;
+            UpdateGameLevel();
+        }
+
+        private void Start()
+        {
+            UpdateGameLevel();
         }
 
         private void OnEnable()
@@ -38,8 +43,16 @@ namespace TheSicker.GameLevel
 
         private void OnPlayerLevelUp()
         {
+            UpdateGameLevel();
+        }
 
+        /// <summary>
+        /// Update several stats from Progression asset, this will be invoked OnAwake, OnStart and everytime there is a OnPLayerLevelUpEvent
+        /// </summary>
+        private void UpdateGameLevel()
+        {
             if (!_playerXpLevelHandler) return;
+
             gameCurrentLevel = _playerXpLevelHandler.CurrentLevel;
 
             OnGameLevelUpEvent?.Invoke();

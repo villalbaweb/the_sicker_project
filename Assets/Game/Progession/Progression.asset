@@ -134,20 +134,20 @@ MonoBehaviour:
     stats:
     - stat: 4
       levels:
-      - 2
       - 1
       - 0.5
       - 0.25
-      - 0.1
+      - 0.125
+      - 0.06
   - character: 8
     stats:
     - stat: 4
       levels:
+      - 1.5
       - 3
-      - 5
-      - 6.5
-      - 7.5
-      - 8
+      - 4
+      - 4.5
+      - 4.75
   - character: 6
     stats:
     - stat: 3
