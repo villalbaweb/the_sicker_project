@@ -69,11 +69,16 @@ namespace TheSicker.UI
 
             string playerId = GetPlayerId(fullFile);
 
+            maxScore.text = playerId is null ? "0" : RetrieveMaxPoints(fullFile, playerId);
+        }
+
+        private string RetrieveMaxPoints(Dictionary<string, object> fullFile, string playerId)
+        {
             Dictionary<string, object> maxXps = fullFile[playerId] as Dictionary<string, object>;
 
             var maxXpKeyForDifficulty = maxXps.FirstOrDefault(x => x.Key.Contains(difficultyLevel.ToString())).Key;
 
-            maxScore.text = maxXpKeyForDifficulty is null 
+            return maxXpKeyForDifficulty is null
                 ? "0"
                 : maxXps[maxXpKeyForDifficulty].ToString();
         }
@@ -103,8 +108,8 @@ namespace TheSicker.UI
 
             foreach (string key in fullFile.Keys)
             {
-                var test = (Dictionary<string, object>)fullFile[key];
-                foreach (var value in test)
+                var availableKeys = (Dictionary<string, object>)fullFile[key];
+                foreach (var value in availableKeys)
                 {
                     if (value.Key.Contains(stateType))
                     {

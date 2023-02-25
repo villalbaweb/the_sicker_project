@@ -29,7 +29,7 @@ namespace TheSicker.SaveSystem
                 Save();
             }
 
-            if (Input.GetKeyDown(KeyCode.Delete))
+            if (Input.GetKeyDown(KeyCode.D))
             {
                 Delete();
             }

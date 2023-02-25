@@ -1,4 +1,6 @@
+* Add difficulty factor perhaps increase the number of spawned enemies with time
 * Make small tutorial scene
+* Fix Max XP Bug
 * Add delete records button in setup.
 * Make iOS version
 
