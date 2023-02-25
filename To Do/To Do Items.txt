@@ -1,4 +1,5 @@
-* Add difficulty factor perhaps increase the number of spawned enemies with time
+* Bugfix, initally the player does not take initial value from Scriptable Object
+* Helth cannont go higher than initial value otherwise the bar will have issues
 * Make small tutorial scene
 * Fix Max XP Bug
 * Add delete records button in setup.
