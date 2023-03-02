@@ -1,4 +1,3 @@
-* Helth cannont go higher than initial value otherwise the bar will have issues
 * Make small tutorial scene
 * Add delete records button in setup.
 * Make iOS version
