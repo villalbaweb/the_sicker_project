@@ -1,5 +1,6 @@
 * Make small tutorial scene
 * Add delete records button in setup.
+
 * Make iOS version
 
 
