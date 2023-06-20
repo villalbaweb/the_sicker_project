@@ -9,15 +9,21 @@ namespace TheSicker.Player
 
         // cache
         PlayerMover _playerMover;
+        PlayerRotation _playerRotation;
 
         private void Awake()
         {
             _playerMover = GetComponent<PlayerMover>();
+            _playerRotation = GetComponent<PlayerRotation>();
         }
 
-        private void Update()
+        public void PlayerControls(bool enable)
         {
-            print($"IsTutorialPlayer: {IsTutorialPlayer}");
+            if (!IsTutorialPlayer || !_playerMover || !_playerRotation) return;
+
+            _playerMover.enabled = enable;
+            _playerRotation.enabled = enable;
         }
+
     }
 }
