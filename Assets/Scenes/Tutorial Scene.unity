@@ -296,6 +296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pool Object Enemy Spawner Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3553719842210023335, guid: 9e3dab43ff146a64993428f66591c780, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e3dab43ff146a64993428f66591c780, type: 3}
 --- !u!1001 &1225984410
@@ -466,6 +470,10 @@ PrefabInstance:
     - target: {fileID: 7271675388175938627, guid: 6c8272c7b42a91b458ee5ce885dc44d1, type: 3}
       propertyPath: m_Name
       value: Pool Object PickUp Spawner Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7271675388175938627, guid: 6c8272c7b42a91b458ee5ce885dc44d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c8272c7b42a91b458ee5ce885dc44d1, type: 3}
