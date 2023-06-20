@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 884b93ec-e3f8-4737-b2f9-210352069f16
       objectReference: {fileID: 0}
+    - target: {fileID: 3271039278003271842, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
+      propertyPath: IsTutorialPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6576423509886590832, guid: d2dd47ce8edc1eb4fa436cfbc3e2498a, type: 3}
       propertyPath: m_RootOrder
       value: 10
