@@ -1,3 +1,4 @@
+using TheSicker.Controls;
 using UnityEngine;
 
 namespace TheSicker.Player
@@ -8,21 +9,21 @@ namespace TheSicker.Player
         [SerializeField] bool IsTutorialPlayer = false;
 
         // cache
-        PlayerMover _playerMover;
         PlayerRotation _playerRotation;
+        SpeedButtonControler _speedButtonControler;
 
         private void Awake()
         {
-            _playerMover = GetComponent<PlayerMover>();
             _playerRotation = GetComponent<PlayerRotation>();
+            _speedButtonControler = FindObjectOfType<SpeedButtonControler>();
         }
 
         public void PlayerControls(bool enable)
         {
-            if (!IsTutorialPlayer || !_playerMover || !_playerRotation) return;
+            if (!IsTutorialPlayer || !_speedButtonControler || !_playerRotation) return;
 
-            _playerMover.enabled = enable;
-            _playerRotation.enabled = enable;
+            _speedButtonControler.gameObject.SetActive(enable);
+            _playerRotation.enabled = enable;   // change this to enable disable the joystick perhaps ???
         }
 
     }
