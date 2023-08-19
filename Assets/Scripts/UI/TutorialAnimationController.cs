@@ -26,5 +26,35 @@ namespace TheSicker.UI
 
             _playerTutorialControlHandler.PlayerControls(true);
         }
+
+        public void TurnUp()
+        {
+            print("Up..");
+        }
+
+        public void TurnDown()
+        {
+            print("Down..");
+        }
+
+        public void TurnLeft()
+        {
+            print("Left..");
+        }
+
+        public void TurnRight()
+        {
+            print("Right..");
+        }
+
+        public void ThrotleOn()
+        {
+            print($"Throtling On");
+        }
+
+        public void ThrotleOff()
+        {
+            print("Throtling Off");
+        }
     }
 }
