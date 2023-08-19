@@ -9,21 +9,21 @@ namespace TheSicker.Player
         [SerializeField] bool IsTutorialPlayer = false;
 
         // cache
-        PlayerRotation _playerRotation;
         SpeedButtonControler _speedButtonControler;
+        Joystick _joystick;
 
         private void Awake()
         {
-            _playerRotation = GetComponent<PlayerRotation>();
             _speedButtonControler = FindObjectOfType<SpeedButtonControler>();
+            _joystick = FindObjectOfType<Joystick>();
         }
 
         public void PlayerControls(bool enable)
         {
-            if (!IsTutorialPlayer || !_speedButtonControler || !_playerRotation) return;
+            if (!IsTutorialPlayer || !_speedButtonControler || !_joystick) return;
 
             _speedButtonControler.gameObject.SetActive(enable);
-            _playerRotation.enabled = enable;   // change this to enable disable the joystick perhaps ???
+            _joystick.gameObject.SetActive(enable);
         }
 
     }

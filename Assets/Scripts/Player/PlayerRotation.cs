@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TheSicker.UI;
+using UnityEngine;
 
 namespace TheSicker.Player
 {
@@ -15,6 +16,8 @@ namespace TheSicker.Player
         // State
         // Create a base vector for the rotation calculations
         Vector3 originVector = new Vector3(0,0,0);
+        Vector3 tutorialDirection = new Vector3(0,0,0);
+        bool isTutorialDriving = false;
 
         // Start is called before the first frame update
         void Awake()
@@ -30,10 +33,12 @@ namespace TheSicker.Player
 
         private void CalculateTargetPosition()
         {
-            if(Mathf.Abs(_joystick.Horizontal) < minimunStickRotation && Mathf.Abs(_joystick.Vertical) < minimunStickRotation) { return; }
+            if (Mathf.Abs(_joystick.Horizontal) < minimunStickRotation && Mathf.Abs(_joystick.Vertical) < minimunStickRotation && !isTutorialDriving) { return; }
 
             // calculate a new Vector based on Joystick input
-            Vector3 target = new Vector3(_joystick.Horizontal, _joystick.Vertical, 0);
+            Vector3 target = isTutorialDriving
+                ? tutorialDirection
+                : new Vector3(_joystick.Horizontal, _joystick.Vertical, 0);
 
             Vector3 vectorToTarget = target - originVector;
             float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
@@ -44,6 +49,16 @@ namespace TheSicker.Player
         private float CalculateStep()
         {
             return speed * Time.deltaTime;
+        }
+
+        public void TutorialSetDirection(Vector3 direction)
+        {
+            tutorialDirection = direction;
+        }
+
+        public void TutorialModeSet(bool isTutorialMode)
+        {
+            isTutorialDriving = isTutorialMode;
         }
     }
 }
