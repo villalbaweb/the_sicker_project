@@ -45,6 +45,7 @@ namespace TheSicker.UI
             _playerRotation?.TutorialModeSet(false);
             _playerTutorialControlHandler.PlayerControls(true);
             _objectPoolSpawner.gameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
 
         public void TurnUp()
