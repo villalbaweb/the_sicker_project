@@ -31,14 +31,7 @@ namespace TheSicker.UI
         {
             if (!_tutorialEnablingControlsTextController) return;
 
-            _tutorialEnablingControlsTextController.EnableControlsTextDisplay(true);
-        }
-
-        public void ControlsEnabledTextRemove()
-        {
-            if (!_tutorialEnablingControlsTextController) return;
-
-            _tutorialEnablingControlsTextController.EnableControlsTextDisplay(false);
+            _tutorialEnablingControlsTextController.EnableControlsTextDisplay();
         }
 
         public void PlayerControlsEnable()
