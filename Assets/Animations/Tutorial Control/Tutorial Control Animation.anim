@@ -166,6 +166,20 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 46.083332
+    functionName: ControlsEnabledTextDisplay
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 49.583332
+    functionName: ControlsEnabledTextRemove
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 49.708332
     functionName: ThrotleOff
     data: 

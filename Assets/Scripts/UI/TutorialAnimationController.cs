@@ -9,11 +9,13 @@ namespace TheSicker.UI
         PlayerTutorialControlHandler _playerTutorialControlHandler;
         PlayerMover _playerMover;
         PlayerRotation _playerRotation;
+        TutorialEnablingControlsTextController _tutorialEnablingControlsTextController;
 
         private void Awake()
         {
             _playerTutorialControlHandler = FindObjectOfType<PlayerTutorialControlHandler>();
             _playerMover = FindObjectOfType<PlayerMover>();
+            _tutorialEnablingControlsTextController = FindObjectOfType<TutorialEnablingControlsTextController>();
             _playerRotation = _playerMover.gameObject.GetComponent<PlayerRotation>();
         }
 
@@ -23,6 +25,20 @@ namespace TheSicker.UI
 
             _playerRotation?.TutorialModeSet(true);
             _playerTutorialControlHandler.PlayerControls(false);
+        }
+
+        public void ControlsEnabledTextDisplay()
+        {
+            if (!_tutorialEnablingControlsTextController) return;
+
+            _tutorialEnablingControlsTextController.EnableControlsTextDisplay(true);
+        }
+
+        public void ControlsEnabledTextRemove()
+        {
+            if (!_tutorialEnablingControlsTextController) return;
+
+            _tutorialEnablingControlsTextController.EnableControlsTextDisplay(false);
         }
 
         public void PlayerControlsEnable()
