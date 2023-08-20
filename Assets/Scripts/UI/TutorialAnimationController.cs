@@ -1,3 +1,4 @@
+using TheSicker.Core;
 using TheSicker.Player;
 using UnityEngine;
 
@@ -10,12 +11,14 @@ namespace TheSicker.UI
         PlayerMover _playerMover;
         PlayerRotation _playerRotation;
         TutorialEnablingControlsTextController _tutorialEnablingControlsTextController;
+        ObjectPoolSpawner _objectPoolSpawner;
 
         private void Awake()
         {
             _playerTutorialControlHandler = FindObjectOfType<PlayerTutorialControlHandler>();
             _playerMover = FindObjectOfType<PlayerMover>();
             _tutorialEnablingControlsTextController = FindObjectOfType<TutorialEnablingControlsTextController>();
+            _objectPoolSpawner = FindObjectOfType<ObjectPoolSpawner>();
             _playerRotation = _playerMover.gameObject.GetComponent<PlayerRotation>();
         }
 
@@ -25,6 +28,7 @@ namespace TheSicker.UI
 
             _playerRotation?.TutorialModeSet(true);
             _playerTutorialControlHandler.PlayerControls(false);
+            _objectPoolSpawner.gameObject.SetActive(false);
         }
 
         public void ControlsEnabledTextDisplay()
@@ -40,29 +44,26 @@ namespace TheSicker.UI
 
             _playerRotation?.TutorialModeSet(false);
             _playerTutorialControlHandler.PlayerControls(true);
+            _objectPoolSpawner.gameObject.SetActive(true);
         }
 
         public void TurnUp()
         {
-            print("Up..");
             _playerRotation?.TutorialSetDirection(Vector3.up);
         }
 
         public void TurnDown()
         {
-            print("Down..");
             _playerRotation?.TutorialSetDirection(Vector3.down);
         }
 
         public void TurnLeft()
         {
-            print("Left..");
             _playerRotation?.TutorialSetDirection(Vector3.left);
         }
 
         public void TurnRight()
         {
-            print("Right..");
             _playerRotation?.TutorialSetDirection(Vector3.right);
         }
 
